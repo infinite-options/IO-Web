@@ -6,27 +6,29 @@ import WhatWeDo from "./Homepage/WhatWeDo.js";
 import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
-import Footer from "./Homepage/Footer";
+import Contact from "./Homepage/Contact.js";
+import Footer from "./Homepage/Footer.jsx";
 
 function Media() {
   return <section id="media"></section>;
 }
 
-// function Main() {
-//   return (
-//     <main>
-//       <WhatWeDo />
-//       <ScheduleAMeeting />
-//       <Profolio />
-//       <Contact />
-//     </main>
-//   );
-// }
+function Main() {
+  return (
+    <main>
+      <WhatWeDo />
+      <ScheduleAMeeting />
+      <Profolio />
+      <Contact />
+    </main>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
+      <Main></Main>
       <How_we_can_help></How_we_can_help>
       <Footer/>
     </div>
