@@ -6,6 +6,7 @@ import WhatWeDo from "./Homepage/WhatWeDo.js";
 import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import Contact from "./Homepage/Contact.js";
+import Footer from "./Homepage/Footer.js";
 
 function Media() {
   return <section id="media"></section>;
@@ -24,9 +25,12 @@ function Main() {
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <Main />
+      <div className="App">
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 }

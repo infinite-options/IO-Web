@@ -1,30 +1,43 @@
-import logo from "../image/logo.png";
-
-const style = {
-  borderBottom: "6px solid #F6A833",
-};
+import logo from "../image/InfiniteOptionsLogoDark.png";
+import "./NavBar.css";
 
 const Navbar = () => {
   return (
-    <nav style={style}>
-      <img src={logo} alt="logo" />
-      <ul>
-        <li>
-          <p>What We Do</p>
-        </li>
-        <li>
-          <p>Profolio</p>
-        </li>
-        <li>
-          <p>Contact</p>
-        </li>
-        <li>
-          <p>Media</p>
-        </li>
-        <li>
-          <p>Get Involved</p>
-        </li>
-      </ul>
+    <nav className="navbar">
+      <div>
+        <ul className="nav-ul">
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              <img src={logo} alt="Infinite Options Logo" />
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              What We Do
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              Profolio
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              Contact
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              Media
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              Get Involved
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };
