@@ -1,5 +1,10 @@
-import logo from "../image/logo.png";
 import { makeStyles } from "@material-ui/core/styles";
+import MobileAppsWhite from "../assets/MobileWhite.svg";
+import MarketingNBrandingWhite from "../assets/MarketingWhite.svg";
+import BusinessStrategyWhite from "../assets/BusinessWhite.svg";
+import HardwareEngineeringWhite from "../assets/HardwareWhite.svg";
+import UIUXDesignWhite from "../assets/UIUXDesignWhite.svg";
+import WebSoftwareDevWhite from "../assets/WebWhite.svg";
 
 const useStyles = makeStyles((theme) => ({
   contaier: {
@@ -13,13 +18,18 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     backgroundColor: "White",
-    width: "40%",
+    width: "45%",
     border: "none",
     color: "white",
     padding: "20px",
     boxSizing: "border-box",
     borderRadius: "20px",
     resize: "none",
+    fontColor: "#52330D",
+    fontSize: "20px",
+    display: "inline-block",
+    margin: "5px",
+    alignContent: "left",
   },
   textarea: {
     backgroundColor: "White",
@@ -31,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
     borderRadius: "20px",
     resize: "none",
+    fontColor: "#52330D",
+    fontSize: "20px",
   },
   button: {
     backgroundColor: "#52330D",
@@ -43,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     borderRadius: "50px",
   },
+  img: {
+    width: "100px",
+  },
 }));
 
 const Contact = () => {
@@ -52,7 +67,7 @@ const Contact = () => {
       <div className={classes.contaier}>
         <h1 className={classes.h1}>Let's have a chat</h1>
         <form>
-          <div style={{ padding: 10 }}>
+          <div>
             <input
               className={classes.input}
               type="text"
@@ -82,16 +97,59 @@ const Contact = () => {
           </div>
           <div>
             <h1 className={classes.h1}>Pick the pieces where we can help</h1>
-            <input type="checkbox" id="" />
-            <label for="">Business Strategy</label>
-            <input type="checkbox" />
-            <label for="">UI/UX Design</label>
-            <input type="checkbox" />
-            <label for="">Marketing & Branding</label>
-            <input type="checkbox" />
-            <label for="">Mobile Apps</label>
-            <input type="checkbox" />
-            <label for="">Web/Software Development</label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              <img
+                src={BusinessStrategyWhite}
+                alt="BusinessStrategyWhite"
+                className={classes.img}
+              />
+              {/* Business Strategy */}
+            </label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              {/* UI/UX Design */}
+              <img
+                src={UIUXDesignWhite}
+                alt="UIUXDesignWhite"
+                className={classes.img}
+              />
+            </label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              {/* Marketing & Branding */}
+              <img
+                src={MarketingNBrandingWhite}
+                alt="MarketingNBrandingWhite"
+                className={classes.img}
+              />
+            </label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              <img
+                className={classes.img}
+                src={MobileAppsWhite}
+                alt="MobileAppsWhite"
+              />
+            </label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              <img
+                src={HardwareEngineeringWhite}
+                alt="HardwareEngineeringWhite"
+                className={classes.img}
+              />
+              {/* Hardware Engineering */}
+            </label>
+            <input type="checkbox">{/*  */}</input>
+            <label for="">
+              <img
+                src={WebSoftwareDevWhite}
+                alt="WebSoftwareDevWhite"
+                className={classes.img}
+              />
+              {/* Web/Software Development */}
+            </label>
           </div>
           <div>
             <textarea
@@ -99,6 +157,7 @@ const Contact = () => {
               placeholder="Anything else you want to your note to us?"
             ></textarea>
           </div>
+          <br />
           <button className={classes.button}>Send a Message</button>
         </form>
       </div>

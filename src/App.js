@@ -15,7 +15,7 @@ function Media() {
 
 function Main() {
   return (
-    <main>
+    <main style={{ textAlign: "center" }}>
       <WhatWeDo />
       <ScheduleAMeeting />
       <Profolio />
@@ -28,9 +28,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Main></Main>
-      <How_we_can_help></How_we_can_help>
-      <Footer/>
+      <Main />
+      {/* <How_we_can_help></How_we_can_help> */}
+      <Footer />
     </div>
   );
 }
