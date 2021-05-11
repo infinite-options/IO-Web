@@ -23,9 +23,9 @@ const Footeer=()=>{
                 <div style={{height:'30%'}}><p style={{color:'white',marginTop:'30px'}}>San Jose, CA 95120</p></div>
             </div>
             <div style={{height:'250px',float:'left',width:'33%'}}>
-                <div style={{float:'left', width:'33%',marginTop:'20%'}}><img style={{height:'51px',width:'51px'}} src={twitter}></img></div>
-                <div style={{float:'left',width:'33%',marginTop:'20%'}}><img style={{height:'51px',width:'51px'}} src={fb}></img></div>
-                <div style={{float:'left',width:'33%',marginTop:'20%'}}><img style={{height:'51px',width:'51px'}} src={li}></img></div>
+                <div style={{float:'left', width:'33%',marginTop:'15%'}}><img style={{height:'51px',width:'51px'}} src={twitter}></img></div>
+                <div style={{float:'left',width:'33%',marginTop:'15%'}}><img style={{height:'51px',width:'51px'}} src={fb}></img></div>
+                <div style={{float:'left',width:'33%',marginTop:'15%'}}><img style={{height:'51px',width:'51px'}} src={li}></img></div>
             </div>
         </div>
     )
