@@ -7,24 +7,26 @@ import WhatWeDo from "./Homepage/WhatWeDo.js";
 import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
-import Footer from "./Homepage/Footer";
+
 import Chat from "./Homepage/Chat";
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import Contact from "./Homepage/Contact.js";
+import Footer from "./Homepage/Footer.jsx";
 
 function Media() {
   return <section id="media"></section>;
 }
 
-// function Main() {
-//   return (
-//     <main>
-//       <WhatWeDo />
-//       <ScheduleAMeeting />
-//       <Profolio />
-//       <Contact />
-//     </main>
-//   );
-// }
+function Main() {
+  return (
+    <main>
+      <WhatWeDo />
+      <ScheduleAMeeting />
+      <Profolio />
+      <Contact />
+    </main>
+  );
+}
 
 function App() {
   return (
