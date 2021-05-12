@@ -13,20 +13,20 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Contact from "./Homepage/Contact.js";
 import Footer from "./Homepage/Footer.jsx";
 
-function Media() {
-  return <section id="media"></section>;
-}
+// function Media() {
+//   return <section id="media"></section>;
+// }
 
-function Main() {
-  return (
-    <main>
-      <WhatWeDo />
-      <ScheduleAMeeting />
-      <Profolio />
-      <Contact />
-    </main>
-  );
-}
+// function Main() {
+//   return (
+//     <main>
+//       <WhatWeDo />
+//       <ScheduleAMeeting />
+//       <Profolio />
+//       <Contact />
+//     </main>
+//   );
+// }
 
 function App() {
   return (
@@ -36,9 +36,10 @@ function App() {
       <div className="App">
         <Navbar/>
         <Switch>
+        <Route exact path="/" component={WhatWeDo}/>
           <Route exact path="/whatwedo" component={WhatWeDo}/>
-          <Route path="/media" component={How_we_can_help}/>
-          <Route path="/getinvolved" component={Chat}/>
+          <Route path="/how_we_can_help" component={How_we_can_help}/>
+          <Route path="/contact" component={Chat}/>
           <Route path="/portfolio" component={Profolio}/>
         </Switch>
       </div>
