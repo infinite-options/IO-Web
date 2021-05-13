@@ -7,16 +7,15 @@ import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
 import Chat from "./Homepage/Chat";
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import Contact from "./Homepage/Contact.js";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./Homepage/Footer.jsx";
 import ServingFresh from "./ServingFresh/ServingFresh";
 import Careers from "./Homepage/Careers";
+import Appointment from "./Appointment/scheduleMeeting.js";
 
 function App() {
   return (
     <div className="App">
-      
       <BrowserRouter>
       <div className="App">
         <Navbar/>
@@ -28,6 +27,7 @@ function App() {
           <Route path="/portfolio" component={Profolio}/>
           <Route path="/Careers" component={Careers}/>
           <Route path="/ServingFresh" component={ServingFresh}/>
+          <Route path="/appointment" component={Appointment} />
         </Switch>
         <Footer></Footer>
       </div>
@@ -43,8 +43,6 @@ function App() {
   );
 }
 
-
-
 export function Main() {
   return (
     <main style={{ textAlign: "center" }}>
@@ -52,7 +50,6 @@ export function Main() {
       <ScheduleAMeeting />
       <Profolio />
       <Chat />
-      
     </main>
   );
 }

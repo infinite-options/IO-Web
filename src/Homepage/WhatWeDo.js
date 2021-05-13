@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import How_we_can_help from "./How_we_can_help.js";
 import logo from "../image/logo.png";
 import MobileAppsLight from "../assets/MobileAppsLight.svg";
