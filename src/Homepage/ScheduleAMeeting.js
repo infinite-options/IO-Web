@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   contaier: {
     margin: "auto",
@@ -28,7 +29,9 @@ const ScheduleAMeeting = () => {
         <h1 className={classes.h1}>
           Let's chat about design and development solutions for your business
         </h1>
-        <button className={classes.button}>Schedule a meeting</button>
+        <Link to="appointment">
+          <button className={classes.button}>Schedule a meeting</button>
+        </Link>
       </div>
     </section>
   );

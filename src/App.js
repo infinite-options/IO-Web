@@ -7,33 +7,30 @@ import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
 import Chat from "./Homepage/Chat";
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import Contact from "./Homepage/Contact.js";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./Homepage/Footer.jsx";
+import Appointment from "./Appointment/scheduleMeeting.js";
 
 function App() {
   return (
     <div className="App">
-      
       <BrowserRouter>
-      <div className="App">
-        <Navbar/>
-        <Switch>
-        <Route exact path="/" component={Main}/>
-          <Route exact path="/whatwedo" component={WhatWeDo}/>
-          <Route path="/how_we_can_help" component={How_we_can_help}/>
-          <Route path="/contact" component={Chat}/>
-          <Route path="/portfolio" component={Profolio}/>
-        </Switch>
-      </div>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/whatwedo" component={WhatWeDo} />
+            <Route path="/how_we_can_help" component={How_we_can_help} />
+            <Route path="/contact" component={Chat} />
+            <Route path="/portfolio" component={Profolio} />
+            <Route path="/appointment" component={Appointment} />
+          </Switch>
+        </div>
       </BrowserRouter>
-        
-    <Footer/>
+      <Footer />
     </div>
   );
 }
-
-
 
 export function Main() {
   return (
@@ -41,7 +38,7 @@ export function Main() {
       <WhatWeDo />
       <ScheduleAMeeting />
       <Profolio />
-      <Contact />
+      <Chat />
     </main>
   );
 }
