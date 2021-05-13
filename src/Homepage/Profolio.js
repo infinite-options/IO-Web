@@ -13,6 +13,7 @@ import UIUXDesignLight from "../assets/UIUXDesignLight.svg";
 import WebSoftwareDevLight from "../assets/WebSoftwareDevLight.svg";
 
 import { makeStyles, withTheme } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -169,7 +170,7 @@ const Profolio = () => {
           A meal subscription platform for busy professionals to eat from their
           favorite local restaurants at affordable prices.
         </p>
-        <img src={ServingFresh} className={classes.bigImg} alt="ServingFresh" />
+        <Link to='ServingFresh'><img src={ServingFresh} className={classes.bigImg} alt="ServingFresh" /></Link>
         <div className={classes.logoContainer}>
           <div className={classes.inline1}>
             <img

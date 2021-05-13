@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     width: "80%",
     padding: "50px",
+    marginBottom:'100px'
   },
   button: {
     backgroundColor: "#52330D",
@@ -87,7 +88,7 @@ const WhatWeDo = () => {
           entrepreneurial journey
         </h1>
 
-        <Link to="how-we-can-help">
+        <Link to="How_we_can_help">
           <button className={classes.button}>See how we can help</button>
         </Link>
       </div>

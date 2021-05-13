@@ -6,8 +6,8 @@ import Engage from "../image/Component_2.svg";
 const How_we_can_help = () => {
   return (
     <>
-      <p style={{ fontSize: "84px", textAlign: "center", fontWeight: "bold", color: "#52330D" }}>
-        We fill the <span style={{ color: "blue" }}>gaps</span> around your skill set to help you succeed on your entrepreneurial journey
+      <p style={{ fontSize: "400%", textAlign: "center", fontWeight: "bold", color: "#52330D" }}>
+        We fill the <span style={{ color: "white", webkitTextStroke: "2px #52330D" }}>gaps</span> around your skill set to help you succeed on your entrepreneurial journey
       </p>
       <div>
         <img src={how1} style={{ width: "100%" }}></img>

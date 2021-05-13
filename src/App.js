@@ -10,6 +10,8 @@ import Chat from "./Homepage/Chat";
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Contact from "./Homepage/Contact.js";
 import Footer from "./Homepage/Footer.jsx";
+import ServingFresh from "./ServingFresh/ServingFresh";
+import Careers from "./Homepage/Careers";
 
 function App() {
   return (
@@ -24,11 +26,19 @@ function App() {
           <Route path="/how_we_can_help" component={How_we_can_help}/>
           <Route path="/contact" component={Chat}/>
           <Route path="/portfolio" component={Profolio}/>
+          <Route path="/Careers" component={Careers}/>
+          <Route path="/ServingFresh" component={ServingFresh}/>
         </Switch>
+        <Footer></Footer>
       </div>
       </BrowserRouter>
-        
-    <Footer/>
+      <BrowserRouter>
+      
+      </BrowserRouter>
+
+    {/* <ServingFresh></ServingFresh> */}
+    
+ 
     </div>
   );
 }
@@ -41,7 +51,8 @@ export function Main() {
       <WhatWeDo />
       <ScheduleAMeeting />
       <Profolio />
-      <Contact />
+      <Chat />
+      
     </main>
   );
 }

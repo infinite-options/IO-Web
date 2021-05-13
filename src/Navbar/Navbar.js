@@ -8,13 +8,13 @@ import border from '../image/border.png'
 const style = {
   // borderBottom: "6px solid #F6A833",
   marginBottom:'100px',
-  border:'1px solid black'
+  
 };
 
 const Navbar = () => {
   return (
     <nav style={{marginBottom:'100px',
-    border:'1px solid black',borderBottom:'1px ',borderBottomColor:'black'}}>
+    borderBottom:'1px ',borderBottomColor:'black'}}>
       <div style={{width:'33%'}}>
       <img src={logo} alt="logo" style={{float:'left',marginTop:'35px'}}/>
       </div>
