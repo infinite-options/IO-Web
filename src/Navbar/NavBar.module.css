@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   float:left;
-  margin-top: 5vh;
+  margin-top: 8vh;
   margin-left: 5vw;
 }
 .li {
@@ -30,5 +30,9 @@
   height: auto;
   border:1px solid #f6a833;
   border-radius: 10px;
-
+  color: azure;
+}
+.NavLink{
+  text-decoration: none;
+  color: black;
 }

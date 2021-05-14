@@ -1,9 +1,15 @@
 .App {
   text-align: center;
   font-family: "Avenir";
+  height: auto;
 }
-
-.App-logo {
+/* @media only screen and (min-height:900px){
+  .App{
+      height:4700px;
+      
+  } 
+   }  */
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -36,4 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

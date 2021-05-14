@@ -15,7 +15,7 @@ import Appointment from "./Appointment/scheduleMeeting.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{height:'auto'}}>
       <BrowserRouter>
       <div className="App">
         <Navbar/>
@@ -29,14 +29,19 @@ function App() {
           <Route path="/ServingFresh" component={ServingFresh}/>
           <Route path="/appointment" component={Appointment} />
         </Switch>
-        <Footer></Footer>
+        
       </div>
+      <Footer></Footer>
       </BrowserRouter>
       <BrowserRouter>
       
+      {/* <Switch>
+      
+      </Switch> */}
+      
       </BrowserRouter>
 
-    {/* <ServingFresh></ServingFresh> */}
+    
     
  
     </div>

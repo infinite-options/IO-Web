@@ -41,7 +41,7 @@ const Chat=()=>{
                 borderRadius: "25px",
                 marginLeft: "10vw",
                 float: "left",
-                fontSize: "32px",
+                fontSize: "150%",
                 color:'#52330D',
                 border:'1px solid #F6A833'
               }}
@@ -54,7 +54,7 @@ const Chat=()=>{
                 borderRadius: "25px",
                 marginLeft: "10vw",
                 float: "left",
-                fontSize: "32px",
+                fontSize: "150%",
                 color:'#52330D',
                 border:'1px solid #F6A833'
               }}
@@ -70,7 +70,7 @@ const Chat=()=>{
                 marginLeft: "10vw",
                 marginTop: "5vh",
                 float: "left",
-                fontSize: "32px",
+                fontSize: "150%",
                 color:'#52330D',
                 border:'1px solid #F6A833'
               }}
@@ -84,7 +84,7 @@ const Chat=()=>{
                 marginLeft: "10vw",
                 marginTop: "5vh",
                 float: "left",
-                fontSize: "32px",
+                fontSize: "150%",
                 color:'#52330D',
                 border:'1px solid #F6A833'
               }}
@@ -107,7 +107,7 @@ const Chat=()=>{
                 marginLeft: "10vw",
                 marginRight: "10vw",
                 marginTop: "5vh",
-                fontSize: "32px",
+                fontSize: "150%",
                 color:'black',
                 border:'1px solid #F6A833'
                 

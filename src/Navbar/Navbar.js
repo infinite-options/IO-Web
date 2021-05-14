@@ -21,29 +21,29 @@ const Navbar = () => {
       <div style={{width:'66%',float:'right'}}>
       <ul className={classes.ul}>
         <li className={classes.li}>
-        <NavLink style={{ textDecoration: 'none',color:'black' }} exact activeClassName={classes.active} to="/">
+        <NavLink style={{color:'black',textDecoration:'none'}}  exact activeStyle={{color:'white',backgroundColor:'#f6a833',borderRadius:'20px',border:'15px solid #f6a833'}} to="/">
           What We Do
           </NavLink>
           </li>
         <li className={classes.li}>
-        <NavLink style={{ textDecoration: 'none',color:'black' }} activeClassName={classes.active} to="/how_we_can_help">
+        <NavLink style={{color:'black',textDecoration:'none'}}  exact activeStyle={{color:'white',backgroundColor:'#f6a833',borderRadius:'20px',border:'15px solid #f6a833'}} to="/how_we_can_help">
           How We Can Help
           </NavLink>
         </li>
         <li className={classes.li}>
-        <NavLink style={{ textDecoration: 'none',color:'black' }} activeClassName={classes.active} to="/portfolio">
+        <NavLink style={{color:'black',textDecoration:'none'}}  exact activeStyle={{color:'white',backgroundColor:'#f6a833',borderRadius:'20px',border:'15px solid #f6a833'}} to="/portfolio">
           Our Portfolio
           </NavLink>
         </li>
         <li className={classes.li}>
-        <NavLink style={{ textDecoration: 'none' ,color:'black',height: '60px'}} activeClassName={classes.active} to="/contact">
+        <NavLink style={{color:'black',textDecoration:'none'}}  exact activeStyle={{color:'white',backgroundColor:'#f6a833',borderRadius:'20px',border:'15px solid #f6a833'}} to="/contact">
           Contact Us
           </NavLink>
         </li>
         
       </ul>
       </div>
-      <img style={{width:'100%'}}src={border}></img>
+      <img style={{width:'100%',marginTop:'25px'}}src={border}></img>
       
     </nav>
   );
