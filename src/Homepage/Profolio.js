@@ -80,7 +80,13 @@ const Profolio = () => {
             A meal subscription platform for busy professionals to eat from
             their favorite local restaurants at affordable prices.
           </p>
-          <img src={MealsForMe} className={classes.smallImg} alt="MealsForMe" />
+          <Link to="MealsForMe">
+            <img
+              src={MealsForMe}
+              className={classes.smallImg}
+              alt="MealsForMe"
+            />
+          </Link>
           <div className={classes.logoContainer}>
             <div className={classes.inline1}>
               <img
@@ -170,7 +176,13 @@ const Profolio = () => {
           A meal subscription platform for busy professionals to eat from their
           favorite local restaurants at affordable prices.
         </p>
-        <Link to='ServingFresh'><img src={ServingFresh} className={classes.bigImg} alt="ServingFresh" /></Link>
+        <Link to="ServingFresh">
+          <img
+            src={ServingFresh}
+            className={classes.bigImg}
+            alt="ServingFresh"
+          />
+        </Link>
         <div className={classes.logoContainer}>
           <div className={classes.inline1}>
             <img

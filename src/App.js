@@ -12,33 +12,27 @@ import Footer from "./Homepage/Footer.jsx";
 import ServingFresh from "./ServingFresh/ServingFresh";
 import Careers from "./Homepage/Careers";
 import Appointment from "./Appointment/scheduleMeeting.js";
-
+import MealsForMe from "./MealsForMe/MealsForMe";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <div className="App">
-        <Navbar/>
+        <Navbar />
         <Switch>
-        <Route exact path="/" component={Main}/>
-          <Route exact path="/whatwedo" component={WhatWeDo}/>
-          <Route path="/how_we_can_help" component={How_we_can_help}/>
-          <Route path="/contact" component={Chat}/>
-          <Route path="/portfolio" component={Profolio}/>
-          <Route path="/Careers" component={Careers}/>
-          <Route path="/ServingFresh" component={ServingFresh}/>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/whatwedo" component={WhatWeDo} />
+          <Route path="/how_we_can_help" component={How_we_can_help} />
+          <Route path="/contact" component={Chat} />
+          <Route path="/portfolio" component={Profolio} />
+          <Route path="/Careers" component={Careers} />
+          <Route path="/ServingFresh" component={ServingFresh} />
+          <Route path="/MealsForMe" component={MealsForMe} />
           <Route path="/appointment" component={Appointment} />
         </Switch>
-        <Footer></Footer>
-      </div>
-      </BrowserRouter>
-      <BrowserRouter>
-      
+        <Footer />
       </BrowserRouter>
 
-    {/* <ServingFresh></ServingFresh> */}
-    
- 
+      {/* <ServingFresh></ServingFresh> */}
     </div>
   );
 }
