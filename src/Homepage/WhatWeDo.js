@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     width: "80%",
     padding: "50px",
-    marginBottom:'100px'
+    marginBottom: "100px",
+    fontFamily: "AvenirHeavy",
   },
   button: {
     backgroundColor: "#52330D",

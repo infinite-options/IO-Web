@@ -5,9 +5,11 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     width: "50%",
     padding: "50px",
+    fontFamily: "AvenirHeavy",
   },
   h1: {
     color: "White",
+    fontSize: "200%",
   },
   button: {
     backgroundColor: "#52330D",
@@ -27,7 +29,7 @@ const ScheduleAMeeting = () => {
     <section style={{ backgroundColor: "#F6A833" }}>
       <div className={classes.contaier}>
         <h1 className={classes.h1}>
-          Let's chat about design and development solutions for your business
+          Let’s chat about design and development solutions for your business
         </h1>
         <Link to="appointment">
           <button className={classes.button}>Schedule a meeting</button>

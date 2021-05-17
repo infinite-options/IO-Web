@@ -69,24 +69,27 @@ const useStyles = makeStyles((theme) => ({
     color: "#F6A833",
     fontSize: "200%",
   },
-  calendarTimeWrapper: {
+  calendarTimeTable: {
     width: "90%",
     height: "auto",
-    border: "1px black",
+    border: "1px solid #F6A833 ",
     // display: "block",
   },
   calendarBox: {
-    display: "inline-block",
+    // display: "inline-block",
     width: "40%",
     height: "auto",
-    // padding: "20px",
+    padding: "20px",
     backgroundColor: "#F6A833",
   },
   timeslotBox: {
-    display: "inline-block",
+    // display: "inline-block",
     width: "60%",
-    // padding: "20px",
-    backgroundColor: "lightblue",
+    padding: "20px",
+    margin: "auto",
+  },
+  center: {
+    margin: "auto",
   },
   timeslotButton: {
     backgroundColor: "#F6A833",
@@ -97,25 +100,33 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     fontSize: "20px",
     borderRadius: "50px",
+    margin: "10px",
   },
 
   duritionInput: {
     backgroundColor: "#FAD399",
     width: "50%",
+    height: "75px",
     border: "none",
     // color: "white",
-    padding: "10px",
+    padding: "20px",
     boxSizing: "border-box",
     borderRadius: "50px",
     // resize: "none",
     fontColor: "#52330D",
-    fontSize: "20px",
+    fontSize: "25px",
     display: "inline-block",
     margin: "5px",
     // alignContent: "left",
+    "&::placeholder": {
+      textOverflow: "ellipsis !important",
+      color: "#52330D",
+    },
   },
+
   timeslotButtonBox: {
     width: "50%",
+    margin: "auto",
   },
 }));
 
@@ -196,38 +207,52 @@ const Appointment = () => {
     <section id="appointment">
       <div className={classes.contaier}>
         <img src={logo} alt="logo" />
+        <table className={classes.calendarTimeTable}>
+          <tr style={{ borderBottom: "none" }}>
+            <th className={classes.calendarBox}>
+              <h1 style={{ textAlign: "left", color: "white" }}>
+                Find a time to meet with us
+              </h1>
+            </th>
+            <th className={classes.timeslotBox}>
+              <div className={classes.inputRow}>
+                <label className={classes.h1}>Meeting Duriation</label>
+                <input
+                  className={classes.duritionInput}
+                  placeholder="30 mins"
+                ></input>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th className={classes.calendarBox}>
+              <Calendar
+                onClickDay={dateChange}
+                value={date}
+                backgroundColor="#F6A833"
+                calendarType="US"
+                className={classes.center}
+              />
+            </th>
+            <th className={classes.timeslotBox}>
+              <h1 className={classes.h1} style={{ textAlign: "left" }}>
+                What time is good for you?
+              </h1>
+              <p style={{ textAlign: "left", color: "#4E70FF" }}>
+                UTC - 07:00 Pacific Time
+              </p>
+              <div className={classes.timeslotButtonBox}>
+                <button className={classes.timeslotButton}>12:30 PM</button>
+                <button className={classes.timeslotButton}>01:00 PM</button>
+                <button className={classes.timeslotButton}>01:30 PM</button>
+                <button className={classes.timeslotButton}>02:00 PM</button>
+                <button className={classes.timeslotButton}>02:30 PM</button>
+              </div>
+            </th>
+          </tr>
+        </table>
         <form></form>
-        <div className={classes.calendarTimeWrapper}>
-          <div className={classes.calendarBox}>
-            <h1 style={{ textAlign: "left", color: "white" }}>
-              Find a time to meet with us
-            </h1>
-            <Calendar
-              onClickDay={dateChange}
-              value={date}
-              backgroundColor="#F6A833"
-              calendarType="US"
-            />
-          </div>
-          <div className={classes.timeslotBox}>
-            <div className={classes.inputRow}>
-              <label className={classes.h1}>Meeting Duriation</label>
-              <input
-                className={classes.duritionInput}
-                placeholder="30 mins"
-              ></input>
-            </div>
-
-            <label className={classes.h1}>what time is good for you?</label>
-            <div className={classes.timeslotButtonBox}>
-              <button className={classes.timeslotButton}>12:30 PM</button>
-              <button className={classes.timeslotButton}>01:00 PM</button>
-              <button className={classes.timeslotButton}>01:30 PM</button>
-              <button className={classes.timeslotButton}>02:00 PM</button>
-              <button className={classes.timeslotButton}>02:30 PM</button>
-            </div>
-          </div>
-        </div>
+        <div></div>
         <div>
           <h1>Confirm Meeting</h1>
           <h1 className={classes.date}>

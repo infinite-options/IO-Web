@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+@font-face {
+  font-family: "AvenirBook";
+  src: local("AvenirBook"),
+    url(./assets/font/AvenirLTStd-Book.otf) format("truetype");
+}
+@font-face {
+  font-family: "AvenirHeavy";
+  src: local("AvenirHeavy"),
+    url(./assets/font/AvenirLTStd-Heavy.otf) format("truetype");
+}
+@font-face {
+  font-family: "AvenirMedium";
+  src: local("AvenirMedium"),
+    url(./assets/font/AvenirLTStd-Medium.otf) format("truetype");
+}
 
 body {
   margin: 0;
