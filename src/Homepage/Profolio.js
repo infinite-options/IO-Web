@@ -101,185 +101,152 @@ const Profolio = () => {
     <section id="profolio" className={classes.contaier}>
       <h1 className={classes.h1}>Profolio</h1>
       <div>
-        <table className={classes.smallProjectTable}>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.title}>Meals for me</p>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.title}>Manifest</p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.description}>
-                A meal subscription platform for busy professionals to eat from
-                their favorite local restaurants at affordable prices.
-              </p>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.description}>
-                A productivity app for people with memory issues - in
-                collaboration with Tulane University.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
+        <div className={classes.smallProjectBox}>
+          <h3 className={classes.h3}>Meals for me</h3>
+          <p className={classes.description}>
+            A meal subscription platform for busy professionals to eat from
+            their favorite local restaurants at affordable prices.
+          </p>
+          <Link to="MealsForMe">
+            <img
+              src={MealsForMe}
+              className={classes.smallImg}
+              alt="MealsForMe"
+            />
+          </Link>
+          <div className={classes.logoContainer}>
+            <div className={classes.inline1}>
+              <img
+                className={classes.smallIcon}
+                src={MobileAppsLight}
+                alt="MobileAppsLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={MarketingNBrandingLight}
+                alt="MarketingNBrandingLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={BusinessStrategyLight}
+                alt="BusinessStrategyLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={HardwareEngineeringLight}
+                alt="HardwareEngineeringLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={WebSoftwareDevLight}
+                alt="WebSoftwareDevLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={UIUXDesignLight}
+                alt="UIUXDesignLight"
+              />
+            </div>
+            <p className={classes.inline2}>7 months Engagement</p>
+          </div>
+        </div>
+        <div className={classes.smallProjectBox}>
+          <h3 className={classes.h3}>Manifest</h3>
+          <p className={classes.description}>
+            A productivity app for people with memory issues - in collaboration
+            with Tulane University.
+          </p>
+          <img src={Manifest} className={classes.smallImg} alt="Manifest" />
+          <div className={classes.logoContainer}>
+            <div className={classes.inline1}>
+              <img
+                className={classes.smallIcon}
+                src={MobileAppsLight}
+                alt="MobileAppsLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={MarketingNBrandingLight}
+                alt="MarketingNBrandingLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={BusinessStrategyLight}
+                alt="BusinessStrategyLight"
+              />
               <img
                 src={MealsForMe}
                 className={classes.smallImg}
                 alt="MealsForMe"
               />
-            </td>
-            <td className={classes.smallProjectCell}>
-              <img src={Manifest} className={classes.smallImg} alt="Manifest" />
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <p className={classes.inline2}>7 months Engagement</p>
-              </div>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <p className={classes.inline2}>2 Years Engagement</p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.largeProjectCell}>
-              <p className={classes.title}>Serving Fresh</p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.description}>
-                A meal subscription platform for busy professionals to eat from
-                their favorite local restaurants at affordable prices.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <Link to="ServingFresh">
-                <img
-                  src={ServingFresh}
-                  className={classes.bigImg}
-                  alt="ServingFresh"
-                />
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.largeProjectBox}>
-                <div className={classes.logoContainer}>
-                  <div className={classes.inline1}>
-                    <img
-                      className={classes.smallIcon}
-                      src={MobileAppsLight}
-                      alt="MobileAppsLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={MarketingNBrandingLight}
-                      alt="MarketingNBrandingLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={BusinessStrategyLight}
-                      alt="BusinessStrategyLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={HardwareEngineeringLight}
-                      alt="HardwareEngineeringLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={WebSoftwareDevLight}
-                      alt="WebSoftwareDevLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={UIUXDesignLight}
-                      alt="UIUXDesignLight"
-                    />
-                  </div>
-                  <p className={classes.inline2} style={{ textAlign: "right" }}>
-                    1 Year Engagement
-                  </p>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
+              <img
+                className={classes.smallIcon}
+                src={WebSoftwareDevLight}
+                alt="WebSoftwareDevLight"
+              />
+              <img
+                className={classes.smallIcon}
+                src={UIUXDesignLight}
+                alt="UIUXDesignLight"
+              />
+            </div>
+            <p className={classes.inline2}>2 Years Engagement</p>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{ display: "inline-block" }}
+        className={classes.largeProjectBox}
+      >
+        <h3 className={classes.h3}>Serving Fresh</h3>
+        <p className={classes.description}>
+          A meal subscription platform for busy professionals to eat from their
+          favorite local restaurants at affordable prices.
+        </p>
+        <Link to="ServingFresh">
+          <img
+            src={ServingFresh}
+            className={classes.bigImg}
+            alt="ServingFresh"
+          />
+        </Link>
+        <div className={classes.logoContainer}>
+          <div className={classes.inline1}>
+            <img
+              className={classes.smallIcon}
+              src={MobileAppsLight}
+              alt="MobileAppsLight"
+            />
+            <img
+              className={classes.smallIcon}
+              src={MarketingNBrandingLight}
+              alt="MarketingNBrandingLight"
+            />
+            <img
+              className={classes.smallIcon}
+              src={BusinessStrategyLight}
+              alt="BusinessStrategyLight"
+            />
+            <img
+              className={classes.smallIcon}
+              src={HardwareEngineeringLight}
+              alt="HardwareEngineeringLight"
+            />
+            <img
+              className={classes.smallIcon}
+              src={WebSoftwareDevLight}
+              alt="WebSoftwareDevLight"
+            />
+            <img
+              className={classes.smallIcon}
+              src={UIUXDesignLight}
+              alt="UIUXDesignLight"
+            />
+          </div>
+          <p className={classes.inline2} style={{ textAlign: "right" }}>
+            1 Year Engagement
+          </p>
+        </div>
       </div>
 
       <div>
