@@ -15,7 +15,7 @@ import Footer from "./Homepage/Footer.jsx";
 import ServingFresh from "./ServingFresh/ServingFresh";
 import Careers from "./Homepage/Careers";
 import Appointment from "./Appointment/scheduleMeeting.js";
-
+import MealsForMe from "./MealsForMe/MealsForMe";
 function App() {
   return (
     <div className="App">
@@ -36,6 +36,7 @@ function App() {
             <Route path="/portfolio1" component={Profolio1} />
             <Route path="/Careers" component={Careers} />
             <Route path="/ServingFresh" component={ServingFresh} />
+            <Route path="/MealsForMe" component={MealsForMe} />
             <Route path="/appointment" component={Appointment} />
           </Switch>
           <Footer></Footer>
