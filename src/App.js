@@ -8,6 +8,7 @@ import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Profolio from "./Homepage/Profolio.js";
 import Profolio1 from "./Homepage/Profolio1.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
+import How_we_can_help_Portfolio from "./Homepage/How_we_can_help_Portfolio.js";
 import Chat from "./Homepage/Chat";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./Homepage/Footer.jsx";
@@ -26,6 +27,10 @@ function App() {
             <Route exact path="/WhatWeDo" component={WhatWeDo} />
             <Route path="/WhatWeDo1" component={WhatWeDo1} />
             <Route path="/how_we_can_help" component={How_we_can_help} />
+            <Route
+              path="/How_we_can_help_portfolio"
+              component={How_we_can_help_Portfolio}
+            />
             <Route path="/contact" component={Chat} />
             <Route path="/portfolio" component={Profolio} />
             <Route path="/portfolio1" component={Profolio1} />
@@ -36,8 +41,6 @@ function App() {
           <Footer></Footer>
         </div>
       </BrowserRouter>
-      <BrowserRouter></BrowserRouter>
-
       {/* <ServingFresh></ServingFresh> */}
     </div>
   );
@@ -48,7 +51,7 @@ export function Main() {
     <main style={{ textAlign: "center" }}>
       <WhatWeDo1 />
       <ScheduleAMeeting />
-      <Profolio />
+      <Profolio1 />
       <Chat />
     </main>
   );

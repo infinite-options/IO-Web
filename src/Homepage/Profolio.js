@@ -38,11 +38,7 @@ const useStyles = makeStyles((theme) => ({
     // width: "80%",
     padding: "20px",
   },
-  largeProjectTable: {
-    display: "inline-block",
-    width: "90%",
-  },
-  smallProjectTable: {
+  ProjectTable: {
     display: "inline-block",
     width: "90%",
   },
@@ -58,10 +54,10 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
   },
   inline1: {
-    display: "inline-block",
+    display: "inline",
   },
   inline2: {
-    display: "inline-block",
+    display: "inline",
     textAlign: "Right",
     fontFamily: "AvenirMedium",
   },
@@ -92,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
     fontSize: "20px",
     borderRadius: "50px",
+    margin: "5% auto",
   },
 }));
 
@@ -101,7 +98,7 @@ const Profolio = () => {
     <section id="profolio" className={classes.contaier}>
       <h1 className={classes.h1}>Profolio</h1>
       <div>
-        <table className={classes.smallProjectTable}>
+        <table className={classes.ProjectTable}>
           <tr>
             <td className={classes.smallProjectCell}>
               <p className={classes.title}>Meals for me</p>
@@ -212,13 +209,15 @@ const Profolio = () => {
               </div>
             </td>
           </tr>
+        </table>
+        <table>
           <tr>
-            <td className={classes.largeProjectCell}>
+            <td>
               <p className={classes.title}>Serving Fresh</p>
             </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
+            <td>
               <p className={classes.description}>
                 A meal subscription platform for busy professionals to eat from
                 their favorite local restaurants at affordable prices.
@@ -226,7 +225,7 @@ const Profolio = () => {
             </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
+            <td>
               <Link to="ServingFresh">
                 <img
                   src={ServingFresh}
@@ -237,7 +236,7 @@ const Profolio = () => {
             </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
+            <td>
               <div className={classes.largeProjectBox}>
                 <div className={classes.logoContainer}>
                   <div className={classes.inline1}>
@@ -280,10 +279,7 @@ const Profolio = () => {
             </td>
           </tr>
         </table>
-      </div>
-
-      <div>
-        <table className={classes.smallProjectTable}>
+        <table className={classes.ProjectTable}>
           <tr>
             <td className={classes.smallProjectCell}>
               <p className={classes.title}>Just Delivered</p>
@@ -392,7 +388,9 @@ const Profolio = () => {
                     alt="UIUXDesignLight"
                   />
                 </div>
-                <p className={classes.inline2}>2 months Engagement</p>
+                <div className={classes.inline2}>
+                  <p>2 months Engagement</p>
+                </div>
               </div>
             </td>
           </tr>
