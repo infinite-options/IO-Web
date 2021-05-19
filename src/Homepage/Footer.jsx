@@ -3,8 +3,6 @@ import li from "../image/li.svg";
 import fb from "../image/fb.svg";
 import twitter from "../image/twitter.svg";
 import { Router, Switch, Routes, Route, Link, NavLink } from "react-router-dom";
-// import Careers from './Careers';
-// import Profolio from "./Profolio";
 
 const Footer = () => {
   return (

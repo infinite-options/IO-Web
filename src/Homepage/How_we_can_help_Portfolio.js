@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 const Portfolio = () => {
   const classes = useStyles();
   return (
-    <section id="profolio" className={classes.contaier}>
+    <section id="portfolio" className={classes.contaier}>
       <h1 className={classes.h1}>Product Design</h1>
       <table className={classes.ProjectTable}>
         <tr>

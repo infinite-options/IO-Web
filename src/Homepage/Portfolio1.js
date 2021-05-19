@@ -82,10 +82,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Profolio = () => {
+const Portfolio = () => {
   const classes = useStyles();
   return (
-    <section id="profolio" className={classes.contaier}>
+    <section id="portfolio" className={classes.contaier}>
       <h1 className={classes.h1}>Products we’ve built</h1>
       <div>
         <table className={classes.ProjectTable}>
@@ -210,4 +210,4 @@ const Profolio = () => {
   );
 };
 
-export default Profolio;
+export default Portfolio;
