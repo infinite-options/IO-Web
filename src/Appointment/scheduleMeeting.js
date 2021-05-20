@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import logo from "../image/logo.png";
-import calendarStyle from "./calendar.css";
-
+import "./calendar.css";
 import axios from "axios"; //npm install axios
 import Calendar from "react-calendar"; // npm install react-calendar
-// import { Button, Row, Col } from "reactstrap";
 import { makeStyles } from "@material-ui/core/styles";
+import SimpleForm from "./simpleForm";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -127,13 +126,21 @@ const useStyles = makeStyles((theme) => ({
   },
 
   timeslotButtonBox: {
-    width: "50%",
+    width: "100%",
+    height: "500px",
     margin: "0 auto",
+    overflowY: "scroll",
+    "&::-webkit-scrollbar-track": {
+      border: "1px solid #000",
+      padding: "2px 0",
+      backgroundColor: "#404040",
+    },
   },
 }));
 
 const Appointment = () => {
   const treatment_uid = "330-000006"; // props.treatmentID;
+
   //For Axios.Get
   const [date, setDate] = useState(new Date());
   const [dateString, setDateString] = useState(null);
@@ -144,7 +151,38 @@ const Appointment = () => {
   const [timeSlots, setTimeSlots] = useState([]);
 
   //For Axios.Post
+  const [purchaseDate, setPurchaseDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
+  const [fName, setFName] = useState("");
+  // const [lName, setLName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+  const [notes, setNotes] = useState("");
+  const [url, setUrl] = useState("");
+
+  const handleFirstNameChange = (newFName) => {
+    setFName(newFName);
+  };
+
+  // const handleLastNameChange = (newLName) => {
+  //   setLName(newLName);
+  // };
+
+  const handleUrlChange = (newUrl) => {
+    setUrl(newUrl);
+  };
+
+  const handleEmailChange = (newEmail) => {
+    setEmail(newEmail);
+  };
+
+  const handlePhoneNumChange = (newPhoneNum) => {
+    setPhoneNum(newPhoneNum);
+  };
+
+  const handleNotesChange = (newNotes) => {
+    setNotes(newNotes);
+  };
 
   const dateChange = (date) => {
     setDate(date);
@@ -259,6 +297,34 @@ const Appointment = () => {
   }
 
   const classes = useStyles();
+
+  function bookAppt() {
+    console.log(fName);
+    //console.log(lName);
+    console.log(email);
+    console.log(phoneNum);
+    console.log(url);
+
+    const postURL =
+      "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+    axios
+      .post(postURL, {
+        first_name: fName,
+        //last_name: lName,
+        email: email,
+        phone_no: phoneNum,
+        appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
+        notes: notes,
+        appt_date: dateFormat1(date),
+        appt_time: selectedTime,
+        purchase_price: "$100", //TREATMENT INFO #2
+        purchase_date: dateFormat1(purchaseDate),
+      })
+      .then((res) => console.log(res));
+
+    //We oughta figure out how to get those pieces of treatment info into our post call
+  }
+
   return (
     <section id="appointment">
       <div className={classes.contaier}>
@@ -294,11 +360,6 @@ const Appointment = () => {
               <div className={classes.timeslotButtonBox}>
                 {renderAvailableApptsVertical()}
                 {/* {renderAvailableAppts()} */}
-                {/* <button className={classes.timeslotButton}>12:30 PM</button>
-                <button className={classes.timeslotButton}>01:00 PM</button>
-                <button className={classes.timeslotButton}>01:30 PM</button>
-                <button className={classes.timeslotButton}>02:00 PM</button>
-                <button className={classes.timeslotButton}>02:30 PM</button> */}
               </div>
             </th>
           </tr>
@@ -307,10 +368,23 @@ const Appointment = () => {
           <h1>Confirm Meeting</h1>
           <h1 className={classes.date}>
             {dateString1}
-            <span style={{ Color: "#52330D" }}>at</span> 1:30 pm
+            <span style={{ Color: "#52330D" }}>at</span> {selectedTime}
           </h1>
+          <div>
+            <SimpleForm
+              field="First Name"
+              onHandleChange={handleFirstNameChange}
+            />
+            <SimpleForm field="Url" onHandleChange={handleUrlChange} />
+            <SimpleForm field="Email Name" onHandleChange={handleEmailChange} />
+            <SimpleForm
+              field="Phone Number"
+              onHandleChange={handlePhoneNumChange}
+            />
+            <SimpleForm field="Notes" onHandleChange={handleNotesChange} />
+          </div>
           <form>
-            <div className={classes.inputRow}>
+            <div>
               <input
                 className={classes.input}
                 type="text"
@@ -331,6 +405,7 @@ const Appointment = () => {
                 name="url"
                 placeholder="Email"
               ></input>
+
               <input
                 className={classes.input}
                 type="text"
@@ -345,7 +420,9 @@ const Appointment = () => {
               ></textarea>
             </div>
             <br />
-            <button className={classes.button}>Confirm</button>
+            <button className={classes.button} onClick={bookAppt}>
+              Confirm
+            </button>
           </form>
         </div>
       </div>

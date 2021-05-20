@@ -1,5 +1,22 @@
 import React, { Component } from "react";
-
+import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles((theme) => ({
+  input: {
+    width: "50%",
+    padding: "20px",
+    boxSizing: "border-box",
+    borderRadius: "20px",
+    // resize: "none",
+    fontColor: "#52330D",
+    fontSize: "20px",
+    // fontFamily: "AvenirHeavy",
+    // fontWight: "700",
+    display: "inline-block",
+    margin: "5px",
+    borderColor: "#52330D",
+    borderWidth: "2px",
+  },
+}));
 class Form extends Component {
   constructor(props) {
     super(props);

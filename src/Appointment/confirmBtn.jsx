@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
-class confirmBtn extends Component {
+class BookNowBTN extends Component {
   constructor(props) {
     super(props);
     this.state = { tID: props.apptID };
@@ -11,10 +11,10 @@ class confirmBtn extends Component {
   render() {
     return (
       <Button>
-        <Link to={"appointment"}>Book Now</Link>
+        <Link to={`/${this.state.tID}/appt`}>Book Now</Link>
       </Button>
     );
   }
 }
 
-export default confirmBtn;
+export default BookNowBTN;
