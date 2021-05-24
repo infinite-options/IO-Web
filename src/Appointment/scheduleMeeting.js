@@ -145,7 +145,7 @@ const Appointment = () => {
   const [date, setDate] = useState(new Date());
   const [dateString, setDateString] = useState(null);
   const [dateString1, setDateString1] = useState(null);
-  const [dateHasBeenChanged, setDateHasBeenChanged] = useState(true);
+  const [dateHasBeenChanged, setDateHasBeenChanged] = useState(false);
 
   const [apiDateString, setApiDateString] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
@@ -154,7 +154,6 @@ const Appointment = () => {
   const [purchaseDate, setPurchaseDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
   const [fName, setFName] = useState("");
-  // const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [notes, setNotes] = useState("");
@@ -163,10 +162,6 @@ const Appointment = () => {
   const handleFirstNameChange = (newFName) => {
     setFName(newFName);
   };
-
-  // const handleLastNameChange = (newLName) => {
-  //   setLName(newLName);
-  // };
 
   const handleUrlChange = (newUrl) => {
     setUrl(newUrl);
@@ -263,9 +258,11 @@ const Appointment = () => {
         )
         .then((res) => {
           console.log(res.data.result.available_timeslots);
+          console.log("get time slots");
           setTimeSlots(res.data.result.available_timeslots);
         });
     }
+
     setDateHasBeenChanged(false);
   });
 
@@ -299,18 +296,14 @@ const Appointment = () => {
   const classes = useStyles();
 
   function bookAppt() {
-    console.log(fName);
-    //console.log(lName);
-    console.log(email);
-    console.log(phoneNum);
-    console.log(url);
+    console.log(fName, url, email, phoneNum);
 
     const postURL =
       "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
     axios
       .post(postURL, {
         first_name: fName,
-        //last_name: lName,
+        last_name: "", //lName,
         email: email,
         phone_no: phoneNum,
         appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
@@ -321,8 +314,18 @@ const Appointment = () => {
         purchase_date: dateFormat1(purchaseDate),
       })
       .then((res) => console.log(res));
-
     //We oughta figure out how to get those pieces of treatment info into our post call
+    return (
+      <div>
+        <h1 className={classes.h1}>
+          Thank you for your message. <br />
+          Your meeting has been confirmed with us for {dateString1} at{" "}
+          {selectedTime}
+          . <br />
+          Please check your email for the meeting link.
+        </h1>
+      </div>
+    );
   }
 
   return (
@@ -359,72 +362,35 @@ const Appointment = () => {
               </p>
               <div className={classes.timeslotButtonBox}>
                 {renderAvailableApptsVertical()}
-                {/* {renderAvailableAppts()} */}
               </div>
             </th>
           </tr>
         </table>
-        <div>
-          <h1>Confirm Meeting</h1>
-          <h1 className={classes.date}>
-            {dateString1}
-            <span style={{ Color: "#52330D" }}>at</span> {selectedTime}
-          </h1>
-          <div>
-            <SimpleForm
-              field="First Name"
-              onHandleChange={handleFirstNameChange}
-            />
-            <SimpleForm field="Url" onHandleChange={handleUrlChange} />
-            <SimpleForm field="Email Name" onHandleChange={handleEmailChange} />
-            <SimpleForm
-              field="Phone Number"
-              onHandleChange={handlePhoneNumChange}
-            />
-            <SimpleForm field="Notes" onHandleChange={handleNotesChange} />
-          </div>
-          <form>
-            <div>
-              <input
-                className={classes.input}
-                type="text"
-                name="name"
-                placeholder="Name"
-              ></input>
-              <input
-                className={classes.input}
-                type="url"
-                name="websiteURL"
-                placeholder="Website URL"
-              ></input>
-            </div>
-            <div className={classes.inputRow}>
-              <input
-                className={classes.input}
-                type="email"
-                name="url"
-                placeholder="Email"
-              ></input>
+      </div>
 
-              <input
-                className={classes.input}
-                type="text"
-                name="text"
-                placeholder="Phone"
-              ></input>
-            </div>
-            <div>
-              <textarea
-                className={classes.textarea}
-                placeholder="Anything else you want to your note to us?"
-              ></textarea>
-            </div>
-            <br />
-            <button className={classes.button} onClick={bookAppt}>
-              Confirm
-            </button>
-          </form>
+      <div>
+        <h1>Confirm Meeting</h1>
+        <h1 className={classes.date}>
+          {dateString1}
+          <span style={{ Color: "#52330D" }}>at</span> {selectedTime}
+        </h1>
+        <div>
+          <SimpleForm field="Name" onHandleChange={handleFirstNameChange} />
+          <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
         </div>
+        <div>
+          <SimpleForm field="Email" onHandleChange={handleEmailChange} />
+          <SimpleForm
+            field="Phone Number"
+            onHandleChange={handlePhoneNumChange}
+          />
+        </div>
+        <div>
+          <SimpleForm field="Notes" onHandleChange={handleNotesChange} />
+        </div>
+        <button className={classes.button} onClick={bookAppt}>
+          Confirm
+        </button>
       </div>
     </section>
   );
