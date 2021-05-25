@@ -1,21 +1,18 @@
-import logo from "../image/logo.png";
 import MealsForMe from "../image/Meals_for_me.png";
 import Manifest from "../image/Manifest.png";
 import ServingFresh from "../image/Serving_Fresh.png";
-import JustDelivered from "../image/JustDelivered.png";
-import NityaAyurveda from "../image/NityaAyurvedaLogo.png";
 
 import ServingFreshMobile from "../image/ServingFreshMobile.png";
 import ServingFreshWhite from "../image/ServingFreshWhite@2x.png";
 import JustDelivered1 from "../image/JustDelivered1.png";
 import M4MeMockup1 from "../image/M4MeMockup1.png";
 import MealsForMe1 from "../image/MealsForMe1.png";
-
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import { makeStyles, withTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
-    fontSize: "300%",
+    fontSize: "54px",
     fontFamily: "AvenirHeavy",
     color: "#F6A833",
     borderTop: "3px solid #F6A833",
@@ -23,8 +20,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     padding: "20px",
   },
+  title0: {
+    fontSize: "54px",
+    fontFamily: "AvenirHeavy",
+    color: "#52330D",
+    margin: "0 auto",
+  },
   title: {
-    fontSize: "200%",
+    fontSize: "42px",
     textAlign: "left",
     fontFamily: "AvenirHeavy",
     color: "#52330D",
@@ -33,11 +36,12 @@ const useStyles = makeStyles((theme) => ({
   description: {
     textAlign: "left",
     fontFamily: "AvenirMedium",
-    fontSize: "150%",
+    fontSize: "24px",
   },
   contaier: {
-    margin: "auto",
+    margin: "0 auto",
     width: "80%",
+    marginBottom: "10%",
   },
   ProjectTable: {
     display: "block",
@@ -45,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
   },
   ProjectCell: {
     width: "500px",
-    paddingLeft: "15px",
-    paddingRight: "15px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
     margin: "0, auto",
   },
   inline: {
@@ -63,15 +67,22 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <section id="portfolio" className={classes.contaier}>
+      <h1 className={classes.title0}>
+        Things we can help with & some examples
+      </h1>
       <h1 className={classes.h1}>Product Design</h1>
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <p className={classes.title}>Meals for me</p>
+            <Link to="MealsForMe">
+              <p className={classes.title}>Meals for me</p>
+            </Link>
           </td>
 
           <td className={classes.ProjectCell}>
-            <p className={classes.title}>Serving Fresh</p>
+            <Link to="ServingFresh">
+              <p className={classes.title}>Serving Fresh</p>
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
             <p className={classes.title}>Manifest</p>
@@ -125,11 +136,15 @@ const Portfolio = () => {
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <p className={classes.title}>Meals for me</p>
+            <Link to="MealsForMe">
+              <p className={classes.title}>Meals for me</p>
+            </Link>
           </td>
 
           <td className={classes.ProjectCell}>
-            <p className={classes.title}>Serving Fresh</p>
+            <Link to="ServingFresh">
+              <p className={classes.title}>Serving Fresh</p>
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
             <p className={classes.title}>Manifest</p>
@@ -179,19 +194,23 @@ const Portfolio = () => {
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <img
-              src={MealsForMe}
-              className={classes.smallImg}
-              alt="MealsForMe"
-            />
+            <Link to="MealsForMe">
+              <img
+                src={MealsForMe}
+                className={classes.smallImg}
+                alt="MealsForMe"
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <img
-              src={ServingFresh}
-              className={classes.smallImg}
-              alt="ServingFresh"
-              style={{ opacity: 0.5 }}
-            />
+            <Link to="ServingFresh">
+              <img
+                src={ServingFresh}
+                className={classes.smallImg}
+                alt="ServingFresh"
+                style={{ opacity: 0.5 }}
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}></td>
         </tr>

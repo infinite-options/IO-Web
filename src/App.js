@@ -1,5 +1,3 @@
-import logo from "./image/logo.png";
-import flow from "./image/flow.png";
 import "./App.css";
 import Navbar from "./Navbar/Navbar.js";
 import WhatWeDo from "./Homepage/WhatWeDo.js";
@@ -18,8 +16,8 @@ import Appointment from "./Appointment/scheduleMeeting.js";
 import MealsForMe from "./MealsForMe/MealsForMe";
 function App() {
   return (
-    <div className="App" style={{height:'auto'}}>
-      <BrowserRouter >
+    <div className="App" style={{ height: "auto" }}>
+      <BrowserRouter>
         <div className="App">
           <Navbar />
           <Switch>
