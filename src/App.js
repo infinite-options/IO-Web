@@ -18,8 +18,8 @@ import Appointment from "./Appointment/scheduleMeeting.js";
 import MealsForMe from "./MealsForMe/MealsForMe";
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div className="App" style={{height:'auto'}}>
+      <BrowserRouter >
         <div className="App">
           <Navbar />
           <Switch>

@@ -6,7 +6,8 @@ import How_We_Can_Help_Portfolio from "./How_we_can_help_Portfolio.js";
 
 const How_we_can_help = () => {
   return (
-    <>
+    < div style={{marginLeft:'10%',marginRight:'10%'}}>
+
       <p
         style={{
           fontSize: "400%",
@@ -29,6 +30,7 @@ const How_we_can_help = () => {
         <p
           style={{
             fontSize: "42px",
+            // fontSize: "180%",
             marginLeft: "25px",
             marginRight: "auto",
             marginTop: "100px",
@@ -55,7 +57,7 @@ const How_we_can_help = () => {
         <p style={{ color: "white", fontSize: "30px" }}>Let's Engage</p>
       </button>
       <How_We_Can_Help_Portfolio />
-    </>
+    </div>
   );
 };
 
