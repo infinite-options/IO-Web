@@ -1,4 +1,13 @@
+/*this placaeholder does nothing right now */
 #input::placeholder{
     font-size: 32px;
-    color:brown;
+    color:green;
 }
+/*changes the color of chat text box*/
+::placeholder {
+  color: red;
+  align-items: center;
+}
+
+
+

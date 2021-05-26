@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 const WhatWeDo = () => {
   const classes = useStyles();
   return (
-    <section id="whatWeDo">
+    /*<section id="whatWeDo">
       <div className={classes.contaier}>
         <h1 className={classes.h1}>
           We are entrepreneurs on a mission to build cool products{" "}
@@ -47,6 +47,17 @@ const WhatWeDo = () => {
         </Link>
       </div>
     </section>
+  */
+
+  // allowfullscreen="true" width="" height=""
+  //<source src="ENTER SOURCE OF MP4 HERE" type="video/mp4">
+    <div class = "wrapper">
+      <h1>Video</h1>
+        <div class ="videowrapper">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/PFmuCDHHpwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> </div>
+
   );
 };
 
