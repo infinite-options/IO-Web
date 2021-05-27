@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "AvenirHeavy",
   },
   selectTime: {
-    fontSize: "150%",
+    fontSize: "42px",
     color: "#52330D",
     fontFamily: "AvenirHeavy",
   },
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   date: {
-    fontSize: "200%",
+    fontSize: "64px",
     fontFamily: "AvenirHeavy",
   },
   calendarTimeTable: {
@@ -330,7 +330,11 @@ const Appointment = () => {
   return (
     <section id="appointment">
       <div className={classes.contaier}>
-        <img src={logo} alt="logo" />
+        <img
+          src={logo}
+          alt="logo"
+          style={{ width: "25%", marginBottom: "50px" }}
+        />
         <table className={classes.calendarTimeTable}>
           <tr>
             <th className={classes.calendarBox}>
