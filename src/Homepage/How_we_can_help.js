@@ -49,7 +49,7 @@ const How_we_can_help = () => {
             height: "100px",
             width: "500px",
             borderRadius: "50px",
-            marginBottom: "300px",
+            marginBottom: "200px",
             backgroundColor: "#F6A833",
             border: "1px solid #F6A833",
           }}

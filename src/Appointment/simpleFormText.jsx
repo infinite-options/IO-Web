@@ -14,7 +14,7 @@ class Form extends Component {
     const info = this.props.variable;
     return (
       <form onSubmit={this.handleSubmit} style={{ display: "inline" }}>
-        <input
+        <textarea
           name="variable"
           placeholder={this.props.field}
           value={info}
@@ -29,7 +29,7 @@ class Form extends Component {
             margin: "5px 5px",
             borderColor: "#52330D",
             borderWidth: "2px",
-            width: "40%",
+            width: "80.5%",
             fontFamily: "AvenirHeavy",
           }}
         />

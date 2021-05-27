@@ -5,12 +5,19 @@ import axios from "axios"; //npm install axios
 import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
+import SimpleFormText from "./simpleFormText";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
     fontSize: "150%",
     padding: "20px 0",
     color: "#52330D",
+    fontFamily: "AvenirHeavy",
+  },
+  selectTime: {
+    fontSize: "150%",
+    color: "#52330D",
+    fontFamily: "AvenirHeavy",
   },
   contaier: {
     margin: "auto",
@@ -36,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     // resize: "none",
     fontColor: "#52330D",
     fontSize: "20px",
-    // fontFamily: "AvenirHeavy",
+    fontFamily: "AvenirHeavy",
     // fontWight: "700",
     display: "inline-block",
     margin: "5px",
@@ -63,8 +70,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   date: {
-    color: "#F6A833",
     fontSize: "200%",
+    fontFamily: "AvenirHeavy",
   },
   calendarTimeTable: {
     width: "90%",
@@ -98,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     borderRadius: "50px",
     margin: "5px",
-    "&:hover": {
+    "&:focus": {
       background: "#52330D",
       fontColor: "#F6A833",
     },
@@ -146,7 +153,6 @@ const Appointment = () => {
   const [dateString, setDateString] = useState(null);
   const [dateString1, setDateString1] = useState(null);
   const [dateHasBeenChanged, setDateHasBeenChanged] = useState(false);
-
   const [apiDateString, setApiDateString] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
 
@@ -158,6 +164,9 @@ const Appointment = () => {
   const [phoneNum, setPhoneNum] = useState("");
   const [notes, setNotes] = useState("");
   const [url, setUrl] = useState("");
+  // for hide and show
+  const [timeSelected, setTimeSelected] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleFirstNameChange = (newFName) => {
     setFName(newFName);
@@ -182,6 +191,7 @@ const Appointment = () => {
   const dateChange = (date) => {
     setDate(date);
     dateStringChange(date);
+    setTimeSelected(true);
   };
 
   const doubleDigitMonth = (date) => {
@@ -258,11 +268,9 @@ const Appointment = () => {
         )
         .then((res) => {
           console.log(res.data.result.available_timeslots);
-          console.log("get time slots");
           setTimeSlots(res.data.result.available_timeslots);
         });
     }
-
     setDateHasBeenChanged(false);
   });
 
@@ -284,13 +292,14 @@ const Appointment = () => {
           onClick={() => selectApptTime(element)}
         >
           {element}
-        </button>{" "}
+        </button>
       </div>
     ));
   }
 
   function selectApptTime(element) {
     setSelectedTime(element);
+    setTimeSelected(true);
   }
 
   const classes = useStyles();
@@ -314,18 +323,8 @@ const Appointment = () => {
         purchase_date: dateFormat1(purchaseDate),
       })
       .then((res) => console.log(res));
+    setSubmitted(true);
     //We oughta figure out how to get those pieces of treatment info into our post call
-    return (
-      <div>
-        <h1 className={classes.h1}>
-          Thank you for your message. <br />
-          Your meeting has been confirmed with us for {dateString1} at{" "}
-          {selectedTime}
-          . <br />
-          Please check your email for the meeting link.
-        </h1>
-      </div>
-    );
   }
 
   return (
@@ -335,7 +334,13 @@ const Appointment = () => {
         <table className={classes.calendarTimeTable}>
           <tr>
             <th className={classes.calendarBox}>
-              <h1 style={{ textAlign: "left", color: "white" }}>
+              <h1
+                style={{
+                  textAlign: "left",
+                  color: "white",
+                  fontFamily: "AvenirHeavy",
+                }}
+              >
                 Find a time to meet with us
               </h1>
               <Calendar
@@ -357,7 +362,13 @@ const Appointment = () => {
               <h1 className={classes.h1} style={{ textAlign: "left" }}>
                 What time is good for you?
               </h1>
-              <p style={{ textAlign: "left", color: "#4E70FF" }}>
+              <p
+                style={{
+                  textAlign: "left",
+                  color: "#4E70FF",
+                  fontFamily: "AvenirHeavy",
+                }}
+              >
                 UTC - 07:00 Pacific Time
               </p>
               <div className={classes.timeslotButtonBox}>
@@ -368,29 +379,49 @@ const Appointment = () => {
         </table>
       </div>
 
-      <div>
-        <h1>Confirm Meeting</h1>
-        <h1 className={classes.date}>
-          {dateString1}
-          <span style={{ Color: "#52330D" }}>at</span> {selectedTime}
+      <div className={classes.contaier}>
+        <h1 className={classes.selectTime}>Confirm Meeting</h1>
+        <h1
+          className={classes.selectTime}
+          hidden={timeSelected ? "hidden" : ""}
+        >
+          Please select a time
         </h1>
-        <div>
-          <SimpleForm field="Name" onHandleChange={handleFirstNameChange} />
-          <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
+        <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
+          <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
+          <span style={{ color: "#F6A833" }}>{selectedTime}</span>
+        </h1>
+        <div hidden={submitted ? "hidden" : ""}>
+          <div>
+            <SimpleForm field="Name" onHandleChange={handleFirstNameChange} />
+            <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
+          </div>
+          <div>
+            <SimpleForm field="Email" onHandleChange={handleEmailChange} />
+            <SimpleForm
+              field="Phone Number"
+              onHandleChange={handlePhoneNumChange}
+            />
+          </div>
+          <div>
+            <SimpleFormText
+              field="Message"
+              onHandleChange={handleNotesChange}
+            />
+          </div>
+          <button className={classes.button} onClick={bookAppt}>
+            Confirm
+          </button>
         </div>
-        <div>
-          <SimpleForm field="Email" onHandleChange={handleEmailChange} />
-          <SimpleForm
-            field="Phone Number"
-            onHandleChange={handlePhoneNumChange}
-          />
+        <div hidden={!submitted ? "hidden" : ""}>
+          <h1 className={classes.h1}>
+            Thank you for your message. <br />
+            Your meeting has been confirmed with us for {dateString1} at{" "}
+            {selectedTime}
+            . <br />
+            Please check your email for the meeting link.
+          </h1>
         </div>
-        <div>
-          <SimpleForm field="Notes" onHandleChange={handleNotesChange} />
-        </div>
-        <button className={classes.button} onClick={bookAppt}>
-          Confirm
-        </button>
       </div>
     </section>
   );

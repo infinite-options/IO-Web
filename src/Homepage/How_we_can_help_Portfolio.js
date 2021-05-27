@@ -75,7 +75,7 @@ const Portfolio = () => {
         <tr>
           <td className={classes.ProjectCell}>
             <Link to="MealsForMe">
-              <p className={classes.title}>Meals for me</p>
+              <p className={classes.title}>Mealsfor.me</p>
             </Link>
           </td>
 
@@ -137,7 +137,7 @@ const Portfolio = () => {
         <tr>
           <td className={classes.ProjectCell}>
             <Link to="MealsForMe">
-              <p className={classes.title}>Meals for me</p>
+              <p className={classes.title}>Mealsfor.me</p>
             </Link>
           </td>
 

@@ -4,7 +4,6 @@ import classes from "./NavBar.module.css";
 import border from "../image/border.png";
 
 const style = {
-  // borderBottom: "6px solid #F6A833",
   marginBottom: "100px",
 };
 
@@ -37,7 +36,7 @@ const Navbar = () => {
               activeStyle={{
                 color: "white",
                 backgroundColor: "#f6a833",
-                borderRadius: "20px",
+                borderRadius: "100px",
                 border: "15px solid #f6a833",
               }}
               to="/"
@@ -56,7 +55,7 @@ const Navbar = () => {
               activeStyle={{
                 color: "white",
                 backgroundColor: "#f6a833",
-                borderRadius: "20px",
+                borderRadius: "100px",
                 border: "15px solid #f6a833",
               }}
               to="/how_we_can_help"
@@ -75,7 +74,7 @@ const Navbar = () => {
               activeStyle={{
                 color: "white",
                 backgroundColor: "#f6a833",
-                borderRadius: "20px",
+                borderRadius: "100px",
                 border: "15px solid #f6a833",
               }}
               to="/portfolio1"
@@ -94,7 +93,7 @@ const Navbar = () => {
               activeStyle={{
                 color: "white",
                 backgroundColor: "#f6a833",
-                borderRadius: "20px",
+                borderRadius: "100px",
                 border: "15px solid #f6a833",
               }}
               to="/contact"
@@ -110,33 +109,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-{
-  /* <ul style={{fontSize:'25px',listStyleType:'none',float:'left'}}>
-        <li style={{float:'right',margin:'20px',}}>
-        <NavLink to="/whatwedo">
-          <p style={{fontSize:'32px'}}>What We Do</p>
-          </NavLink>
-        </li>
-        <li style={{float:'right',margin:'20px'}}>
-        <NavLink to="/media">
-          <p style={{fontSize:'32px'}}>How_we_can_help</p>
-          </NavLink>
-        </li>
-
-        <li style={{float:'right',margin:'20px'}}>
-        
-          <p style={{fontSize:'32px'}}>Contact</p>
-          
-        </li >
-        <li style={{float:'right',margin:'20px'}}>
-        <NavLink to="/portfolio">
-          <p style={{fontSize:'32px'}}>Our Portfolio</p>
-          </NavLink>
-        </li>
-        <li style={{float:'right',margin:'20px'}}>
-        <NavLink to="/getinvolved">
-          <p style={{fontSize:'32px'}}>Get Involved</p>
-          </NavLink>
-        </li>
-      </ul> */
-}
