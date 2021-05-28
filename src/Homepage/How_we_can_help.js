@@ -1,4 +1,4 @@
-import how1 from "../assets/Group521.svg";
+import how1 from "../assets/Group534.svg";
 import How_We_Can_Help_Portfolio from "./How_we_can_help_Portfolio.js";
 
 const How_we_can_help = () => {

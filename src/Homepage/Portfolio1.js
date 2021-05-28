@@ -1,12 +1,16 @@
-import logo from "../image/logo.png";
 import MealsForMe from "../image/Meals_for_me.png";
 import Manifest from "../image/Manifest.png";
 import ServingFresh from "../image/Serving_Fresh.png";
 import JustDelivered from "../image/JustDelivered.png";
 import NityaAyurveda from "../image/NityaAyurvedaLogo.png";
-
-import { makeStyles, withTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import {
+  makeStyles,
+  createMuiTheme,
+  MuiThemeProvider,
+  withStyles,
+} from "@material-ui/core/styles";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -85,6 +89,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const defaultTheme = createMuiTheme();
+const theme = createMuiTheme({
+  overrides: {
+    MuiTooltip: {
+      tooltip: {
+        fontSize: "1.5em",
+        fontFamily: "AvenirMedium",
+        color: "white",
+        backgroundColor: "#F6A833",
+      },
+    },
+  },
+});
+
 const Portfolio = () => {
   const classes = useStyles();
   return (
@@ -94,15 +112,27 @@ const Portfolio = () => {
         <table className={classes.ProjectTable}>
           <tr>
             <td className={classes.ProjectCell}>
-              <Link to="MealsForMe" className={classes.unstyleLink}>
-                <p className={classes.title}>Mealsfor.me</p>
-              </Link>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link to="MealsForMe" className={classes.unstyleLink}>
+                      <p className={classes.title}>Mealsfor.me</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
             </td>
 
             <td className={classes.ProjectCell}>
-              <Link to="ServingFresh" className={classes.unstyleLink}>
-                <p className={classes.title}>Serving Fresh</p>
-              </Link>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link to="ServingFresh" className={classes.unstyleLink}>
+                      <p className={classes.title}>Serving Fresh</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
             </td>
             <td className={classes.ProjectCell}>
               <p className={classes.title}>Manifest</p>
