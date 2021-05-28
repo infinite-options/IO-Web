@@ -61,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
     height: "500px",
     margin: "0, auto",
   },
+  unstyleLink: {
+    textDecoration: "none",
+  },
 }));
 
 const Portfolio = () => {
@@ -74,13 +77,13 @@ const Portfolio = () => {
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <Link to="MealsForMe">
+            <Link to="MealsForMe" className={classes.unstyleLink}>
               <p className={classes.title}>Mealsfor.me</p>
             </Link>
           </td>
 
           <td className={classes.ProjectCell}>
-            <Link to="ServingFresh">
+            <Link to="ServingFresh" className={classes.unstyleLink}>
               <p className={classes.title}>Serving Fresh</p>
             </Link>
           </td>
@@ -109,18 +112,22 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <img
-              src={MealsForMe1}
-              className={classes.smallImg}
-              alt="MealsForMe1"
-            />
+            <Link to="MealsForMe">
+              <img
+                src={MealsForMe1}
+                className={classes.smallImg}
+                alt="MealsForMe1"
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <img
-              src={ServingFreshWhite}
-              className={classes.smallImg}
-              alt="ServingFreshWhite"
-            />
+            <Link to="ServingFresh">
+              <img
+                src={ServingFreshWhite}
+                className={classes.smallImg}
+                alt="ServingFreshWhite"
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
             <img
@@ -136,13 +143,13 @@ const Portfolio = () => {
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <Link to="MealsForMe">
+            <Link to="MealsForMe" className={classes.unstyleLink}>
               <p className={classes.title}>Mealsfor.me</p>
             </Link>
           </td>
 
           <td className={classes.ProjectCell}>
-            <Link to="ServingFresh">
+            <Link to="ServingFresh" className={classes.unstyleLink}>
               <p className={classes.title}>Serving Fresh</p>
             </Link>
           </td>
@@ -172,18 +179,22 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <img
-              src={M4MeMockup1}
-              className={classes.smallImg}
-              alt="M4MeMockup1"
-            />
+            <Link to="MealsForMe">
+              <img
+                src={M4MeMockup1}
+                className={classes.smallImg}
+                alt="M4MeMockup1"
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <img
-              src={ServingFreshMobile}
-              className={classes.smallImg}
-              alt="ServingFreshMobile"
-            />
+            <Link to="ServingFresh">
+              <img
+                src={ServingFreshMobile}
+                className={classes.smallImg}
+                alt="ServingFreshMobile"
+              />
+            </Link>
           </td>
           <td className={classes.ProjectCell}>
             <img src={Manifest} className={classes.smallImg} alt="Manifest" />

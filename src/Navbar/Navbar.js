@@ -3,19 +3,9 @@ import { NavLink } from "react-router-dom";
 import classes from "./NavBar.module.css";
 import border from "../image/border.png";
 
-const style = {
-  marginBottom: "100px",
-};
-
 const Navbar = () => {
   return (
-    <nav
-      style={{
-        marginBottom: "100px",
-        borderBottom: "1px ",
-        borderBottomColor: "black",
-      }}
-    >
+    <nav>
       <div style={{ width: "33%" }}>
         <img
           src={logo}
@@ -37,7 +27,7 @@ const Navbar = () => {
                 color: "white",
                 backgroundColor: "#f6a833",
                 borderRadius: "100px",
-                border: "15px solid #f6a833",
+                padding: "10px 20px 10px 20px",
               }}
               to="/"
             >
@@ -56,7 +46,7 @@ const Navbar = () => {
                 color: "white",
                 backgroundColor: "#f6a833",
                 borderRadius: "100px",
-                border: "15px solid #f6a833",
+                padding: "10px 20px 10px 20px",
               }}
               to="/how_we_can_help"
             >
@@ -75,7 +65,7 @@ const Navbar = () => {
                 color: "white",
                 backgroundColor: "#f6a833",
                 borderRadius: "100px",
-                border: "15px solid #f6a833",
+                padding: "10px 20px 10px 20px",
               }}
               to="/portfolio1"
             >
@@ -94,7 +84,7 @@ const Navbar = () => {
                 color: "white",
                 backgroundColor: "#f6a833",
                 borderRadius: "100px",
-                border: "15px solid #f6a833",
+                padding: "10px 20px 10px 20px",
               }}
               to="/contact"
             >

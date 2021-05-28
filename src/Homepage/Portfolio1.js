@@ -80,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "AvenirHeavy",
     margin: "50px auto",
   },
+  unstyleLink: {
+    textDecoration: "none",
+  },
 }));
 
 const Portfolio = () => {
@@ -91,11 +94,15 @@ const Portfolio = () => {
         <table className={classes.ProjectTable}>
           <tr>
             <td className={classes.ProjectCell}>
-              <p className={classes.title}>Meals for me</p>
+              <Link to="MealsForMe" className={classes.unstyleLink}>
+                <p className={classes.title}>Mealsfor.me</p>
+              </Link>
             </td>
 
             <td className={classes.ProjectCell}>
-              <p className={classes.title}>Serving Fresh</p>
+              <Link to="ServingFresh" className={classes.unstyleLink}>
+                <p className={classes.title}>Serving Fresh</p>
+              </Link>
             </td>
             <td className={classes.ProjectCell}>
               <p className={classes.title}>Manifest</p>

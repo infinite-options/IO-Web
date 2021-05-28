@@ -25,45 +25,33 @@ const useStyles = makeStyles((theme) => ({
     padding: "50px",
   },
   button: {
-    backgroundColor: "#52330D",
+    backgroundColor: "#F6A833",
     border: "none",
     color: "white",
-    padding: "15px 30px",
+    padding: "15px 100px",
     textAlign: "center",
     textDecoration: "none",
-    display: "inline-block",
+    display: "block",
     fontSize: "20px",
     borderRadius: "50px",
+    margin: "0 auto",
+    "&:hover": {
+      background: "#52330D",
+      fontColor: "#F6A833",
+    },
   },
-  input: {
-    width: "50%",
-    padding: "20px",
-    boxSizing: "border-box",
-    borderRadius: "20px",
-    // resize: "none",
-    fontColor: "#52330D",
+  buttonDisable: {
+    backgroundColor: "#F6A833",
+    border: "none",
+    color: "white",
+    padding: "15px 100px",
+    textAlign: "center",
+    textDecoration: "none",
+    display: "block",
     fontSize: "20px",
-    fontFamily: "AvenirHeavy",
-    // fontWight: "700",
-    display: "inline-block",
-    margin: "5px",
-    borderColor: "#52330D",
-    borderWidth: "2px",
-  },
-  textarea: {
-    // backgroundColor: "White",
-    width: "100%",
-    // border: "none",
-    // color: "white",
-    padding: "20px",
-    height: "150px",
-    boxSizing: "border-box",
-    borderRadius: "20px",
-    // resize: "none",
-    fontColor: "#52330D",
-    fontSize: "20px",
-    borderColor: "#52330D",
-    borderWidth: "2px",
+    borderRadius: "50px",
+    margin: "0 auto",
+    opacity: "50%",
   },
   inputRow: {
     display: "flex",
@@ -76,21 +64,16 @@ const useStyles = makeStyles((theme) => ({
   calendarTimeTable: {
     width: "90%",
     margin: "0 auto",
-    // height: "auto",
     border: "2px solid #F6A833 ",
-    // display: "block",
   },
   calendarBox: {
-    // display: "inline-block",
     width: "40%",
-    // height: "auto",
     padding: "50px",
     backgroundColor: "#F6A833",
   },
   timeslotBox: {
     width: "60%",
     padding: "20px",
-    // margin: "0 auto",
   },
   center: {
     margin: "0 auto",
@@ -116,16 +99,13 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     height: "75px",
     border: "none",
-    // color: "white",
     padding: "20px",
     boxSizing: "border-box",
     borderRadius: "50px",
-    // resize: "none",
     fontColor: "#52330D",
     fontSize: "25px",
     display: "inline-block",
     margin: "5px",
-    // alignContent: "left",
     "&::placeholder": {
       textOverflow: "ellipsis !important",
       color: "#52330D",
@@ -137,10 +117,18 @@ const useStyles = makeStyles((theme) => ({
     height: "500px",
     margin: "0 auto",
     overflowY: "scroll",
-    "&::-webkit-scrollbar-track": {
+    "&::-webkit-scrollbar": {
+      width: "10px",
+      // border: "1px solid black",
+      borderRadius: "20px",
+      padding: "1px 0",
+      backgroundColor: "white",
+    },
+    "&::-webkit-scrollbar-thumb": {
       border: "1px solid #000",
-      padding: "2px 0",
-      backgroundColor: "#404040",
+      borderRadius: "20px",
+      padding: "1px 0",
+      backgroundColor: "#52330D",
     },
   },
 }));
@@ -386,10 +374,10 @@ const Appointment = () => {
       <div className={classes.contaier}>
         <h1 className={classes.selectTime}>Confirm Meeting</h1>
         <h1
-          className={classes.selectTime}
+          style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}
           hidden={timeSelected ? "hidden" : ""}
         >
-          Please select a time
+          Please pick a day and time to meet
         </h1>
         <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
           <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
@@ -397,11 +385,17 @@ const Appointment = () => {
         </h1>
         <div hidden={submitted ? "hidden" : ""}>
           <div>
-            <SimpleForm field="Name" onHandleChange={handleFirstNameChange} />
-            <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
+            <SimpleForm
+              field="Full Name*"
+              onHandleChange={handleFirstNameChange}
+            />
+            <SimpleForm field="Website" onHandleChange={handleUrlChange} />
           </div>
           <div>
-            <SimpleForm field="Email" onHandleChange={handleEmailChange} />
+            <SimpleForm
+              field="Email Address*"
+              onHandleChange={handleEmailChange}
+            />
             <SimpleForm
               field="Phone Number"
               onHandleChange={handlePhoneNumChange}
@@ -413,9 +407,14 @@ const Appointment = () => {
               onHandleChange={handleNotesChange}
             />
           </div>
-          <button className={classes.button} onClick={bookAppt}>
-            Confirm
-          </button>
+          <div hidden={timeSelected ? "hidden" : ""}>
+            <button className={classes.buttonDisable}>Confirm</button>
+          </div>
+          <div hidden={!timeSelected ? "hidden" : ""}>
+            <button className={classes.button} onClick={bookAppt}>
+              Confirm
+            </button>
+          </div>
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
           <h1 className={classes.h1}>

@@ -30,6 +30,7 @@ class Form extends Component {
             borderColor: "#52330D",
             borderWidth: "2px",
             width: "80.5%",
+            height: "150px",
             fontFamily: "AvenirHeavy",
           }}
         />
