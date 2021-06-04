@@ -110,9 +110,9 @@ const Portfolio = () => {
         <tr>
           <td className={classes.ProjectCell}>
             <img
-              src={MealsForMe1}
+              src={ServingFreshWhite}
               className={classes.smallImg}
-              alt="MealsForMe1"
+              alt="ServingFreshWhite"
             />
           </td>
           <td className={classes.ProjectCell}>

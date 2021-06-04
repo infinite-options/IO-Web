@@ -1,7 +1,9 @@
 import logo from "../image/logo.png";
-import MealsForMe from "../image/Meals_for_me.png";
+//import MealsForMe from "../image/Meals_for_me.png";
+//import ServingFresh from "../image/Serving_Fresh.png";
+import MealsForMe from "../videos/MealsForMeAnimation.mp4";
 import Manifest from "../image/Manifest.png";
-import ServingFresh from "../image/Serving_Fresh.png";
+import ServingFresh from "../videos/ServingFreshAnimation.mp4";
 import JustDelivered from "../image/JustDelivered.png";
 import NityaAyurveda from "../image/NityaAyurvedaLogo.png";
 
@@ -122,17 +124,17 @@ const Portfolio = () => {
           </tr>
           <tr>
             <td className={classes.ProjectCell}>
-              <img
-                src={MealsForMe}
-                className={classes.smallImg}
-                alt="MealsForMe"
+
+              <video src= {MealsForMe}
+              width="500" height="500" autoplay="autoplay" muted loop
+              alt="MealsForMe Picture"
               />
             </td>
             <td className={classes.ProjectCell}>
-              <img
+              <video
                 src={ServingFresh}
-                className={classes.smallImg}
-                alt="Manifest"
+                width="500" height="500" autoplay="autoplay" muted loop
+                alt="ServingFresh Picture"
               />
             </td>
             <td className={classes.ProjectCell}>
