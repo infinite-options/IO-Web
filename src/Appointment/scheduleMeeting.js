@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../image/logo.png";
+import logo from "../image/IOlogo.png";
 import "./calendar.css";
 import axios from "axios"; //npm install axios
 import Calendar from "react-calendar"; // npm install react-calendar
@@ -110,6 +110,7 @@ const useStyles = makeStyles((theme) => ({
       textOverflow: "ellipsis !important",
       color: "#52330D",
     },
+    outline: "none",
   },
 
   timeslotButtonBox: {

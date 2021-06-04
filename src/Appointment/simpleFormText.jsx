@@ -32,6 +32,7 @@ class Form extends Component {
             width: "80.5%",
             height: "150px",
             fontFamily: "AvenirHeavy",
+            outline: "none",
           }}
         />
       </form>

@@ -1,13 +1,12 @@
 import MealsForMe from "../image/Meals_for_me.png";
 import Manifest from "../image/Manifest.png";
 import ServingFresh from "../image/Serving_Fresh.png";
-
 import ServingFreshMobile from "../image/ServingFreshMobile.png";
 import ServingFreshWhite from "../image/ServingFreshWhite@2x.png";
 import JustDelivered1 from "../image/JustDelivered1.png";
 import M4MeMockup1 from "../image/M4MeMockup1.png";
 import MealsForMe1 from "../image/MealsForMe1.png";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   makeStyles,
   createMuiTheme,

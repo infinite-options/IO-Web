@@ -1,10 +1,8 @@
 import "./App.css";
 import Navbar from "./Navbar/Navbar.js";
-import WhatWeDo from "./Homepage/WhatWeDo.js";
-import WhatWeDo1 from "./Homepage/WhatWeDo1.js";
+import WhatWeDo from "./Homepage/WhatWeDo1.js";
 import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
-import Portfolio from "./Homepage/Portfolio.js";
-import Portfolio1 from "./Homepage/Portfolio1.js";
+import Portfolio from "./Homepage/Portfolio1.js";
 import How_we_can_help from "./Homepage/How_we_can_help.js";
 import How_we_can_help_Portfolio from "./Homepage/How_we_can_help_Portfolio.js";
 import Chat from "./Homepage/Chat";
@@ -22,19 +20,17 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Main} />
-            <Route exact path="/WhatWeDo" component={WhatWeDo} />
-            <Route path="/WhatWeDo1" component={WhatWeDo1} />
+            <Route path="/WhatWeDo" component={WhatWeDo} />
             <Route path="/how_we_can_help" component={How_we_can_help} />
             <Route
-              path="/How_we_can_help_portfolio"
+              path="/how_we_can_help_portfolio"
               component={How_we_can_help_Portfolio}
             />
             <Route path="/contact" component={Chat} />
             <Route path="/portfolio" component={Portfolio} />
-            <Route path="/portfolio1" component={Portfolio1} />
-            <Route path="/Careers" component={Careers} />
-            <Route path="/ServingFresh" component={ServingFresh} />
-            <Route path="/MealsForMe" component={MealsForMe} />
+            <Route path="/careers" component={Careers} />
+            <Route path="/servingfresh" component={ServingFresh} />
+            <Route path="/mealsforMe" component={MealsForMe} />
             <Route path="/appointment" component={Appointment} />
           </Switch>
           <Footer></Footer>
@@ -48,9 +44,9 @@ function App() {
 export function Main() {
   return (
     <main style={{ textAlign: "center" }}>
-      <WhatWeDo1 />
+      <WhatWeDo />
       <ScheduleAMeeting />
-      <Portfolio1 />
+      <Portfolio />
       <Chat />
     </main>
   );

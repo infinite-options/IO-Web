@@ -1,4 +1,4 @@
-import logo from "../image/logo.png";
+import logo from "../image/IOlogo.png";
 import { NavLink } from "react-router-dom";
 import classes from "./NavBar.module.css";
 import border from "../image/border.png";
@@ -67,7 +67,7 @@ const Navbar = () => {
                 borderRadius: "100px",
                 padding: "10px 20px 10px 20px",
               }}
-              to="/portfolio1"
+              to="/portfolio"
             >
               Our Portfolio
             </NavLink>
