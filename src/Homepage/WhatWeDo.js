@@ -1,15 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import How_we_can_help from "./How_we_can_help.js";
-import logo from "../image/logo.png";
-import MobileAppsLight from "../assets/MobileAppsLight.svg";
-import MarketingNBrandingLight from "../assets/MarketingNBrandingLight.svg";
-import BusinessStrategyLight from "../assets/BusinessStrategyLight.svg";
-import HardwareEngineeringLight from "../assets/HardwareEngineeringLight.svg";
-import UIUXDesignLight from "../assets/UIUXDesignLight.svg";
-import WebSoftwareDevLight from "../assets/WebSoftwareDevLight.svg";
-
-import { makeStyles, withTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -34,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     borderRadius: "50px",
   },
-  logoContainer: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
 }));
 
 const WhatWeDo = () => {
@@ -46,51 +33,15 @@ const WhatWeDo = () => {
     <section id="whatWeDo">
       <div className={classes.contaier}>
         <h1 className={classes.h1}>
-          We fill the{" "}
-          <span style={{ color: "white", webkitTextStroke: "2px #52330D" }}>
-            gaps
-          </span>{" "}
-          around your skill set
+          We are entrepreneurs on a mission to build cool products{" "}
+          <span style={{ color: "#F6A833" }}>
+            & help fellow entrepreneurs on their journey
+          </span>
         </h1>
-        <div className={classes.logoContainer}>
-          <img
-            src={MobileAppsLight}
-            alt="MobileAppsLight"
-            style={{ marginBottom: 100 }}
-          />
-          <img
-            src={MarketingNBrandingLight}
-            alt="MarketingNBrandingLight"
-            style={{ marginTop: 100 }}
-          />
-          <img
-            src={BusinessStrategyLight}
-            alt="BusinessStrategyLight"
-            style={{ marginBottom: 100 }}
-          />
-          <img
-            src={HardwareEngineeringLight}
-            alt="HardwareEngineeringLight"
-            style={{ marginTop: 100 }}
-          />
-          <img
-            src={WebSoftwareDevLight}
-            alt="WebSoftwareDevLight"
-            style={{ marginBottom: 100 }}
-          />
-          <img
-            src={UIUXDesignLight}
-            alt="UIUXDesignLight"
-            style={{ marginTop: 100 }}
-          />
-        </div>
-        <h1 className={classes.h1}>
-          to help you succeed on your <br />
-          entrepreneurial journey
-        </h1>
-
-        <Link to="How_we_can_help">
-          <button className={classes.button}>See how we can help</button>
+        <Link to="how_we_can_help">
+          <button className={classes.button}>
+            Let’s build something together
+          </button>
         </Link>
       </div>
     </section>

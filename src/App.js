@@ -1,17 +1,21 @@
 import "./App.css";
-import Navbar from "./Navbar/Navbar.js";
-import WhatWeDo from "./Homepage/WhatWeDo1.js";
-import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
-import Portfolio from "./Homepage/Portfolio1.js";
-import How_we_can_help from "./Homepage/How_we_can_help.js";
-import How_we_can_help_Portfolio from "./Homepage/How_we_can_help_Portfolio.js";
-import Chat from "./Homepage/Chat";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Footer from "./Homepage/Footer.jsx";
-import ServingFresh from "./ServingFresh/ServingFresh";
-import Careers from "./Homepage/Careers";
-import Appointment from "./Appointment/scheduleMeeting.js";
-import MealsForMe from "./MealsForMe/MealsForMe";
+//components
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar/Navbar.js";
+//containers
+//homepage
+import WhatWeDo from "./Homepage/WhatWeDo.js";
+import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
+import Portfolio from "./Homepage/Portfolio.js";
+import Chat from "./Homepage/Chat/Chat";
+//subpage
+import Careers from "./containers/Careers/Careers";
+import Appointment from "./containers/Appointment/scheduleMeeting.js";
+import ServingFresh from "./containers/ServingFresh/ServingFresh";
+import MealsForMe from "./containers/MealsForMe/MealsForMe";
+import How_we_can_help from "./containers/HowWeCanHelp/How_we_can_help.js";
+
 function App() {
   return (
     <div className="App" style={{ height: "auto" }}>
@@ -22,10 +26,6 @@ function App() {
             <Route exact path="/" component={Main} />
             <Route path="/WhatWeDo" component={WhatWeDo} />
             <Route path="/how_we_can_help" component={How_we_can_help} />
-            <Route
-              path="/how_we_can_help_portfolio"
-              component={How_we_can_help_Portfolio}
-            />
             <Route path="/contact" component={Chat} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/careers" component={Careers} />
