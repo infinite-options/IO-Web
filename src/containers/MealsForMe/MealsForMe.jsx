@@ -9,7 +9,7 @@ import Meals4MeSocial from "../../assets/images/Meals4Me/Meals4MeSocial.png";
 
 const MealsForMe = () => {
   return (
-    <div className="page-container ">
+    <div className="page-container">
       <div className="content-wrap">
         <div>
           <div style={{ marginLeft: "10%", marginRight: "10%" }}>
