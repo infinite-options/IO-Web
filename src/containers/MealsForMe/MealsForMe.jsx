@@ -9,7 +9,7 @@ import Meals4MeSocial from "../../assets/images/Meals4Me/Meals4MeSocial.png";
 
 const MealsForMe = () => {
   return (
-    <div className="page-container">
+    <div className="page-container" style={{ fontFamily: "AvenirHeavy" }}>
       <div className="content-wrap">
         <div>
           <div style={{ marginLeft: "10%", marginRight: "10%" }}>
@@ -116,6 +116,7 @@ const MealsForMe = () => {
               </p>
             </div>
           </div>
+
           <div
             style={{
               float: "left",

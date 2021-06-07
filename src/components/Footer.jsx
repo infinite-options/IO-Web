@@ -12,6 +12,7 @@ const Footer = () => {
         backgroundColor: "#52330D",
         width: "100%",
         bottom: "0",
+        fontFamily: "AvenirBook",
       }}
     >
       <div
@@ -25,14 +26,12 @@ const Footer = () => {
         </p>
       </div>
       <div
-        style={{ height: "250px", float: "left", width: "25%", bottom: "0" }}
+        style={{ height: "200px", float: "left", width: "25%", bottom: "0" }}
       >
         <p style={{ color: "white", marginTop: "75px" }}>Tel: 925-400-7469</p>
         <p style={{ color: "white", marginTop: "0px" }}>San Jose, CA 95120</p>
       </div>
-      <div
-        style={{ height: "250px", float: "left", width: "25%", bottom: "0" }}
-      >
+      <div style={{ height: "200px", float: "left", width: "25%" }}>
         <p style={{ color: "white", marginTop: "75px" }}>
           <NavLink
             style={{ textDecoration: "none", color: "white" }}
@@ -47,10 +46,9 @@ const Footer = () => {
       </div>
       <div
         style={{
-          height: "250px",
+          height: "200px",
           float: "left",
           width: "25%",
-          marginTop: "20px",
         }}
       >
         <div style={{ float: "left", width: "33%", marginTop: "15%" }}>

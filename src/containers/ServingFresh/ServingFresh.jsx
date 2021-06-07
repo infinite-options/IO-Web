@@ -11,7 +11,7 @@ import Footer from "../../components/Footer";
 
 const ServingFresh = () => {
   return (
-    <div className="page-container">
+    <div className="page-container" style={{ fontFamily: "AvenirHeavy" }}>
       <div className="content-wrap">
         <div>
           <div
@@ -21,46 +21,37 @@ const ServingFresh = () => {
           </div>
           <div
             style={{
-              float: "left",
               fontWeight: "bold",
-              width: "100%",
               color: "#52330D",
               marginLeft: "10%",
               marginRight: "10%",
-              fontWeight: "bold",
               fontSize: "200%",
-              color: "#52330D",
               display: "flex",
               flexDirection: "row",
             }}
           >
-            <div style={{ width: "33%", float: "left" }}>
+            <div style={{ width: "23%", textAlign: "left" }}>
               <p style={{ float: "left" }}>Client</p>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
+            <div style={{ width: "33%", textAlign: "left" }}>
               <p style={{ float: "left" }}>Challenge / brief</p>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
+            <div style={{ width: "33%", textAlign: "left", marginLeft: "10%" }}>
               <p style={{ float: "left" }}>Services</p>
             </div>
           </div>
-
           <div
             style={{
-              float: "left",
-              width: "100%",
               color: "#707070",
               marginLeft: "10%",
               marginRight: "10%",
               display: "flex",
               flexDirection: "row",
-              color: "#707070",
             }}
           >
-            <div style={{ width: "33%", float: "left", fontSize: "150%" }}>
+            <div style={{ width: "23%", fontSize: "150%" }}>
               <p
                 style={{
-                  float: "left",
                   textAlign: "left",
                   fontWeight: "bold",
                 }}
@@ -68,8 +59,8 @@ const ServingFresh = () => {
                 Serving Fresh, LLC
               </p>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <p style={{ float: "left", fontSize: "75%", textAlign: "left" }}>
+            <div style={{ width: "33%" }}>
+              <p style={{ fontSize: "75%", textAlign: "left" }}>
                 YOUR BUSINESS NAME helps all businesses not only reach, but
                 exceed their goals. Our experience helps us lay out a strategy
                 that perfectly fits our clients. This collaboration is essential
@@ -78,8 +69,8 @@ const ServingFresh = () => {
                 see what we can do for you.
               </p>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <p style={{ float: "left", fontSize: "75%", textAlign: "left" }}>
+            <div style={{ width: "33%", marginLeft: "10%" }}>
+              <p style={{ fontSize: "75%", textAlign: "left" }}>
                 App and web Design / Development<br></br> Branding<br></br>{" "}
                 Marketing
               </p>
@@ -146,46 +137,69 @@ const ServingFresh = () => {
               ></img>
             </div>
           </div>
+          <div
+            style={{
+              marginLeft: "10%",
+              marginRight: "10%",
+              color: "#52330D",
+              // display: "flex",
+              // flexDirection: "row",
+              float: "left",
+              width: "100%",
+              fontWeight: "bold",
+              fontSize: "200%",
+            }}
+          >
+            <div style={{ width: "100%", float: "left", fontSize: "100%" }}>
+              <p
+                style={{
+                  textAlign: "left",
+                  fontWeight: "bold",
+                }}
+              >
+                Marketing Content
+              </p>
+            </div>
+          </div>
 
           <div
-            style={{ marginLeft: "10%", marginRight: "10%", height: "2900px" }}
+            style={{
+              float: "left",
+              color: "#52330D",
+              marginLeft: "10%",
+              marginRight: "10%",
+              marginTop: "2%",
+            }}
           >
-            <div style={{ float: "left", width: "100%", color: "#52330D" }}>
-              <div style={{ width: "100%", float: "left", fontSize: "100%" }}>
-                <p
-                  style={{
-                    float: "left",
-                    textAlign: "left",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Marketing Content
-                </p>
-              </div>
+            <div style={{ width: "50%", float: "left" }}>
+              <img style={{ width: "70%" }} src={Air1}></img>
             </div>
-            <div style={{ float: "left", width: "100%", color: "#52330D" }}>
-              <div style={{ width: "50%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Air1}></img>
-              </div>
-              <div style={{ width: "50%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Air2}></img>
-              </div>
+            <div style={{ width: "50%", float: "left" }}>
+              <img style={{ width: "70%" }} src={Air2}></img>
             </div>
+          </div>
+          <div
+            style={{
+              marginLeft: "10%",
+              marginRight: "10%",
+              marginBottom: "10%",
+            }}
+          >
             <div
               style={{
-                float: "left",
                 width: "100%",
                 color: "#52330D",
-                marginTop: "75px",
+                display: "flex",
+                flexDirection: "row",
               }}
             >
-              <div style={{ width: "30%", float: "left" }}>
+              <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
                 <img style={{ width: "70%" }} src={SFFicon}></img>
               </div>
-              <div style={{ width: "30%", float: "left" }}>
+              <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
                 <img style={{ width: "70%" }} src={EggPlant}></img>
               </div>
-              <div style={{ width: "30%", float: "left" }}>
+              <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
                 <img style={{ width: "70%" }} src={Insta}></img>
               </div>
             </div>
