@@ -1,11 +1,13 @@
 import Manifest from "../../assets/images/Manifest.png";
 import ServingFresh from "../../assets/images/ServingFresh/Serving_Fresh.png";
+import ServingFreshAnimation from "../../videos/ServingFreshAnimation.mp4";
 import ServingFreshMobile from "../../assets/images/ServingFresh/ServingFreshMobile.png";
 import ServingFreshWhite from "../../assets/images/ServingFresh/ServingFreshWhite@2x.png";
 import JustDelivered1 from "../../assets/images/JustDelivered1.png";
 import MealsForMe from "../../assets/images/Meals4Me/Meals_for_me.png";
 import M4MeMockup1 from "../../assets/images/Meals4Me/M4MeMockup1.png";
 import MealsForMe1 from "../../assets/images/Meals4Me/MealsForMe1.png";
+import MealsForMeAnimation from "../../videos/MealsForMeAnimation.mp4";
 
 import { Link } from "react-router-dom";
 import {
@@ -144,26 +146,25 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <img
-              src={ServingFreshWhite}
-              className={classes.smallImg}
-              alt="ServingFreshWhite"
-            />
-                        <Link to="MealsForMe">
+            <Link to="MealsForMe">
               <img
                 src={MealsForMe1}
                 className={classes.smallImg}
                 alt="MealsForMe1"
               />
             </Link>
->>>>>>> c9045312324b9bbe1181350e703b07a9219f68c1:src/containers/HowWeCanHelp/How_we_can_help_Portfolio.js
           </td>
           <td className={classes.ProjectCell}>
             <Link to="ServingFresh">
-              <img
-                src={ServingFreshWhite}
-                className={classes.smallImg}
-                alt="ServingFreshWhite"
+              {" "}
+              <video
+                src={ServingFreshAnimation}
+                width="500"
+                height="500"
+                autoplay="autoplay"
+                muted
+                loop
+                alt="ServingFresh Picture"
               />
             </Link>
           </td>
@@ -256,10 +257,14 @@ const Portfolio = () => {
         <tr>
           <td className={classes.ProjectCell}>
             <Link to="MealsForMe">
-              <img
-                src={MealsForMe}
-                className={classes.smallImg}
-                alt="MealsForMe"
+              <video
+                src={MealsForMeAnimation}
+                width="500"
+                height="500"
+                autoplay="autoplay"
+                muted
+                loop
+                alt="MealsForMe Picture"
               />
             </Link>
           </td>
