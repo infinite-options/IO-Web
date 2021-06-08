@@ -1,32 +1,34 @@
-import logo from "../image/logo.png";
-import MealsForMe from "../image/MealsForMe.png";
-import Manifest from "../image/Manifest.png";
-import ServingFresh from "../image/ServingFresh.png";
-import JustDelivered from "../image/JustDelivered.png";
-import NityaAyurveda from "../image/NityaAyurvedaLogo.png";
-
-import MobileAppsLight from "../assets/MobileAppsLight.svg";
-import MarketingNBrandingLight from "../assets/MarketingNBrandingLight.svg";
-import BusinessStrategyLight from "../assets/BusinessStrategyLight.svg";
-import HardwareEngineeringLight from "../assets/HardwareEngineeringLight.svg";
-import UIUXDesignLight from "../assets/UIUXDesignLight.svg";
-import WebSoftwareDevLight from "../assets/WebSoftwareDevLight.svg";
-
-import { makeStyles, withTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import {
+  makeStyles,
+  createMuiTheme,
+  MuiThemeProvider,
+} from "@material-ui/core/styles";
+import Tooltip from "@material-ui/core/Tooltip";
+
+//images
+import MealsForMe from "../assets/images/Meals4Me/Meals_for_me.png";
+import Manifest from "../assets/images/Manifest.png";
+import ServingFresh from "../assets/images/ServingFresh/Serving_Fresh.png";
+import JustDelivered from "../assets/images/JustDelivered.png";
+import NityaAyurveda from "../assets/images/NityaAyurvedaLogo.png";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
     fontSize: "300%",
     fontFamily: "AvenirHeavy",
-    textDecoration: "underline",
     color: "#52330D",
+    borderTop: "3px solid #52330D",
+    borderBottom: "3px solid #52330D",
+    textAlign: "left",
+    padding: "20px",
   },
   title: {
     fontSize: "200%",
     textAlign: "left",
     fontFamily: "AvenirHeavy",
     color: "#52330D",
+    marginBottom: "-10px",
   },
   description: {
     textAlign: "left",
@@ -35,368 +37,213 @@ const useStyles = makeStyles((theme) => ({
   },
   contaier: {
     margin: "auto",
-    // width: "80%",
-    padding: "20px",
+    width: "80%",
   },
   ProjectTable: {
-    display: "inline-block",
+    display: "block",
     width: "90%",
   },
-  smallProjectCell: {
-    paddingLeft: "2%",
-    paddingRight: "2%",
-  },
-  largeProjectCell: {
-    paddingLeft: "2%",
-    paddingRight: "2%",
+  ProjectCell: {
+    width: "500px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    margin: "0, auto",
   },
   inline: {
     display: "inline-block",
   },
-  inline1: {
-    display: "inline",
-  },
-  inline2: {
-    display: "inline",
-    textAlign: "Right",
-    fontFamily: "AvenirMedium",
-  },
   smallImg: {
-    width: "auto",
-    height: "auto",
-  },
-  bigImg: {
-    width: "100%",
-    // width: "1000px",
-  },
-  smallIcon: {
-    width: "10%",
-    padding: "2px",
-  },
-
-  logoContainer: {
-    display: "flex",
-    justifyContent: "space-between",
+    width: "500px",
+    height: "500px",
+    margin: "0, auto",
   },
   button: {
-    backgroundColor: "#52330D",
-    border: "none",
-    color: "white",
+    backgroundColor: "white",
+    border: "3px solid #F6A833",
+    color: "#F6A833",
+    width: "90%",
     padding: "15px 30px",
     textAlign: "center",
-    textDecoration: "none",
-    display: "inline-block",
-    fontSize: "20px",
+    display: "block",
+    fontSize: "28px",
     borderRadius: "50px",
-    margin: "5% auto",
+    fontFamily: "AvenirHeavy",
+    marginTop: "10px",
+    marginBottom: "10px",
+    margin: "auto",
+  },
+  button2: {
+    backgroundColor: "#F6A833",
+    border: "1px solid #F6A833",
+    color: "white",
+    width: "50%",
+    padding: "15px 30px",
+    textAlign: "center",
+    display: "block",
+    fontSize: "28px",
+    borderRadius: "50px",
+    fontFamily: "AvenirHeavy",
+    margin: "50px auto",
+  },
+  unstyleLink: {
+    textDecoration: "none",
   },
 }));
+
+const defaultTheme = createMuiTheme();
+const theme = createMuiTheme({
+  overrides: {
+    MuiTooltip: {
+      tooltip: {
+        fontSize: "1.5em",
+        fontFamily: "AvenirMedium",
+        color: "white",
+        backgroundColor: "#F6A833",
+      },
+    },
+  },
+});
 
 const Portfolio = () => {
   const classes = useStyles();
   return (
     <section id="portfolio" className={classes.contaier}>
-      <h1 className={classes.h1}>Portfolio</h1>
+      <h1 className={classes.h1}>Products we’ve built</h1>
       <div>
         <table className={classes.ProjectTable}>
           <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.title}>Meals for me</p>
+            <td className={classes.ProjectCell}>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link to="MealsForMe" className={classes.unstyleLink}>
+                      <p className={classes.title}>Mealsfor.me</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
             </td>
-            <td className={classes.smallProjectCell}>
+
+            <td className={classes.ProjectCell}>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link to="ServingFresh" className={classes.unstyleLink}>
+                      <p className={classes.title}>Serving Fresh</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
+            </td>
+            <td className={classes.ProjectCell}>
               <p className={classes.title}>Manifest</p>
             </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
+            <td className={classes.ProjectCell}>
               <p className={classes.description}>
                 A meal subscription platform for busy professionals to eat from
                 their favorite local restaurants at affordable prices.
               </p>
             </td>
-            <td className={classes.smallProjectCell}>
+            <td className={classes.ProjectCell}>
               <p className={classes.description}>
-                A productivity app for people with memory issues - in
-                collaboration with Tulane University.
+                A digital platform for local farmers to take online orders and
+                make home deliveries.
+              </p>
+            </td>
+            <td className={classes.ProjectCell}>
+              <p className={classes.description}>
+                A digital platform for last mile food delivery.
               </p>
             </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
+            <td className={classes.ProjectCell}>
               <img
                 src={MealsForMe}
                 className={classes.smallImg}
                 alt="MealsForMe"
               />
             </td>
-            <td className={classes.smallProjectCell}>
-              <img src={Manifest} className={classes.smallImg} alt="Manifest" />
+            <td className={classes.ProjectCell}>
+              <img
+                src={ServingFresh}
+                className={classes.smallImg}
+                alt="Manifest"
+              />
             </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <p className={classes.inline2}>7 months Engagement</p>
-              </div>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <p className={classes.inline2}>2 Years Engagement</p>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <td>
-              <p className={classes.title}>Serving Fresh</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p className={classes.description}>
-                A meal subscription platform for busy professionals to eat from
-                their favorite local restaurants at affordable prices.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <Link to="ServingFresh">
-                <img
-                  src={ServingFresh}
-                  className={classes.bigImg}
-                  alt="ServingFresh"
-                />
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div className={classes.largeProjectBox}>
-                <div className={classes.logoContainer}>
-                  <div className={classes.inline1}>
-                    <img
-                      className={classes.smallIcon}
-                      src={MobileAppsLight}
-                      alt="MobileAppsLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={MarketingNBrandingLight}
-                      alt="MarketingNBrandingLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={BusinessStrategyLight}
-                      alt="BusinessStrategyLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={HardwareEngineeringLight}
-                      alt="HardwareEngineeringLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={WebSoftwareDevLight}
-                      alt="WebSoftwareDevLight"
-                    />
-                    <img
-                      className={classes.smallIcon}
-                      src={UIUXDesignLight}
-                      alt="UIUXDesignLight"
-                    />
-                  </div>
-                  <p className={classes.inline2} style={{ textAlign: "right" }}>
-                    1 Year Engagement
-                  </p>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <table className={classes.ProjectTable}>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.title}>Just Delivered</p>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.title}>Nitya Ayurveda</p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.description}>
-                A digital platform for last mile food delivery
-              </p>
-            </td>
-            <td className={classes.smallProjectCell}>
-              <p className={classes.description}>
-                A digital platform for last mile food delivery
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.smallProjectCell}>
+            <td className={classes.ProjectCell}>
               <img
                 src={JustDelivered}
                 className={classes.smallImg}
                 alt="JustDelivered"
               />
             </td>
-            <td className={classes.smallProjectCell}>
-              <img
-                src={NityaAyurveda}
-                className={classes.smallImg}
-                alt="NityaAyurveda"
-              />
-            </td>
           </tr>
           <tr>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <p className={classes.inline2}>4 months Engagement</p>
-              </div>
+            <td className={classes.ProjectCell}>
+              <button className={classes.button}>Become a Customer</button>
+              <button className={classes.button}>
+                Become a Partner Restaurant
+              </button>
             </td>
-            <td className={classes.smallProjectCell}>
-              <div className={classes.logoContainer}>
-                <div className={classes.inline1}>
-                  <img
-                    className={classes.smallIcon}
-                    src={MobileAppsLight}
-                    alt="MobileAppsLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={MarketingNBrandingLight}
-                    alt="MarketingNBrandingLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={BusinessStrategyLight}
-                    alt="BusinessStrategyLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={HardwareEngineeringLight}
-                    alt="HardwareEngineeringLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={WebSoftwareDevLight}
-                    alt="WebSoftwareDevLight"
-                  />
-                  <img
-                    className={classes.smallIcon}
-                    src={UIUXDesignLight}
-                    alt="UIUXDesignLight"
-                  />
-                </div>
-                <div className={classes.inline2}>
-                  <p>2 months Engagement</p>
-                </div>
-              </div>
+            <td className={classes.ProjectCell}>
+              <button className={classes.button}>Become a Customer</button>
+              <button className={classes.button}>Become a Farm Partner</button>
+            </td>
+            <td className={classes.ProjectCell}>
+              <button className={classes.button}>
+                Use this app for your delivery business
+              </button>
             </td>
           </tr>
         </table>
       </div>
-      <button className={classes.button}>Hire Our Talent</button>
+      <h1 className={classes.h1}>Products we helped build</h1>
+      <table className={classes.ProjectTable}>
+        <tr>
+          <td className={classes.ProjectCell}>
+            <p className={classes.title}>Manifest</p>
+          </td>
+          <td className={classes.ProjectCell}>
+            <p className={classes.title}>Nitya Ayurveda</p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td className={classes.ProjectCell}>
+            <p className={classes.description}>
+              A productivity app for people with memory issues - in
+              collaboration with Tulane University.
+            </p>
+          </td>
+          <td className={classes.ProjectCell}>
+            <p className={classes.description}>
+              Nitya Ayurveda brings classical Ayurvedic healthcare to clients in
+              the South Bay.
+            </p>
+          </td>
+          <td className={classes.ProjectCell}></td>
+        </tr>
+        <tr>
+          <td className={classes.ProjectCell}>
+            <img src={Manifest} className={classes.smallImg} alt="Manifest" />
+          </td>
+          <td className={classes.ProjectCell}>
+            <img
+              src={NityaAyurveda}
+              className={classes.smallImg}
+              alt="NityaAyurveda"
+            />
+          </td>
+          <td className={classes.ProjectCell}></td>
+        </tr>
+        <tr></tr>
+      </table>
+      <button className={classes.button2}>
+        I am a Entrepreneur looking for some help.
+      </button>
     </section>
   );
 };
