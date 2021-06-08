@@ -256,6 +256,9 @@ const Appointment = () => {
             apiDateString
         )
         .then((res) => {
+          console.log("Hello world");
+          console.log(res.data);
+          console.log("Hello world");
           console.log(res.data.result.available_timeslots);
           setTimeSlots(res.data.result.available_timeslots);
         });

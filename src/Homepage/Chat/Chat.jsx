@@ -42,6 +42,7 @@ const Chat = () => {
               border: "1px solid #F6A833",
             }}
             placeholder="Your Name"
+            aria-label="Enter your name"
           ></input>
           <input
             style={{
@@ -55,6 +56,7 @@ const Chat = () => {
               border: "1px solid #F6A833",
             }}
             placeholder="Website URL"
+            aria-label="Enter your URL"
           ></input>
         </Row>
         <Row>
@@ -71,6 +73,7 @@ const Chat = () => {
               border: "1px solid #F6A833",
             }}
             placeholder="Email"
+            aria-label="Enter your e-mail"
           ></input>
           <input
             style={{
@@ -85,6 +88,7 @@ const Chat = () => {
               border: "1px solid #F6A833",
             }}
             placeholder="Phone"
+            aria-label="Enter your phone number"
           ></input>
         </Row>
 
@@ -108,6 +112,7 @@ const Chat = () => {
               border: "1px solid #F6A833",
             }}
             placeholder="Anything else you want to add? You can also email us your resume and / or portfolio at info@infiniteoptions.com"
+            aria-label="Enter any questions you have for us"
           ></input>
         </Row>
         <Row>

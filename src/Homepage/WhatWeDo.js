@@ -38,8 +38,8 @@ const WhatWeDo = () => {
             & help fellow entrepreneurs on their journey
           </span>
         </h1>
-        <Link to="how_we_can_help">
-          <button className={classes.button}>
+        <Link to="how_we_can_help" aria-label="Let's build something together. Click to see how we can help">
+          <button className={classes.button} aria-hidden="true" tabindex="-1">
             Let’s build something together
           </button>
         </Link>

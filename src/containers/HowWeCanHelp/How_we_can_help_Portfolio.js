@@ -98,9 +98,9 @@ const Portfolio = () => {
         <tr>
           <td className={classes.ProjectCell}>
             <MuiThemeProvider theme={theme}>
-              <Tooltip title="Click here to see the design files">
+              <Tooltip title="Click here to see the design files" >
                 <div>
-                  <Link to="MealsForMe" className={classes.unstyleLink}>
+                  <Link to="MealsForMe" className={classes.unstyleLink} aria-label="Click to see design files for Meals For Me">
                     <p className={classes.title}>Mealsfor.me</p>
                   </Link>
                 </div>
@@ -112,7 +112,7 @@ const Portfolio = () => {
             <MuiThemeProvider theme={theme}>
               <Tooltip title="Click here to see the design files">
                 <div>
-                  <Link to="ServingFresh" className={classes.unstyleLink}>
+                  <Link to="ServingFresh" className={classes.unstyleLink} aria-label="Click to see design files for Serving Fresh">
                     <p className={classes.title}>Serving Fresh</p>
                   </Link>
                 </div>
@@ -144,7 +144,7 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <Link to="MealsForMe">
+            <Link to="MealsForMe" aria-label="Click to check out Meals For Me">
               <img
                 src={MealsForMe1}
                 className={classes.smallImg}
@@ -153,7 +153,7 @@ const Portfolio = () => {
             </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <Link to="ServingFresh">
+            <Link to="ServingFresh" aria-label="Click to check out Serving Fresh">
               <img
                 src={ServingFreshWhite}
                 className={classes.smallImg}
@@ -178,7 +178,7 @@ const Portfolio = () => {
             <MuiThemeProvider theme={theme}>
               <Tooltip title="Click here to see the design files">
                 <div>
-                  <Link to="MealsForMe" className={classes.unstyleLink}>
+                  <Link to="MealsForMe" className={classes.unstyleLink} aria-label="Click to see design files for Meals For Me">
                     <p className={classes.title}>Mealsfor.me</p>
                   </Link>
                 </div>
@@ -190,7 +190,7 @@ const Portfolio = () => {
             <MuiThemeProvider theme={theme}>
               <Tooltip title="Click here to see the design files">
                 <div>
-                  <Link to="ServingFresh" className={classes.unstyleLink}>
+                  <Link to="ServingFresh" className={classes.unstyleLink} aria-label="Click to see design files for serving fresh">
                     <p className={classes.title}>Serving Fresh</p>
                   </Link>
                 </div>
@@ -223,7 +223,7 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <Link to="MealsForMe">
+            <Link to="MealsForMe" aria-label="Click to check out Meals For Me">
               <img
                 src={M4MeMockup1}
                 className={classes.smallImg}
@@ -232,7 +232,7 @@ const Portfolio = () => {
             </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <Link to="ServingFresh">
+            <Link to="ServingFresh" aria-label="Click to check out serving fresh">
               <img
                 src={ServingFreshMobile}
                 className={classes.smallImg}
@@ -249,7 +249,7 @@ const Portfolio = () => {
       <table className={classes.ProjectTable}>
         <tr>
           <td className={classes.ProjectCell}>
-            <Link to="MealsForMe">
+            <Link to="MealsForMe" aria-label="Click to check out Meals For Me">
               <img
                 src={MealsForMe}
                 className={classes.smallImg}
@@ -258,7 +258,7 @@ const Portfolio = () => {
             </Link>
           </td>
           <td className={classes.ProjectCell}>
-            <Link to="ServingFresh">
+            <Link to="ServingFresh" aria-label="Click to check out Serving Fresh">
               <img
                 src={ServingFresh}
                 className={classes.smallImg}

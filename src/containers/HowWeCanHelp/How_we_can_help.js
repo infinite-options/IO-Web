@@ -23,7 +23,7 @@ const How_we_can_help = () => {
           See how it all fits together
         </p>
         <div>
-          <img src={how1} style={{ width: "100%" }}></img>
+          <img src={how1} style={{ width: "100%" }} aria-label="Infinite Options diagram"></img>
         </div>
         <div>
           <p
@@ -55,7 +55,7 @@ const How_we_can_help = () => {
           }}
         >
           {" "}
-          <p style={{ color: "white", fontSize: "30px" }}>Let's Engage</p>
+          <p style={{ color: "white", fontSize: "30px" }} aria-label="This button does nothing">Let's Engage</p>
         </button>
       </div>
 

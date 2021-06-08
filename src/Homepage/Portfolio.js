@@ -116,7 +116,7 @@ const Portfolio = () => {
               <MuiThemeProvider theme={theme}>
                 <Tooltip title="Click here to see the design files">
                   <div>
-                    <Link to="MealsForMe" className={classes.unstyleLink}>
+                    <Link to="MealsForMe" className={classes.unstyleLink} aria-label="Click to see design files for Meals For Me">
                       <p className={classes.title}>Mealsfor.me</p>
                     </Link>
                   </div>
@@ -128,7 +128,7 @@ const Portfolio = () => {
               <MuiThemeProvider theme={theme}>
                 <Tooltip title="Click here to see the design files">
                   <div>
-                    <Link to="ServingFresh" className={classes.unstyleLink}>
+                    <Link to="ServingFresh" className={classes.unstyleLink} aria-label="Click here to see design files for Serving Fresh">
                       <p className={classes.title}>Serving Fresh</p>
                     </Link>
                   </div>
@@ -164,6 +164,7 @@ const Portfolio = () => {
                 src={MealsForMe}
                 className={classes.smallImg}
                 alt="MealsForMe"
+                aria-label="Meals For Me logo"
               />
             </td>
             <td className={classes.ProjectCell}>
@@ -171,6 +172,7 @@ const Portfolio = () => {
                 src={ServingFresh}
                 className={classes.smallImg}
                 alt="Manifest"
+                aria-label="Serving Fresh logo"
               />
             </td>
             <td className={classes.ProjectCell}>
@@ -178,22 +180,23 @@ const Portfolio = () => {
                 src={JustDelivered}
                 className={classes.smallImg}
                 alt="JustDelivered"
+                aria-label="Just Delivered logo"
               />
             </td>
           </tr>
           <tr>
             <td className={classes.ProjectCell}>
-              <button className={classes.button}>Become a Customer</button>
-              <button className={classes.button}>
+              <button className={classes.button} aria-label="Become a customer for Meals for me">Become a Customer</button>
+              <button className={classes.button} aria-label="Become a partner restaurant for meals for me">
                 Become a Partner Restaurant
               </button>
             </td>
             <td className={classes.ProjectCell}>
-              <button className={classes.button}>Become a Customer</button>
-              <button className={classes.button}>Become a Farm Partner</button>
+              <button className={classes.button} aria-label="Become a customer for serving fresh">Become a Customer</button>
+              <button className={classes.button} aria-label="Become a farm partner for serving fresh">Become a Farm Partner</button>
             </td>
             <td className={classes.ProjectCell}>
-              <button className={classes.button}>
+              <button className={classes.button} aria-label="use the manifest app for your delivery business">
                 Use this app for your delivery business
               </button>
             </td>
@@ -228,20 +231,21 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-            <img src={Manifest} className={classes.smallImg} alt="Manifest" />
+            <img src={Manifest} className={classes.smallImg} alt="Manifest" aria-label="Manifest image" />
           </td>
           <td className={classes.ProjectCell}>
             <img
               src={NityaAyurveda}
               className={classes.smallImg}
               alt="NityaAyurveda"
+              aria-label="Nitya Ayurveda logo"
             />
           </td>
           <td className={classes.ProjectCell}></td>
         </tr>
         <tr></tr>
       </table>
-      <button className={classes.button2}>
+      <button className={classes.button2} aria-label="This button does nothing">
         I am a Entrepreneur looking for some help.
       </button>
     </section>

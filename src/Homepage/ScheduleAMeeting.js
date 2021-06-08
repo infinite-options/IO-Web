@@ -31,8 +31,8 @@ const ScheduleAMeeting = () => {
         <h1 className={classes.h1}>
           Let’s chat about design and development solutions for your business
         </h1>
-        <Link to="appointment">
-          <button className={classes.button}>Schedule a meeting</button>
+        <Link to="appointment" aria-label="Click here to schedule a meeting">
+          <button className={classes.button} aria-hidden="true" tabindex="-1">Schedule a meeting</button>
         </Link>
       </div>
     </section>
