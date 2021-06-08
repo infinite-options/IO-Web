@@ -144,14 +144,12 @@ const Portfolio = () => {
         </tr>
         <tr>
           <td className={classes.ProjectCell}>
-<<<<<<< HEAD:src/Homepage/How_we_can_help_Portfolio.js
             <img
               src={ServingFreshWhite}
               className={classes.smallImg}
               alt="ServingFreshWhite"
             />
-=======
-            <Link to="MealsForMe">
+                        <Link to="MealsForMe">
               <img
                 src={MealsForMe1}
                 className={classes.smallImg}

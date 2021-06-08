@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar/Navbar.js";
 import WhatWeDo from "./Homepage/WhatWeDo.js";
 import ScheduleAMeeting from "./Homepage/ScheduleAMeeting.js";
 import Portfolio from "./Homepage/Portfolio.js";
-import Chat from "./Homepage/Chat/Chat";
+import Chat1 from "./Homepage/Chat/Chat1";
 //subpage
 import Careers from "./containers/Careers/Careers";
 import Appointment from "./containers/Appointment/scheduleMeeting.js";
@@ -26,7 +26,7 @@ function App() {
             <Route exact path="/" component={Main} />
             <Route path="/WhatWeDo" component={WhatWeDo} />
             <Route path="/how_we_can_help" component={How_we_can_help} />
-            <Route path="/contact" component={Chat} />
+            <Route path="/contact" component={Chat1} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/careers" component={Careers} />
             <Route path="/servingfresh" component={ServingFresh} />
@@ -47,7 +47,7 @@ export function Main() {
       <WhatWeDo />
       <ScheduleAMeeting />
       <Portfolio />
-      <Chat />
+      <Chat1 />
     </main>
   );
 }
