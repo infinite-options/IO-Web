@@ -1,0 +1,54 @@
+.h1 {
+  font-size: 54px;
+  font-family: AvenirHeavy;
+  color: #f6a833;
+  border-top: 3px solid #f6a833;
+  border-bottom: 3px solid #f6a833;
+  text-align: left;
+  padding: 20px;
+}
+.title0 {
+  font: 54px;
+  font-family: AvenirHeavy;
+  color: #52330d;
+  margin: 0 auto;
+}
+.title1 {
+  font: 42px;
+  text-align: left;
+  font-family: AvenirHeavy;
+  color: #52330d;
+  margin-bottom: -10px;
+}
+.description {
+  text-align: left;
+  font-family: AvenirMedium;
+  font-size: 24px;
+}
+.contaier {
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 10%;
+}
+.ProjectTable {
+  display: block;
+  width: 90%;
+}
+.ProjectCell {
+  width: 500px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+.inline {
+  display: inline-block;
+}
+.smallImg {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+.unstylelink {
+  text-decoration: none;
+  font: 42px;
+}

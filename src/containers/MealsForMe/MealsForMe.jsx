@@ -2,7 +2,6 @@ import HowItWorks from "../../assets/images/Meals4Me/M4MHowItWorks.png";
 import Meals4MeMainImage from "../../assets/images/Meals4Me/Meals4MeMainImage.png";
 import Meals4MeIcon from "../../assets/images/Meals4Me/Meals4MeIcon.png";
 import Meals4MeMarketing from "../../assets/images/Meals4Me/Meals4MeMarketing.png";
-
 import Meals4MeInsta from "../../assets/images/Meals4Me/Meals4MeInsta.png";
 import Meals4MeTagLine from "../../assets/images/Meals4Me/Meals4MeTagLine.png";
 import Meals4MeSocial from "../../assets/images/Meals4Me/Meals4MeSocial.png";

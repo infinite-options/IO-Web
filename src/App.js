@@ -36,7 +36,6 @@ function App() {
           <Footer></Footer>
         </div>
       </BrowserRouter>
-      {/* <ServingFresh></ServingFresh> */}
     </div>
   );
 }
