@@ -7,6 +7,7 @@ import JustDelivered from "../assets/images/JustDelivered.png";
 import NityaAyurveda from "../assets/images/NityaAyurvedaLogo.png";
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
 import {
   makeStyles,
   createMuiTheme,
@@ -38,11 +39,30 @@ class App extends Component {
           <table className="ProjectTable">
             <tr>
               <td className="ProjectCell">
-                <p className="title">Meals for me</p>
+                <MuiThemeProvider theme={theme}>
+                  <Tooltip title="Click here to see the design files">
+                    <div>
+                      <Link to="MealsForMe" style={{ textDecoration: "none" }}>
+                        <p className="title">Mealsfor.me</p>
+                      </Link>
+                    </div>
+                  </Tooltip>
+                </MuiThemeProvider>
               </td>
 
               <td className="ProjectCell">
-                <p className="title">Serving Fresh</p>
+                <MuiThemeProvider theme={theme}>
+                  <Tooltip title="Click here to see the design files">
+                    <div>
+                      <Link
+                        to="ServingFresh"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <p className="title">Serving Fresh</p>
+                      </Link>
+                    </div>
+                  </Tooltip>
+                </MuiThemeProvider>
               </td>
               <td className="ProjectCell">
                 <p className="title">Manifest</p>
