@@ -17,7 +17,7 @@ const ServingFresh = () => {
           <div
             style={{ marginLeft: "10%", marginRight: "10%", height: "auto" }}
           >
-            <img style={{ width: "100%" }} src={Sf_Fb}></img>
+            <img style={{ width: "100%" }} src={Sf_Fb} aria-label="serving fresh diagram"></img>
           </div>
           <div
             style={{
@@ -108,7 +108,7 @@ const ServingFresh = () => {
               </p>
             </div>
             <div style={{ width: "100%", float: "left" }}>
-              <img style={{ width: "100%" }} src={Before}></img>
+              <img style={{ width: "100%" }} src={Before} aria-label="Serving fresh before Infinite Options"></img>
             </div>
           </div>
           <div
@@ -143,6 +143,7 @@ const ServingFresh = () => {
               <img
                 style={{ width: "100%", marginLeft: "0px" }}
                 src={SFFAfter}
+                aria-label="serving fresh after Infinite Options"
               ></img>
             </div>
           </div>
@@ -165,10 +166,10 @@ const ServingFresh = () => {
             </div>
             <div style={{ float: "left", width: "100%", color: "#52330D" }}>
               <div style={{ width: "50%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Air1}></img>
+                <img style={{ width: "70%" }} src={Air1} aria-label="Serving Fresh ad 1"></img>
               </div>
               <div style={{ width: "50%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Air2}></img>
+                <img style={{ width: "70%" }} src={Air2} aria-label="The same serving fresh ad but a different source for some reason"></img>
               </div>
             </div>
             <div
@@ -180,13 +181,13 @@ const ServingFresh = () => {
               }}
             >
               <div style={{ width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={SFFicon}></img>
+                <img style={{ width: "70%" }} src={SFFicon} aria-label="Serving Fresh icon"></img>
               </div>
               <div style={{ width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={EggPlant}></img>
+                <img style={{ width: "70%" }} src={EggPlant} aria-label="Fun fact about eggplants, eggplants are berries, not vegetables"></img>
               </div>
               <div style={{ width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Insta}></img>
+                <img style={{ width: "70%" }} src={Insta} aria-label="Serving fresh supports local farmers, local communities, and helps build local economies"></img>
               </div>
             </div>
           </div>

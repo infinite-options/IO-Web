@@ -94,7 +94,7 @@ const Chat = () => {
 
         <Row>
           <div>
-            <img style={{ marginTop: "5vh", width: "75%" }} src={gi}></img>
+            <img style={{ marginTop: "5vh", width: "75%" }} src={gi} aria-label="Infinite Options services diagram. Infinite options can help you with your marketing, branding, hardware engineering, software development, brand strategy, and UI/UX design needs"></img>
           </div>
         </Row>
 
