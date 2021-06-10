@@ -14,7 +14,15 @@ import ServingFresh from "./ServingFresh/ServingFresh";
 import Careers from "./Homepage/Careers";
 import Appointment from "./Appointment/scheduleMeeting.js";
 import MealsForMe from "./MealsForMe/MealsForMe";
+import {useEffect, useState} from "react";
+import Media from 'react-media'
+
+
 function App() {
+  const [width, setWindowWidth] = useState(0);
+
+
+
   return (
     <div className="App" style={{ height: "auto" }}>
       <BrowserRouter>

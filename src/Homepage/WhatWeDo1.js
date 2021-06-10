@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import How_we_can_help from "./How_we_can_help.js";
 
 import { makeStyles, withTheme } from "@material-ui/core/styles";
+import useWindowSize from "../utils/useWindowSize";
+import classes from "./WhatWeDo1.css";
+
+
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -30,23 +34,32 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const WhatWeDo = () => {
-  const classes = useStyles();
+  /*const classes = useStyles();*/
+  const { width } = useWindowSize();
   return (
-    <section id="whatWeDo">
-      <div className={classes.contaier}>
-        <h1 className={classes.h1}>
-          We are entrepreneurs on a mission to build cool products{" "}
-          <span style={{ color: "#F6A833" }}>
+    <div>
+      {
+        width > 1081 && (
+            <>
+              <section id="whatWeDo">
+                <div className={classes.contaier}>
+                  <h1 className={classes.h1}>
+                    We are entrepreneurs on a mission to build cool products{" "}
+                    <span style={{ color: "#F6A833" }}>
             & help fellow entrepreneurs on their journey
           </span>
-        </h1>
-        <Link to="How_we_can_help">
-          <button className={classes.button}>
-            Let’s build something together
-          </button>
-        </Link>
-      </div>
-    </section>
+                  </h1>
+                  <Link to="How_we_can_help">
+                    <button className={classes.button}>
+                      Let’s build something together
+                    </button>
+                  </Link>
+                </div>
+              </section>
+            </>
+        )
+      }
+    </div>
   );
 };
 

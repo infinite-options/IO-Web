@@ -1,0 +1,142 @@
+.h1{
+    font-size: 150%;
+    padding: 20px 0;
+    color: #52330D;
+    font-family: "AvenirHeavy", sans-serif
+}
+
+.selectTime{
+    font-size: 42px;
+    color: #52330D;
+    font-family: "AvenirHeavy", sans-serif;
+}
+
+.contaier{
+    margin: auto;
+    width: 80%;
+    padding: 50px;
+}
+
+.button{
+background-color: #F6A833;
+border: none;
+color: white;
+padding:15px 100px;
+text-align:center;
+text-decoration: none;
+display: block;
+font-size: 20px;
+border-radius: 50px;
+margin: 0 auto;
+
+}
+
+.button:hover{
+    background: #52330D;
+    color: #F6A833;
+}
+
+.buttonDisable {
+    background-color: #F6A833;
+    border: none;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    border-radius: 50px;
+    margin: 0 auto;
+    opacity: 50%;
+}
+
+.inputRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    fontSize: "64px";
+    fontFamily: "AvenirHeavy";
+}
+
+.calendarTimeTable{
+    width:90%;
+    margin: 0 auto;
+    border: 2px solid #F6A833 ;
+}
+
+.calendarBox{
+    width: 40%;
+    padding: 50px;
+    background-color: #F6A833;
+}
+
+.timeslotBox{
+    width: 60%;
+    padding: 20px;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.timeslotButton{
+background-color: #F6A833;
+border: none;
+color: white;
+padding: 20px 100px 20px 100px;
+text-align: center;
+textDecoration: none;
+font-size: 20px;
+border-radius: 50px;
+margin: 5px;
+
+}
+
+.timeslotButton :focus{
+    background: #52330D;
+    color: #F6A833;
+}
+
+.duritionInput {
+background-color: #FAD399;
+width: 50%;
+height: 75px;
+border: none;
+padding: 20px;
+box-sizing: border-box;
+border-radius: 50px;
+color: #52330D;
+font-size: 25px;
+display: inline-block;
+margin: 5px;
+
+}
+
+.duritionInput::placeholder {
+    text-Overflow: ellipsis !important;
+    color: #52330D
+}
+
+.timeslotButtonBox {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.timeslotButtonBox::-webkit-scrollbar {
+    width: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1px 0;
+    background-color: white;
+}
+
+.timeslotButtonBox::-webkit-scrollbar-thumb{
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 1px 0;
+    background-color: #52330D;
+}

@@ -1,3 +1,5 @@
+import React, {useEffect, useState} from 'react';
+
 import MealsForMe from "../image/Meals_for_me.png";
 import Manifest from "../image/Manifest.png";
 import ServingFresh from "../image/Serving_Fresh.png";
@@ -11,6 +13,11 @@ import {
   withStyles,
 } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
+import useWindowSize from "../utils/useWindowSize";
+import { useMediaQuery } from 'react-responsive';
+import ResponsiveMixin from 'react-responsive-mixin';
+import Media from "react-media"
+
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -47,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "10px",
     paddingRight: "10px",
     margin: "0, auto",
+
+
   },
   inline: {
     display: "inline-block",
@@ -87,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
   unstyleLink: {
     textDecoration: "none",
   },
+
+
+
 }));
 
 const defaultTheme = createMuiTheme();
@@ -103,147 +115,210 @@ const theme = createMuiTheme({
   },
 });
 
-const Portfolio = () => {
-  const classes = useStyles();
-  return (
-    <section id="portfolio" className={classes.contaier}>
-      <h1 className={classes.h1}>Products we’ve built</h1>
-      <div>
-        <table className={classes.ProjectTable}>
-          <tr>
-            <td className={classes.ProjectCell}>
-              <MuiThemeProvider theme={theme}>
-                <Tooltip title="Click here to see the design files">
-                  <div>
-                    <Link to="MealsForMe" className={classes.unstyleLink}>
-                      <p className={classes.title}>Mealsfor.me</p>
-                    </Link>
-                  </div>
-                </Tooltip>
-              </MuiThemeProvider>
-            </td>
 
-            <td className={classes.ProjectCell}>
-              <MuiThemeProvider theme={theme}>
-                <Tooltip title="Click here to see the design files">
+
+const styles = {
+  container: isRowBased => ({
+    display: 'flex',
+    flexDirection: isRowBased ? 'row' : 'column',
+    justifyContent: 'space-around'
+  })
+};
+
+
+
+const Portfolio = () => {
+
+  const ResizeMixin = {
+    componentDidMount: function(){
+      window.addEventListener('resize', this._resize_mixin_callback);
+    },
+    _resize_mixin_callback: function(){
+      this.setState({
+        viewport: {
+          width: document.documentElement.clientWidth,
+          height: document.documentElement.clientHeight
+        }
+      });
+    },
+    componentWillUnmount: function(){
+      window.removeEventListener('resize', this._resize_mixin_callback);
+    }
+  };
+
+  const mediaMatch = window.matchMedia('(min-width: 900px)');
+  const [matches, setMatches] = useState(mediaMatch.matches);
+
+
+
+
+  const classes = useStyles();
+  const {width} = useWindowSize();
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1008px)'
+  })
+  const isBigScreen = useMediaQuery({ query: '(min-device-width: 1824px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isTabletOrMobileDevice = useMediaQuery({
+    query: '(max-device-width: 1224px)'
+  })
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
+  const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
+
+
+
+
+  return (
+      <div style={styles.container(matches)}>
+
+        {
+          width > 900 && (
+              <>
+                <section id="portfolio" className={classes.contaier}>
+                  <h1 className={classes.h1}>Products we’ve built</h1>
                   <div>
-                    <Link to="ServingFresh" className={classes.unstyleLink}>
-                      <p className={classes.title}>Serving Fresh</p>
-                    </Link>
+                    <table className={classes.ProjectTable}>
+                      <tr>
+                        <td className={classes.ProjectCell}>
+                          <MuiThemeProvider theme={theme}>
+                            <Tooltip title="Click here to see the design files">
+                              <div>
+                                <Link to="MealsForMe" className={classes.unstyleLink}>
+                                  <p className={classes.title}>Mealsfor.me</p>
+                                </Link>
+                              </div>
+                            </Tooltip>
+                          </MuiThemeProvider>
+                        </td>
+
+                        <td className={classes.ProjectCell}>
+                          <MuiThemeProvider theme={theme}>
+                            <Tooltip title="Click here to see the design files">
+                              <div>
+                                <Link to="ServingFresh" className={classes.unstyleLink}>
+                                  <p className={classes.title}>Serving Fresh</p>
+                                </Link>
+                              </div>
+                            </Tooltip>
+                          </MuiThemeProvider>
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <p className={classes.title}>Manifest</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className={classes.ProjectCell}>
+                          <p className={classes.description}>
+                            A meal subscription platform for busy professionals to eat from
+                            their favorite local restaurants at affordable prices.
+                          </p>
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <p className={classes.description}>
+                            A digital platform for local farmers to take online orders and
+                            make home deliveries.
+                          </p>
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <p className={classes.description}>
+                            A digital platform for last mile food delivery.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className={classes.ProjectCell}>
+                          <img
+                              src={MealsForMe}
+                              className={classes.smallImg}
+                              alt="MealsForMe"
+                          />
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <img
+                              src={ServingFresh}
+                              className={classes.smallImg}
+                              alt="Manifest"
+                          />
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <img
+                              src={JustDelivered}
+                              className={classes.smallImg}
+                              alt="JustDelivered"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className={classes.ProjectCell}>
+                          <button className={classes.button}>Become a Customer</button>
+                          <button className={classes.button}>
+                            Become a Partner Restaurant
+                          </button>
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <button className={classes.button}>Become a Customer</button>
+                          <button className={classes.button}>Become a Farm Partner</button>
+                        </td>
+                        <td className={classes.ProjectCell}>
+                          <button className={classes.button}>
+                            Use this app for your delivery business
+                          </button>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
-                </Tooltip>
-              </MuiThemeProvider>
-            </td>
-            <td className={classes.ProjectCell}>
-              <p className={classes.title}>Manifest</p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.ProjectCell}>
-              <p className={classes.description}>
-                A meal subscription platform for busy professionals to eat from
-                their favorite local restaurants at affordable prices.
-              </p>
-            </td>
-            <td className={classes.ProjectCell}>
-              <p className={classes.description}>
-                A digital platform for local farmers to take online orders and
-                make home deliveries.
-              </p>
-            </td>
-            <td className={classes.ProjectCell}>
-              <p className={classes.description}>
-                A digital platform for last mile food delivery.
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.ProjectCell}>
-              <img
-                src={MealsForMe}
-                className={classes.smallImg}
-                alt="MealsForMe"
-              />
-            </td>
-            <td className={classes.ProjectCell}>
-              <img
-                src={ServingFresh}
-                className={classes.smallImg}
-                alt="Manifest"
-              />
-            </td>
-            <td className={classes.ProjectCell}>
-              <img
-                src={JustDelivered}
-                className={classes.smallImg}
-                alt="JustDelivered"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className={classes.ProjectCell}>
-              <button className={classes.button}>Become a Customer</button>
-              <button className={classes.button}>
-                Become a Partner Restaurant
-              </button>
-            </td>
-            <td className={classes.ProjectCell}>
-              <button className={classes.button}>Become a Customer</button>
-              <button className={classes.button}>Become a Farm Partner</button>
-            </td>
-            <td className={classes.ProjectCell}>
-              <button className={classes.button}>
-                Use this app for your delivery business
-              </button>
-            </td>
-          </tr>
-        </table>
+
+                  <h1 className={classes.h1}>Products we helped build</h1>
+                  <table className={classes.ProjectTable}>
+                    <tr>
+                      <td className={classes.ProjectCell}>
+                        <p className={classes.title}>Manifest</p>
+                      </td>
+                      <td className={classes.ProjectCell}>
+                        <p className={classes.title}>Nitya Ayurveda</p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td className={classes.ProjectCell}>
+                        <p className={classes.description}>
+                          A productivity app for people with memory issues - in
+                          collaboration with Tulane University.
+                        </p>
+                      </td>
+                      <td className={classes.ProjectCell}>
+                        <p className={classes.description}>
+                          Nitya Ayurveda brings classical Ayurvedic healthcare to clients in
+                          the South Bay.
+                        </p>
+                      </td>
+                      <td className={classes.ProjectCell}></td>
+                    </tr>
+                    <tr>
+                      <td className={classes.ProjectCell}>
+                        <img src={Manifest} className={classes.smallImg} alt="Manifest" />
+                      </td>
+                      <td className={classes.ProjectCell}>
+                        <img
+                            src={NityaAyurveda}
+                            className={classes.smallImg}
+                            alt="NityaAyurveda"
+                        />
+                      </td>
+                      <td className={classes.ProjectCell}></td>
+                    </tr>
+                    <tr></tr>
+                  </table>
+                  <button className={classes.button2}>
+                    I am a Entrepreneur looking for some help.
+                  </button>
+                </section>
+              </>
+          )
+        }
+
+
       </div>
-      <h1 className={classes.h1}>Products we helped build</h1>
-      <table className={classes.ProjectTable}>
-        <tr>
-          <td className={classes.ProjectCell}>
-            <p className={classes.title}>Manifest</p>
-          </td>
-          <td className={classes.ProjectCell}>
-            <p className={classes.title}>Nitya Ayurveda</p>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td className={classes.ProjectCell}>
-            <p className={classes.description}>
-              A productivity app for people with memory issues - in
-              collaboration with Tulane University.
-            </p>
-          </td>
-          <td className={classes.ProjectCell}>
-            <p className={classes.description}>
-              Nitya Ayurveda brings classical Ayurvedic healthcare to clients in
-              the South Bay.
-            </p>
-          </td>
-          <td className={classes.ProjectCell}></td>
-        </tr>
-        <tr>
-          <td className={classes.ProjectCell}>
-            <img src={Manifest} className={classes.smallImg} alt="Manifest" />
-          </td>
-          <td className={classes.ProjectCell}>
-            <img
-              src={NityaAyurveda}
-              className={classes.smallImg}
-              alt="NityaAyurveda"
-            />
-          </td>
-          <td className={classes.ProjectCell}></td>
-        </tr>
-        <tr></tr>
-      </table>
-      <button className={classes.button2}>
-        I am a Entrepreneur looking for some help.
-      </button>
-    </section>
   );
 };
 

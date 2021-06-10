@@ -11,6 +11,7 @@ import BusinessStrategyLight from "../assets/BusinessStrategyLight.svg";
 import HardwareEngineeringLight from "../assets/HardwareEngineeringLight.svg";
 import UIUXDesignLight from "../assets/UIUXDesignLight.svg";
 import WebSoftwareDevLight from "../assets/WebSoftwareDevLight.svg";
+import classes from './Portfolio1.css';
 
 import { makeStyles, withTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
@@ -93,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Portfolio = () => {
-  const classes = useStyles();
+  /*const classes = useStyles();*/
   return (
     <section id="portfolio" className={classes.contaier}>
       <h1 className={classes.h1}>Portfolio</h1>

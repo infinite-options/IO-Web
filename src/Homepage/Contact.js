@@ -5,6 +5,7 @@ import BusinessStrategyWhite from "../assets/BusinessWhite.svg";
 import HardwareEngineeringWhite from "../assets/HardwareWhite.svg";
 import UIUXDesignWhite from "../assets/UIUXDesignWhite.svg";
 import WebSoftwareDevWhite from "../assets/WebWhite.svg";
+import classes from "./Contact.css"
 
 const useStyles = makeStyles((theme) => ({
   contaier: {
@@ -66,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = () => {
-  const classes = useStyles();
+  /*const classes = useStyles();*/
   return (
     <section id="contact" style={{ backgroundColor: "#F6A833" }}>
       <div className={classes.contaier}>

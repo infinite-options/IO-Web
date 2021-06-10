@@ -1,0 +1,85 @@
+.h1 { 
+    font-size: 300%;
+    font-family: AvenirHeavy, sans-serif;
+    textDecoration: "underline";
+    color: #52330D;
+}
+.title{
+    font-size: 200%;
+    text-align: left;
+    fontFamily: "AvenirHeavy";
+    color: #52330D;
+}
+
+.description{
+    text-align: left;
+    font-family: AvenirMedium, sans-serif;
+    font-size: 150%;
+}
+
+.contaier{
+    margin: auto;
+    padding: 20px;
+}
+
+.ProjectTable{
+    display: inline-block;
+    width: 90%
+}
+
+.smallProjectCell{
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+.largeProjectCell{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.inline1 {
+    display: inline;
+}
+
+.inline2{
+    display: inline;
+    text-align: right;
+    font-family: AvenirMedium, sans-serif;
+}
+
+.smallImg{
+    width: auto;
+    height: auto;
+}
+
+.bigImg{
+    width: 100%;
+
+}
+
+.smallIcon{
+    width: 10%;
+    padding: 2px;
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: space-between
+}
+
+.button {
+    background-color: #52330D;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    fontSize: 20px;
+    border-radius: 50px;
+    margin: 5% auto;
+}
