@@ -1,13 +1,16 @@
 import Chat from "../../Homepage/Chat/Chat1.js";
 import Flowimg from "./Flowimg";
 
-const Careers = () => {
-  return (
-    <div>
-      <Flowimg></Flowimg>
-      <Chat></Chat>
-    </div>
-  );
-};
+import React, { Component } from "react";
 
-export default Careers;
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Flowimg></Flowimg>
+        <Chat></Chat>
+      </div>
+    );
+  }
+}
+export default App;
