@@ -17,7 +17,11 @@ const ServingFresh = () => {
           <div
             style={{ marginLeft: "10%", marginRight: "10%", height: "auto" }}
           >
-            <img style={{ width: "100%" }} src={Sf_Fb}></img>
+            <img
+              style={{ width: "100%" }}
+              src={Sf_Fb}
+              alt="serving fresh diagram"
+            ></img>
           </div>
           <div
             style={{
@@ -99,7 +103,11 @@ const ServingFresh = () => {
               </p>
             </div>
             <div style={{ width: "100%", float: "left" }}>
-              <img style={{ width: "100%" }} src={Before}></img>
+              <img
+                style={{ width: "100%" }}
+                src={Before}
+                alt="Serving fresh before Infinite Options"
+              ></img>
             </div>
           </div>
           <div
@@ -134,6 +142,7 @@ const ServingFresh = () => {
               <img
                 style={{ width: "100%", marginLeft: "0px" }}
                 src={SFFAfter}
+                alt="serving fresh after Infinite Options"
               ></img>
             </div>
           </div>
@@ -142,8 +151,6 @@ const ServingFresh = () => {
               marginLeft: "10%",
               marginRight: "10%",
               color: "#52330D",
-              // display: "flex",
-              // flexDirection: "row",
               float: "left",
               width: "100%",
               fontWeight: "bold",
@@ -172,10 +179,18 @@ const ServingFresh = () => {
             }}
           >
             <div style={{ width: "50%", float: "left" }}>
-              <img style={{ width: "70%" }} src={Air1}></img>
+              <img
+                style={{ width: "70%" }}
+                src={Air1}
+                alt="Serving Fresh ad 1"
+              ></img>
             </div>
             <div style={{ width: "50%", float: "left" }}>
-              <img style={{ width: "70%" }} src={Air2}></img>
+              <img
+                style={{ width: "70%" }}
+                src={Air2}
+                alt="The same serving fresh ad but a different source for some reason"
+              ></img>
             </div>
           </div>
           <div
@@ -194,13 +209,25 @@ const ServingFresh = () => {
               }}
             >
               <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={SFFicon}></img>
+                <img
+                  style={{ width: "70%" }}
+                  src={SFFicon}
+                  alt="Serving Fresh icon"
+                ></img>
               </div>
               <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={EggPlant}></img>
+                <img
+                  style={{ width: "70%" }}
+                  src={EggPlant}
+                  alt="Fun fact about eggplants, eggplants are berries, not vegetables"
+                ></img>
               </div>
               <div style={{ marginTop: "10%", width: "30%", float: "left" }}>
-                <img style={{ width: "70%" }} src={Insta}></img>
+                <img
+                  style={{ width: "70%" }}
+                  src={Insta}
+                  alt="Serving fresh supports local farmers, local communities, and helps build local economies"
+                ></img>
               </div>
             </div>
           </div>

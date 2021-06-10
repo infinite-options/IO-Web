@@ -6,16 +6,17 @@ import border from "../../assets/images/border.png";
 const Navbar = () => {
   return (
     <nav>
-      <div style={{ width: "33%" }}>
+      <div style={{ width: "33%" }} >
         <img
           src={logo}
           alt="logo"
           style={{ float: "left", marginTop: "35px" }}
+          aria-label="Infinite Options logo"
         />
       </div>
-      <div style={{ width: "66%", float: "right" }}>
+      <div style={{ width: "66%", float: "right" }} >
         <ul className={classes.ul}>
-          <li className={classes.li}>
+          <li className={classes.li} >
             <NavLink
               style={{
                 color: "black",
@@ -30,11 +31,12 @@ const Navbar = () => {
                 padding: "10px 20px 10px 20px",
               }}
               to="/"
+              aria-label="Click to see What we do"
             >
               What We Do
             </NavLink>
           </li>
-          <li className={classes.li}>
+          <li className={classes.li} >
             <NavLink
               style={{
                 fontFamily: "AvenirMedium",
@@ -49,11 +51,12 @@ const Navbar = () => {
                 padding: "10px 20px 10px 20px",
               }}
               to="/how_we_can_help"
+              aria-label="Click to see How we can help"
             >
               How We Can Help
             </NavLink>
           </li>
-          <li className={classes.li}>
+          <li className={classes.li} >
             <NavLink
               style={{
                 fontFamily: "AvenirMedium",
@@ -68,11 +71,12 @@ const Navbar = () => {
                 padding: "10px 20px 10px 20px",
               }}
               to="/portfolio"
+              aria-label="Click to see Our portfolio"
             >
               Our Portfolio
             </NavLink>
           </li>
-          <li className={classes.li}>
+          <li className={classes.li} >
             <NavLink
               style={{
                 fontFamily: "AvenirMedium",
@@ -87,6 +91,7 @@ const Navbar = () => {
                 padding: "10px 20px 10px 20px",
               }}
               to="/contact"
+              aria-label="Click to Contact us"
             >
               Contact Us
             </NavLink>

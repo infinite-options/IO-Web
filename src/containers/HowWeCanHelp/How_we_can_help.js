@@ -25,7 +25,11 @@ class App extends Component {
             See how it all fits together
           </p>
           <div>
-            <img src={how1} style={{ width: "100%" }}></img>
+            <img
+              src={how1}
+              style={{ width: "100%" }}
+              alt="Infinite Options diagram"
+            ></img>
           </div>
           <div>
             <p
@@ -57,10 +61,14 @@ class App extends Component {
             }}
           >
             {" "}
-            <p style={{ color: "white", fontSize: "30px" }}>Let's Engage</p>
+            <p
+              style={{ color: "white", fontSize: "30px" }}
+              aria-label="This button does nothing"
+            >
+              Let's Engage
+            </p>
           </button>
         </div>
-
         <How_We_Can_Help_Portfolio />
       </div>
     );

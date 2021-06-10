@@ -42,7 +42,11 @@ class App extends Component {
                 <MuiThemeProvider theme={theme}>
                   <Tooltip title="Click here to see the design files">
                     <div>
-                      <Link to="MealsForMe" style={{ textDecoration: "none" }}>
+                      <Link
+                        to="MealsForMe"
+                        style={{ textDecoration: "none" }}
+                        aria-label="Click to see design files for Meals For Me"
+                      >
                         <p className="title">Mealsfor.me</p>
                       </Link>
                     </div>
@@ -57,6 +61,7 @@ class App extends Component {
                       <Link
                         to="ServingFresh"
                         style={{ textDecoration: "none" }}
+                        aria-label="Click here to see design files for Serving Fresh"
                       >
                         <p className="title">Serving Fresh</p>
                       </Link>
@@ -120,18 +125,41 @@ class App extends Component {
             </tr>
             <tr>
               <td className="ProjectCell">
-                <button className="button">Become a Customer</button>
+                <button
+                  className="button"
+                  aria-label="Become a customer for Meals for me"
+                >
+                  Become a Customer
+                </button>
                 <br></br>
-                <button className="button">Become a Partner Restaurant</button>
+                <button
+                  className="button"
+                  aria-label="Become a partner restaurant for meals for me"
+                >
+                  Become a Partner Restaurant
+                </button>
               </td>
 
               <td className="ProjectCell">
-                <button className="button">Become a Customer</button>
+                <button
+                  className="button"
+                  aria-label="Become a customer for serving fresh"
+                >
+                  Become a Customer
+                </button>
                 <br></br>
-                <button className="button">Become a Farm Partner</button>
+                <button
+                  className="button"
+                  aria-label="Become a farm partner for serving fresh"
+                >
+                  Become a Farm Partner
+                </button>
               </td>
               <td className="ProjectCell">
-                <button className="button">
+                <button
+                  className="button"
+                  aria-label="use the manifest app for your delivery business"
+                >
                   Use this app for your delivery business
                 </button>
               </td>
@@ -166,20 +194,20 @@ class App extends Component {
           </tr>
           <tr>
             <td className="ProjectCell">
-              <img src={Manifest} className="smallImg" alt="Manifest" />
+              <img src={Manifest} className="smallImg" alt="Manifest image" />
             </td>
             <td className="ProjectCell">
               <img
                 src={NityaAyurveda}
                 className="smallImg"
-                alt="NityaAyurveda"
+                alt="Nitya Ayurveda logo"
               />
             </td>
             <td className="ProjectCell"></td>
           </tr>
           <tr></tr>
         </table>
-        <button className="button2">
+        <button className="button2" aria-label="This button does nothing">
           I am a Entrepreneur looking for some help.
         </button>
       </section>

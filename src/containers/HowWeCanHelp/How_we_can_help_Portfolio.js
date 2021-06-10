@@ -5,19 +5,13 @@ import Manifest from "../../assets/images/Manifest.png";
 import ServingFresh from "../../assets/images/ServingFresh/Serving_Fresh.png";
 import ServingFreshAnimation from "../../videos/ServingFreshAnimation.mp4";
 import ServingFreshMobile from "../../assets/images/ServingFresh/ServingFreshMobile.png";
-import ServingFreshWhite from "../../assets/images/ServingFresh/ServingFreshWhite@2x.png";
 import JustDelivered1 from "../../assets/images/JustDelivered1.png";
-import MealsForMe from "../../assets/images/Meals4Me/Meals_for_me.png";
 import M4MeMockup1 from "../../assets/images/Meals4Me/M4MeMockup1.png";
 import MealsForMe1 from "../../assets/images/Meals4Me/MealsForMe1.png";
 import MealsForMeAnimation from "../../videos/MealsForMeAnimation.mp4";
 
 import { Link } from "react-router-dom";
-import {
-  makeStyles,
-  createMuiTheme,
-  MuiThemeProvider,
-} from "@material-ui/core/styles";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const defaultTheme = createMuiTheme();
@@ -55,6 +49,7 @@ class App extends Component {
                     <Link
                       to="MealsForMe"
                       style={{ textDecoration: "none", fontSize: "42px" }}
+                      aria-label="Click to see design files for Meals For Me"
                     >
                       <p className="title1">Mealsfor.me</p>
                     </Link>
@@ -70,6 +65,7 @@ class App extends Component {
                     <Link
                       to="ServingFresh"
                       style={{ textDecoration: "none", fontSize: "42px" }}
+                      aria-label="Click to see design files for Serving Fresh"
                     >
                       <p className="title1">Serving Fresh</p>
                     </Link>
@@ -107,13 +103,18 @@ class App extends Component {
           </tr>
           <tr>
             <td className="ProjectCell">
-              <Link to="MealsForMe">
+              <Link
+                to="MealsForMe"
+                aria-label="Click to check out Meals For Me"
+              >
                 <img src={MealsForMe1} className="smallImg" alt="MealsForMe1" />
               </Link>
             </td>
             <td className="ProjectCell">
-              <Link to="ServingFresh">
-                {" "}
+              <Link
+                to="ServingFresh"
+                aria-label="Click to check out Serving Fresh"
+              >
                 <video
                   src={ServingFreshAnimation}
                   width="500"
@@ -145,6 +146,7 @@ class App extends Component {
                     <Link
                       to="MealsForMe"
                       style={{ textDecoration: "none", fontSize: "42px" }}
+                      aria-label="Click to see design files for Meals For Me"
                     >
                       <p className="title1">Mealsfor.me</p>
                     </Link>
@@ -160,6 +162,7 @@ class App extends Component {
                     <Link
                       to="ServingFresh"
                       style={{ textDecoration: "none", fontSize: "42px" }}
+                      aria-label="Click to see design files for serving fresh"
                     >
                       <p className="title1">Serving Fresh</p>
                     </Link>
@@ -198,12 +201,18 @@ class App extends Component {
           </tr>
           <tr>
             <td className="ProjectCell">
-              <Link to="MealsForMe">
+              <Link
+                to="MealsForMe"
+                aria-label="Click to check out Meals For Me"
+              >
                 <img src={M4MeMockup1} className="smallImg" alt="M4MeMockup1" />
               </Link>
             </td>
             <td className="ProjectCell">
-              <Link to="ServingFresh">
+              <Link
+                to="ServingFresh"
+                aria-label="Click to check out serving fresh"
+              >
                 <img
                   src={ServingFreshMobile}
                   className="smallImg"
@@ -220,7 +229,10 @@ class App extends Component {
         <table className="ProjectTable">
           <tr>
             <td className="ProjectCell">
-              <Link to="MealsForMe">
+              <Link
+                to="MealsForMe"
+                aria-label="Click to check out Meals For Me"
+              >
                 <video
                   src={MealsForMeAnimation}
                   width="500"
@@ -233,7 +245,10 @@ class App extends Component {
               </Link>
             </td>
             <td className="ProjectCell">
-              <Link to="ServingFresh">
+              <Link
+                to="ServingFresh"
+                aria-label="Click to check out Serving Fresh"
+              >
                 <img
                   src={ServingFresh}
                   className="smallImg"

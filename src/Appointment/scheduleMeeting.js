@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/images/IOLogos/IOlogo.png";
+import logo from "../image/IOlogo.png";
 import "./calendar.css";
 import axios from "axios"; //npm install axios
 import Calendar from "react-calendar"; // npm install react-calendar
@@ -256,9 +256,6 @@ const Appointment = () => {
             apiDateString
         )
         .then((res) => {
-          console.log("Hello world");
-          console.log(res.data);
-          console.log("Hello world");
           console.log(res.data.result.available_timeslots);
           setTimeSlots(res.data.result.available_timeslots);
         });

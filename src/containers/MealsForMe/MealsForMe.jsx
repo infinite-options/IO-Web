@@ -12,10 +12,10 @@ const MealsForMe = () => {
       <div className="content-wrap">
         <div>
           <div style={{ marginLeft: "10%", marginRight: "10%" }}>
-            <img style={{ width: "30%" }} src={Meals4MeIcon}></img>
+            <img style={{ width: "30%" }} src={Meals4MeIcon} aria-label="Meals for me icon"></img>
           </div>
           <div style={{ marginLeft: "10%", marginRight: "10%" }}>
-            <img style={{ width: "100%" }} src={HowItWorks}></img>
+            <img style={{ width: "100%" }} src={HowItWorks} aria-label="Diagram showing how Meals For Me works"></img>
           </div>
 
           <div
@@ -89,7 +89,7 @@ const MealsForMe = () => {
 
           <div style={{ float: "left", width: "100%", color: "#52330D" }}>
             <div style={{ width: "100%", float: "left", fontSize: "100%" }}>
-              <img style={{ width: "100%" }} src={Meals4MeMainImage}></img>
+              <img style={{ width: "100%" }} src={Meals4MeMainImage} aria-label="Meals for me assets"></img>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ const MealsForMe = () => {
             }}
           >
             <div style={{ width: "50%", float: "left" }}>
-              <img style={{ width: "70%" }} src={Meals4MeMarketing}></img>
+              <img style={{ width: "70%" }} src={Meals4MeMarketing} aria-label="Meals for me marketing content"></img>
             </div>
             <div
               style={{
@@ -140,6 +140,7 @@ const MealsForMe = () => {
               <img
                 style={{ width: "70%", opacity: "0" }}
                 src={Meals4MeMarketing}
+                aria-label="Meals for me marketing content"
               ></img>
             </div>
           </div>
@@ -162,18 +163,21 @@ const MealsForMe = () => {
                 <img
                   style={{ width: "90%", paddingLeft: "10%" }}
                   src={Meals4MeInsta}
+                  aria-label="Meals for me instagram placeholder"
                 ></img>
               </div>
               <div style={{ marginTop: "10%" }}>
                 <img
                   style={{ width: "90%", paddingLeft: "10%" }}
                   src={Meals4MeTagLine}
+                  aria-label="Meals for me tagline placeholder"
                 ></img>
               </div>
               <div style={{ marginTop: "10%" }}>
                 <img
                   style={{ width: "90%", paddingLeft: "10%" }}
                   src={Meals4MeSocial}
+                  aria-label="meals for me social placeholder"
                 ></img>
               </div>
             </div>

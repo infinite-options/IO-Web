@@ -29,7 +29,7 @@ const Flowimg = () => {
         We learn by doing. The best way to get good at something is to do it -
         preferably in a safe, supportive environment.
       </p>
-      <img style={{ height: "100%", width: "100%" }} src={flow}></img>
+      <img style={{ height: "100%", width: "100%" }} src={flow} aria-label="Infinite Options workflow diagram"></img>
       <p
         style={{
           fontSize: "180%",

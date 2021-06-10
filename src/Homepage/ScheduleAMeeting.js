@@ -16,7 +16,7 @@ class App extends Component {
           <h1 style={{ color: "White", fontSize: "200%" }}>
             Let’s chat about design and development solutions for your business
           </h1>
-          <Link to="appointment">
+          <Link to="appointment" aria-label="Click here to schedule a meeting">
             <button
               style={{
                 backgroundColor: "#52330D",
@@ -29,6 +29,8 @@ class App extends Component {
                 fontSize: "20px",
                 borderRadius: "50px",
               }}
+              aria-hidden="true"
+              tabindex="-1"
             >
               Schedule a meeting
             </button>
