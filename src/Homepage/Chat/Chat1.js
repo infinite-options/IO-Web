@@ -7,19 +7,23 @@ import React, { useEffect, useState } from "react";
 
 import classes from './Chat.module.css'
 const Chat1=()=>{
-    //For Axios.Post
- 
-  const [fName, setFName] = useState("");
+
+
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNum, setPhoneNum] = useState("");
-  const [notes, setNotes] = useState("");
   const [url, setUrl] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-
-  const handleFirstNameChange = (newFName) => {
-    setFName(newFName.target.value);
+  const handleFirstNameChange = (newName) => {
+    setName(newName.target.value);
   };
+
+  const handleSubjectChange = (newSubject) =>{
+    setSubject(newSubject.target.value);
+  }
 
   const handleUrlChange = (newUrl) => {
     setUrl(newUrl.target.value);
@@ -33,29 +37,28 @@ const Chat1=()=>{
     setPhoneNum(newPhoneNum.target.value);
   };
 
-  const handleNotesChange = (newNotes) => {
-    setNotes(newNotes.target.value);
+  const handleNotesChange = (newMessage) => {
+    setMessage(newMessage.target.value);
   };
 
 
 function sendMessage() {
-    console.log(fName, url, email, phoneNum,notes);
-    setFName("");
+    console.log(name, url, email, phoneNum,message);
+    setName("");
     setUrl("");
     setEmail("");
     setPhoneNum("");
-    setNotes("");
+    setMessage("");
 
    const postURL =
    "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/addcontact"  
  axios
       .post(postURL, {
-        first_name: fName,
-        last_name: "", //lName,
+          name: name,
         email: email, 
-        phone_no: phoneNum,
-        appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
-        notes: notes,
+        subject: subject,
+        //phone_no: phoneNum,
+        message: message,
         
       })
       .then((res) => console.log(res));
@@ -86,12 +89,9 @@ function sendMessage() {
             </p>
           </div>
           <Row style={{ marginTop: "35px" }}>
-            <input type = "text" value={fName}
+            <input type = "text" value={name}
              onChange={handleFirstNameChange}
               placeholder="Your Name"
-
-
-
               style={{
                 width: "35vw",
                 height: "8vh",
@@ -136,8 +136,8 @@ function sendMessage() {
               }}
             
             ></input> 
-            <input type = "tel" value={phoneNum}
-            onChange={handlePhoneNumChange}
+            <input type = "text" value={subject}
+            onChange={handleSubjectChange}
               style={{
                 width: "35vw",
                 height: "8vh",
@@ -158,7 +158,7 @@ function sendMessage() {
           </Row>
 
           <Row>
-            <input type ="text" value={notes}
+            <input type ="text" value={message}
             onChange={handleNotesChange}
               style={{
                 width: "81vw",
