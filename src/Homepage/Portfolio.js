@@ -34,179 +34,266 @@ class App extends Component {
   render() {
     return (
       <section id="portfolio" className="contaier">
-        <h1 className="h1">Products we’ve built</h1>
         <div>
-          <table className="ProjectTable">
-            <tr>
-              <td className="ProjectCell">
-                <MuiThemeProvider theme={theme}>
-                  <Tooltip title="Click here to see the design files">
-                    <div>
-                      <Link
-                        to="MealsForMe"
-                        style={{ textDecoration: "none" }}
-                        aria-label="Click to see design files for Meals For Me"
-                      >
-                        <p className="title">Mealsfor.me</p>
-                      </Link>
-                    </div>
-                  </Tooltip>
-                </MuiThemeProvider>
-              </td>
-
-              <td className="ProjectCell">
-                <MuiThemeProvider theme={theme}>
-                  <Tooltip title="Click here to see the design files">
-                    <div>
-                      <Link
-                        to="ServingFresh"
-                        style={{ textDecoration: "none" }}
-                        aria-label="Click here to see design files for Serving Fresh"
-                      >
-                        <p className="title">Serving Fresh</p>
-                      </Link>
-                    </div>
-                  </Tooltip>
-                </MuiThemeProvider>
-              </td>
-              <td className="ProjectCell">
-                <p className="title">Manifest</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="ProjectCell">
-                <p className="description">
-                  A meal subscription platform for busy professionals to eat
-                  from their favorite local restaurants at affordable prices.
-                </p>
-              </td>
-              <td className="ProjectCell">
-                <p className="description">
-                  A digital platform for local farmers to take online orders and
-                  make home deliveries.
-                </p>
-              </td>
-              <td className="ProjectCell">
-                <p className="description">
-                  A digital platform for last mile food delivery.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td className="ProjectCell">
-                <video
-                  src={MealsForMe}
-                  width="500"
-                  height="500"
-                  autoplay="autoplay"
-                  muted
-                  loop
-                  alt="MealsForMe Picture"
-                />
-              </td>
-              <td className="ProjectCell">
-                <video
-                  src={ServingFresh}
-                  width="500"
-                  height="500"
-                  autoplay="autoplay"
-                  muted
-                  loop
-                  alt="ServingFresh Picture"
-                />
-              </td>
-              <td className="ProjectCell">
-                <img
-                  src={JustDelivered}
-                  className="smallImg"
-                  alt="JustDelivered"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td className="ProjectCell">
-                <button
-                  className="button"
-                  aria-label="Become a customer for Meals for me"
-                >
-                  Become a Customer
-                </button>
-                <br></br>
-                <button
-                  className="button"
-                  aria-label="Become a partner restaurant for meals for me"
-                >
-                  Become a Partner Restaurant
-                </button>
-              </td>
-
-              <td className="ProjectCell">
-                <button
-                  className="button"
-                  aria-label="Become a customer for serving fresh"
-                >
-                  Become a Customer
-                </button>
-                <br></br>
-                <button
-                  className="button"
-                  aria-label="Become a farm partner for serving fresh"
-                >
-                  Become a Farm Partner
-                </button>
-              </td>
-              <td className="ProjectCell">
-                <button
-                  className="button"
-                  aria-label="use the manifest app for your delivery business"
-                >
-                  Use this app for your delivery business
-                </button>
-              </td>
-            </tr>
-          </table>
+          <div
+            style={{
+              color: "#52330D",
+              float: "left",
+              width: "100%",
+              fontWeight: "bold",
+              fontSize: "200%",
+              marginTop: "5%",
+            }}
+          >
+            <h1 className="h1">Products we’ve built</h1>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          >
+            <div style={{ width: "33%", float: "left" }}>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link
+                      to="MealsForMe"
+                      style={{ textDecoration: "none" }}
+                      aria-label="Click to see design files for Meals For Me"
+                    >
+                      <p className="title">Mealsfor.me</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link
+                      to="ServingFresh"
+                      style={{ textDecoration: "none" }}
+                      aria-label="Click here to see design files for Serving Fresh"
+                    >
+                      <p className="title">Serving Fresh</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <p className="title">Just Delivered</p>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          >
+            <div style={{ width: "33%", float: "left" }}>
+              <p className="description">
+                A meal subscription platform for busy professionals to eat from
+                their favorite local restaurants at affordable prices.
+              </p>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <p className="description">
+                A digital platform for local farmers to take online orders and
+                make home deliveries.
+              </p>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <p className="description">
+                A digital platform for last mile food delivery.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          >
+            <div style={{ width: "33%", float: "left" }}>
+              <video
+                src={MealsForMe}
+                width="500"
+                height="500"
+                autoplay="autoplay"
+                muted
+                loop
+                alt="MealsForMe Picture"
+              />
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <video
+                src={ServingFresh}
+                width="500"
+                height="500"
+                autoplay="autoplay"
+                muted
+                loop
+                alt="ServingFresh Picture"
+              />
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <img
+                src={JustDelivered}
+                className="smallImg"
+                alt="JustDelivered"
+              />
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          >
+            <div style={{ width: "33%", float: "left" }}>
+              <button
+                className="button"
+                aria-label="Become a customer for Meals for me"
+              >
+                Become a Customer
+              </button>
+              <br></br>
+              <button
+                className="button"
+                aria-label="Become a partner restaurant for meals for me"
+              >
+                Become a Partner Restaurant
+              </button>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <button
+                className="button"
+                aria-label="Become a customer for serving fresh"
+              >
+                Become a Customer
+              </button>
+              <br></br>
+              <button
+                className="button"
+                aria-label="Become a farm partner for serving fresh"
+              >
+                Become a Farm Partner
+              </button>
+            </div>
+            <div style={{ width: "33%", float: "left", paddingTop: "2%" }}>
+              <button
+                className="button"
+                aria-label="use the manifest app for your delivery business"
+              >
+                Use this app for your delivery business
+              </button>
+            </div>
+          </div>
         </div>
-        <h1 className="h1">Products we helped build</h1>
-        <table className="ProjectTable">
-          <tr>
-            <td className="ProjectCell">
+        <div>
+          <div
+            style={{
+              color: "#52330D",
+              float: "left",
+              width: "100%",
+              fontWeight: "bold",
+              fontSize: "200%",
+              marginTop: "5%",
+            }}
+          >
+            <h1 className="h1">Products we helped build</h1>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div
+              style={{
+                width: "33%",
+                float: "left",
+                paddingLeft: "1%",
+                paddingRight: "1%",
+              }}
+            >
               <p className="title">Manifest</p>
-            </td>
-            <td className="ProjectCell">
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
               <p className="title">Nitya Ayurveda</p>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td className="ProjectCell">
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div
+              style={{
+                width: "33%",
+                float: "left",
+                paddingLeft: "1%",
+                paddingRight: "1%",
+              }}
+            >
               <p className="description">
                 A productivity app for people with memory issues - in
                 collaboration with Tulane University.
               </p>
-            </td>
-            <td className="ProjectCell">
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
               <p className="description">
                 Nitya Ayurveda brings classical Ayurvedic healthcare to clients
                 in the South Bay.
               </p>
-            </td>
-            <td className="ProjectCell"></td>
-          </tr>
-          <tr>
-            <td className="ProjectCell">
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          >
+            <div style={{ width: "33%", float: "left" }}>
               <img src={Manifest} className="smallImg" alt="Manifest image" />
-            </td>
-            <td className="ProjectCell">
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
               <img
                 src={NityaAyurveda}
                 className="smallImg"
                 alt="Nitya Ayurveda logo"
               />
-            </td>
-            <td className="ProjectCell"></td>
-          </tr>
-          <tr></tr>
-        </table>
+            </div>
+          </div>
+        </div>
         <button className="button2" aria-label="This button does nothing">
           I am a Entrepreneur looking for some help.
         </button>
