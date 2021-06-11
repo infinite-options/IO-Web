@@ -132,8 +132,7 @@ class App extends Component {
             <div style={{ width: "33%", float: "left" }}>
               <video
                 src={MealsForMe}
-                width="500"
-                height="500"
+                width="100%"
                 autoplay="autoplay"
                 muted
                 loop
@@ -143,8 +142,7 @@ class App extends Component {
             <div style={{ width: "33%", float: "left" }}>
               <video
                 src={ServingFresh}
-                width="500"
-                height="500"
+                width="100%"
                 autoplay="autoplay"
                 muted
                 loop
@@ -152,11 +150,7 @@ class App extends Component {
               />
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <img
-                src={JustDelivered}
-                className="smallImg"
-                alt="JustDelivered"
-              />
+              <img width="100%" src={JustDelivered} alt="JustDelivered" />
             </div>
           </div>
           <div
@@ -283,14 +277,10 @@ class App extends Component {
             }}
           >
             <div style={{ width: "33%", float: "left" }}>
-              <img src={Manifest} className="smallImg" alt="Manifest image" />
+              <img src={Manifest} width="100%" alt="Manifest image" />
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <img
-                src={NityaAyurveda}
-                className="smallImg"
-                alt="Nitya Ayurveda logo"
-              />
+              <img src={NityaAyurveda} width="100%" alt="Nitya Ayurveda logo" />
             </div>
           </div>
         </div>

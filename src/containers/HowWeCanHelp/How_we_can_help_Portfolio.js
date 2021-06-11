@@ -139,7 +139,7 @@ class App extends Component {
                 to="MealsForMe"
                 aria-label="Click to check out Meals For Me"
               >
-                <img src={MealsForMe1} className="smallImg" alt="MealsForMe1" />
+                <img src={MealsForMe1} width="100%" alt="MealsForMe1" />
               </Link>
             </div>
             <div style={{ width: "33%", float: "left" }}>
@@ -149,8 +149,7 @@ class App extends Component {
               >
                 <video
                   src={ServingFreshAnimation}
-                  width="500"
-                  height="500"
+                  width="100%"
                   autoplay="autoplay"
                   muted
                   loop
@@ -159,11 +158,7 @@ class App extends Component {
               </Link>
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <img
-                src={JustDelivered1}
-                className="smallImg"
-                alt="JustDelivered1"
-              />
+              <img src={JustDelivered1} width="100%" alt="JustDelivered1" />
             </div>
           </div>
         </div>
@@ -269,7 +264,7 @@ class App extends Component {
                 to="MealsForMe"
                 aria-label="Click to check out Meals For Me"
               >
-                <img src={M4MeMockup1} className="smallImg" alt="M4MeMockup1" />
+                <img src={M4MeMockup1} width="100%" alt="M4MeMockup1" />
               </Link>
             </div>
             <div style={{ width: "33%", float: "left" }}>
@@ -279,13 +274,13 @@ class App extends Component {
               >
                 <img
                   src={ServingFreshMobile}
-                  className="smallImg"
+                  width="100%"
                   alt="ServingFreshMobile"
                 />
               </Link>
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <img src={Manifest} className="smallImg" alt="Manifest" />
+              <img src={Manifest} width="100%" alt="Manifest" />
             </div>
           </div>
         </div>
@@ -319,8 +314,7 @@ class App extends Component {
               >
                 <video
                   src={MealsForMeAnimation}
-                  width="500"
-                  height="500"
+                  width="100%"
                   autoplay="autoplay"
                   muted
                   loop
@@ -335,7 +329,7 @@ class App extends Component {
               >
                 <img
                   src={ServingFresh}
-                  className="smallImg"
+                  width="100%"
                   alt="ServingFresh"
                   style={{ opacity: 0.5 }}
                 />
