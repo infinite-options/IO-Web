@@ -1,6 +1,6 @@
 .h1 {
   font-size: 54px;
-  font-family: AvenirHeavy;
+  font-family: AvenirHeavy, sans-serif;
   color: #f6a833;
   border-top: 3px solid #f6a833;
   border-bottom: 3px solid #f6a833;
@@ -8,21 +8,21 @@
   padding: 20px;
 }
 .title0 {
-  font: 54px;
-  font-family: AvenirHeavy;
+  font-size: 54px;
+  font-family: AvenirHeavy, sans-serif;
   color: #52330d;
   margin: 0 auto;
 }
 .title1 {
-  font: 42px;
+  font-size: 42px;
   text-align: left;
-  font-family: AvenirHeavy;
+  font-family: AvenirHeavy, sans-serif;
   color: #52330d;
   margin-bottom: -10px;
 }
 .description {
   text-align: left;
-  font-family: AvenirMedium;
+  font-family: AvenirMedium, sans-serif;
   font-size: 24px;
 }
 .contaier {
@@ -50,5 +50,32 @@
 }
 .unstylelink {
   text-decoration: none;
-  font: 42px;
+  font-size: 42px;
+}
+
+@media screen and (max-width: 900px) {
+
+
+  .description{
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 660px) {
+
+
+
+  .description{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+
+
+  .description{
+    font-size: 10px;
+  }
 }

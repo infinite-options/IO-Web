@@ -6,6 +6,7 @@ import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
+import classes from "./ScheduleMeeting.css"
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -291,7 +292,7 @@ const Appointment = () => {
     setTimeSelected(true);
   }
 
-  const classes = useStyles();
+  /*const classes = useStyles();*/
 
   function bookAppt() {
     console.log(fName, url, email, phoneNum);

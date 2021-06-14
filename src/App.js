@@ -15,6 +15,7 @@ import Appointment from "./containers/Appointment/scheduleMeeting.js";
 import ServingFresh from "./containers/ServingFresh/ServingFresh";
 import MealsForMe from "./containers/MealsForMe/MealsForMe";
 import How_we_can_help from "./containers/HowWeCanHelp/How_we_can_help.js";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 import React, { Component } from "react";
 
@@ -24,6 +25,10 @@ class App extends Component {
       <div className="App" style={{ height: "auto" }}>
         <BrowserRouter>
           <div className="App">
+              <MessengerCustomerChat
+                  pageId="110111434630375"
+                  appId="941694233292147"
+              />
             <Navbar />
             <Switch>
               <Route exact path="/" component={Main} />
