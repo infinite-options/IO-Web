@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#52330D",
     fontFamily: "AvenirHeavy",
   },
-  contaier: {
+  container: {
     margin: "auto",
     width: "80%",
     padding: "50px",
@@ -321,7 +321,7 @@ const Appointment = () => {
 
   return (
     <section id="appointment">
-      <div className={classes.contaier}>
+      <div className={classes.container}>
         <img
           src={logo}
           alt="logo"
@@ -375,7 +375,7 @@ const Appointment = () => {
         </table>
       </div>
 
-      <div className={classes.contaier}>
+      <div className={classes.container}>
         <h1 className={classes.selectTime}>Confirm Meeting</h1>
         <h1
           style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}

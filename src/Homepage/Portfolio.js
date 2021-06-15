@@ -33,7 +33,7 @@ const theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <section id="portfolio" className="contaier">
+      <section id="portfolio" className="container">
         <div>
           <div
             style={{
