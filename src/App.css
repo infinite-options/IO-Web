@@ -1,7 +1,8 @@
 .App {
-  text-align: center;
-  font-family: "Avenir";
-  height: auto;
+    text-align: center;
+    font-family: "Avenir";
+    height: auto;
+    min-width: 40ch;
 }
 /* @media only screen and (min-height:900px){
   .App{
