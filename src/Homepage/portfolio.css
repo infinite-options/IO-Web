@@ -41,14 +41,14 @@
   height: 500px;
   margin: 0 auto;
 }
-.button {
+.button111 {
   display: flex;
 
   background-color: white;
-  border: 3px solid #f6a833;
+  border: 2px solid #f6a833;
   color: #f6a833;
   width: 100%;
-  padding: 15px 30px;
+  padding: 2%;
   text-align: center;
   display: block;
   font-size: 28px;
@@ -60,6 +60,24 @@
   margin-left: 5px;
   margin-right:5px;
   margin: auto;
+}
+
+.button {
+    display: flex;
+    background-color: white;
+    border: 2px solid #f6a833;
+    color: #f6a833;
+    width: 95%;
+    padding: 2%;
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    border-radius: 50px;
+    font-family: AvenirHeavy, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .button2 {
@@ -76,9 +94,9 @@
   margin: 50px auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 100px) {
   .button {
-    font-size: 13px;
+    font-size: 75%;
   }
   .title {
     font-size: 150%;
@@ -95,7 +113,7 @@
 @media screen and (max-width: 660px) {
 
   .title {
-    font-size: 120%;
+    font-size: 75%;
   }
 
   .description{
@@ -106,7 +124,7 @@
 @media screen and (max-width: 400px) {
     .button {
         text-align: center;
-        font-size: 10px;
+        font-size: 75%;
         padding-right: 1px;
         padding-left: 1px;
         padding-top: 1px;

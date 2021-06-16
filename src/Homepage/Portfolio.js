@@ -125,11 +125,11 @@ class App extends Component {
               color: "#52330D",
               display: "flex",
               flexDirection: "row",
-              paddingLeft: "1%",
-              paddingRight: "1%",
+             
+              paddingRight: "1%"
             }}
-          >
-            <div style={{ width: "33%", float: "left" }}>
+                >
+                    <div style={{ width: "33%", float: "left"}}>
               <video
                 src={MealsForMe}
                 width="100%"
