@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { Component } from "react";
+import  "./WhatWeDo.css";
 
 class App extends Component {
   render() {
