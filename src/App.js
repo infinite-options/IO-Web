@@ -20,44 +20,44 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 import React, { Component } from "react";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App" style={{ height: "auto" }}>
-        <BrowserRouter>
-          <div className="App">
-              <MessengerCustomerChat
-                  pageId="110111434630375"
-                  appId="941694233292147"
-              />
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={Main} />
-              <Route path="/WhatWeDo" component={WhatWeDo} />
-              <Route path="/how_we_can_help" component={How_we_can_help} />
-              <Route path="/contact" component={Chat1} />
-              <Route path="/portfolio" component={Portfolio} />
-              <Route path="/careers" component={Careers} />
-              <Route path="/servingfresh" component={ServingFresh} />
-              <Route path="/mealsforMe" component={MealsForMe} />
-              <Route path="/appointment" component={Appointment} />
-            </Switch>
-            <Footer></Footer>
-          </div>
-        </BrowserRouter>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App" style={{ height: "auto" }}>
+                <BrowserRouter>
+                    <div className="App">
+                        <MessengerCustomerChat
+                            pageId="110111434630375"
+                            appId="941694233292147"
+                        />
+                        <Navbar />
+                        <Switch>
+                            <Route exact path="/" component={Main} />
+                            <Route path="/WhatWeDo" component={WhatWeDo} />
+                            <Route path="/how_we_can_help" component={How_we_can_help} />
+                            <Route path="/contact" component={Chat1} />
+                            <Route path="/portfolio" component={Portfolio} />
+                            <Route path="/careers" component={Careers} />
+                            <Route path="/servingfresh" component={ServingFresh} />
+                            <Route path="/mealsforMe" component={MealsForMe} />
+                            <Route path="/appointment" component={Appointment} />
+                        </Switch>
+                        <Footer></Footer>
+                    </div>
+                </BrowserRouter>
+            </div>
+        );
+    }
 }
 
 export function Main() {
-  return (
-    <main style={{ textAlign: "center" }}>
-      <WhatWeDo />
-      <ScheduleAMeeting />
-      <Portfolio />
-      <Chat1 />
-    </main>
-  );
+    return (
+        <main style={{ textAlign: "center" }}>
+            <WhatWeDo />
+            <ScheduleAMeeting />
+            <Portfolio />
+            <Chat1 />
+        </main>
+    );
 }
 
 export default App;

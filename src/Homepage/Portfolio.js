@@ -72,7 +72,7 @@ class App extends Component {
                 </Tooltip>
               </MuiThemeProvider>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
+            <div style={{ width: "33%", float: "left"}}>
               <MuiThemeProvider theme={theme}>
                 <Tooltip title="Click here to see the design files">
                   <div>
@@ -101,19 +101,19 @@ class App extends Component {
               paddingRight: "1%",
             }}
           >
-            <div style={{ width: "33%", float: "left" }}>
+            <div style={{ width: "30%", float: "left"}}>
               <p className="description">
                 A meal subscription platform for busy professionals to eat from
                 their favorite local restaurants at affordable prices.
               </p>
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
+                    </div>
+                    <div style={{ width: "30%", float: "left", paddingLeft: "3%", paddingRight:"1%"}}>
               <p className="description">
                 A digital platform for local farmers to take online orders and
                 make home deliveries.
               </p>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
+                    <div style={{ width: "33%", float: "left", paddingLeft: "2%" }}>
               <p className="description">
                 A digital platform for last mile food delivery.
               </p>
@@ -159,7 +159,7 @@ class App extends Component {
               color: "#52330D",
               display: "flex",
               flexDirection: "row",
-              paddingLeft: "1%",
+              paddingLeft: "%",
               paddingRight: "1%",
             }}
           >
@@ -198,7 +198,7 @@ class App extends Component {
                 className="button"
                 aria-label="use the manifest app for your delivery business"
               >
-                Use this app for your delivery business
+                Sign up for Just Delivered
               </button>
             </div>
           </div>
