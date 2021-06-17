@@ -195,21 +195,21 @@ const Appointment = () => {
 
   const dateFormat1 = (date) => {
     return (
+      date.getFullYear() +
+      "-" +
       doubleDigitMonth(date) +
-      "/" +
-      doubleDigitDay(date) +
-      "/" +
-      date.getFullYear()
+      "-" +
+      doubleDigitDay(date)
     );
   };
 
   const dateFormat2 = (date) => {
     return (
+      date.getFullYear() +
+      "-" +
       doubleDigitMonth(date) +
-      "/" +
-      doubleDigitDay(date) +
-      "/" +
-      date.getFullYear()
+      "-" +
+      doubleDigitDay(date)
     );
   };
 
