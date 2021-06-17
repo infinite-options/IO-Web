@@ -206,9 +206,9 @@ const Appointment = () => {
   const dateFormat2 = (date) => {
     return (
       doubleDigitMonth(date) +
-      "-" +
+      "/" +
       doubleDigitDay(date) +
-      "-" +
+      "/" +
       date.getFullYear()
     );
   };
