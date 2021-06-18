@@ -1,6 +1,8 @@
 .react-calendar {
+  /*width: 100%;*/
   width: 100%;
   line-height: 5em;
+  
 }
 .react-calendar--doubleView {
   width: 100%;

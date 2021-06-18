@@ -6,8 +6,10 @@ import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
+import { auto } from "@popperjs/core";
 
 const useStyles = makeStyles((theme) => ({
+
   h1: {
     fontSize: "150%",
     padding: "20px 0",
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: "auto",
-    width: "80%",
+    width: "50%",
     padding: "50px",
   },
   button: {
@@ -67,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
     border: "2px solid #F6A833 ",
   },
   calendarBox: {
+
     width: "40%",
     padding: "50px",
     backgroundColor: "#F6A833",
@@ -321,7 +324,7 @@ const Appointment = () => {
 
   return (
     <section id="appointment">
-      <div className={classes.container}>
+      {/*<div className={classes.container}>*/}
         <img
           src={logo}
           alt="logo"
@@ -373,9 +376,9 @@ const Appointment = () => {
             </th>
           </tr>
         </table>
-      </div>
+      {/*</div>*/}
 
-      <div className={classes.container}>
+      {/*<div className={classes.container}>*/}
         <h1 className={classes.selectTime}>Confirm Meeting</h1>
         <h1
           style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}
@@ -429,7 +432,7 @@ const Appointment = () => {
             Please check your email for the meeting link.
           </h1>
         </div>
-      </div>
+      {/*</div>*/}
     </section>
   );
 };
