@@ -72,7 +72,7 @@ class App extends Component {
                 </Tooltip>
               </MuiThemeProvider>
             </div>
-            <div style={{ width: "33%", float: "left"}}>
+            <div style={{ width: "33%", float: "left" }}>
               <MuiThemeProvider theme={theme}>
                 <Tooltip title="Click here to see the design files">
                   <div>
@@ -101,19 +101,26 @@ class App extends Component {
               paddingRight: "1%",
             }}
           >
-            <div style={{ width: "30%", float: "left"}}>
+            <div style={{ width: "30%", float: "left" }}>
               <p className="description">
                 A meal subscription platform for busy professionals to eat from
                 their favorite local restaurants at affordable prices.
               </p>
-                    </div>
-                    <div style={{ width: "30%", float: "left", paddingLeft: "3%", paddingRight:"1%"}}>
+            </div>
+            <div
+              style={{
+                width: "30%",
+                float: "left",
+                paddingLeft: "3%",
+                paddingRight: "1%",
+              }}
+            >
               <p className="description">
                 A digital platform for local farmers to take online orders and
                 make home deliveries.
               </p>
             </div>
-                    <div style={{ width: "33%", float: "left", paddingLeft: "2%" }}>
+            <div style={{ width: "33%", float: "left", paddingLeft: "2%" }}>
               <p className="description">
                 A digital platform for last mile food delivery.
               </p>
@@ -125,11 +132,11 @@ class App extends Component {
               color: "#52330D",
               display: "flex",
               flexDirection: "row",
-             
-              paddingRight: "1%"
+
+              paddingRight: "1%",
             }}
-                >
-                    <div style={{ width: "33%", float: "left"}}>
+          >
+            <div style={{ width: "33%", float: "left" }}>
               <video
                 src={MealsForMe}
                 width="100%"
@@ -175,7 +182,7 @@ class App extends Component {
                 className="button"
                 aria-label="Become a partner restaurant for meals for me"
               >
-                Become a Partner Restaurant
+                Become a Provider
               </button>
             </div>
             <div style={{ width: "33%", float: "left" }}>
@@ -190,7 +197,7 @@ class App extends Component {
                 className="button"
                 aria-label="Become a farm partner for serving fresh"
               >
-                Become a Farm Partner
+                Become a Supplier
               </button>
             </div>
             <div style={{ width: "33%", float: "left", paddingTop: "2%" }}>
@@ -198,7 +205,7 @@ class App extends Component {
                 className="button"
                 aria-label="use the manifest app for your delivery business"
               >
-                Sign up for Just Delivered
+                Request a Demo
               </button>
             </div>
           </div>
