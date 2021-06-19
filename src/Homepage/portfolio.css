@@ -8,7 +8,7 @@
   padding: 20px;
 }
 .title {
-  font-size: 200%;
+  font-size: 160%;
   text-align: left;
   font-family: AvenirHeavy, sans-serif;
   color: #52330d;
@@ -21,7 +21,7 @@
 }
 .container {
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 .ProjectTable {
   display: block;
@@ -58,26 +58,26 @@
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
-  margin-right:5px;
+  margin-right: 5px;
   margin: auto;
 }
 
 .button {
-    display: flex;
-    background-color: white;
-    border: 2px solid #f6a833;
-    color: #f6a833;
-    width: 95%;
-    padding: 2%;
-    text-align: center;
-    display: block;
-    font-size: 28px;
-    border-radius: 50px;
-    font-family: AvenirHeavy, sans-serif;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
+  display: flex;
+  background-color: white;
+  border: 2px solid #f6a833;
+  color: #f6a833;
+  width: 95%;
+  padding: 2%;
+  text-align: center;
+  display: block;
+  /* font-size: 28px; */
+  border-radius: 50px;
+  font-family: AvenirHeavy, sans-serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .button2 {
@@ -104,36 +104,30 @@
   .button2 {
     font-size: 25px;
   }
-  .description{
+  .description {
     font-size: small;
   }
-
 }
 
 @media screen and (max-width: 660px) {
-
   .title {
     font-size: 75%;
   }
 
-  .description{
+  .description {
     font-size: 100%;
   }
 }
 
 @media screen and (max-width: 400px) {
-    .button {
-        text-align: center;
-        font-size: 75%;
-        padding-right: 1px;
-        padding-left: 1px;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        
-        font-size: 13px;
-    }
+  .button {
+    text-align: center;
+    font-size: 75%;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 
-   
+    font-size: 13px;
+  }
 }
-
-

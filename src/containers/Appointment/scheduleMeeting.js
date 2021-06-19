@@ -208,11 +208,11 @@ const Appointment = () => {
 
   const dateFormat2 = (date) => {
     return (
-      date.getFullYear() +
-      "-" +
       doubleDigitMonth(date) +
       "-" +
-      doubleDigitDay(date)
+      doubleDigitDay(date) +
+      "-" +
+      date.getFullYear()
     );
   };
 
@@ -259,9 +259,7 @@ const Appointment = () => {
             apiDateString
         )
         .then((res) => {
-          console.log("Hello world");
           console.log(res.data);
-          console.log("Hello world");
           console.log(res.data.result.available_timeslots);
           setTimeSlots(res.data.result.available_timeslots);
         });
