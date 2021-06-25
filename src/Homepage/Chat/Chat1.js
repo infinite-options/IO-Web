@@ -213,7 +213,18 @@ const Appointment = () => {
     );
   };
 
+  // This one is for doing the sendToDatabase Post Call
   const dateFormat3 = (date) => {
+    return (
+      date.getFullYear() +
+      "-" +
+      doubleDigitMonth(date) +
+      "-" +
+      doubleDigitDay(date)
+    );
+  };
+
+  const dateFormat4 = (date) => {
     var months = {
       "01": "Jan",
       "02": "Feb",
@@ -241,8 +252,8 @@ const Appointment = () => {
 
   const dateStringChange = (date) => {
     setDateString(dateFormat1(date));
-    setApiDateString(dateFormat2(date));
-    setDateString1(dateFormat3(date));
+    setApiDateString(dateFormat3(date));
+    setDateString1(dateFormat4(date));
     setDateHasBeenChanged(true);
   };
 
@@ -251,36 +262,38 @@ const Appointment = () => {
       axios
         .get(
           "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/calendar/" +
-            treatment_uid +
-            "/" +
             apiDateString
         )
         .then((res) => {
-          console.log(res.data.result.available_timeslots);
-          setTimeSlots(res.data.result.available_timeslots);
+          console.log(res);
+          console.log("This is the information we got" + res.data);
+          console.log(res.data[0]);
+          console.log(res.data[0].appt_start);
+          setTimeSlots(res.data);
+          console.log("Timeslots Array " + timeSlots);
         });
     }
     setDateHasBeenChanged(false);
   });
 
-  function renderAvailableAppts() {
-    return timeSlots.map((element) => (
-      <button
-        className={classes.timeslotButton}
-        onClick={() => selectApptTime(element)}
-      >
-        {element}
-      </button>
-    ));
-  }
+  // function renderAvailableAppts() {
+  //   return timeSlots.map((element) => (
+  //     <button
+  //       className={classes.timeslotButton}
+  //       onClick={() => selectApptTime(element.appt_start)}
+  //     >
+  //       {element.appt_start}
+  //     </button>
+  //   ));
+  // }
   function renderAvailableApptsVertical() {
     return timeSlots.map((element) => (
       <div>
         <button
           className={classes.timeslotButton}
-          onClick={() => selectApptTime(element)}
+          onClick={() => selectApptTime(element.appt_start)}
         >
-          {element}
+          {element.appt_start}
         </button>
       </div>
     ));
