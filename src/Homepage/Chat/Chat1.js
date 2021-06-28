@@ -195,23 +195,23 @@ const Appointment = () => {
 
   const dateFormat1 = (date) => {
     return (
+      date.getFullYear() +
+      "-" +
       doubleDigitMonth(date) +
-      "/" +
-      doubleDigitDay(date) +
-      "/" +
-      date.getFullYear()
+      "-" +
+      doubleDigitDay(date)
     );
   };
 
-  const dateFormat2 = (date) => {
-    return (
-      doubleDigitMonth(date) +
-      "-" +
-      doubleDigitDay(date) +
-      "-" +
-      date.getFullYear()
-    );
-  };
+  // const dateFormat2 = (date) => {
+  //   return (
+  //     doubleDigitMonth(date) +
+  //     "-" +
+  //     doubleDigitDay(date) +
+  //     "-" +
+  //     date.getFullYear()
+  //   );
+  // };
 
   // This one is for doing the sendToDatabase Post Call
   const dateFormat3 = (date) => {
