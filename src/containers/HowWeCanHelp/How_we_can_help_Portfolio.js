@@ -5,6 +5,7 @@ import Manifest from "../../assets/images/Manifest.png";
 import ServingFresh from "../../assets/images/ServingFresh/Serving_Fresh.png";
 import ServingFreshAnimation from "../../videos/ServingFreshAnimation.mp4";
 import ServingFreshMobile from "../../assets/images/ServingFresh/ServingFreshMobile.png";
+import ServingFreshBranding from "../../videos/teaser-loading-Freshness.mp4";
 import JustDelivered1 from "../../assets/images/JustDelivered1.png";
 import M4MeMockup1 from "../../assets/images/Meals4Me/M4MeMockup1.png";
 import MealsForMe1 from "../../assets/images/Meals4Me/MealsForMe1.png";
@@ -327,11 +328,13 @@ class App extends Component {
                 to="ServingFresh"
                 aria-label="Click to check out Serving Fresh"
               >
-                <img
-                  src={ServingFresh}
+                <video
+                  src={ServingFreshBranding}
                   width="100%"
-                  alt="ServingFresh"
-                  style={{ opacity: 0.5 }}
+                  autoplay="autoplay"
+                  muted
+                  loop
+                  alt="ServingFresh Picture"
                 />
               </Link>
             </div>

@@ -1,4 +1,4 @@
-import Chat from "../../Homepage/Chat/Chat1.js";
+import Chat from "./Chat1.js";
 import Flowimg from "./Flowimg";
 
 import React, { Component } from "react";

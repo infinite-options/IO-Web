@@ -57,7 +57,6 @@ class App extends Component {
                 marginRight: "10%",
                 display: "flex",
                 flexDirection: "row",
-                color: "#707070",
               }}
             >
               <div style={{ width: "23%", fontSize: "150%" }}>
@@ -65,6 +64,7 @@ class App extends Component {
                   style={{
                     textAlign: "left",
                     fontWeight: "bold",
+                    textDecoration: "underline",
                   }}
                 >
                   MealsFor.Me
@@ -73,22 +73,20 @@ class App extends Component {
               <div style={{ width: "33%" }}>
                 <p
                   style={{
-                    fontSize: "75%",
+                    fontSize: "90%",
                     textAlign: "left",
                   }}
                 >
-                  YOUR BUSINESS NAME helps all businesses not only reach, but
-                  exceed their goals. Our experience helps us lay out a strategy
-                  that perfectly fits our clients. This collaboration is
-                  essential for the successful transition from strategy, to
-                  plan, to action. Learn about some of our past projects below,
-                  and get in touch to see what we can do for you.
+                  We designed and developed the brand identity, logo, mobile app
+                  as well as the website for Serving Fresh. It continues to be
+                  one of our favorite in-house products where we are now
+                  focusing on creating marketing and advertising.
                 </p>
               </div>
               <div style={{ width: "33%", marginLeft: "10%" }}>
                 <p
                   style={{
-                    fontSize: "75%",
+                    fontSize: "90%",
                     textAlign: "left",
                   }}
                 >

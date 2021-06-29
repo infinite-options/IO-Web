@@ -7,6 +7,7 @@ import Insta from "../../assets/images/ServingFresh/SFInstagram.png";
 import EggPlant from "../../assets/images/ServingFresh/eggplant.png";
 import SFFicon from "../../assets/images/ServingFresh/SFicon.png";
 import SFFAfter from "../../assets/images/ServingFresh/SFFAfter.png";
+import ServingFreshVideo from "../../videos/SF-video-for-FB-june.mp4";
 import Footer from "../../components/Footer";
 import React, { Component } from "react";
 
@@ -19,11 +20,19 @@ class App extends Component {
             <div
               style={{ marginLeft: "10%", marginRight: "10%", height: "auto" }}
             >
-              <img
+              {/* <img
                 style={{ width: "100%" }}
                 src={Sf_Fb}
                 alt="serving fresh diagram"
-              ></img>
+              ></img> */}
+              <video
+                src={ServingFreshVideo}
+                width="100%"
+                autoplay="autoplay"
+                muted
+                loop
+                alt="ServingFresh Picture"
+              />
             </div>
             <div
               style={{
@@ -50,7 +59,6 @@ class App extends Component {
             </div>
             <div
               style={{
-                color: "#707070",
                 marginLeft: "10%",
                 marginRight: "10%",
                 display: "flex",
@@ -62,23 +70,22 @@ class App extends Component {
                   style={{
                     textAlign: "left",
                     fontWeight: "bold",
+                    textDecoration: "underline",
                   }}
                 >
                   Serving Fresh, LLC
                 </p>
               </div>
               <div style={{ width: "33%" }}>
-                <p style={{ fontSize: "75%", textAlign: "left" }}>
-                  YOUR BUSINESS NAME helps all businesses not only reach, but
-                  exceed their goals. Our experience helps us lay out a strategy
-                  that perfectly fits our clients. This collaboration is
-                  essential for the successful transition from strategy, to
-                  plan, to action. Learn about some of our past projects below,
-                  and get in touch to see what we can do for you.
+                <p style={{ fontSize: "90%", textAlign: "left" }}>
+                  We designed and developed the brand identity, logo, mobile app
+                  as well as the website for Serving Fresh. It continues to be
+                  one of our favorite in-house products where we are now
+                  focusing on creating marketing and advertising.
                 </p>
               </div>
               <div style={{ width: "33%", marginLeft: "10%" }}>
-                <p style={{ fontSize: "75%", textAlign: "left" }}>
+                <p style={{ fontSize: "90%", textAlign: "left" }}>
                   App and web Design / Development<br></br> Branding<br></br>{" "}
                   Marketing
                 </p>
@@ -92,7 +99,6 @@ class App extends Component {
                 display: "flex",
                 flexDirection: "row",
                 float: "left",
-                color: "#52330D",
                 fontWeight: "bold",
                 fontSize: "200%",
               }}
@@ -124,10 +130,7 @@ class App extends Component {
                 display: "flex",
                 flexDirection: "row",
                 float: "left",
-                color: "#52330D",
-                float: "left",
                 width: "100%",
-                color: "#52330D",
                 fontWeight: "bold",
                 fontSize: "200%",
               }}

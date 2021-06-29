@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Appointment = () => {
   const treatment_uid = "330-000006"; // props.treatmentID;
-
+  const duriation = "0:29:59";
   //For Axios.Get
   const [date, setDate] = useState(new Date());
   const [dateString, setDateString] = useState(null);
@@ -262,39 +262,29 @@ const Appointment = () => {
     if (dateHasBeenChanged) {
       axios
         .get(
-          "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/calendar/" +
-            apiDateString
+          "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments/" +
+            apiDateString +
+            "/" +
+            duriation
         )
         .then((res) => {
           console.log(res);
-          console.log("This is the information we got" + res.data);
-          console.log(res.data[0]);
-          console.log(res.data[0].appt_start);
-          setTimeSlots(res.data);
+          console.log(res.data.result);
+          setTimeSlots(res.data.result);
           console.log("Timeslots Array " + timeSlots);
         });
     }
     setDateHasBeenChanged(false);
   });
 
-  // function renderAvailableAppts() {
-  //   return timeSlots.map((element) => (
-  //     <button
-  //       className={classes.timeslotButton}
-  //       onClick={() => selectApptTime(element.appt_start)}
-  //     >
-  //       {element.appt_start}
-  //     </button>
-  //   ));
-  // }
   function renderAvailableApptsVertical() {
     return timeSlots.map((element) => (
       <div>
         <button
           className={classes.timeslotButton}
-          onClick={() => selectApptTime(element.appt_start)}
+          onClick={() => selectApptTime(element.begin_time)}
         >
-          {element.appt_start}
+          {element.begin_time}
         </button>
       </div>
     ));

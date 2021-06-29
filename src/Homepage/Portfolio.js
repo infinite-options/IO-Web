@@ -4,7 +4,7 @@ import MealsForMe from "../videos/MealsForMeAnimation.mp4";
 import Manifest from "../assets/images/Manifest.png";
 import ServingFresh from "../videos/ServingFreshAnimation.mp4";
 import JustDelivered from "../assets/images/JustDelivered.png";
-import NityaAyurveda from "../assets/images/NityaAyurvedaLogo.png";
+import NityaAyurveda from "../assets/images/Nitya/NityaAyurvedaLogo.png";
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
@@ -42,7 +42,6 @@ class App extends Component {
               width: "100%",
               fontWeight: "bold",
               fontSize: "200%",
-              marginTop: "5%",
             }}
           >
             <h1 className="h1">Products we’ve built</h1>
@@ -213,7 +212,7 @@ class App extends Component {
         <div>
           <div
             style={{
-              color: "#52330D",
+              color: "#52330d",
               float: "left",
               width: "100%",
               fontWeight: "bold",
@@ -242,7 +241,19 @@ class App extends Component {
               <p className="title">Manifest</p>
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <p className="title">Nitya Ayurveda</p>
+              <MuiThemeProvider theme={theme}>
+                <Tooltip title="Click here to see the design files">
+                  <div>
+                    <Link
+                      to="MealsForMe"
+                      style={{ textDecoration: "none" }}
+                      aria-label="Click to see design files for Nitya Ayurveda"
+                    >
+                      <p className="title">Nitya Ayurveda</p>
+                    </Link>
+                  </div>
+                </Tooltip>
+              </MuiThemeProvider>
             </div>
           </div>
           <div
@@ -294,6 +305,87 @@ class App extends Component {
         <button className="button2" aria-label="This button does nothing">
           I am a Entrepreneur looking for some help.
         </button>
+        <div>
+          <div
+            style={{
+              color: "#52330D",
+              float: "left",
+              width: "100%",
+              fontWeight: "bold",
+              fontSize: "200%",
+              marginTop: "5%",
+            }}
+          >
+            <h1 className="h1">People we’ve helped</h1>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div
+              style={{
+                width: "33%",
+                float: "left",
+                paddingLeft: "1%",
+                paddingRight: "1%",
+              }}
+            >
+              <p className="title" style={{ textAlign: "center" }}>
+                Manifest
+              </p>
+            </div>
+            <div style={{ width: "33%", float: "left", margin: "0, auto" }}>
+              <p className="title" style={{ textAlign: "center" }}>
+                Nitya Ayurveda
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <div
+              style={{
+                width: "33%",
+                float: "left",
+                paddingLeft: "1%",
+                paddingRight: "1%",
+              }}
+            >
+              <p className="description" style={{ textAlign: "center" }}>
+                "A productivity app for people
+                <br /> with memory issues - in collaboration <br /> with Tulane
+                University."
+              </p>
+            </div>
+            <div style={{ width: "33%", float: "left" }}>
+              <p className="description" style={{ textAlign: "center" }}>
+                "Nitya Ayurveda brings classical <br />
+                Ayurvedic healthcare to clients
+                <br />
+                in the South Bay."
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              color: "#52330D",
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "1%",
+              paddingRight: "1%",
+            }}
+          ></div>
+        </div>
       </section>
     );
   }

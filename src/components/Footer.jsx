@@ -18,7 +18,11 @@ const Footer = () => {
       <div
         style={{ height: "200px", float: "left", width: "25%", bottom: "0" }}
       >
-        <img src={logo} style={{ marginBottom: "0px" }} aria-label="Infinite Options logo"></img>
+        <img
+          src={logo}
+          style={{ marginBottom: "0px" }}
+          aria-label="Infinite Options logo"
+        ></img>
 
         <p style={{ color: "white", marginTop: "30px" }}>Corporate Overview</p>
         <p style={{ color: "white", marginTop: "30px" }}>
@@ -52,13 +56,25 @@ const Footer = () => {
         }}
       >
         <div style={{ float: "left", width: "33%", marginTop: "15%" }}>
-          <img style={{ height: "51px", width: "51px" }} src={twitter} aria-label="Twitter link placeholder"></img>
+          <img
+            style={{ height: "51px", width: "51px" }}
+            src={twitter}
+            aria-label="Twitter link placeholder"
+          ></img>
         </div>
         <div style={{ float: "left", width: "33%", marginTop: "15%" }}>
-          <img style={{ height: "51px", width: "51px" }} src={fb} aria-label="Facebook link placeholder"></img>
+          <img
+            style={{ height: "51px", width: "51px" }}
+            src={fb}
+            aria-label="Facebook link placeholder"
+          ></img>
         </div>
         <div style={{ float: "left", width: "33%", marginTop: "15%" }}>
-          <img style={{ height: "51px", width: "51px" }} src={li} aria-label="Linkedn link placeholder"></img>
+          <img
+            style={{ height: "51px", width: "51px" }}
+            src={li}
+            aria-label="Linkedn link placeholder"
+          ></img>
         </div>
       </div>
     </div>

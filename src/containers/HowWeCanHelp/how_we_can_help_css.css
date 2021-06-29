@@ -1,9 +1,9 @@
 .h1 {
   font-size: 54px;
   font-family: AvenirHeavy, sans-serif;
-  color: #f6a833;
-  border-top: 3px solid #f6a833;
-  border-bottom: 3px solid #f6a833;
+  color: #52330d;
+  border-top: 3px solid #52330d;
+  border-bottom: 3px solid #52330d;
   text-align: left;
   padding: 20px;
 }
@@ -54,28 +54,19 @@
 }
 
 @media screen and (max-width: 900px) {
-
-
-  .description{
+  .description {
     font-size: 16px;
   }
-
 }
 
 @media screen and (max-width: 660px) {
-
-
-
-  .description{
+  .description {
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 520px) {
-
-
-
-  .description{
+  .description {
     font-size: 10px;
   }
 }
