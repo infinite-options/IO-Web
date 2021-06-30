@@ -6,7 +6,7 @@ import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
-import { auto } from "@popperjs/core";
+import scrollToTop from "./ScrollToTop.js";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: "auto",
-    width: "50%",
+    width: "80%",
     padding: "50px",
   },
   button: {
@@ -322,110 +322,115 @@ const Appointment = () => {
 
   return (
     <section id="appointment">
-      {/*<div className={classes.container}>*/}
-      <img
-        src={logo}
-        alt="logo"
-        style={{ width: "25%", marginBottom: "50px" }}
-      />
-      <table className={classes.calendarTimeTable}>
-        <tr>
-          <th className={classes.calendarBox}>
-            <h1
-              style={{
-                textAlign: "left",
-                color: "white",
-                fontFamily: "AvenirHeavy",
-              }}
-            >
-              Find a time to meet with us
-            </h1>
-            <Calendar
-              onClickDay={dateChange}
-              value={date}
-              backgroundColor="#F6A833"
-              calendarType="US"
-              className={classes.center}
-            />
-          </th>
-          <th className={classes.timeslotBox}>
-            <div className={classes.inputRow}>
-              <label className={classes.h1}>Meeting Duriation</label>
-              <input
-                className={classes.duritionInput}
-                placeholder="30 mins"
-              ></input>
-            </div>
-            <h1 className={classes.h1} style={{ textAlign: "left" }}>
-              What time is good for you?
-            </h1>
-            <p
-              style={{
-                textAlign: "left",
-                color: "#4E70FF",
-                fontFamily: "AvenirHeavy",
-              }}
-            >
-              UTC - 07:00 Pacific Time
-            </p>
-            <div className={classes.timeslotButtonBox}>
-              {renderAvailableApptsVertical()}
-            </div>
-          </th>
-        </tr>
-      </table>
-      {/*</div>*/}
-
-      {/*<div className={classes.container}>*/}
-      <h1 className={classes.selectTime}>Confirm Meeting</h1>
-      <h1
-        style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}
-        hidden={timeSelected ? "hidden" : ""}
-      >
-        Please pick a day and time to meet
-      </h1>
-      <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
-        <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
-        <span style={{ color: "#F6A833" }}>{selectedTime}</span>
-      </h1>
-      <div hidden={submitted ? "hidden" : ""}>
-        <div>
-          <SimpleForm
-            field="Full Name*"
-            onHandleChange={handleFirstNameChange}
-          />
-          <SimpleForm field="Website" onHandleChange={handleUrlChange} />
-        </div>
-        <div>
-          <SimpleForm
-            field="Email Address*"
-            onHandleChange={handleEmailChange}
-          />
-          <SimpleForm
-            field="Phone Number"
-            onHandleChange={handlePhoneNumChange}
-          />
-        </div>
-        <div>
-          <SimpleFormText field="Message" onHandleChange={handleNotesChange} />
-        </div>
-        <div hidden={timeSelected ? "hidden" : ""}>
-          <button className={classes.buttonDisable}>Confirm</button>
-        </div>
-        <div hidden={!timeSelected ? "hidden" : ""}>
-          <button className={classes.button} onClick={bookAppt}>
-            Confirm
-          </button>
-        </div>
+      <scrollToTop />
+      <div className={classes.container}>
+        <img
+          src={logo}
+          alt="logo"
+          style={{ width: "25%", marginBottom: "50px" }}
+        />
+        <table className={classes.calendarTimeTable}>
+          <tr>
+            <th className={classes.calendarBox}>
+              <h1
+                style={{
+                  textAlign: "left",
+                  color: "white",
+                  fontFamily: "AvenirHeavy",
+                }}
+              >
+                Find a time to meet with us
+              </h1>
+              <Calendar
+                onClickDay={dateChange}
+                value={date}
+                backgroundColor="#F6A833"
+                calendarType="US"
+                className={classes.center}
+              />
+            </th>
+            <th className={classes.timeslotBox}>
+              <div className={classes.inputRow}>
+                <label className={classes.h1}>Meeting Duriation</label>
+                <input
+                  className={classes.duritionInput}
+                  placeholder="30 mins"
+                ></input>
+              </div>
+              <h1 className={classes.h1} style={{ textAlign: "left" }}>
+                What time is good for you?
+              </h1>
+              <p
+                style={{
+                  textAlign: "left",
+                  color: "#4E70FF",
+                  fontFamily: "AvenirHeavy",
+                }}
+              >
+                UTC - 07:00 Pacific Time
+              </p>
+              <div className={classes.timeslotButtonBox}>
+                {renderAvailableApptsVertical()}
+              </div>
+            </th>
+          </tr>
+        </table>
       </div>
-      <div hidden={!submitted ? "hidden" : ""}>
-        <h1 className={classes.h1}>
-          Thank you for your message. <br />
-          Your meeting has been confirmed with us for {dateString1} at{" "}
-          {selectedTime}
-          . <br />
-          Please check your email for the meeting link.
+
+      <div className={classes.container}>
+        <h1 className={classes.selectTime}>Confirm Meeting</h1>
+        <h1
+          style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}
+          hidden={timeSelected ? "hidden" : ""}
+        >
+          Please pick a day and time to meet
         </h1>
+        <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
+          <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
+          <span style={{ color: "#F6A833" }}>{selectedTime}</span>
+        </h1>
+        <div hidden={submitted ? "hidden" : ""}>
+          <div>
+            <SimpleForm
+              field="Full Name*"
+              onHandleChange={handleFirstNameChange}
+            />
+            <SimpleForm field="Website" onHandleChange={handleUrlChange} />
+          </div>
+          <div>
+            <SimpleForm
+              field="Email Address*"
+              onHandleChange={handleEmailChange}
+            />
+            <SimpleForm
+              field="Phone Number"
+              onHandleChange={handlePhoneNumChange}
+            />
+          </div>
+          <div>
+            <SimpleFormText
+              field="Message"
+              onHandleChange={handleNotesChange}
+            />
+          </div>
+          <div hidden={timeSelected ? "hidden" : ""}>
+            <button className={classes.buttonDisable}>Confirm</button>
+          </div>
+          <div hidden={!timeSelected ? "hidden" : ""}>
+            <button className={classes.button} onClick={bookAppt}>
+              Confirm
+            </button>
+          </div>
+        </div>
+        <div hidden={!submitted ? "hidden" : ""}>
+          <h1 className={classes.h1}>
+            Thank you for your message. <br />
+            Your meeting has been confirmed with us for {dateString1} at{" "}
+            {selectedTime}
+            . <br />
+            Please check your email for the meeting link.
+          </h1>
+        </div>
       </div>
       <br />
     </section>

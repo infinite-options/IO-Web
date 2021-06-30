@@ -18,7 +18,7 @@ import Nitya from "./containers/Nitya/Nitya";
 import MealsForMe from "./containers/MealsForMe/MealsForMe";
 import How_we_can_help from "./containers/HowWeCanHelp/How_we_can_help.js";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-
+import scrollToTop from "./ScrollToTop.js";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -26,27 +26,29 @@ class App extends Component {
     return (
       <div className="App" style={{ height: "auto" }}>
         <BrowserRouter>
-          <div className="App">
-            <MessengerCustomerChat
-              pageId="110111434630375"
-              appId="941694233292147"
-            />
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={Main} />
-              <Route path="/WhatWeDo" component={WhatWeDo} />
-              <Route path="/how_we_can_help" component={How_we_can_help} />
-              <Route path="/contact" component={Chat1} />
-              <Route path="/portfolio" component={Portfolio} />
-              <Route path="/ourPortfolio" component={ourPortfolio} />
-              <Route path="/careers" component={Careers} />
-              <Route path="/servingfresh" component={ServingFresh} />
-              <Route path="/mealsforMe" component={MealsForMe} />
-              <Route path="/NityaAyurveda" component={Nitya} />
-              <Route path="/appointment" component={Appointment} />
-            </Switch>
-            <Footer></Footer>
-          </div>
+          <scrollToTop>
+            <div className="App">
+              <MessengerCustomerChat
+                pageId="110111434630375"
+                appId="941694233292147"
+              />
+              <Navbar />
+              <Switch>
+                <Route exact path="/" component={Main} />
+                <Route path="/WhatWeDo" component={WhatWeDo} />
+                <Route path="/how_we_can_help" component={How_we_can_help} />
+                <Route path="/contact" component={Chat1} />
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/ourPortfolio" component={ourPortfolio} />
+                <Route path="/careers" component={Careers} />
+                <Route path="/servingfresh" component={ServingFresh} />
+                <Route path="/mealsforMe" component={MealsForMe} />
+                <Route path="/NityaAyurveda" component={Nitya} />
+                <Route path="/appointment" component={Appointment} />
+              </Switch>
+              <Footer></Footer>
+            </div>
+          </scrollToTop>
         </BrowserRouter>
       </div>
     );

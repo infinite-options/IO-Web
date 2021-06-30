@@ -170,12 +170,15 @@ class App extends Component {
             }}
           >
             <div style={{ width: "33%", float: "left" }}>
-              <button
-                className="button"
-                aria-label="Become a customer for Meals for me"
-              >
-                Become a Customer
-              </button>
+              <a href="https://mealsfor.me" style={{ textDecoration: "none" }}>
+                <button
+                  className="button"
+                  aria-label="Become a customer for Meals for me"
+                  target="_blank"
+                >
+                  Become a Customer
+                </button>
+              </a>
               <br></br>
               <button
                 className="button"
@@ -185,12 +188,19 @@ class App extends Component {
               </button>
             </div>
             <div style={{ width: "33%", float: "left" }}>
-              <button
-                className="button"
-                aria-label="Become a customer for serving fresh"
+              <a
+                href="https://servingfresh.me"
+                style={{ textDecoration: "none" }}
+                target="_blank"
               >
-                Become a Customer
-              </button>
+                <button
+                  className="button"
+                  aria-label="Become a customer for serving fresh"
+                >
+                  Become a Customer
+                </button>
+              </a>
+
               <br></br>
               <button
                 className="button"
@@ -341,12 +351,12 @@ class App extends Component {
               }}
             >
               <p className="title" style={{ textAlign: "center" }}>
-                Manifest
+                Serving Fresh
               </p>
             </div>
             <div style={{ width: "33%", float: "left", margin: "0, auto" }}>
               <p className="title" style={{ textAlign: "center" }}>
-                Nitya Ayurveda
+                Stealth Startup
               </p>
             </div>
           </div>
@@ -367,17 +377,23 @@ class App extends Component {
               }}
             >
               <p className="description" style={{ textAlign: "center" }}>
-                "A productivity app for people
-                <br /> with memory issues - in collaboration <br /> with Tulane
-                University."
+                "Our initial product lacked the polish of a professional app.
+                Infinite Options was able to re-brand the app, streamline the
+                user experience and improve the overall look and feel all at the
+                same time. Now, we’re more confident in our offering and more
+                competitive in the market place." <br />- P.M. San Jose
               </p>
             </div>
             <div style={{ width: "33%", float: "left" }}>
               <p className="description" style={{ textAlign: "center" }}>
-                "Nitya Ayurveda brings classical <br />
-                Ayurvedic healthcare to clients
-                <br />
-                in the South Bay."
+                "Choosing Infinite Options to create a wireframe for the early
+                phase of my startup was the best decision I have made! From the
+                introduction, to development, to completion, the IO team was
+                warm, consistent, and competent in their expertise. As someone
+                without a technical background, the IO team made the process
+                understandable and seamless. I am obsessed with the final
+                product and am looking forward to working with them again in the
+                future!" <br />- M.F. San Jose
               </p>
             </div>
           </div>
