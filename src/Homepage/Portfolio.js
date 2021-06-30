@@ -302,9 +302,15 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <button className="button2" aria-label="This button does nothing">
-          I am a Entrepreneur looking for some help.
-        </button>
+        <Link
+          to="how_we_can_help"
+          aria-label="Let's build something together. Click to see how we can help"
+          style={{ textDecoration: "none" }}
+        >
+          <button className="button2" aria-label="This button does nothing">
+            I am a Entrepreneur looking for some help.
+          </button>
+        </Link>
         <div>
           <div
             style={{

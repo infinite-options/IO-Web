@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import how1 from "../../assets/images/HowWeCanHelp.svg";
 import How_We_Can_Help_Portfolio from "./How_we_can_help_Portfolio.js";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -50,24 +51,22 @@ class App extends Component {
               want to help you fill in the necessary gaps.
             </p>
           </div>
-          <button
-            style={{
-              height: "100px",
-              width: "500px",
-              borderRadius: "50px",
-              marginBottom: "200px",
-              backgroundColor: "#F6A833",
-              border: "1px solid #F6A833",
-            }}
-          >
-            {" "}
-            <p
-              style={{ color: "white", fontSize: "30px" }}
-              aria-label="This button does nothing"
+          <Link to="appointment" aria-label="Click here to schedule a meeting">
+            <button
+              style={{
+                height: "100px",
+                width: "500px",
+                borderRadius: "50px",
+                marginBottom: "200px",
+                backgroundColor: "#F6A833",
+                border: "1px solid #F6A833",
+                color: "white",
+                fontSize: "30px",
+              }}
             >
               Let's Engage
-            </p>
-          </button>
+            </button>
+          </Link>
         </div>
         <How_We_Can_Help_Portfolio />
       </div>

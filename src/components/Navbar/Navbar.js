@@ -105,7 +105,7 @@ const Navbar = () => {
                     borderRadius: "100px",
                     padding: "10px 20px 10px 20px",
                   }}
-                  to="/contact"
+                  to="/appointment"
                   aria-label="Click to Contact us"
                 >
                   Contact Us

@@ -427,7 +427,7 @@ const Appointment = () => {
           Please check your email for the meeting link.
         </h1>
       </div>
-      {/*</div>*/}
+      <br />
     </section>
   );
 };
