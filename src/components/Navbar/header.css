@@ -90,7 +90,8 @@
     height: 45px;
   }
   .option {
-    display: flex;
+    /* display: flex; */
+    display: inline-block;
     align-items: center;
     justify-content: center;
     height: 10vw;

@@ -5,9 +5,10 @@ import axios from "axios"; //npm install axios
 import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
+import SimpleForm2 from "./simpleForm2";
 import SimpleFormText from "./simpleFormText";
 import scrollToTop from "./ScrollToTop.js";
-
+import moment from "moment";
 const useStyles = makeStyles((theme) => ({
   h1: {
     fontSize: "150%",
@@ -22,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: "auto",
-    width: "80%",
-    padding: "50px",
+    width: "980px",
   },
   button: {
     backgroundColor: "#F6A833",
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   calendarBox: {
     width: "40%",
-    padding: "50px",
+    padding: "20px",
     backgroundColor: "#F6A833",
   },
   timeslotBox: {
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F6A833",
     border: "none",
     color: "white",
-    padding: " 20px 100px 20px 100px ",
+    padding: " 20px 80px 20px 80px ",
     textAlign: "center",
     textDecoration: "none",
     fontSize: "20px",
@@ -136,8 +136,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Appointment = () => {
-  const treatment_uid = "330-000006"; // props.treatmentID;
-  const duriation = "0:29:59";
   //For Axios.Get
   const [date, setDate] = useState(new Date());
   const [dateString, setDateString] = useState(null);
@@ -149,17 +147,18 @@ const Appointment = () => {
   //For Axios.Post
   const [purchaseDate, setPurchaseDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
-  const [fName, setFName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
-  const [notes, setNotes] = useState("");
+  const [message, setMessage] = useState("");
   const [url, setUrl] = useState("");
   // for hide and show
   const [timeSelected, setTimeSelected] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleFirstNameChange = (newFName) => {
-    setFName(newFName);
+  const handleNameChange = (newname) => {
+    setName(newname);
   };
 
   const handleUrlChange = (newUrl) => {
@@ -174,8 +173,12 @@ const Appointment = () => {
     setPhoneNum(newPhoneNum);
   };
 
-  const handleNotesChange = (newNotes) => {
-    setNotes(newNotes);
+  const handleMessageChange = (newMessage) => {
+    setMessage(newMessage);
+  };
+
+  const handleCompanyChange = (newCompany) => {
+    setCompany(newCompany);
   };
 
   const dateChange = (date) => {
@@ -251,6 +254,22 @@ const Appointment = () => {
     );
   };
 
+  function formatTime(date, time) {
+    if (time == null) {
+      return "?";
+    } else {
+      var newDate = new Date(date + " " + time);
+      var hours = newDate.getHours();
+      var minutes = newDate.getMinutes();
+      var ampm = hours >= 12 ? "pm" : "am";
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      var strTime = hours + ":" + minutes + " " + ampm;
+      return strTime;
+    }
+  }
+
   const dateStringChange = (date) => {
     setDateString(dateFormat1(date));
     setApiDateString(dateFormat3(date));
@@ -262,10 +281,8 @@ const Appointment = () => {
     if (dateHasBeenChanged) {
       axios
         .get(
-          "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments/" +
-            apiDateString +
-            "/" +
-            duriation
+          "https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments/" +
+            apiDateString
         )
         .then((res) => {
           console.log(res);
@@ -282,9 +299,9 @@ const Appointment = () => {
       <div>
         <button
           className={classes.timeslotButton}
-          onClick={() => selectApptTime(element.begin_time)}
+          onClick={() => selectApptTime(element.start_time)}
         >
-          {element.begin_time}
+          {formatTime(apiDateString, element.start_time)}
         </button>
       </div>
     ));
@@ -298,22 +315,20 @@ const Appointment = () => {
   const classes = useStyles();
 
   function bookAppt() {
-    console.log(fName, url, email, phoneNum);
+    console.log(name, url, email, phoneNum);
 
     const postURL =
-      "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+      "https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
     axios
       .post(postURL, {
-        first_name: fName,
-        last_name: "", //lName,
-        email: email,
-        phone_no: phoneNum,
-        appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
-        notes: notes,
+        name: name,
+        phone: phoneNum,
         appt_date: dateFormat1(date),
         appt_time: selectedTime,
-        purchase_price: "$100", //TREATMENT INFO #2
-        purchase_date: dateFormat1(purchaseDate),
+        email: email,
+        company: company,
+        url: url, //treatment_uid, //TREATMENT INFO #1
+        message: message,
       })
       .then((res) => console.log(res));
     setSubmitted(true);
@@ -387,15 +402,13 @@ const Appointment = () => {
         </h1>
         <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
           <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
-          <span style={{ color: "#F6A833" }}>{selectedTime}</span>
+          <span style={{ color: "#F6A833" }}>
+            {formatTime(apiDateString, selectedTime)}
+          </span>
         </h1>
         <div hidden={submitted ? "hidden" : ""}>
           <div>
-            <SimpleForm
-              field="Full Name*"
-              onHandleChange={handleFirstNameChange}
-            />
-            <SimpleForm field="Website" onHandleChange={handleUrlChange} />
+            <SimpleForm2 field="Full Name*" onHandleChange={handleNameChange} />
           </div>
           <div>
             <SimpleForm
@@ -408,9 +421,16 @@ const Appointment = () => {
             />
           </div>
           <div>
+            <SimpleForm
+              field="Company Name"
+              onHandleChange={handleCompanyChange}
+            />
+            <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
+          </div>
+          <div>
             <SimpleFormText
               field="Message"
-              onHandleChange={handleNotesChange}
+              onHandleChange={handleMessageChange}
             />
           </div>
           <div hidden={timeSelected ? "hidden" : ""}>
@@ -426,7 +446,7 @@ const Appointment = () => {
           <h1 className={classes.h1}>
             Thank you for your message. <br />
             Your meeting has been confirmed with us for {dateString1} at{" "}
-            {selectedTime}
+            {formatTime(apiDateString, selectedTime)}
             . <br />
             Please check your email for the meeting link.
           </h1>

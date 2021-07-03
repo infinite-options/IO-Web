@@ -14,12 +14,12 @@ class Form extends Component {
     const info = this.props.variable;
     return (
       <form onSubmit={this.handleSubmit} style={{ display: "inline" }}>
-        <textarea
+        <input
           name="variable"
           placeholder={this.props.field}
           value={info}
           onChange={this.handleChange}
-          aria-labelby={"Enter your message here"}
+          aria-labelby={"Enter your " + this.props.field + "here"}
           style={{
             padding: "20px",
             boxSizing: "border-box",
@@ -29,8 +29,7 @@ class Form extends Component {
             margin: "5px 5px",
             borderColor: "#52330D",
             borderWidth: "2px",
-            width: "80.5%",
-            height: "150px",
+            width: "81%",
             fontFamily: "AvenirHeavy",
             outline: "none",
           }}
