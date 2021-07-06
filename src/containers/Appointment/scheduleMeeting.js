@@ -323,6 +323,7 @@ const Appointment = () => {
   return (
     <section id="appointment">
       <scrollToTop />
+      <scrollToTop />
       <div className={classes.container}>
         <img
           src={logo}

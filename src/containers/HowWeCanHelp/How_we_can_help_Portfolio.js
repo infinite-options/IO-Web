@@ -34,12 +34,6 @@ class App extends Component {
   render() {
     return (
       <section id="portfolio" className="container">
-        <h1
-          className="title0"
-          style={{ textDecoration: "none", fontSize: "54px" }}
-        >
-          Things we can help with & some examples
-        </h1>
         <div>
           <div
             style={{

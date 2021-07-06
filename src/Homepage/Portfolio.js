@@ -5,7 +5,15 @@ import Manifest from "../assets/images/Manifest.png";
 import ServingFresh from "../videos/ServingFreshAnimation.mp4";
 import JustDelivered from "../assets/images/JustDelivered.png";
 import NityaAyurveda from "../assets/images/Nitya/NityaAyurvedaLogo.png";
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
+import { Grid, Row, Col } from "react-bootstrap";
+import Meals4Me from "../assets/images/Meals4Me/M4MeMockup1@2x.png";
+import SF from "../assets/images/ServingFresh/SFNewImg.png";
+import OurPortfolio from "../containers/Portfolio/portfolio.js";
+import HowWeCanHelpPortfolio from "../containers/HowWeCanHelp/How_we_can_help.js";
+import How_We_Can_Help from "../containers/HowWeCanHelp/How_we_can_help.js";
+import HowWeCanHelp from "../containers/HowWeCanHelp/How_we_can_help.js";
+
 
 import { Link } from "react-router-dom";
 import {
@@ -15,402 +23,259 @@ import {
 } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 3000, min: 1430 },
+    items: 1,
+  },
+  desktop: {
+    breakpoint: { max: 1430, min: 1150 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1150, min: 800 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 800, min: 0 },
+    items: 1,
+  },
+};
+
 const defaultTheme = createMuiTheme();
 const theme = createMuiTheme({
   overrides: {
     MuiTooltip: {
       tooltip: {
-        fontSize: "24px",
-        fontFamily: "AvenirMedium",
-        color: "white",
-        backgroundColor: "#F6A833",
-        textAlign: "center",
+        // fontSize: "24px",
+        // fontFamily: "AvenirMedium",
+        // color: "white",
+        // backgroundColor: "#F6A833",
+        // textAlign: "center",
       },
     },
   },
 });
+export default function Portfolio() {
+  const carouselRef = useRef();
 
-class App extends Component {
-  render() {
-    return (
-      <section id="portfolio" className="container">
-        <div>
-          <div
-            style={{
-              color: "#52330D",
-              float: "left",
-              width: "100%",
-              fontWeight: "bold",
-              fontSize: "200%",
-            }}
-          >
-            <h1 className="h1">Products we’ve built</h1>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: "1%",
-              paddingRight: "1%",
-            }}
-          >
-            <div style={{ width: "33%", float: "left" }}>
-              <MuiThemeProvider theme={theme}>
-                <Tooltip title="Click here to see the design files">
-                  <div>
-                    <Link
-                      to="MealsForMe"
-                      style={{ textDecoration: "none" }}
-                      aria-label="Click to see design files for Meals For Me"
-                    >
-                      <p className="title">Mealsfor.me</p>
-                    </Link>
+  // class App extends Component {
+  // render() {
+  return (
+    <>
+      <div>
+        <section id="portfolio">
+          <div>
+            <div>
+              <h1 className="header1">
+                Products we’ve built
+                <a id="viewAllProjects" href="OurPortfolio" class="button">
+                  View All Projects
+                </a>
+              </h1>
+            </div>
+            <div>
+              <div className="info">
+                <p>
+                  We are entrepreneurs solving problems that we encounter in new
+                  and creative ways. Here are some examples.
+                </p>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div>
+                <Row style={{ height: "500px" }}>
+                  <div className="mainCol">
+                    <div>
+                      <img src={Meals4Me} className="imageScaling" />
+                    </div>
                   </div>
-                </Tooltip>
-              </MuiThemeProvider>
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <MuiThemeProvider theme={theme}>
-                <Tooltip title="Click here to see the design files">
-                  <div>
-                    <Link
-                      to="ServingFresh"
-                      style={{ textDecoration: "none" }}
-                      aria-label="Click here to see design files for Serving Fresh"
-                    >
-                      <p className="title">Serving Fresh</p>
-                    </Link>
+                  <div className="mainCol">
+                    <p className="hCol">Meals For Me</p>
+                    <p className="infoCol">
+                      An in-house product, Meals For Me was born out of the
+                      need to help people eat healthy even when they don’t have
+                      time to cook. We designed and developed the website and
+                      app for this ourselves. Creating a strong brand identity
+                      and a simple user flow for the meal subscription platform
+                      was key to the project.
+                    </p>
+                    <br />
+                    <div className="aBtn">
+                      <a href="https://mealsfor.me/">
+                        <button className="viewProjectBtn">View Project</button>
+                      </a>
+                    </div>
                   </div>
-                </Tooltip>
-              </MuiThemeProvider>
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <p className="title">Just Delivered</p>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: "1%",
-              paddingRight: "1%",
-            }}
-          >
-            <div style={{ width: "30%", float: "left" }}>
-              <p className="description">
-                A meal subscription platform for busy professionals to eat from
-                their favorite local restaurants at affordable prices.
-              </p>
-            </div>
-            <div
-              style={{
-                width: "30%",
-                float: "left",
-                paddingLeft: "3%",
-                paddingRight: "1%",
-              }}
-            >
-              <p className="description">
-                A digital platform for local farmers to take online orders and
-                make home deliveries.
-              </p>
-            </div>
-            <div style={{ width: "33%", float: "left", paddingLeft: "2%" }}>
-              <p className="description">
-                A digital platform for last mile food delivery.
-              </p>
+                </Row>
+                <div>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </div>
+                <Row style={{ height: "500px" }}>
+                  <div className="mainCol">
+                    <p className="hCol">Serving Fresh</p>
+                    <p className="infoCol">
+                      We designed and developed the brand identity, logo, mobile
+                      app as well as the website for Serving Fresh. It continues
+                      to be one of our favorite in-house products where we are
+                      now focusing on creating marketing and advertising.
+                    </p>
+                    <br />
+                    <div className="aBtn">
+                      <a href="https://servingfresh.me/">
+                        <button className="viewProjectBtn">View Project</button>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="mainCol">
+                    <img src={SF} className="imageScaling" />
+                  </div>
+                </Row>
+              </div>
             </div>
           </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
 
-              paddingRight: "1%",
-            }}
-          >
-            <div style={{ width: "33%", float: "left" }}>
-              <video
-                src={MealsForMe}
-                width="100%"
-                autoplay="autoplay"
-                muted
-                loop
-                alt="MealsForMe Picture"
-              />
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <video
-                src={ServingFresh}
-                width="100%"
-                autoplay="autoplay"
-                muted
-                loop
-                alt="ServingFresh Picture"
-              />
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <img width="100%" src={JustDelivered} alt="JustDelivered" />
-            </div>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: "%",
-              paddingRight: "1%",
-            }}
-          >
-            <div style={{ width: "33%", float: "left" }}>
-              <a href="https://mealsfor.me" style={{ textDecoration: "none" }}>
-                <button
-                  className="button"
-                  aria-label="Become a customer for Meals for me"
-                  target="_blank"
+          <div>
+            <div className="ProductsWeHelpedBuild">
+              <h1 className="header1">
+                Products we helped build
+                <a
+                  id="viewAllProjects2"
+                  href="How_We_Can_Help"
+                  class="button"
                 >
-                  Become a Customer
-                </button>
-              </a>
-              <br></br>
-              <button
-                className="button"
-                aria-label="Become a partner restaurant for meals for me"
-              >
-                Become a Provider
-              </button>
+                  View All Projects
+                </a>
+              </h1>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <a
-                href="https://servingfresh.me"
-                style={{ textDecoration: "none" }}
-                target="_blank"
-              >
-                <button
-                  className="button"
-                  aria-label="Become a customer for serving fresh"
-                >
-                  Become a Customer
-                </button>
-              </a>
+            <p className="info">
+              We work with companies, non-profits, Universities and
+              entrepreneurs to help them innovate and solve problems. Here are a
+              few examples.
+            </p>
+            <br />
+            <br />
+            <br />
+            <Carousel
+              responsive={responsive}
+              showDots={true}
+              autoPlay={true}
+              autoPlaySpeed={10000}
+              infinite={true}
+              arrows={false}
+            >
+              <div className="firstCarousel">
+                <div className="carouselCol">
+                  <img src={NityaAyurveda} className="imageScaling" />
+                </div>
+                <div className="carouselCol">
+                  <p className="titleCol">Nitya Ayurveda</p>
+                  <p className="infoCol">
+                    We redesigned the website for an Ayurvedic practitioner to
+                    make it pop and convey their messaging around Ayurveda. We
+                    also simplified the user flow to make it easier for people
+                    to understand the services and book appointments.
+                  </p>
+                  <br />
+                  {/* <div className="aBtn"> */}
+                  <a href="https://www.nityaayurveda.com/">
+                    <button className="viewProjectBtn">View Project</button>
+                  </a>
+                  {/* </div> */}
+                </div>
+              </div>
 
-              <br></br>
-              <button
-                className="button"
-                aria-label="Become a farm partner for serving fresh"
-              >
-                Become a Supplier
-              </button>
-            </div>
-            <div style={{ width: "33%", float: "left", paddingTop: "2%" }}>
-              <button
-                className="button"
-                aria-label="use the manifest app for your delivery business"
-              >
-                Request a Demo
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            style={{
-              color: "#52330d",
-              float: "left",
-              width: "100%",
-              fontWeight: "bold",
-              fontSize: "200%",
-              marginTop: "5%",
-            }}
-          >
-            <h1 className="h1">Products we helped build</h1>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <div
-              style={{
-                width: "33%",
-                float: "left",
-                paddingLeft: "1%",
-                paddingRight: "1%",
-              }}
-            >
-              <p className="title">Manifest</p>
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <MuiThemeProvider theme={theme}>
-                <Tooltip title="Click here to see the design files">
-                  <div>
-                    <Link
-                      to="MealsForMe"
-                      style={{ textDecoration: "none" }}
-                      aria-label="Click to see design files for Nitya Ayurveda"
-                    >
-                      <p className="title">Nitya Ayurveda</p>
-                    </Link>
+              <div className="firstCarousel">
+                <div className="carouselCol">
+                  <img src={Manifest} className="imageScaling" />
+                </div>
+                <div className="carouselCol">
+                  <p className="titleCol">Manifest</p>
+                  <p className="infoCol">
+                    We designed and developed a productivity to help people with
+                    short-term memory loss gain control of their lives without
+                    the app dominating it - in collaboration with Tulane
+                    University.
+                  </p>
+                  <br />
+                  <div className="aBtn">
+                    <button className="viewProjectBtn">Coming Soon</button>
                   </div>
-                </Tooltip>
-              </MuiThemeProvider>
-            </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
+
+          <div>
             <div
-              style={{
-                width: "33%",
-                float: "left",
-                paddingLeft: "1%",
-                paddingRight: "1%",
-              }}
+              style={
+                {
+                  // color: "#52330D",
+                  // float: "left",
+                  // width: "100%",
+                  // fontWeight: "bold",
+                  // fontSize: "200%",
+                  // marginTop: "5%",
+                }
+              }
             >
-              <p className="description">
-                A productivity app for people with memory issues - in
-                collaboration with Tulane University.
-              </p>
+              <h1 className="header1">People we’ve helped </h1>
             </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <p className="description">
-                Nitya Ayurveda brings classical Ayurvedic healthcare to clients
-                in the South Bay.
-              </p>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: "1%",
-              paddingRight: "1%",
-            }}
-          >
-            <div style={{ width: "33%", float: "left" }}>
-              <img src={Manifest} width="100%" alt="Manifest image" />
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <img src={NityaAyurveda} width="100%" alt="Nitya Ayurveda logo" />
-            </div>
-          </div>
-        </div>
-        <Link
-          to="how_we_can_help"
-          aria-label="Let's build something together. Click to see how we can help"
-          style={{ textDecoration: "none" }}
-        >
-          <button className="button2" aria-label="This button does nothing">
-            I am a Entrepreneur looking for some help.
-          </button>
-        </Link>
-        <div>
-          <div
-            style={{
-              color: "#52330D",
-              float: "left",
-              width: "100%",
-              fontWeight: "bold",
-              fontSize: "200%",
-              marginTop: "5%",
-            }}
-          >
-            <h1 className="h1">People we’ve helped</h1>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <div
-              style={{
-                width: "33%",
-                float: "left",
-                paddingLeft: "1%",
-                paddingRight: "1%",
-              }}
+
+            <Carousel
+              responsive={responsive}
+              showDots={true}
+              autoPlay={true}
+              autoPlaySpeed={10000}
+              infinite={true}
+              arrows={false}
             >
-              <p className="title" style={{ textAlign: "center" }}>
-                Serving Fresh
-              </p>
-            </div>
-            <div style={{ width: "33%", float: "left", margin: "0, auto" }}>
-              <p className="title" style={{ textAlign: "center" }}>
-                Stealth Startup
-              </p>
-            </div>
+              <div className="secondCarousel">
+                <p className="secondTitle">Stealth Startup</p>
+                <p className="secondInfo">
+                  "Choosing Infinite Options to create a wireframe for the early
+                  phase of my startup was the best decision I have made! From
+                  the introduction, to development, to completion, the IO team
+                  was warm, consistent, and competent in their expertise. As
+                  someone without a technical background, the IO team made the
+                  process understandable and seamless. I am obsessed with the
+                  final product and am looking forward to working with them
+                  again in the future!" <br />- M.F. San Jose
+                </p>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <p className="secondTitle">Serving Fresh</p>
+                <p className="secondInfo">
+                  "Our initial product lacked the polish of a professional app.
+                  Infinite Options was able to re-brand the app, streamline the
+                  user experience and improve the overall look and feel all at
+                  the same time. Now, we’re more confident in our offering and
+                  more competitive in the market place." <br />- P.M. San Jose
+                </p>
+              </div>
+            </Carousel>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            <div
-              style={{
-                width: "33%",
-                float: "left",
-                paddingLeft: "1%",
-                paddingRight: "1%",
-              }}
-            >
-              <p className="description" style={{ textAlign: "center" }}>
-                "Our initial product lacked the polish of a professional app.
-                Infinite Options was able to re-brand the app, streamline the
-                user experience and improve the overall look and feel all at the
-                same time. Now, we’re more confident in our offering and more
-                competitive in the market place." <br />- P.M. San Jose
-              </p>
-            </div>
-            <div style={{ width: "33%", float: "left" }}>
-              <p className="description" style={{ textAlign: "center" }}>
-                "Choosing Infinite Options to create a wireframe for the early
-                phase of my startup was the best decision I have made! From the
-                introduction, to development, to completion, the IO team was
-                warm, consistent, and competent in their expertise. As someone
-                without a technical background, the IO team made the process
-                understandable and seamless. I am obsessed with the final
-                product and am looking forward to working with them again in the
-                future!" <br />- M.F. San Jose
-              </p>
-            </div>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              color: "#52330D",
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: "1%",
-              paddingRight: "1%",
-            }}
-          ></div>
-        </div>
-      </section>
-    );
-  }
+        </section>
+      </div>
+    </>
+  );
 }
-
-export default App;

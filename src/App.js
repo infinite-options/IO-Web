@@ -33,7 +33,9 @@ class App extends Component {
                 appId="941694233292147"
               />
               <Navbar />
-              <Switch>
+              <div className="center">
+              <div className="containerApp">
+              <Switch >
                 <Route exact path="/" component={Main} />
                 <Route path="/WhatWeDo" component={WhatWeDo} />
                 <Route path="/how_we_can_help" component={How_we_can_help} />
@@ -46,6 +48,9 @@ class App extends Component {
                 <Route path="/NityaAyurveda" component={Nitya} />
                 <Route path="/appointment" component={Appointment} />
               </Switch>
+              </div>
+              </div>
+              
               <Footer></Footer>
             </div>
           </scrollToTop>
@@ -57,10 +62,14 @@ class App extends Component {
 
 export function Main() {
   return (
-    <main style={{ textAlign: "center" }}>
+    <main>
+      <div style={{ textAlign: "center" }}>
       <WhatWeDo />
       <Portfolio />
+      </div>
+      <div style={{width:"175%", marginLeft:"-385px"}}>
       <ScheduleAMeeting />
+      </div>
     </main>
   );
 }

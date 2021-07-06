@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav>
       <div className="header">
         <div className="logo-nav">
-          <div style={{ width: "60%" }}>
+          <div style={{ wiidht:"60%"}}>
             <NavLink to="/">
               <img
                 src={logo}
@@ -29,7 +29,7 @@ const Navbar = () => {
               />
             </NavLink>
           </div>
-          <div style={{ width: "40%", float: "right" }}>
+          <div style={{ float: "right" }}>
             <ul className={click ? "nav-options active" : "nav-options"}>
               <li className="option" onClick={closeMobileMenu}>
                 <NavLink

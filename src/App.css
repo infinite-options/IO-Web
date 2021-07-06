@@ -2,8 +2,74 @@
     text-align: center;
     font-family: "Avenir";
     height: auto;
-    min-width: 40ch;
+    /* min-width: 40ch; */
+    /* width: 980px; */
+    
+    
 }
+.center{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.containerApp{
+  /* width: 100px; */
+  /* background-color: pink; */
+  width: 980px;
+  
+}
+
+@media (max-width:1280px){
+  .containerApp{
+    width: 980px;
+  }
+}
+
+@media (max-width:980px){
+  .containerApp{
+    width: 863px;
+
+  }
+}
+/*ADDED 863px to 550px for better flow*/
+@media (max-width:863px){
+  .containerApp{
+    width: 750px;
+  }
+}
+@media (max-width:750px){
+  .containerApp{
+    width: 650px;
+  }
+}
+
+@media (max-width:650px){
+  .containerApp{
+    width: 550px;
+  }
+}
+
+@media (max-width:550px){
+  .containerApp{
+    width: 450px;
+  }
+}
+
+@media (max-width:450px){
+  .containerApp{
+    width: 360px;
+  }
+}
+
+
+
+
+
+
+
 /* @media only screen and (min-height:900px){
   .App{
       height:4700px;
