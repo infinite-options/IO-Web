@@ -144,7 +144,7 @@ const Appointment = () => {
     console.log(fName, url, email, phoneNum);
 
     const postURL =
-      "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact";
+      " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact";
     axios
       .post(postURL, {
         name: fName,

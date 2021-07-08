@@ -6,8 +6,9 @@ import Calendar from "react-calendar"; // npm install react-calendar
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
-import scrollToTop from "./ScrollToTop.js";
+import ScrollToTop from "./ScrollToTop.js";
 import SimpleFormName from "./simpleFormName";
+
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -87,6 +88,8 @@ const useStyles = makeStyles((theme) => ({
   },
   calendarTimeTable: {
     width: "100%",
+    marginTop: "-40px",
+    // the margin used here is to 
     // margin: "0 auto",
     border: "2px solid #F6A833 ",
     
@@ -215,6 +218,10 @@ const Appointment = () => {
   const dateChange = (date) => {
     setDate(date);
     dateStringChange(date);
+    setSubmitted(false);
+    // fName("");
+    // setFName(fName);
+    // setFName("");
     // setTimeSelected(true);
   };
 
@@ -296,10 +303,9 @@ const Appointment = () => {
     if (dateHasBeenChanged) {
       axios
         .get(
-          "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments/" +
-            apiDateString +
-            "/" +
-            duriation
+          "https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments" +
+          "/" +
+            apiDateString 
         )
         .then((res) => {
           console.log(res);
@@ -316,9 +322,9 @@ const Appointment = () => {
       <div>
         <button
           className={classes.timeslotButton}
-          onClick={() => selectApptTime(element.begin_time)}
+          onClick={() => selectApptTime(element.start_time)}
         >
-          {element.begin_time}
+          {element.start_time}
         </button>
       </div>
     ));
@@ -335,29 +341,37 @@ const Appointment = () => {
     console.log(fName, url, email, phoneNum);
 
     const postURL =
-      "https://mfrbehiqnb.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+      " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+    
+
     axios
       .post(postURL, {
-        first_name: fName,
-        last_name: "", //lName,
+        name: fName,
+        // last_name: "", //lName,
         email: email,
-        phone_no: phoneNum,
-        appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
-        notes: notes,
+        phone: phoneNum,
+        // appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
+        company: CompanyName,
+        message: notes,
+        url: url,
         appt_date: dateFormat1(date),
         appt_time: selectedTime,
-        purchase_price: "$100", //TREATMENT INFO #2
-        purchase_date: dateFormat1(purchaseDate),
+        // purchase_price: "$100", //TREATMENT INFO #2
+        // purchase_date: dateFormat1(purchaseDate),
       })
       .then((res) => console.log(res));
+
+
     setSubmitted(true);
+    // window.location.reload()
+    
     //We oughta figure out how to get those pieces of treatment info into our post call
   }
 
   return (
     <section id="appointment">
-      <scrollToTop />
-      <scrollToTop />
+      <ScrollToTop />
+      {/* <scrollToTop /> */}
       <div className={classes.container}>
         {/* <img
           src={logo}
@@ -483,7 +497,7 @@ const Appointment = () => {
             <button className={classes.buttonDisable}>Confirm</button>
           </div>
           <div hidden={!timeSelected ? "hidden" : ""}>
-            <button className={classes.button} onClick={bookAppt}>
+            <button className={classes.button} onClick={() => bookAppt()}>
               Confirm
             </button>
           </div>
@@ -496,6 +510,7 @@ const Appointment = () => {
             . <br />
             Please check your email for the meeting link.
           </h1>
+
         </div>
       </div>
       <br />

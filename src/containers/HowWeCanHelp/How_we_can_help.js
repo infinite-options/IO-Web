@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import "./HWCH.css";
-import NityaAyurveda from "../../assets/images/Nitya/NityaAyurvedaLogo@2x.png";
+import Nitya from "../../assets/images/Nitya/NityaAyurvedaLogo@2x.png";
 import Manifest from "../../assets/images/Manifest.png";
 import WalkWithPop from "../../assets/images/WalkWithPop/Welcome screen@2x.png";
 import UI from "../../assets/images/HowWeCanHelpIcons/Group 532.svg";
 import WEB from "../../assets/images/HowWeCanHelpIcons/Group 418.svg";
 import Mobile from "../../assets/images/HowWeCanHelpIcons/Group 403.svg";
-
+import NityaAyurveda from "../../containers/Nitya/Nitya.jsx";
 
 class App extends Component {
   render() {
@@ -98,7 +98,7 @@ class App extends Component {
           <Row style={{height:"500px"}}>
             <div className="halfContainer">
               <div >
-                <img src={NityaAyurveda} className="fitDiv" />
+                <img src={Nitya} className="fitDiv" />
               </div>
             </div>
             <div className="halfContainer">
@@ -108,7 +108,7 @@ class App extends Component {
                 for people to understand the services and book appointments.
               </p>
               <div className="alignBtn">
-              <a href="https://www.nityaayurveda.com/"><button className="ProjectBtn" >View Project</button></a>
+              <a href="NityaAyurveda"><button className="ProjectBtn" >View Project</button></a>
               
               &nbsp;&nbsp;&nbsp;
               <img className="UIicon" src={UI} />

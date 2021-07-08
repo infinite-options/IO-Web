@@ -49,15 +49,16 @@ class App extends Component {
           }}
         >
           <div style={{ width: "23%", fontSize: "150%" }}>
-            <p
+            <a
               style={{
                 textAlign: "left",
                 fontWeight: "bold",
                 textDecoration: "underline",
               }}
+              href="https://www.nityaayurveda.com/"
             >
               Nitya Ayurveda
-            </p>
+            </a>
           </div>
           <div style={{ width: "33%" }}>
             <p style={{ fontSize: "90%", textAlign: "left" }}>
