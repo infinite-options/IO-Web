@@ -1,10 +1,10 @@
 import "./portfolio.css";
 //images
-import MealsForMe from "../videos/MealsForMeAnimation.mp4";
+// import MealsForMe from "../videos/MealsForMeAnimation.mp4";
 import Manifest from "../assets/images/Manifest.png";
-import ServingFresh from "../videos/ServingFreshAnimation.mp4";
+// import ServingFresh from "../videos/ServingFreshAnimation.mp4";
 import JustDelivered from "../assets/images/JustDelivered.png";
-import NityaAyurveda from "../assets/images/Nitya/NityaAyurvedaLogo.png";
+import Nitya from "../assets/images/Nitya/NityaAyurvedaLogo.png";
 import React, { Component, useRef } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import Meals4Me from "../assets/images/Meals4Me/M4MeMockup1@2x.png";
@@ -13,7 +13,9 @@ import OurPortfolio from "../containers/Portfolio/portfolio.js";
 import HowWeCanHelpPortfolio from "../containers/HowWeCanHelp/How_we_can_help.js";
 import How_We_Can_Help from "../containers/HowWeCanHelp/How_we_can_help.js";
 import HowWeCanHelp from "../containers/HowWeCanHelp/How_we_can_help.js";
-
+import MealsForMe from "../containers/MealsForMe/MealsForMe.jsx";
+import ServingFresh from "../containers/ServingFresh/ServingFresh.jsx";
+import NityaAyurveda from "../containers/Nitya/Nitya.jsx";
 
 import { Link } from "react-router-dom";
 import {
@@ -106,8 +108,12 @@ export default function Portfolio() {
                     </p>
                     <br />
                     <div className="aBtn">
-                      <a href="https://mealsfor.me/">
+                      <a href="MealsForMe ">
                         <button className="viewProjectBtn">View Project</button>
+                      </a>
+                      
+                      <a href="https://mealsfor.me/">
+                        <button className="viewProjectBtn2">Visit Website</button>
                       </a>
                     </div>
                   </div>
@@ -129,8 +135,11 @@ export default function Portfolio() {
                     </p>
                     <br />
                     <div className="aBtn">
-                      <a href="https://servingfresh.me/">
+                      <a href="ServingFresh">
                         <button className="viewProjectBtn">View Project</button>
+                      </a>
+                      <a href="https://servingfresh.me/">
+                        <button className="viewProjectBtn2">Visit Website</button>
                       </a>
                     </div>
                   </div>
@@ -173,7 +182,7 @@ export default function Portfolio() {
             >
               <div className="firstCarousel">
                 <div className="carouselCol">
-                  <img src={NityaAyurveda} className="imageScaling" />
+                  <img src={Nitya} className="imageScaling" />
                 </div>
                 <div className="carouselCol">
                   <p className="titleCol">Nitya Ayurveda</p>
@@ -185,7 +194,7 @@ export default function Portfolio() {
                   </p>
                   <br />
                   {/* <div className="aBtn"> */}
-                  <a href="https://www.nityaayurveda.com/">
+                  <a href="NityaAyurveda">
                     <button className="viewProjectBtn">View Project</button>
                   </a>
                   {/* </div> */}

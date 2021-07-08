@@ -30,9 +30,10 @@ class Form extends Component {
             //borderColor: "#52330D",
             //borderWidth: "2px",
             border: "2px solid #52330D",
-            width: "40%",
+            width: "81%",
             fontFamily: "AvenirHeavy",
             outline: "none",
+            // height:"100px"
           }}
         />
       </form>

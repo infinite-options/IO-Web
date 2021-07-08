@@ -81,7 +81,7 @@ const App = () => {
         <div className="textDiv">
           <h1 className="projectTitle">Meals for Me</h1>
           <p id="projDescription">
-            Can in-house product, Meals For Me was born out of the need to help
+            An in-house product, Meals For Me was born out of the need to help
             people eat healthy even when they don’t have time to cook. We
             designed and developed the website and app for this ourselves.
             Creating a strong brand identity and a simple user flow for the meal

@@ -60,15 +60,16 @@ class App extends Component {
               }}
             >
               <div style={{ width: "23%", fontSize: "150%" }}>
-                <p
+                <a href="https://mealsfor.me/"
                   style={{
                     textAlign: "left",
                     fontWeight: "bold",
                     textDecoration: "underline",
                   }}
+                  
                 >
                   MealsFor.Me
-                </p>
+                </a>
               </div>
               <div style={{ width: "33%" }}>
                 <p

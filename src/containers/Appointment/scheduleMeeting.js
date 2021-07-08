@@ -7,25 +7,46 @@ import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
 import scrollToTop from "./ScrollToTop.js";
+import SimpleFormName from "./simpleFormName";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
-    fontSize: "150%",
-    padding: "20px 0",
+    // fontSize: "150%",
+    // padding: "20px 0",
     color: "#52330D",
     fontFamily: "AvenirHeavy",
+    textAlign: "left",
+    font: "normal normal 900 36px/49px Avenir",
+    paddingLeft:"20px",
+    // marginRight:"200px",
+    // float:"left",
+    
+  },
+  calanderHeader:{
+    textAlign: "center",
+    font: "normal normal 60px/82px AvenirMedium",
+    // fontSize:"60px/82px",
+    // font: "normal normal medium 54px/74px Avenir",
+    color: "#52330D",
+    padding: "20px 0",
+  },
+  leftTitle:{
+    marginTop:"-80px",
   },
   selectTime: {
+    paddingTop:"118px",
     fontSize: "42px",
     color: "#52330D",
     fontFamily: "AvenirHeavy",
   },
   container: {
     margin: "auto",
-    width: "80%",
-    padding: "50px",
+    width: "100%",
+    
+    // padding: "50px",
   },
   button: {
+    // buttons for times
     backgroundColor: "#F6A833",
     border: "none",
     color: "white",
@@ -42,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttonDisable: {
+    // comfirm button
     backgroundColor: "#F6A833",
     border: "none",
     color: "white",
@@ -59,22 +81,29 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   date: {
+    // date and time under comfirm meeting
     fontSize: "64px",
     fontFamily: "AvenirHeavy",
   },
   calendarTimeTable: {
-    width: "90%",
-    margin: "0 auto",
+    width: "100%",
+    // margin: "0 auto",
     border: "2px solid #F6A833 ",
+    
+    
+
   },
   calendarBox: {
-    width: "40%",
-    padding: "50px",
+    width: "50%", // this makes the calander and timeslot take up half the box each
+    // padding: "50px",
+    // padding: "10px",
     backgroundColor: "#F6A833",
+    height:"350px",
   },
   timeslotBox: {
-    width: "60%",
-    padding: "20px",
+    width: "50%",
+    height:"350px",
+    // padding: "20px",
   },
   center: {
     margin: "0 auto",
@@ -116,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
 
   timeslotButtonBox: {
     width: "100%",
-    height: "500px",
+    height: "400px",
     margin: "0 auto",
     overflowY: "scroll",
     "&::-webkit-scrollbar": {
@@ -152,6 +181,7 @@ const Appointment = () => {
   const [fName, setFName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
+  const [CompanyName, setCompanyName] = useState("");
   const [notes, setNotes] = useState("");
   const [url, setUrl] = useState("");
   // for hide and show
@@ -174,6 +204,10 @@ const Appointment = () => {
     setPhoneNum(newPhoneNum);
   };
 
+  const handleCompanyNameChange = (newCompanyName) => {
+    setCompanyName(newCompanyName);
+  };
+
   const handleNotesChange = (newNotes) => {
     setNotes(newNotes);
   };
@@ -181,7 +215,7 @@ const Appointment = () => {
   const dateChange = (date) => {
     setDate(date);
     dateStringChange(date);
-    setTimeSelected(true);
+    // setTimeSelected(true);
   };
 
   const doubleDigitMonth = (date) => {
@@ -325,22 +359,25 @@ const Appointment = () => {
       <scrollToTop />
       <scrollToTop />
       <div className={classes.container}>
-        <img
+        {/* <img
           src={logo}
           alt="logo"
           style={{ width: "25%", marginBottom: "50px" }}
-        />
+        /> */}
+        <p className={classes.calanderHeader}> Schedule a 30 min meeting</p>
         <table className={classes.calendarTimeTable}>
           <tr>
             <th className={classes.calendarBox}>
-              <h1
+              <h1 className={classes.h1}
                 style={{
-                  textAlign: "left",
+                  // marginTop:"-20px",
+                  // textAlign: "left",
                   color: "white",
-                  fontFamily: "AvenirHeavy",
+                  // font: "normal normal medium 60px/82px Avenir",
+
                 }}
               >
-                Find a time to meet with us
+                Pick a date
               </h1>
               <Calendar
                 onClickDay={dateChange}
@@ -351,25 +388,45 @@ const Appointment = () => {
               />
             </th>
             <th className={classes.timeslotBox}>
-              <div className={classes.inputRow}>
+              <div className={classes.leftTitle}>
+              <h1 className={classes.h1} >
+                Pick a time
+                <span
+                style={{
+                  // textAlign: "left",
+                  paddingLeft:"120px",
+                  color: "#4E70FF",
+                  // fontFamily: "AvenirHeavy",
+                  font:"normal normal 900 14px/19px Avenir",
+                  marginTop:"-20px",
+                  // width:"130px",
+                  // float:"right",
+                }}
+              >
+                {/* UTC - 07:00 Pacific Time */}
+                All times are in PST
+              </span>
+              </h1>
+              </div>
+              {/* <div className={classes.inputRow}>
                 <label className={classes.h1}>Meeting Duriation</label>
                 <input
                   className={classes.duritionInput}
                   placeholder="30 mins"
                 ></input>
-              </div>
-              <h1 className={classes.h1} style={{ textAlign: "left" }}>
-                What time is good for you?
-              </h1>
-              <p
+              </div> */}
+              
+              {/* <p
                 style={{
-                  textAlign: "left",
+                  // textAlign: "left",
                   color: "#4E70FF",
                   fontFamily: "AvenirHeavy",
+                  width:"20px",
                 }}
               >
-                UTC - 07:00 Pacific Time
-              </p>
+                
+                All times are in PST
+              </p> */}
               <div className={classes.timeslotButtonBox}>
                 {renderAvailableApptsVertical()}
               </div>
@@ -392,26 +449,34 @@ const Appointment = () => {
         </h1>
         <div hidden={submitted ? "hidden" : ""}>
           <div>
-            <SimpleForm
+            <SimpleFormName
               field="Full Name*"
               onHandleChange={handleFirstNameChange}
             />
-            <SimpleForm field="Website" onHandleChange={handleUrlChange} />
+            {/* <SimpleForm field="Website URL" onHandleChange={handleUrlChange} /> */}
           </div>
           <div>
-            <SimpleForm
-              field="Email Address*"
-              onHandleChange={handleEmailChange}
-            />
             <SimpleForm
               field="Phone Number"
               onHandleChange={handlePhoneNumChange}
             />
+            <SimpleForm
+              field="Email Address*"
+              onHandleChange={handleEmailChange}
+            />
+          </div>
+          <div>
+            <SimpleForm
+              field="Company Name"
+              onHandleChange={handleCompanyNameChange}
+            />
+            <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
           </div>
           <div>
             <SimpleFormText
               field="Message"
               onHandleChange={handleNotesChange}
+              style={{width:"150%"}}
             />
           </div>
           <div hidden={timeSelected ? "hidden" : ""}>

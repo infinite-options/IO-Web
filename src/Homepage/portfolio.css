@@ -31,7 +31,7 @@
 }
 .viewProjectBtn{
   top: 1610px;
-  width: 247px;
+  width: 210px;
   height: 62px;
   background-color: #52330D;
   color:white;
@@ -44,6 +44,20 @@
   /* background: transparent url('img/Component 8 – 44.png') 0% 0% no-repeat padding-box; */
 
 }
+
+.viewProjectBtn2{
+  top: 1610px;
+  width: 210px;
+  height: 62px;
+  background-color: #F6A833;
+  color:white;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  float:right;
+  /* margin-left:20px; */
+}
+
 .aBtn{
   padding-left: 20px;
   padding-right: 20px;

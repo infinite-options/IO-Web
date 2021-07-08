@@ -1,19 +1,19 @@
 .react-calendar {
   /*width: 100%;*/
   width: 100%;
-  line-height: 5em;
+  line-height: 4em;
   
 }
 .react-calendar--doubleView {
   width: 100%;
 }
 .react-calendar--doubleView .react-calendar__viewContainer {
-  display: flex;
+  /* display: flex; */
   /* margin: -0.5em; */
 }
 .react-calendar--doubleView .react-calendar__viewContainer > * {
-  width: 80%;
-  margin: 0.5em;
+  /* width: 80%; */
+  /* margin: 0.5em; */
 }
 .react-calendar,
 .react-calendar *,
@@ -25,10 +25,12 @@
 }
 .react-calendar button {
   margin: 0 auto;
-  padding: 10px;
+  /* padding: 10px; */
   border: none;
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
+  width: 69px;
+  height: 69px;
   outline: none;
   font-family: "AvenirMedium";
   font-size: 24px;
@@ -64,13 +66,14 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.75em;
+  /* font-size: 0.75em; */
+  font-size: 16px;
   color: white;
   font-family: "AvenirMedium";
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 .react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
+  /* padding: 0.5em; */
   /* color: white; */
 }
 .react-calendar__month-view__weekNumbers {
@@ -81,25 +84,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75em;
+  font-size: 20px;
+  /* 0.75em; */
   padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
 }
 
 .react-calendar__month-view__days__day--weekend {
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
+  width: 69px;
+  height: 69px;
   color: #d10000;
 }
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
 }
 .react-calendar__year-view .react-calendar__tile,
 .react-calendar__decade-view .react-calendar__tile,
 .react-calendar__century-view .react-calendar__tile {
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
+  width: 69px;
+  height: 69px;
 }
 .react-calendar__tile {
   /* max-width: 100%; */
