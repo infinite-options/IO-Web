@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from "react";
-import logo from "../../assets/images/IOLogos/IOlogo.png";
-import "./calendar.css";
-import axios from "axios"; //npm install axios
-import Calendar from "react-calendar"; // npm install react-calendar
-import { makeStyles } from "@material-ui/core/styles";
-import SimpleForm from "./simpleForm";
-import SimpleFormText from "./simpleFormText";
-import ScrollToTop from "./ScrollToTop.js";
-import SimpleFormName from "./simpleFormName";
+  import React, { useEffect, useState } from "react";
+  import logo from "../../assets/images/IOLogos/IOlogo.png";
+  import "./calendar.css";
+  import axios from "axios"; //npm install axios
+  import Calendar from "react-calendar"; // npm install react-calendar
+  import { makeStyles } from "@material-ui/core/styles";
+  import ScrollToTop from "./ScrollToTop.js";
 
+  import { Button, Form, FormGroup, Input } from "reactstrap";
 
-const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles((theme) => ({
   h1: {
     // fontSize: "150%",
     // padding: "20px 0",
@@ -165,9 +163,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#52330D",
     },
   },
-}));
+  }));
 
-const Appointment = () => {
+  const Appointment = () => {
   const treatment_uid = "330-000006"; // props.treatmentID;
   const duriation = "0:29:59";
   //For Axios.Get
@@ -181,17 +179,17 @@ const Appointment = () => {
   //For Axios.Post
   const [purchaseDate, setPurchaseDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
-  const [fName, setFName] = useState("");
+ /*  const [fName, setFName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [CompanyName, setCompanyName] = useState("");
   const [notes, setNotes] = useState("");
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(""); */
   // for hide and show
   const [timeSelected, setTimeSelected] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleFirstNameChange = (newFName) => {
+  /* const handleFirstNameChange = (newFName) => {
     setFName(newFName);
   };
 
@@ -213,15 +211,13 @@ const Appointment = () => {
 
   const handleNotesChange = (newNotes) => {
     setNotes(newNotes);
-  };
+  }; */
 
   const dateChange = (date) => {
     setDate(date);
     dateStringChange(date);
     setSubmitted(false);
-    // fName("");
-    // setFName(fName);
-    // setFName("");
+
     // setTimeSelected(true);
   };
 
@@ -336,8 +332,9 @@ const Appointment = () => {
   }
 
   const classes = useStyles();
-
-  function bookAppt() {
+  const postURL =
+  " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+  /* function bookAppt() {
     console.log(fName, url, email, phoneNum);
 
     const postURL =
@@ -359,14 +356,59 @@ const Appointment = () => {
         // purchase_price: "$100", //TREATMENT INFO #2
         // purchase_date: dateFormat1(purchaseDate),
       })
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+        }
+      );
 
 
     setSubmitted(true);
-    // window.location.reload()
+  } */
+  const [data, setData] = useState({
+    name: '',
+    phone:'',
+    appt_date: '',
+    appt_time: '',
+    email: '',
+    company: '',
+    url: '',
+    message: '',
     
-    //We oughta figure out how to get those pieces of treatment info into our post call
+  });
+  function submit(e) {
+    e.preventDefault();
+    axios.post(postURL, {
+      name: data.name,
+      phone:data.phone,
+      appt_date: dateFormat1(date),
+      appt_time: selectedTime,
+      email: data.email,
+      company: data.company,
+      url: data.url,
+      message: data.message,
+    })
+      .catch((error) => {
+        console.log(error.message);
+      })
+      .then((response) => {
+        console.log(response);
+      });
+      setSubmitted(true);
+      data.name='';
+      data.phone='';
+      data.email='';
+      data.company='';
+      data.message='';
+      data.url='';
   }
+  function handle(e) {
+    const newData = { ...data };
+    newData[e.target.id] = e.target.value;
+    console.log(newData)
+    setData(newData);
+  }
+
+
 
   return (
     <section id="appointment">
@@ -461,46 +503,164 @@ const Appointment = () => {
           <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
           <span style={{ color: "#F6A833" }}>{selectedTime}</span>
         </h1>
-        <div hidden={submitted ? "hidden" : ""}>
-          <div>
-            <SimpleFormName
-              field="Full Name*"
-              onHandleChange={handleFirstNameChange}
-            />
-            {/* <SimpleForm field="Website URL" onHandleChange={handleUrlChange} /> */}
-          </div>
-          <div>
-            <SimpleForm
-              field="Phone Number"
-              onHandleChange={handlePhoneNumChange}
-            />
-            <SimpleForm
-              field="Email Address*"
-              onHandleChange={handleEmailChange}
-            />
-          </div>
-          <div>
-            <SimpleForm
-              field="Company Name"
-              onHandleChange={handleCompanyNameChange}
-            />
-            <SimpleForm field="Website URL" onHandleChange={handleUrlChange} />
-          </div>
-          <div>
-            <SimpleFormText
-              field="Message"
-              onHandleChange={handleNotesChange}
-              style={{width:"150%"}}
-            />
-          </div>
-          <div hidden={timeSelected ? "hidden" : ""}>
-            <button className={classes.buttonDisable}>Confirm</button>
-          </div>
-          <div hidden={!timeSelected ? "hidden" : ""}>
-            <button className={classes.button} onClick={() => bookAppt()}>
-              Confirm
-            </button>
-          </div>
+        <div id="contact-form" hidden={submitted ? "hidden" : ""}>
+        <Form onSubmit={(e) => submit(e)}>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name*"
+                    onChange={(e) => handle(e)}
+                    value={data.name}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "81%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                      // height:"100px"
+                    }}
+                  />
+                </FormGroup>
+
+                <FormGroup>
+                <Input
+                    type="phone"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone Number"
+                    onChange={(e) => handle(e)}
+                    value={data.phone}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email address*"
+                    onChange={(e) => handle(e)}
+                    value={data.email}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+               
+                  
+                </FormGroup>
+                <FormGroup>
+                  <Input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Company Name"
+                    onChange={(e) => handle(e)}
+                    value={data.company}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                
+                  <Input
+                    type="text"
+                    name="url"
+                    id="url"
+                    placeholder="Website URL"
+                    onChange={(e) => handle(e)}
+                    value={data.url}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                </FormGroup>
+                
+                <FormGroup>
+                  <Input
+                    type="textarea"
+                    name="text"
+                    id="message"
+                    placeholder="Message"
+                    onChange={(e) => handle(e)}
+                    value={data.message}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      // width: "80.5%",
+                      width:"81%",
+                      height: "150px",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                </FormGroup>
+                <div hidden={timeSelected ? "hidden" : ""}>
+                      <button className={classes.buttonDisable}>Submit</button>
+                </div>
+                  <div hidden={!timeSelected ? "hidden" : ""}>
+                    <button className={classes.button}>Submit</button>
+                </div> 
+                    </Form>
+
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
           <h1 className={classes.h1}>
@@ -516,6 +676,6 @@ const Appointment = () => {
       <br />
     </section>
   );
-};
+  };
 
-export default Appointment;
+  export default Appointment;
