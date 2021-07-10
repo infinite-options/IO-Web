@@ -1,14 +1,14 @@
-  import React, { useEffect, useState } from "react";
-  import logo from "../../assets/images/IOLogos/IOlogo.png";
-  import "./calendar.css";
-  import axios from "axios"; //npm install axios
-  import Calendar from "react-calendar"; // npm install react-calendar
-  import { makeStyles } from "@material-ui/core/styles";
-  import ScrollToTop from "./ScrollToTop.js";
+import React, { useEffect, useState } from "react";
+import logo from "../../assets/images/IOLogos/IOlogo.png";
+import "./calendar.css";
+import axios from "axios"; //npm install axios
+import Calendar from "react-calendar"; // npm install react-calendar
+import { makeStyles } from "@material-ui/core/styles";
+import ScrollToTop from "./ScrollToTop.js";
 
-  import { Button, Form, FormGroup, Input } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 
-  const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   h1: {
     // fontSize: "150%",
     // padding: "20px 0",
@@ -16,12 +16,11 @@
     fontFamily: "AvenirHeavy",
     textAlign: "left",
     font: "normal normal 900 36px/49px Avenir",
-    paddingLeft:"20px",
+    paddingLeft: "20px",
     // marginRight:"200px",
     // float:"left",
-    
   },
-  calanderHeader:{
+  calanderHeader: {
     textAlign: "center",
     font: "normal normal 60px/82px AvenirMedium",
     // fontSize:"60px/82px",
@@ -29,11 +28,11 @@
     color: "#52330D",
     padding: "20px 0",
   },
-  leftTitle:{
-    marginTop:"-80px",
+  leftTitle: {
+    marginTop: "-80px",
   },
   selectTime: {
-    paddingTop:"118px",
+    paddingTop: "118px",
     fontSize: "42px",
     color: "#52330D",
     fontFamily: "AvenirHeavy",
@@ -41,7 +40,7 @@
   container: {
     margin: "auto",
     width: "100%",
-    
+
     // padding: "50px",
   },
   button: {
@@ -87,23 +86,20 @@
   calendarTimeTable: {
     width: "100%",
     marginTop: "-40px",
-    // the margin used here is to 
+    // the margin used here is to
     // margin: "0 auto",
     border: "2px solid #F6A833 ",
-    
-    
-
   },
   calendarBox: {
     width: "50%", // this makes the calander and timeslot take up half the box each
     // padding: "50px",
     // padding: "10px",
     backgroundColor: "#F6A833",
-    height:"350px",
+    height: "350px",
   },
   timeslotBox: {
     width: "50%",
-    height:"350px",
+    height: "350px",
     // padding: "20px",
   },
   center: {
@@ -163,9 +159,9 @@
       backgroundColor: "#52330D",
     },
   },
-  }));
+}));
 
-  const Appointment = () => {
+const Appointment = () => {
   const treatment_uid = "330-000006"; // props.treatmentID;
   const duriation = "0:29:59";
   //For Axios.Get
@@ -179,7 +175,7 @@
   //For Axios.Post
   const [purchaseDate, setPurchaseDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
- /*  const [fName, setFName] = useState("");
+  /*  const [fName, setFName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [CompanyName, setCompanyName] = useState("");
@@ -300,8 +296,8 @@
       axios
         .get(
           "https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/availableAppointments" +
-          "/" +
-            apiDateString 
+            "/" +
+            apiDateString
         )
         .then((res) => {
           console.log(res);
@@ -333,7 +329,7 @@
 
   const classes = useStyles();
   const postURL =
-  " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
+    " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
   /* function bookAppt() {
     console.log(fName, url, email, phoneNum);
 
@@ -365,50 +361,48 @@
     setSubmitted(true);
   } */
   const [data, setData] = useState({
-    name: '',
-    phone:'',
-    appt_date: '',
-    appt_time: '',
-    email: '',
-    company: '',
-    url: '',
-    message: '',
-    
+    name: "",
+    phone: "",
+    appt_date: "",
+    appt_time: "",
+    email: "",
+    company: "",
+    url: "",
+    message: "",
   });
   function submit(e) {
     e.preventDefault();
-    axios.post(postURL, {
-      name: data.name,
-      phone:data.phone,
-      appt_date: dateFormat1(date),
-      appt_time: selectedTime,
-      email: data.email,
-      company: data.company,
-      url: data.url,
-      message: data.message,
-    })
+    axios
+      .post(postURL, {
+        name: data.name,
+        phone: data.phone,
+        appt_date: dateFormat1(date),
+        appt_time: selectedTime,
+        email: data.email,
+        company: data.company,
+        url: data.url,
+        message: data.message,
+      })
       .catch((error) => {
         console.log(error.message);
       })
       .then((response) => {
         console.log(response);
       });
-      setSubmitted(true);
-      data.name='';
-      data.phone='';
-      data.email='';
-      data.company='';
-      data.message='';
-      data.url='';
+    setSubmitted(true);
+    data.name = "";
+    data.phone = "";
+    data.email = "";
+    data.company = "";
+    data.message = "";
+    data.url = "";
   }
   function handle(e) {
     const newData = { ...data };
     newData[e.target.id] = e.target.value;
-    console.log(newData)
+    console.log(newData);
     setData(newData);
   }
-
-
 
   return (
     <section id="appointment">
@@ -424,13 +418,13 @@
         <table className={classes.calendarTimeTable}>
           <tr>
             <th className={classes.calendarBox}>
-              <h1 className={classes.h1}
+              <h1
+                className={classes.h1}
                 style={{
                   // marginTop:"-20px",
                   // textAlign: "left",
                   color: "white",
                   // font: "normal normal medium 60px/82px Avenir",
-
                 }}
               >
                 Pick a date
@@ -445,24 +439,24 @@
             </th>
             <th className={classes.timeslotBox}>
               <div className={classes.leftTitle}>
-              <h1 className={classes.h1} >
-                Pick a time
-                <span
-                style={{
-                  // textAlign: "left",
-                  paddingLeft:"120px",
-                  color: "#4E70FF",
-                  // fontFamily: "AvenirHeavy",
-                  font:"normal normal 900 14px/19px Avenir",
-                  marginTop:"-20px",
-                  // width:"130px",
-                  // float:"right",
-                }}
-              >
-                {/* UTC - 07:00 Pacific Time */}
-                All times are in PST
-              </span>
-              </h1>
+                <h1 className={classes.h1}>
+                  Pick a time
+                  <span
+                    style={{
+                      // textAlign: "left",
+                      paddingLeft: "120px",
+                      color: "#4E70FF",
+                      // fontFamily: "AvenirHeavy",
+                      font: "normal normal 900 14px/19px Avenir",
+                      marginTop: "-20px",
+                      // width:"130px",
+                      // float:"right",
+                    }}
+                  >
+                    {/* UTC - 07:00 Pacific Time */}
+                    All times are in PST
+                  </span>
+                </h1>
               </div>
               {/* <div className={classes.inputRow}>
                 <label className={classes.h1}>Meeting Duriation</label>
@@ -471,7 +465,7 @@
                   placeholder="30 mins"
                 ></input>
               </div> */}
-              
+
               {/* <p
                 style={{
                   // textAlign: "left",
@@ -504,163 +498,160 @@
           <span style={{ color: "#F6A833" }}>{selectedTime}</span>
         </h1>
         <div id="contact-form" hidden={submitted ? "hidden" : ""}>
-        <Form onSubmit={(e) => submit(e)}>
-                <FormGroup>
-                  <Input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Full Name*"
-                    onChange={(e) => handle(e)}
-                    value={data.name}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      width: "81%",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                      // height:"100px"
-                    }}
-                  />
-                </FormGroup>
+          <Form onSubmit={(e) => submit(e)}>
+            <FormGroup>
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Full Name*"
+                onChange={(e) => handle(e)}
+                value={data.name}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  width: "81%",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                  // height:"100px"
+                }}
+              />
+            </FormGroup>
 
-                <FormGroup>
-                <Input
-                    type="phone"
-                    name="phone"
-                    id="phone"
-                    placeholder="Phone Number"
-                    onChange={(e) => handle(e)}
-                    value={data.phone}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      width: "40%",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                    }}
-                  />
-                  <Input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email address*"
-                    onChange={(e) => handle(e)}
-                    value={data.email}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      width: "40%",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                    }}
-                  />
-               
-                  
-                </FormGroup>
-                <FormGroup>
-                  <Input
-                    type="text"
-                    name="company"
-                    id="company"
-                    placeholder="Company Name"
-                    onChange={(e) => handle(e)}
-                    value={data.company}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      width: "40%",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                    }}
-                  />
-                
-                  <Input
-                    type="text"
-                    name="url"
-                    id="url"
-                    placeholder="Website URL"
-                    onChange={(e) => handle(e)}
-                    value={data.url}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      width: "40%",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                    }}
-                  />
-                </FormGroup>
-                
-                <FormGroup>
-                  <Input
-                    type="textarea"
-                    name="text"
-                    id="message"
-                    placeholder="Message"
-                    onChange={(e) => handle(e)}
-                    value={data.message}
-                    style={{
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      borderRadius: "20px",
-                      fontColor: "#52330D",
-                      fontSize: "20px",
-                      margin: "5px 5px",
-                      //borderColor: "#52330D",
-                      //borderWidth: "2px",
-                      border: "2px solid #52330D",
-                      // width: "80.5%",
-                      width:"81%",
-                      height: "150px",
-                      fontFamily: "AvenirHeavy",
-                      outline: "none",
-                    }}
-                  />
-                </FormGroup>
-                <div hidden={timeSelected ? "hidden" : ""}>
-                      <button className={classes.buttonDisable}>Submit</button>
-                </div>
-                  <div hidden={!timeSelected ? "hidden" : ""}>
-                    <button className={classes.button}>Submit</button>
-                </div> 
-                    </Form>
+            <FormGroup>
+              <Input
+                type="phone"
+                name="phone"
+                id="phone"
+                placeholder="Phone Number"
+                onChange={(e) => handle(e)}
+                value={data.phone}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  width: "40%",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                }}
+              />
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email address*"
+                onChange={(e) => handle(e)}
+                value={data.email}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  width: "40%",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                }}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                type="text"
+                name="company"
+                id="company"
+                placeholder="Company Name"
+                onChange={(e) => handle(e)}
+                value={data.company}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  width: "40%",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                }}
+              />
 
+              <Input
+                type="text"
+                name="url"
+                id="url"
+                placeholder="Website URL"
+                onChange={(e) => handle(e)}
+                value={data.url}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  width: "40%",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                }}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Input
+                type="textarea"
+                name="text"
+                id="message"
+                placeholder="Message"
+                onChange={(e) => handle(e)}
+                value={data.message}
+                style={{
+                  padding: "20px",
+                  boxSizing: "border-box",
+                  borderRadius: "20px",
+                  fontColor: "#52330D",
+                  fontSize: "20px",
+                  margin: "5px 5px",
+                  //borderColor: "#52330D",
+                  //borderWidth: "2px",
+                  border: "2px solid #52330D",
+                  // width: "80.5%",
+                  width: "81%",
+                  height: "150px",
+                  fontFamily: "AvenirHeavy",
+                  outline: "none",
+                }}
+              />
+            </FormGroup>
+            <div hidden={timeSelected ? "hidden" : ""}>
+              <button className={classes.buttonDisable}>Submit</button>
+            </div>
+            <div hidden={!timeSelected ? "hidden" : ""}>
+              <button className={classes.button}>Submit</button>
+            </div>
+          </Form>
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
           <h1 className={classes.h1}>
@@ -670,12 +661,11 @@
             . <br />
             Please check your email for the meeting link.
           </h1>
-
         </div>
       </div>
       <br />
     </section>
   );
-  };
+};
 
-  export default Appointment;
+export default Appointment;
