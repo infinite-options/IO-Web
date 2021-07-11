@@ -4,6 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import SimpleForm from "./simpleForm";
 import SimpleFormText from "./simpleFormText";
 
+import { Button, Form, FormGroup, Input } from "reactstrap";
+import "./Chat1.css";
+
 const useStyles = makeStyles((theme) => ({
   h1: {
     fontSize: "150%",
@@ -18,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "AvenirHeavy",
   },
   contaier: {
-    margin: "auto",
-    width: "80%",
-    padding: "50px",
+    // margin: "auto",
+    // width: "80%",
+    // padding: "50px",
   },
   button: {
     backgroundColor: "#52330D",
@@ -69,6 +72,7 @@ const Appointment = () => {
 
   //For Axios.Post
   const [fName, setFName] = useState("");
+  const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
   const [notes, setNotes] = useState("");
@@ -78,6 +82,10 @@ const Appointment = () => {
 
   const handleFirstNameChange = (newFName) => {
     setFName(newFName);
+  };
+
+  const handleLastNameChange = (newLName) => {
+    setLName(newLName);
   };
 
   const handleUrlChange = (newUrl) => {
@@ -139,30 +147,68 @@ const Appointment = () => {
   };
 
   const classes = useStyles();
-
-  function bookAppt() {
-    console.log(fName, url, email, phoneNum);
-
-    const postURL =
+  const postURL =
       " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact";
-    axios
-      .post(postURL, {
-        name: fName,
-        url: url,
-        email: email,
-        subject: phoneNum,
-        message: notes,
+  const [data, setData] = useState({
+      // not sure what variables the data wants... change it to the correct variable names once you find out
+      name:'',
+      lastname:'',
+      email:'',
+      phone:'',
+      message:'',
+    });
+    function submit(e){
+      e.preventDefault();
+      axios.post(postURL, {
+        name: data.name,
+        lastname: data.lastname,
+        phone: data.phone,
+        email: data.email,
+        message: data.message,
       })
-      .then((res) => console.log(res));
-    setSubmitted(true);
-  }
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .then((response) => {
+          console.log(response);
+        });
+        setSubmitted(true);
+          data.name='';
+          data.lastname='';
+          data.phone='';
+          data.email='';
+          data.message='';
+    }
+    function handle(e) {
+      const newData = { ...data };
+      newData[e.target.id] = e.target.value;
+      console.log(newData)
+      setData(newData);
+    }
+  // function bookAppt() {
+  //   console.log(fName, url, email, phoneNum);
+
+  //   const postURL =
+  //     " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact";
+    
+  //   axios
+  //     .post(postURL, {
+  //       name: fName,
+  //       url: url,
+  //       email: email,
+  //       subject: phoneNum,
+  //       message: notes,
+  //     })
+  //     .then((res) => console.log(res));
+  //   setSubmitted(true);
+  // }
 
   return (
     <section id="appointment" style={{ backgroundColor: "#F6A833" }}>
-      <div className={classes.contaier}>
+      <div className="contaier">
         <div hidden={submitted ? "hidden" : ""}>
-          <h1 className={classes.h1}>Let's have a chat!</h1>
-          <div>
+          <h1 className="h1">Let's have a chat!</h1>
+          {/* <div>
             <SimpleForm
               field="Your Name"
               onHandleChange={handleFirstNameChange}
@@ -173,23 +219,156 @@ const Appointment = () => {
             <SimpleForm field="Email" onHandleChange={handleEmailChange} />
             <SimpleForm field="Phone" onHandleChange={handlePhoneNumChange} />
           </div>
-          <h1 className={classes.h1}>What are you good at?</h1>
+          <h1 className="h1">What are you good at?</h1>
           <div>
             <SimpleFormText
               field=" Tell us what you are good at and what you are passinate about.
-              Anything lese you want to add?
-              You can als or email us your resume and / or portfolio at info @infiniteoptions.com"
+              Anything else you want to add?
+              You can also email us your resume and/or portfolio at info @infiniteoptions.com"
               onHandleChange={handleNotesChange}
             />
           </div>
           <div>
-            <button className={classes.button} onClick={bookAppt}>
+            <button className="button" onClick={bookAppt}>
+              Confirm
+            </button>
+          </div> */}
+          <div>
+            <Form onSubmit={(e) => submit(e)}>
+              <FormGroup>
+                <FormGroup>
+                <Input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="First Name*"
+                    onChange={(e) => handle(e)}
+                    value={data.name}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                  <Input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    placeholder="Last Name*"
+                    onChange={(e) => handle(e)}
+                    value={data.company}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+               
+                  
+                </FormGroup>
+                <FormGroup>
+                  <Input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email address*"
+                    onChange={(e) => handle(e)}
+                    value={data.company}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                
+                  <Input
+                    type="phone"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone Number"
+                    onChange={(e) => handle(e)}
+                    value={data.url}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      width: "40%",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                </FormGroup>
+                
+                <FormGroup>
+                  <Input
+                    type="textarea"
+                    name="text"
+                    id="message"
+                    placeholder="Tell us what you’re good at and what you’re passionate about.&#10;Anything else you want to add?&#10;You can also email us your resume and/or portfolio at info@infiniteoptions.com"
+                    onChange={(e) => handle(e)}
+                    value={data.message}
+                    style={{
+                      padding: "20px",
+                      boxSizing: "border-box",
+                      borderRadius: "20px",
+                      fontColor: "#52330D",
+                      fontSize: "20px",
+                      margin: "5px 5px",
+                      //borderColor: "#52330D",
+                      //borderWidth: "2px",
+                      border: "2px solid #52330D",
+                      // width: "80.5%",
+                      width:"81%",
+                      height: "150px",
+                      fontFamily: "AvenirHeavy",
+                      outline: "none",
+                    }}
+                  />
+                </FormGroup>
+              </FormGroup>
+              <div>
+            <button className="button">
               Confirm
             </button>
           </div>
+            </Form>
+          </div>
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
-          <h1 className={classes.h1}>
+          <h1 className="h1">
             Thank you for your message. <br />
             We will get back to you on the given email address shortly!
           </h1>

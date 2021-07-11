@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div style={{ marginLeft: "10%", marginRight: "10%" }}>
+        <div>
         <div className="topTitle">
           <p
              style={{
@@ -29,8 +29,8 @@ class App extends Component {
              }}
           >
             
-            You bring the idea,{" "}
-            <span style={{ color: "#F6A833" }}>We fill the</span>{" "}
+            You bring the idea,
+            <span style={{ color: "#F6A833" }}>We fill the </span>
             <span style={{ color: "white", webkitTextStroke: "2px #F6A833" }}>
               gaps
             </span>
@@ -41,10 +41,10 @@ class App extends Component {
 
 
 
-          <div>
+          <div style={{marginRight:"10%"}}>
             <img
               src={how1}
-              style={{ width: "100%" }}
+              style={{ width: "100%"}}
               alt="Infinite Options diagram"
             ></img>
           </div>

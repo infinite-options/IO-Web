@@ -1,5 +1,6 @@
 import Chat from "./Chat1.js";
 import Flowimg from "./Flowimg";
+import More from "./More";
 
 import React, { Component } from "react";
 
@@ -9,6 +10,7 @@ class App extends Component {
       <div>
         <Flowimg></Flowimg>
         <Chat></Chat>
+        <More></More>
       </div>
     );
   }
