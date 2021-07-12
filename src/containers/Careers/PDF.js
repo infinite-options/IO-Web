@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Box } from "@material-ui/core";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-
 import samplePDF from "../../assets/CorporateOverview.pdf";
 import { makeStyles } from "@material-ui/core/styles";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -11,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     height: " 600px",
     border: "1px solid #707070",
     padding: "10px",
-    margin: "5rem",
+    display: "flex",
+    alignItems: "center",
     justifyContent: "center",
   },
   button: {

@@ -1,6 +1,5 @@
 import Chat from "./Chat1.js";
 import Flowimg from "./Flowimg";
-import PDF from "./PDF";
 import More from "./More";
 
 import React, { Component } from "react";
@@ -14,9 +13,7 @@ class App extends Component {
         <ScrollToTop />
         <Flowimg></Flowimg>
         <Chat></Chat>
-
         <More></More>
-        <PDF />
       </div>
     );
   }
