@@ -151,20 +151,24 @@ const Appointment = () => {
       " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact";
   const [data, setData] = useState({
       // not sure what variables the data wants... change it to the correct variable names once you find out
-      name:'',
-      lastname:'',
       email:'',
+      subject:'',
+      first_name:'',
+      last_name:'',
+      
       phone:'',
-      message:'',
+      
     });
     function submit(e){
       e.preventDefault();
       axios.post(postURL, {
-        name: data.name,
-        lastname: data.lastname,
-        phone: data.phone,
         email: data.email,
-        message: data.message,
+        subject: data.subject,
+        first_name: data.first_name,
+        last_name: data.last_name,
+        phone: data.phone,
+        
+        
       })
         .catch((error) => {
           console.log(error.message);
@@ -173,11 +177,12 @@ const Appointment = () => {
           console.log(response);
         });
         setSubmitted(true);
-          data.name='';
-          data.lastname='';
-          data.phone='';
           data.email='';
-          data.message='';
+          data.subject='';
+          data.first_name='';
+          data.last_name='';
+          data.phone='';
+          
     }
     function handle(e) {
       const newData = { ...data };
@@ -240,11 +245,11 @@ const Appointment = () => {
                 <FormGroup style={{marginBottom:"14px"}}>
                 <Input
                     type="text"
-                    name="name"
-                    id="name"
+                    name="first_name"
+                    id="first_name"
                     placeholder="First Name*"
                     onChange={(e) => handle(e)}
-                    value={data.name}
+                    value={data.first_name}
                     style={{
                       padding: "20px",
                       boxSizing: "border-box",
@@ -262,11 +267,11 @@ const Appointment = () => {
                   />
                   <Input
                     type="text"
-                    name="lastname"
-                    id="lastname"
+                    name="last_name"
+                    id="last_name"
                     placeholder="Last Name*"
                     onChange={(e) => handle(e)}
-                    value={data.company}
+                    value={data.last_name}
                     style={{
                       padding: "20px",
                       boxSizing: "border-box",
@@ -337,10 +342,10 @@ const Appointment = () => {
                   <Input
                     type="textarea"
                     name="text"
-                    id="message"
+                    id="subject"
                     placeholder="Tell us what you’re good at and what you’re passionate about.&#10;Anything else you want to add?&#10;You can also email us your resume and/or portfolio at info@infiniteoptions.com"
                     onChange={(e) => handle(e)}
-                    value={data.message}
+                    value={data.subject}
                     style={{
                       padding: "20px",
                       boxSizing: "border-box",
