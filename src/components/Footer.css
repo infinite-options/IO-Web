@@ -1,0 +1,41 @@
+.outterLayer{
+    /* height:   237px  ;   */
+    background-color:   #52330D  ;  
+    width:   100%  ;  
+    bottom:   0  ;  
+    font-family:   AvenirBook  ;  
+    display: flex;
+    justify-content: center;
+
+}
+
+.layer{
+    width: 980px;
+    /* height: 200px; */
+    /* margin-top: 60px; */
+}
+
+.eachCol{
+    /* height: 200px;  */
+    float: left;
+    width: 25%;
+    bottom: 0;
+    /* padding-right: 25px; */
+}
+
+.logoImg{
+    margin-top: 60px;
+    width: 159px;
+    height: 54px;
+}
+
+.firstCol{
+    color:white;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    font: normal normal normal 15px/20px Avenir;
+}
+
+.iconContainer{
+    margin-top: 97.5px;
+}

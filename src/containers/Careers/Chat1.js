@@ -207,7 +207,7 @@ const Appointment = () => {
     <section id="appointment" style={{ backgroundColor: "#F6A833" }}>
       <div className="contaier">
         <div hidden={submitted ? "hidden" : ""}>
-          <h1 className="h1">Let's have a chat!</h1>
+          <h1 className="chat">Let's have a chat!</h1>
           {/* <div>
             <SimpleForm
               field="Your Name"
@@ -236,7 +236,7 @@ const Appointment = () => {
           <div>
             <Form onSubmit={(e) => submit(e)}>
               <FormGroup>
-                <FormGroup>
+                <FormGroup style={{marginBottom:"14px"}}>
                 <Input
                     type="text"
                     name="name"
@@ -250,11 +250,11 @@ const Appointment = () => {
                       borderRadius: "20px",
                       fontColor: "#52330D",
                       fontSize: "20px",
-                      margin: "5px 5px",
+                      marginRight: "15px",
                       //borderColor: "#52330D",
                       //borderWidth: "2px",
                       border: "2px solid #52330D",
-                      width: "40%",
+                      width: "449px",
                       fontFamily: "AvenirHeavy",
                       outline: "none",
                     }}
@@ -272,11 +272,11 @@ const Appointment = () => {
                       borderRadius: "20px",
                       fontColor: "#52330D",
                       fontSize: "20px",
-                      margin: "5px 5px",
+                      // margin: "5px 5px",
                       //borderColor: "#52330D",
                       //borderWidth: "2px",
                       border: "2px solid #52330D",
-                      width: "40%",
+                      width: "449px",
                       fontFamily: "AvenirHeavy",
                       outline: "none",
                     }}
@@ -284,7 +284,7 @@ const Appointment = () => {
                
                   
                 </FormGroup>
-                <FormGroup>
+                <FormGroup style={{marginBottom:"44px"}}>
                   <Input
                     type="email"
                     name="email"
@@ -298,11 +298,11 @@ const Appointment = () => {
                       borderRadius: "20px",
                       fontColor: "#52330D",
                       fontSize: "20px",
-                      margin: "5px 5px",
+                      marginRight: "15px",
                       //borderColor: "#52330D",
                       //borderWidth: "2px",
                       border: "2px solid #52330D",
-                      width: "40%",
+                      width: "449px",
                       fontFamily: "AvenirHeavy",
                       outline: "none",
                     }}
@@ -321,18 +321,18 @@ const Appointment = () => {
                       borderRadius: "20px",
                       fontColor: "#52330D",
                       fontSize: "20px",
-                      margin: "5px 5px",
+                      // margin: "5px 5px",
                       //borderColor: "#52330D",
                       //borderWidth: "2px",
                       border: "2px solid #52330D",
-                      width: "40%",
+                      width: "449px",
                       fontFamily: "AvenirHeavy",
                       outline: "none",
                     }}
                   />
                 </FormGroup>
-                
-                <FormGroup>
+                <h1 className="chat">What are you good at?</h1>
+                <FormGroup style={{marginBottom:"75px"}}>
                   <Input
                     type="textarea"
                     name="text"
@@ -351,8 +351,8 @@ const Appointment = () => {
                       //borderWidth: "2px",
                       border: "2px solid #52330D",
                       // width: "80.5%",
-                      width:"81%",
-                      height: "150px",
+                      width:"913px",
+                      height: "112px",
                       fontFamily: "AvenirHeavy",
                       outline: "none",
                     }}
@@ -360,9 +360,10 @@ const Appointment = () => {
                 </FormGroup>
               </FormGroup>
               <div>
-            <button className="button">
-              Confirm
+            <button className="send">
+              Send a message
             </button>
+            <br />
           </div>
             </Form>
           </div>

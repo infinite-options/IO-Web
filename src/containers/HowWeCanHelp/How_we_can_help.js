@@ -12,11 +12,14 @@ import UI from "../../assets/images/HowWeCanHelpIcons/Group 532.svg";
 import WEB from "../../assets/images/HowWeCanHelpIcons/Group 418.svg";
 import Mobile from "../../assets/images/HowWeCanHelpIcons/Group 403.svg";
 import NityaAyurveda from "../../containers/Nitya/Nitya.jsx";
+import ScrollToTop from "../Appointment/ScrollToTop.js";
+
 
 class App extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div>
         <div className="topTitle">
           <p

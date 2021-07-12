@@ -3,12 +3,15 @@ import Flowimg from "./Flowimg";
 import More from "./More";
 
 import React, { Component } from "react";
+import "../../ScrollToTop.js";
+import ScrollToTop from "../Appointment/ScrollToTop.js";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Flowimg></Flowimg>
+        <ScrollToTop />
+        <Flowimg ></Flowimg>
         <Chat></Chat>
         <More></More>
       </div>

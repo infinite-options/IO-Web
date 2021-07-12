@@ -50,7 +50,6 @@ class App extends Component {
               </Switch>
               </div>
               </div>
-              
               <Footer></Footer>
             </div>
           </scrollToTop>
