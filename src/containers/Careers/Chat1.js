@@ -204,7 +204,8 @@ const Appointment = () => {
   // }
 
   return (
-    <section id="appointment" style={{ backgroundColor: "#F6A833" }}>
+    <section id="appointment" style={{ backgroundColor: "#F6A833" }} className="form">
+      <div >
       <div className="contaier">
         <div hidden={submitted ? "hidden" : ""}>
           <h1 className="chat">Let's have a chat!</h1>
@@ -233,9 +234,9 @@ const Appointment = () => {
               Confirm
             </button>
           </div> */}
-          <div>
+          <div >
             <Form onSubmit={(e) => submit(e)}>
-              <FormGroup>
+              <FormGroup >
                 <FormGroup style={{marginBottom:"14px"}}>
                 <Input
                     type="text"
@@ -369,11 +370,14 @@ const Appointment = () => {
           </div>
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
-          <h1 className="h1">
+          <div className="confirmationContainer" >
+          <h1 className="confirmationText">
             Thank you for your message. <br />
             We will get back to you on the given email address shortly!
           </h1>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   );

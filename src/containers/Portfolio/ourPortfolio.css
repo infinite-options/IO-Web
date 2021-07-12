@@ -132,6 +132,7 @@ color: #000000;
 @media (max-width:750px){
     .portfolioTitle{
         font: normal normal 900 50px/70px Avenir;
+        
     }
     
     .projectTitle{
@@ -167,6 +168,7 @@ color: #000000;
 @media (max-width:650px){
     .portfolioTitle{
         font: normal normal 900 40px/50px Avenir;
+        
     }
     
     .projectTitle{
@@ -202,11 +204,12 @@ color: #000000;
   
 @media (max-width:550px){
     .portfolioTitle{
-        font: normal normal 900 40px/50px Avenir;
+        font: normal normal 900 35px/50px Avenir;
+        
     }
     
     .projectTitle{
-        font: normal normal 900 15px/10px Avenir;
+        font: normal normal 900 15px/5px Avenir;
     }
     
     #projDescription{
@@ -221,13 +224,13 @@ color: #000000;
     
     .imgDiv{
         width: 250px;
-        height: 250px;
+        height: 350px;
         float: left;
     }
     
     .textDiv{
         width: 160px;
-        height: 250px;
+        height: 350px;
         padding-left: 20px;
         padding-right: 20px;
         text-align: left;
@@ -238,10 +241,11 @@ color: #000000;
 @media (max-width:450px){
     .portfolioTitle{
         font: normal normal 900 40px/50px Avenir;
+        
     }
     
     .projectTitle{
-        font: normal normal 900 15px/10px Avenir;
+        font: normal normal 900 15px/0px Avenir;
     }
     
     #projDescription{
@@ -262,7 +266,7 @@ color: #000000;
     
     .textDiv{
         width: 60px;
-        height: 250px;
+        height: 450px;
         padding-left: 20px;
         padding-right: 20px;
         text-align: left;

@@ -11,57 +11,67 @@ const Footer = () => {
   return (
     <div className="outterLayer">
       <div className="layer">
-      <Col className="eachCol">
+      <Col id="eachCol" style={{paddingRight:"0%"}}>
         
         <img
           src={logo}
           className="logoImg"
           aria-label="Infinite Options logo"
         ></img>
+        <div className="firstColText">
+        <NavLink
+            style={{ textDecoration: "none", color: "white",}}
+            to="Careers"
+          >
+          <p><u>Corporate Overview</u></p>
+          <p>© 2021 by Infinite Options LLC</p>
+          </NavLink>
+        </div>
         
-        <p className="firstCol"><u>Corporate Overview</u></p>
-        <p style={{color:"white", font:"normal normal normal 15px/20px Avenir"}}>© 2021 by Infinite Options LLC</p>
       </Col>
-      <Col className="eachCol"  style={{font: "normal normal normal 17px/23px Avenir", textAlign:"left" }}>
-        <p style={{ color: "white", marginTop: "88px" }}>Tel: 925-400-7469</p>
-        <p style={{ color: "white", marginTop: "21px" }}>San Jose, CA 95120</p>
+      <Col id="eachCol" >
+        <p className="colText1" >Tel: 925-400-7469</p>
+        <p className="colText2">San Jose, CA 95120</p>
       </Col>
-      <Col className="eachCol" style={{font: "normal normal normal 17px/23px Avenir" , textAlign:"left" }}>
-        <p style={{ color: "white", marginTop: "88px", }}>
+      <Col id="eachCol">
+        <p className="colText1">
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "white",}}
             to="Careers"
           >
             <u>Careers</u>
           </NavLink>
         </p>
-        <p style={{ color: "white", marginTop: "22px" }}>
+        <p className="colText2">
           info@infiniteoptions.com
         </p>
       </Col>
-      <Col className="eachCol">
+      <Col className="eachCol" >
         <div className="iconContainer">
-        <div style={{ float: "left", width: "20%", }}>
+        {/* <div style={{ float: "left", width: "20%", }}> */}
           <img
-            style={{ height: "26px", width: "32px" }}
+            // style={{ height: "26px", width: "32px" }}
+            className="twitter"
             src={twitter}
             aria-label="Twitter link placeholder"
           ></img>
-        </div>
-        <div style={{ float: "left", width: "20%", }}>
+        {/* </div>
+        <div style={{ float: "left", width: "20%", }}> */}
           <img
-            style={{ height: "26px", width: "26px" }}
+            // style={{ height: "26px", width: "26px" }}
+            className="linkedIn"
             src={li}
             aria-label="Linkedn link placeholder"
           ></img>
-        </div>
-        <div style={{ float: "left", width: "15%", }}>
+        {/* </div>
+        <div style={{ float: "left", width: "15%", }}> */}
           <img
-            style={{ height: "26px", width: "14px" }}
+            // style={{ height: "26px", width: "14px" }}
+            className="facebook"
             src={fb}
             aria-label="Facebook link placeholder"
           ></img>
-        </div>
+        {/* </div> */}
         </div>
         </Col>
       </div>

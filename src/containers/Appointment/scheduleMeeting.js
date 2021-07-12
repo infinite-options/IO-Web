@@ -418,9 +418,9 @@ const Appointment = () => {
         <p className="calanderHeader"> Schedule a 30 min meeting</p>
         <table className="calendarTimeTable">
           <tr>
-            <th className={classes.calendarBox}>
+            <th className="calendarBox">
               <h1
-                className={classes.h1}
+                className="h1"
                 style={{
                   // marginTop:"-20px",
                   // textAlign: "left",
@@ -438,22 +438,11 @@ const Appointment = () => {
                 className="center"
               />
             </th>
-            <th className={classes.timeslotBox}>
-              <div className={classes.leftTitle}>
-                <h1 className={classes.h1}>
+            <th className="timeslotBox">
+              <div className="leftTitle">
+                <h1 className="h1">
                   Pick a time
-                  <span
-                    style={{
-                      // textAlign: "left",
-                      paddingLeft: "120px",
-                      color: "#4E70FF",
-                      // fontFamily: "AvenirHeavy",
-                      font: "normal normal 900 14px/19px Avenir",
-                      marginTop: "-20px",
-                      // width:"130px",
-                      // float:"right",
-                    }}
-                  >
+                  <span className="pst">
                     {/* UTC - 07:00 Pacific Time */}
                     All times are in PST
                   </span>
@@ -647,10 +636,10 @@ const Appointment = () => {
               />
             </FormGroup>
             <div hidden={timeSelected ? "hidden" : ""}>
-              <button className={classes.buttonDisable}>Submit</button>
+              <button className="buttonDisable">Submit</button>
             </div>
             <div hidden={!timeSelected ? "hidden" : ""}>
-              <button className={classes.button}>Submit</button>
+              <button className="button">Submit</button>
             </div>
           </Form>
         </div>

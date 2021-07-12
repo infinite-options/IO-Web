@@ -15,12 +15,13 @@
     /* margin-top: 60px; */
 }
 
-.eachCol{
+#eachCol{
     /* height: 200px;  */
     float: left;
-    width: 25%;
+    width: 29%;
     bottom: 0;
-    /* padding-right: 25px; */
+    /* padding-right: 10px; */
+    margin-bottom: 50px;
 }
 
 .logoImg{
@@ -29,13 +30,205 @@
     height: 54px;
 }
 
-.firstCol{
+.firstColText{
     color:white;
     margin-top: 17px;
     margin-bottom: 10px;
     font: normal normal normal 15px/20px Avenir;
 }
 
+.colText1{
+    font: normal normal normal 17px/23px Avenir;
+    text-align: left;
+    color:white;
+    margin-top: 88px;
+    padding-left: 20px;
+}
+
+.colText2{
+    font: normal normal normal 17px/23px Avenir;
+    text-align: left;
+    color:white;
+    margin-top: 21px;
+    padding-left: 20px;
+}
+
 .iconContainer{
     margin-top: 97.5px;
+    display: flex;
+    justify-content: center;
+    float: left;
+    /* width: 18%; */
 }
+
+.twitter{
+    width: 32px;
+    height: 26px;
+    padding-right: 15px;
+}
+
+.linkedIn{
+    width: 26px;
+    height: 26px;
+    padding-right: 15px;
+}
+
+.facebook{
+    width: 14px;
+    height: 26px;
+}
+
+
+  
+
+/*ADDED 863px to 550px for better flow*/
+
+@media (max-width:750px){   
+    .layer{
+        width: 750px;
+        /* height: 200px; */
+        /* margin-top: 60px; */
+    }
+    
+    #eachCol{
+        /* height: 200px;  */
+        float: left;
+        width: 25%;
+        bottom: 0;
+        /* padding-right: 10px; */
+        margin-bottom: 50px;
+    }
+    
+    .logoImg{
+        margin-top: 50px;
+        width: 159px;
+        height: 54px;
+    }
+    
+    .firstColText{
+        color:white;
+        margin-top: 17px;
+        margin-bottom: 10px;
+        font: normal normal normal 15px/20px Avenir;
+    }
+    
+    .colText1{
+        font: normal normal normal 17px/23px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 78px;
+        padding-left: 20px;
+    }
+    
+    .colText2{
+        font: normal normal normal 17px/23px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 21px;
+        padding-left: 20px;
+    }
+    
+    .iconContainer{
+        margin-top: 77.5px;
+        display: flex;
+        justify-content: center;
+        float: left;
+        /* width: 18%; */
+    }
+    
+    .twitter{
+        width: 26px;
+        height: 20px;
+        padding-right: 15px;
+    }
+    
+    .linkedIn{
+        width: 18px;
+        height: 18px;
+        padding-right: 15px;
+    }
+    
+    .facebook{
+        width: 10px;
+        height: 18px;
+    }
+    
+    
+}
+  
+@media (max-width:550px){
+    .layer{
+        width: 750px;
+        /* height: 200px; */
+        /* margin-top: 60px; */
+    }
+    
+    #eachCol{
+        /* height: 200px;  */
+        float: left;
+        width: 28%;
+        bottom: 0;
+        /* padding-right: 10px; */
+        margin-bottom: 50px;
+    }
+    
+    .logoImg{
+        margin-top: 50px;
+        width: 159px;
+        height: 54px;
+        padding-left: 5px;
+    }
+    
+    .firstColText{
+        color:white;
+        margin-top: 17px;
+        margin-bottom: 10px;
+        font: normal normal normal 15px/20px Avenir;
+    }
+    
+    .colText1{
+        font: normal normal normal 15px/20px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 78px;
+        padding-left: 30px;
+    }
+    
+    .colText2{
+        font: normal normal normal 15px/20px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 21px;
+        padding-left: 30px;
+    }
+    
+    .iconContainer{
+        margin-top: 77.5px;
+        display: flex;
+        justify-content: center;
+        float: left;
+        /* width: 18%; */
+    }
+    
+    .twitter{
+        width: 26px;
+        height: 20px;
+        padding-right: 15px;
+    }
+    
+    .linkedIn{
+        width: 18px;
+        height: 18px;
+        padding-right: 15px;
+    }
+    
+    .facebook{
+        width: 10px;
+        height: 18px;
+    }
+}
+  
+@media (max-width:450px){
+
+}
+  

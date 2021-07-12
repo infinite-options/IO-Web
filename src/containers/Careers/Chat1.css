@@ -1,10 +1,23 @@
+.form{
+    width: 175%;
+    margin-left: -385px;
+}
 .chat {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-900) 17px/23px var(--unnamed-font-family-avenir);
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
     font: normal normal 900 17px/23px Avenir;
     color: #FFFFFF;
-    padding-left: 30px;
+    padding-left: 390px;
+}
+.confirmationContainer{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.confirmationText{
+    margin-top: 200px;
+    color: white;
 }
 .selectTime {
     font-size:  42px ;
@@ -15,6 +28,7 @@
     /* margin:  auto ; 
     width:  80% ;
     padding:  50px ; */
+    
 }
 .send {
     background-color:  #52330D ;
@@ -54,4 +68,24 @@
 }
 .center {
     margin:  0 auto ;
+}
+
+@media (max-width:980px){
+    .form{
+        width: 115%;
+        margin-left: -60px;
+    }
+    .chat {
+        padding-left: 60px;
+    }
+}
+  
+@media (max-width:550px){
+    .form{
+        width: 115%;
+        margin-left: -40px;
+    }
+    .chat {
+        padding-left: 40px;
+    }
 }

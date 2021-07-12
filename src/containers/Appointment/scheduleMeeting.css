@@ -10,8 +10,15 @@
     /* // float: left ; */
     border: none;
     
+}  
+
+.pst{
+  padding-left: 120px;
+  color: #4E70FF;
+  font: normal normal 900 14px/19px Avenir;
+  margin-top: -20px;
 }
-   
+
 .calanderHeader{
     text-align:  center ;
     font:  normal normal 60px/82px AvenirMedium ;
@@ -163,14 +170,20 @@
   .h1 {
     /* // fontSize:  150% ; */
     /* // padding:  20px 0 ; */
-    color:  #52330D ;
+    color:  #52330D;
     font-family:  AvenirHeavy ;
     text-align:  left ;
-    font:  normal normal 900 36px/49px Avenir ;
+    font:  normal normal 900 28px/45px Avenir ;
     padding-left: 20px ;
     /* // marginRight: 200px ; */
     /* // float: left ; */
     
+  }
+  .pst{
+    padding-left: 80px;
+    color: #4E70FF;
+    font: normal normal 900 14px/19px Avenir;
+    margin-top: -20px;
   }
     
   .calanderHeader{
@@ -316,15 +329,313 @@
       background-color:  #52330D ;
     }
 }
-/*ADDED 863px to 550px for better flow*/
-@media (max-width:863px){
-}
+
+
 @media (max-width:750px){
-    /* It looks fine without this */
+  .h1 {
+    font:  normal normal 900 18px/40px Avenir ;
+    padding-left: 20px ;
+  }
+    
+  .pst{
+    padding-left: 120px;
+    color: #4E70FF;
+    font: normal normal 900 12px/18px Avenir;
+    margin-top: -20px;
+  }
+
+  .calanderHeader{
+      font:  normal normal 45px/72px AvenirMedium ;
+      padding:  20px 0 ;
+  }
+  .leftTitle{
+      margin-top: -50px ;
+  }
+  .selectTime {
+      padding-top: 118px ;
+      font-size:  42px ;
+      color:  #52330D ;
+      font-family:  AvenirHeavy ;
+  }
+  .container {
+      margin:  auto ;
+      width:  100% ;
+      
+      /* // padding:  50px ; */
+    }
+  .button {
+      /* // buttons for times */
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:  15px 100px ;
+      text-align:  center ;
+      text-decoration:  none ;
+      display:  block ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  0 auto ;
+      
+  }
+  .button.hover  {
+      background:  #52330D ;
+      color:  #F6A833 ;
+    }
+
+  .buttonDisable {
+      /* // comfirm button */
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:  15px 100px ;
+      text-align:  center ;
+      text-decoration:  none ;
+      display:  block ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  0 auto ;
+      opacity:  50% ;
+    }
+    .inputRow {
+      display:  flex ;
+      justify-content:  space-between ;
+    }
+    .date {
+      /* // date and time under comfirm meeting */
+      font-size:  40px ;
+      font-family:  AvenirHeavy ;
+    }
+    .calendarTimeTable {
+      width:  100% ;
+      /* // margin:  0 auto ; */
+      border:  2px solid #F6A833  ;
+    }
+    .calendarBox {
+      width:  50% ; 
+      /* // this makes the calander and timeslot take up half the box each */
+      /* // padding:  50px ; */
+      /* // padding:  10px ; */
+      background-color:  #F6A833 ;
+      height: 300px ;
+    }
+
+    .timeslotBox {
+      width:  50% ;
+      height: 300px ;
+      /* // padding:  20px ; */
+    }
+    .center {
+      margin:  0 auto ;
+    }
+    .timeslotButton {
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:   20px 100px 20px 100px  ;
+      text-align:  center ;
+      text-decoration:  none ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  5px ;
+      
+    }
+    .timeslotButton.focus  {
+      background:  #52330D ;
+      color:  #F6A833 ;
+    }
+
+    .duritionInput {
+      background-color:  #FAD399 ;
+      width:  50% ;
+      height:  75px ;
+      border:  none ;
+      padding:  20px ;
+      box-sizing:  border-box ;
+      border-radius:  50px ;
+      color:  #52330D ;
+      font-size:  25px ;
+      display:  inline-block ;
+      margin:  5px ;
+      outline:  none ;
+    }
+    .duritionInput.placeholder  {
+      text-Overflow:  ellipsis !important ;
+      color:  #52330D ;
+    }
+
+    .timeslotButtonBox {
+      width:  100% ;
+      height:  400px ;
+      margin:  0 auto ;
+      overflow-Y:  scroll ;
+    }
+    .timeslotButtonBox.-webkit-scrollbar  {
+      width:  10px ;
+      /* // border:  1px solid black ; */
+      border-radius:  20px ;
+      padding:  1px 0 ;
+      background-color:  white ;
+    }
+    .timeslotButtonBox.-webkit-scrollbar-thumb {
+      border:  1px solid #000 ;
+      border-radius:  20px ;
+      padding:  1px 0 ;
+      background-color:  #52330D ;
+    }
 }
   
 @media (max-width:650px){
+  .h1 {
+    font:  normal normal 900 18px/40px Avenir ;
+    padding-left: 20px ;
+  }
+    
+  .pst{
+    padding-left: 120px;
+    color: #4E70FF;
+    font: normal normal 900 12px/18px Avenir;
+    margin-top: -20px;
+  }
 
+  .calanderHeader{
+      font:  normal normal 40px/72px AvenirMedium ;
+      padding:  20px 0 ;
+  }
+  .leftTitle{
+      margin-top: -50px ;
+  }
+  .selectTime {
+      padding-top: 118px ;
+      font-size:  42px ;
+      color:  #52330D ;
+      font-family:  AvenirHeavy ;
+  }
+  .container {
+      margin:  auto ;
+      width:  100% ;
+      
+      /* // padding:  50px ; */
+    }
+  .button {
+      /* // buttons for times */
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:  15px 100px ;
+      text-align:  center ;
+      text-decoration:  none ;
+      display:  block ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  0 auto ;
+      
+  }
+  .button.hover  {
+      background:  #52330D ;
+      color:  #F6A833 ;
+    }
+
+  .buttonDisable {
+      /* // comfirm button */
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:  15px 100px ;
+      text-align:  center ;
+      text-decoration:  none ;
+      display:  block ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  0 auto ;
+      opacity:  50% ;
+    }
+    .inputRow {
+      display:  flex ;
+      justify-content:  space-between ;
+    }
+    .date {
+      /* // date and time under comfirm meeting */
+      font-size:  40px ;
+      font-family:  AvenirHeavy ;
+    }
+    .calendarTimeTable {
+      width:  80% ;
+      /* // margin:  0 auto ; */
+      border:  2px solid #F6A833  ;
+    }
+    .calendarBox {
+      width:  50% ; 
+      /* // this makes the calander and timeslot take up half the box each */
+      /* // padding:  50px ; */
+      /* // padding:  10px ; */
+      background-color:  #F6A833 ;
+      height: 300px ;
+    }
+
+    .timeslotBox {
+      width:  50% ;
+      height: 300px ;
+      /* // padding:  20px ; */
+    }
+    .center {
+      margin:  0 auto ;
+    }
+    .timeslotButton {
+      background-color:  #F6A833 ;
+      border:  none ;
+      color:  white ;
+      padding:   20px 100px 20px 100px  ;
+      text-align:  center ;
+      text-decoration:  none ;
+      font-size:  20px ;
+      border-radius:  50px ;
+      margin:  5px ;
+      
+    }
+    .timeslotButton.focus  {
+      background:  #52330D ;
+      color:  #F6A833 ;
+    }
+
+    .duritionInput {
+      background-color:  #FAD399 ;
+      width:  50% ;
+      height:  75px ;
+      border:  none ;
+      padding:  20px ;
+      box-sizing:  border-box ;
+      border-radius:  50px ;
+      color:  #52330D ;
+      font-size:  25px ;
+      display:  inline-block ;
+      margin:  5px ;
+      outline:  none ;
+    }
+    .duritionInput.placeholder  {
+      text-Overflow:  ellipsis !important ;
+      color:  #52330D ;
+    }
+
+    .timeslotButtonBox {
+      width:  100% ;
+      height:  400px ;
+      margin:  0 auto ;
+      overflow-Y:  scroll ;
+    }
+    .timeslotButtonBox.-webkit-scrollbar  {
+      width:  10px ;
+      /* // border:  1px solid black ; */
+      border-radius:  20px ;
+      padding:  1px 0 ;
+      background-color:  white ;
+    }
+    .timeslotButtonBox.-webkit-scrollbar-thumb {
+      border:  1px solid #000 ;
+      border-radius:  20px ;
+      padding:  1px 0 ;
+      background-color:  #52330D ;
+    }
+  
 }
   
 @media (max-width:550px){

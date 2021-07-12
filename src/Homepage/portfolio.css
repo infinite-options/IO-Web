@@ -165,7 +165,15 @@ color: #52330D;
   }
   .viewProjectBtn{
 
-    width: 217px;
+    width: 184px;
+    height: 55px;
+
+    font-size: 20px;
+
+  }
+  .viewProjectBtn2{
+
+    width: 184px;
     height: 55px;
 
     font-size: 20px;
@@ -261,9 +269,17 @@ color: #52330D;
 
   }
   .viewProjectBtn{
-    width: 200px;
+    width: 160px;
     height: 45px;
     font-size: 17px;
+  }
+  .viewProjectBtn2{
+
+    width: 160px;
+    height: 45px;
+
+    font-size: 17px;
+
   }
   .aBtn{
     padding-left: 15px;
@@ -356,9 +372,17 @@ color: #52330D;
 
   }
   .viewProjectBtn{
-    width: 150px;
+    width: 140px;
     height: 40px;
     font-size: 16px;
+  }
+  .viewProjectBtn2{
+
+    width: 140px;
+    height: 40px;
+
+    font-size: 16px;
+
   }
   .aBtn{
     padding-left: 15px;
@@ -448,9 +472,17 @@ color: #52330D;
 
   }
   .viewProjectBtn{
-    width: 150px;
+    width: 120px;
     height: 40px;
     font-size: 16px;
+  }
+  .viewProjectBtn2{
+
+    width: 120px;
+    height: 40px;
+
+    font-size: 16px;
+
   }
   .aBtn{
     padding-left: 15px;
@@ -541,9 +573,17 @@ color: #52330D;
 
   }
   .viewProjectBtn{
-    width: 100px;
+    width: 95px;
     height: 35px;
     font-size: 12px;
+  }
+  .viewProjectBtn2{
+
+    width: 95px;
+    height: 35px;
+
+    font-size: 12px;
+
   }
   .aBtn{
     padding-left: 15px;
@@ -633,9 +673,17 @@ color: #52330D;
 
   }
   .viewProjectBtn{
-    width: 100px;
+    width: 85px;
     height: 35px;
     font-size: 12px;
+  }
+  .viewProjectBtn2{
+
+    width: 85px;
+    height: 35px;
+
+    font-size: 12px;
+
   }
   .aBtn{
     padding-left: 15px;

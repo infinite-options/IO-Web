@@ -71,17 +71,17 @@ class App extends Component {
           <br />
           <br />
           <Link to="appointment" aria-label="Click here to schedule a meeting">
-            <button
-              style={{
-                height: "100px",
-                width: "500px",
-                borderRadius: "50px",
-                // marginBottom: "200px",
-                backgroundColor: "#F6A833",
-                border: "1px solid #F6A833",
-                color: "white",
-                fontSize: "30px",
-              }}
+            <button className="engageBtn"
+              // style={{
+              //   height: "100px",
+              //   width: "500px",
+              //   borderRadius: "50px",
+              //   // marginBottom: "200px",
+              //   backgroundColor: "#F6A833",
+              //   border: "1px solid #F6A833",
+              //   color: "white",
+              //   fontSize: "30px",
+              // }}
             >
               Let's Engage
             </button>
@@ -90,7 +90,10 @@ class App extends Component {
         {/* <How_We_Can_Help_Portfolio /> */}
 
         <div className="bottomTitle">
-          <h1 className="h1">Products we helped build</h1>
+          <br />
+          {/* <hr className="lines"/> */}
+          <h1><hr className="lines"/>Products we helped build<hr className="lines"/></h1>
+          {/* <hr className="lines"/> */}
         </div>
 
         <br />

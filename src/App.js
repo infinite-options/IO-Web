@@ -66,7 +66,9 @@ export function Main() {
       <WhatWeDo />
       <Portfolio />
       </div>
-      <div style={{width:"175%", marginLeft:"-385px"}}>
+      <div 
+      // style={{width:"175%", marginLeft:"-385px"}}
+      >
       <ScheduleAMeeting />
       </div>
     </main>

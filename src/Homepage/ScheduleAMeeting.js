@@ -5,7 +5,9 @@ import "./ScheduleAMeeting.css";
 class App extends Component {
   render() {
     return (
-      <section style={{ backgroundColor: "#F6A833" }}>
+      <section className="outsideDiv" 
+      // style={{ backgroundColor: "#F6A833" }}
+      >
         <div className="firstDiv">
           {/* <h1 className="firstH1">
             Let’s chat about design and development solutions for your business
