@@ -12,11 +12,14 @@ import UI from "../../assets/images/HowWeCanHelpIcons/Group 532.svg";
 import WEB from "../../assets/images/HowWeCanHelpIcons/Group 418.svg";
 import Mobile from "../../assets/images/HowWeCanHelpIcons/Group 403.svg";
 import NityaAyurveda from "../../containers/Nitya/Nitya.jsx";
+import ScrollToTop from "../Appointment/ScrollToTop.js";
+
 
 class App extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         <div style={{ marginLeft: "10%", marginRight: "10%" }}>
           <div className="topTitle">
             <p
@@ -39,9 +42,37 @@ class App extends Component {
           </div>
 
           <div>
+=======
+        <ScrollToTop />
+        <div>
+        <div className="topTitle">
+          <p
+             style={{
+            //   fontSize: "84px",
+            //   textAlign: "center",
+            //   fontWeight: "bold",
+               color: "#52330D",
+            //   fontFamily: "AvenirHeavy",
+             }}
+          >
+            
+            You bring the idea,
+            <span style={{ color: "#F6A833" }}>We fill the </span>
+            <span style={{ color: "white", webkitTextStroke: "2px #F6A833" }}>
+              gaps
+            </span>
+            <br />
+            See how it all fits together
+          </p>
+          </div>
+
+
+
+          <div style={{marginRight:"10%"}}>
+>>>>>>> 1f9d2a49bf0bb1058933c30640ec049a52520b10
             <img
               src={how1}
-              style={{ width: "100%" }}
+              style={{ width: "100%"}}
               alt="Infinite Options diagram"
             ></img>
           </div>

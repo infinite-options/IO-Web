@@ -166,7 +166,7 @@ const App = () => {
             aria-label="Click to see design files for Meals For Me"
           >
             <button className="linkBtn" aria-hidden="true" tabindex="-1">
-              View Project
+              Coming Soon
             </button>
           </Link>
         </div>

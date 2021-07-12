@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ScrollToTop from "./ScrollToTop.js";
 
 import { Button, Form, FormGroup, Input } from "reactstrap";
+import "./scheduleMeeting.css";
 
 const useStyles = makeStyles((theme) => ({
   h1: {
@@ -408,14 +409,14 @@ const Appointment = () => {
     <section id="appointment">
       <ScrollToTop />
       {/* <scrollToTop /> */}
-      <div className={classes.container}>
+      <div className="container">
         {/* <img
           src={logo}
           alt="logo"
           style={{ width: "25%", marginBottom: "50px" }}
         /> */}
-        <p className={classes.calanderHeader}> Schedule a 30 min meeting</p>
-        <table className={classes.calendarTimeTable}>
+        <p className="calanderHeader"> Schedule a 30 min meeting</p>
+        <table className="calendarTimeTable">
           <tr>
             <th className={classes.calendarBox}>
               <h1
@@ -434,7 +435,7 @@ const Appointment = () => {
                 value={date}
                 backgroundColor="#F6A833"
                 calendarType="US"
-                className={classes.center}
+                className="center"
               />
             </th>
             <th className={classes.timeslotBox}>
@@ -477,7 +478,7 @@ const Appointment = () => {
                 
                 All times are in PST
               </p> */}
-              <div className={classes.timeslotButtonBox}>
+              <div className="timeslotButtonBox">
                 {renderAvailableApptsVertical()}
               </div>
             </th>
@@ -485,15 +486,15 @@ const Appointment = () => {
         </table>
       </div>
 
-      <div className={classes.container}>
-        <h1 className={classes.selectTime}>Confirm Meeting</h1>
+      <div className="container">
+        <h1 className="selectTime">Confirm Meeting</h1>
         <h1
           style={{ fontSize: "64px", fontFamily: "AvenirHeavy" }}
           hidden={timeSelected ? "hidden" : ""}
         >
           Please pick a day and time to meet
         </h1>
-        <h1 className={classes.date} hidden={!timeSelected ? "hidden" : ""}>
+        <h1 className="date" hidden={!timeSelected ? "hidden" : ""}>
           <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
           <span style={{ color: "#F6A833" }}>{selectedTime}</span>
         </h1>
@@ -654,7 +655,7 @@ const Appointment = () => {
           </Form>
         </div>
         <div hidden={!submitted ? "hidden" : ""}>
-          <h1 className={classes.h1}>
+          <h1 className="h1">
             Thank you for your message. <br />
             Your meeting has been confirmed with us for {dateString1} at{" "}
             {selectedTime}

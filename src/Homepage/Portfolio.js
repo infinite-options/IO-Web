@@ -74,7 +74,7 @@ export default function Portfolio() {
             <div>
               <h1 className="header1">
                 Products we’ve built
-                <a id="viewAllProjects" href="OurPortfolio" class="button">
+                <a id="viewAllProjects" href="OurPortfolio" >
                   View All Projects
                 </a>
               </h1>
@@ -158,7 +158,6 @@ export default function Portfolio() {
                 <a
                   id="viewAllProjects2"
                   href="How_We_Can_Help"
-                  class="button"
                 >
                   View All Projects
                 </a>
