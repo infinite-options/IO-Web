@@ -26,8 +26,8 @@
 
 .logoImg{
     margin-top: 60px;
-    width: 159px;
-    height: 54px;
+    width: 250px;
+    height: 90px;
 }
 
 .firstColText{
@@ -41,7 +41,7 @@
     font: normal normal normal 17px/23px Avenir;
     text-align: left;
     color:white;
-    margin-top: 88px;
+    margin-top: 120px;
     padding-left: 20px;
 }
 
@@ -49,12 +49,12 @@
     font: normal normal normal 17px/23px Avenir;
     text-align: left;
     color:white;
-    margin-top: 21px;
+    margin-top: -10px;
     padding-left: 20px;
 }
 
 .iconContainer{
-    margin-top: 97.5px;
+    margin-top: 127.5px;
     display: flex;
     justify-content: center;
     float: left;
