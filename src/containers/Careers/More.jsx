@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <div
+        id="pdf"
         style={{
           display: "flex",
           flexDirection: "column",
