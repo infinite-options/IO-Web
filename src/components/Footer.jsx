@@ -30,10 +30,15 @@ const Footer = () => {
           </div>
         </Col>
         <Col id="eachCol">
-          <p className="colText1">Tel: 925-400-7469</p>
-          <p className="colText2">San Jose, CA 95120</p>
+          <p className="colText1">Tel: 925-400-7469  <span className="spacing1"></span>   <NavLink
+              style={{ textDecoration: "none", color: "white" }}
+              to="Careers"
+            >
+              <u>Careers</u>
+            </NavLink></p>
+          <p className="colText2">San Jose, CA 95120  <span className="spacing2"></span> info@infiniteoptions.com  &nbsp; &nbsp; &nbsp;</p>
         </Col>
-        <Col id="eachCol">
+        {/* <Col id="eachCol">
           <p className="colText1">
             <NavLink
               style={{ textDecoration: "none", color: "white" }}
@@ -43,7 +48,7 @@ const Footer = () => {
             </NavLink>
           </p>
           <p className="colText2">info@infiniteoptions.com</p>
-        </Col>
+        </Col> */}
         <Col className="eachCol">
           <div className="iconContainer">
             {/* <div style={{ float: "left", width: "20%", }}> */}

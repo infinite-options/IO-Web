@@ -18,7 +18,8 @@
 #eachCol{
     /* height: 200px;  */
     float: left;
-    width: 29%;
+    /* width: 29%; */
+
     bottom: 0;
     /* padding-right: 10px; */
     margin-bottom: 50px;
@@ -42,7 +43,14 @@
     text-align: left;
     color:white;
     margin-top: 120px;
-    padding-left: 20px;
+    padding-left: 80px;
+}
+
+.spacing1{
+    padding-left: 107px;
+}
+.spacing2{
+    padding-left: 90px;
 }
 
 .colText2{
@@ -50,14 +58,14 @@
     text-align: left;
     color:white;
     margin-top: -10px;
-    padding-left: 20px;
+    padding-left: 80px;
 }
 
 .iconContainer{
     margin-top: 127.5px;
     display: flex;
     justify-content: center;
-    float: left;
+    float: center;
     /* width: 18%; */
 }
 
@@ -79,7 +87,97 @@
 }
 
 
-  
+@media (max-width:870px){ 
+    .outterLayer{
+        /* height:   237px  ;   */
+        background-color:   #52330D  ;  
+        width:   100%  ;  
+        bottom:   0  ;  
+        font-family:   AvenirBook  ;  
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    .layer{
+        width: 980px;
+        /* height: 200px; */
+        /* margin-top: 60px; */
+    }
+    
+    #eachCol{
+        /* height: 200px;  */
+        float: left;
+        /* width: 29%; */
+    
+        bottom: 0;
+        /* padding-right: 10px; */
+        margin-bottom: 50px;
+    }
+    
+    .logoImg{
+        margin-top: 60px;
+        width: 200px;
+        height: 70px;
+    }
+    
+    .firstColText{
+        color:white;
+        margin-top: 17px;
+        margin-bottom: 10px;
+        font: normal normal normal 15px/20px Avenir;
+    }
+    
+    .colText1{
+        font: normal normal normal 17px/23px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 120px;
+        padding-left: 40px;
+    }
+    
+    .spacing1{
+        padding-left: 56px;
+    }
+    .spacing2{
+        padding-left: 40px;
+        
+    }
+    
+    .colText2{
+        font: normal normal normal 17px/23px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: -10px;
+        padding-left: 40px;
+    }
+    
+    .iconContainer{
+        margin-top: 127.5px;
+        display: flex;
+        justify-content: center;
+        float: left;
+        /* padding-left:20px; */
+        /* width: 18%; */
+    }
+    
+    .twitter{
+        width: 28px;
+        height: 26px;
+        padding-right: 15px;
+    }
+    
+    .linkedIn{
+        width: 21px;
+        height: 21px;
+        padding-right: 15px;
+    }
+    
+    .facebook{
+        width: 12px;
+        height: 24px;
+    }
+}
 
 /*ADDED 863px to 550px for better flow*/
 
@@ -93,7 +191,7 @@
     #eachCol{
         /* height: 200px;  */
         float: left;
-        width: 25%;
+        /* widt5: 25%; */
         bottom: 0;
         /* padding-right: 10px; */
         margin-bottom: 50px;
@@ -109,11 +207,11 @@
         color:white;
         margin-top: 17px;
         margin-bottom: 10px;
-        font: normal normal normal 15px/20px Avenir;
+        font: normal normal normal 13px/19px Avenir;
     }
     
     .colText1{
-        font: normal normal normal 17px/23px Avenir;
+        font: normal normal normal 15px/23px Avenir;
         text-align: left;
         color:white;
         margin-top: 78px;
@@ -121,11 +219,18 @@
     }
     
     .colText2{
-        font: normal normal normal 17px/23px Avenir;
+        font: normal normal normal 15px/23px Avenir;
         text-align: left;
         color:white;
-        margin-top: 21px;
+        margin-top: -10px;
         padding-left: 20px;
+    }
+    .spacing1{
+        padding-left: 56px;
+    }
+    .spacing2{
+        padding-left: 40px;
+        
     }
     
     .iconContainer{
@@ -155,8 +260,8 @@
     
     
 }
-  
-@media (max-width:550px){
+
+@media (max-width:653px){
     .layer{
         width: 750px;
         /* height: 200px; */
@@ -166,7 +271,7 @@
     #eachCol{
         /* height: 200px;  */
         float: left;
-        width: 28%;
+        /* widt5: 25%; */
         bottom: 0;
         /* padding-right: 10px; */
         margin-bottom: 50px;
@@ -174,32 +279,38 @@
     
     .logoImg{
         margin-top: 50px;
-        width: 159px;
-        height: 54px;
-        padding-left: 5px;
+        width: 150px;
+        height: 50px;
     }
     
     .firstColText{
         color:white;
         margin-top: 17px;
         margin-bottom: 10px;
-        font: normal normal normal 15px/20px Avenir;
+        font: normal normal normal 13px/19px Avenir;
     }
     
     .colText1{
-        font: normal normal normal 15px/20px Avenir;
+        font: normal normal normal 14px/23px Avenir;
         text-align: left;
         color:white;
         margin-top: 78px;
-        padding-left: 30px;
+        padding-left: 20px;
     }
     
     .colText2{
-        font: normal normal normal 15px/20px Avenir;
+        font: normal normal normal 14px/23px Avenir;
         text-align: left;
         color:white;
-        margin-top: 21px;
-        padding-left: 30px;
+        margin-top: -10px;
+        padding-left: 20px;
+    }
+    .spacing1{
+        padding-left: 39px;
+    }
+    .spacing2{
+        padding-left: 25px;
+        
     }
     
     .iconContainer{
@@ -211,24 +322,20 @@
     }
     
     .twitter{
-        width: 26px;
-        height: 20px;
+        width: 21px;
+        height: 15px;
         padding-right: 15px;
     }
     
     .linkedIn{
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
         padding-right: 15px;
     }
     
     .facebook{
-        width: 10px;
-        height: 18px;
+        width: 8px;
+        height: 15px;
     }
-}
-  
-@media (max-width:450px){
-
 }
   

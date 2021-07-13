@@ -6,9 +6,12 @@
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-900) 17px/23px var(--unnamed-font-family-avenir);
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-    font: normal normal 900 17px/23px Avenir;
+    /* font: normal normal 900 17px/23px Avenir; */
+    font-size: 200%; 
+    font-weight: bold;
     color: #FFFFFF;
     padding-left: 390px;
+    /* padding-top: 50px; */
 }
 .confirmationContainer{
     height: 500px;
@@ -28,6 +31,7 @@
     /* margin:  auto ; 
     width:  80% ;
     padding:  50px ; */
+    padding-top: 20px;
     
 }
 .send {
