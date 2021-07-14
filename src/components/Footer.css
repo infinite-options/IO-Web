@@ -100,7 +100,7 @@
     }
     
     .layer{
-        width: 980px;
+        width: 870px;
         /* height: 200px; */
         /* margin-top: 60px; */
     }
@@ -263,7 +263,7 @@
 
 @media (max-width:653px){
     .layer{
-        width: 750px;
+        width: 653px;
         /* height: 200px; */
         /* margin-top: 60px; */
     }
@@ -293,7 +293,7 @@
     .colText1{
         font: normal normal normal 14px/23px Avenir;
         text-align: left;
-        color:white;
+        color:pink;
         margin-top: 78px;
         padding-left: 20px;
     }
@@ -338,4 +338,89 @@
         height: 15px;
     }
 }
-  
+
+@media (max-width: 627px){
+    .layer{
+        width: 627px;
+        /* height: 200px; */
+        /* margin-top: 60px; */
+       
+        
+    }
+    
+    #eachCol{
+        /* height: 200px;  */
+        /* float: center; */
+        
+        /* bottom: 0; */
+        /* padding-right: 10px; */
+        /* margin-bottom: 50px;
+        display: flex;
+        justify-content: center; */
+        
+    }
+    .centerLogo{
+        /* margin-top: 50px; */
+        
+        display: flex;
+        justify-content: left;
+        padding-left: 1vw;
+    }
+    .colText1{
+        font: normal normal normal 12px/23px Avenir;
+        text-align: left;
+        color:white;
+        margin-top: 80px;
+        margin-left: -10px;
+        /* margin-right: 50px; */
+        /* padding-left: 10vw; */
+    }
+    .colText2{
+        font: normal normal normal 12px/23px Avenir;
+        text-align: center;
+        color:white;
+        margin-top: -10px;
+        /* padding-left: 10vw; */
+        margin-left: -10px;
+    }
+    .iconContainer{
+        padding-right: 1vw;
+        
+        /* display: flex;
+        justify-content: center;
+        float: center; */
+        /* width: 18%; */
+    }
+    .firstColText{
+        /* padding-left: 0.3vw; */
+        color:white;
+        margin-top: 10px;
+        /* margin-bottom: 10px; */
+        font: normal normal normal 12px/19px Avenir;
+
+    }
+    .twitter{
+        width: 16px;
+        height: 15px;
+        padding-right: 10px;
+    }
+    
+    .linkedIn{
+        width: 14px;
+        height: 15px;
+        padding-right: 10px;
+    }
+    
+    .facebook{
+        width: 8px;
+        height: 15px;
+    }
+    .spacing1{
+        padding-left: 27px;
+    }
+    .spacing2{
+        padding-left: 15px;
+        
+    }
+}
+

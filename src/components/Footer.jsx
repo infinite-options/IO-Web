@@ -12,11 +12,13 @@ const Footer = () => {
     <div className="outterLayer">
       <div className="layer">
         <Col id="eachCol" style={{ paddingRight: "0%" }}>
+          <div className="centerLogo">
           <img
             src={logo}
             className="logoImg"
             aria-label="Infinite Options logo"
           ></img>
+          </div>
           <div className="firstColText">
             <a
               style={{ textDecoration: "none", color: "white" }}
@@ -36,7 +38,7 @@ const Footer = () => {
             >
               <u>Careers</u>
             </NavLink></p>
-          <p className="colText2">San Jose, CA 95120  <span className="spacing2"></span> info@infiniteoptions.com  &nbsp; &nbsp; &nbsp;</p>
+          <p className="colText2">San Jose, CA 95120  <span className="spacing2"></span> info@infiniteoptions.com  </p>
         </Col>
         {/* <Col id="eachCol">
           <p className="colText1">
