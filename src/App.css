@@ -1,84 +1,31 @@
 .App {
-    text-align: center;
-    font-family: "Avenir";
-    height: auto;
-    /* min-width: 40ch; */
-    /* width: 980px; */
-    
-    
-}
-.center{
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+
 }
 
-
-.containerApp{
-  /* width: 100px; */
-  /* background-color: pink; */
-  width: 980px;
-  
-}
-
-@media (max-width:1280px){
-  .containerApp{
-    width: 980px;
-  }
-}
-
-@media (max-width:980px){
-  .containerApp{
-    width: 863px;
-
-  }
-}
-/*ADDED 863px to 550px for better flow*/
-@media (max-width:863px){
-  .containerApp{
-    width: 750px;
-  }
-}
-@media (max-width:750px){
-  .containerApp{
-    width: 650px;
-  }
-}
-
-@media (max-width:650px){
-  .containerApp{
-    width: 550px;
-  }
-}
-
-@media (max-width:550px){
-  .containerApp{
-    width: 450px;
-  }
-}
-
-@media (max-width:450px){
-  .containerApp{
-    width: 360px;
-  }
-}
-
-
-
-
-
-
-
-/* @media only screen and (min-height:900px){
-  .App{
-      height:4700px;
-      
-  } 
-   }  */
-/* .App-logo {
+.App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Navigation {
+  height: 4rem;
+  display: flex;
+  justify-content:flex-start;
+}
+
+.NavElements{
+  padding: 1rem;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+
+}
+
+.NavLogo{
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -92,7 +39,14 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -102,4 +56,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}

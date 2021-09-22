@@ -1,0 +1,123 @@
+.navbar {
+  height: 10vh;
+  background: white;
+  color: #8d6f1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  /* cursor: pointer; */
+}
+
+.emptyDiv{
+flex: 1;
+}
+
+.nav-logo {
+  flex:1;
+}
+
+.nav-links {
+  flex:1;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 20px;
+  list-style: none;
+  padding-top: 30px;
+}
+
+
+.right {
+  flex: 1;
+  width: 250px;
+  /* margin-left: auto; */
+  padding-top: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #8d6f1a;
+  transition: 0.3s all;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #d3a625;
+}
+
+
+.nav-log {
+  list-style: none;
+  padding-top: 30px;
+}
+.nav-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.instagram-icon {
+  color: #8d6f1a;
+  height: 50px;
+}
+
+.instagram-icon:hover {
+  color: #d3a625;
+}
+
+@media screen and (max-width: 1250px) and (min-width: 1050px) {
+  .right {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 80%;
+    z-index: 500;
+    justify-content: space-between;
+    /* cursor: pointer; */
+  }
+
+  .emptyDiv{
+    flex: 0;
+    }
+
+  .nav-links {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    width: 100% ;
+    top: 150px;
+    left: -110%;
+    transition: 0.2s all;
+  }
+
+  .nav-links.active {
+    background: white;
+    left: 0;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #d3a625;
+    margin-left: -25%;
+    height: 40px;
+  }
+
+  .nav-icon {
+    display: flex;
+  }
+
+  .right {
+    width: 0px;
+    margin-left: 0px;
+    display: none;
+  }
+}

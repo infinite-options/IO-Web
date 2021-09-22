@@ -1,29 +1,13 @@
-@font-face {
-  font-family: "AvenirBook";
-  src: local("AvenirBook"),
-    url(./assets/font/AvenirLTStd-Book.otf) format("truetype");
-}
-@font-face {
-  font-family: "AvenirHeavy";
-  src: local("AvenirHeavy"),
-    url(./assets/font/AvenirLTStd-Heavy.otf) format("truetype");
-}
-@font-face {
-  font-family: "AvenirMedium";
-  src: local("AvenirMedium"),
-    url(./assets/font/AvenirLTStd-Medium.otf) format("truetype");
-}
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
