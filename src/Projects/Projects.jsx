@@ -7,11 +7,11 @@ import SF from '../Assets/Projects/SF.png'
 
 export default function Projects(){
     return(
-        <Box style={{backgroundColor:'#52330D', color:'white',display:'flex', justifyContent:'center',alignItems:'center' ,width:'100%', flexDirection:'column'}}>
+        <Box  className="Container">
             <div >
-                <p style={{fontFamily:'Libre Baskerville', fontSize:'54px'}}> Projects</p>
+                <p className="Title"> Projects</p>
             </div>
-                <div style={{width:'50%', height:'28rem',marginTop:'3rem', display:'flex' }}>
+                <div className="Conatiner" style={{width:'50%', height:'28rem',marginTop:'3rem', display:'flex' }}>
                     <div>
                     <img src={'./Home/M4Me.png'} style={{width:'25rem', height:'25rem'}}/>
                     </div>

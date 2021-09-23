@@ -152,6 +152,8 @@ import { Link } from "react-router-dom";
 // import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { animateScroll as scroll } from "react-scroll";
+import { useHistory, useLocation } from "react-router-dom";
+
 //import logo from "../Assets/Projects/Nitya.png";
 //import InstagramIcon from "../Assets/Projects/Nitya.png";
 // import LoginNavBar from "./LoginNavBar";
@@ -196,15 +198,10 @@ function useOutsideAlerter(ref) {
 
 const Navbar = () => {
   const classes = useStyles();
+  const location = useLocation();
+
   const [open, setOpen] = useState(false);
-  const [isLoginShown, setIsLoginShown] = useState(false); // checks if user is logged in
-  const [isSignUpShown, setIsSignUpShown] = useState(false);
-
-  const loginWrapperRef = useRef(null);
-  useOutsideAlerter(loginWrapperRef, setIsLoginShown);
-
-  const signupWrapperRef = useRef(null);
-  useOutsideAlerter(signupWrapperRef, setIsSignUpShown);
+  const [projects, setProjects] = useState(false)
 
   const handleClick = () => {
     setOpen(!open);
@@ -212,6 +209,13 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setOpen(false);
+    setProjects(false)
+
+  };
+
+  const closeMenuProjects = () => {
+    setOpen(false);
+    setProjects(true)
   };
 
   const scrollToTop = () => {
@@ -219,32 +223,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ background: location.pathname === "/projects" ? '#52330D' : 'white' }}>
       <div className="emptyDiv">
       </div>
-      <Link to="/" className="nav-logo">
-        {/* <img
-          src={logo}
-          style={{
-            height: '128px',
-            objectFit: "cover",
-          }}
-          alt="Nitya Ayurveda’s Logo"
-          onClick={scrollToTop}
-        /> */}
+      <Link to="/" className="nav-logo"  onClick={closeMenu}>
+         <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/>
       </Link>
       <div onClick={handleClick} className="nav-icon">
         {open ? <FiX /> : <FiMenu />}
       </div>
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item">
-          <Link to="/" className="nav-link" onClick={closeMenu}  >
-            Home
+          <Link to="/projects" className="nav-link" onClick={closeMenuProjects}  >
+           Projects
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/about" className="nav-link" onClick={closeMenu} >
-            About
+          <Link to="/teams" className="nav-link" onClick={closeMenu} >
+            Teams
           </Link>
         </li>
         {/* <li className="nav-item">
@@ -252,19 +248,16 @@ const Navbar = () => {
             Services
           </Link>
         </li> */}
-        <li className="nav-item">
-          <Link to="/services" className="nav-link" onClick={closeMenu}>
-            Services
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/blog" className="nav-link" onClick={closeMenu}>
-            Blog
-          </Link>
-        </li>
+    
         <li className="nav-item">
           <Link to="/contact" className="nav-link" onClick={closeMenu}>
             Contact
+          </Link>
+        </li>
+
+        <li className="nav-item">
+          <Link to="/about" className="nav-link" onClick={closeMenu}>
+            About
           </Link>
         </li>
       </ul>

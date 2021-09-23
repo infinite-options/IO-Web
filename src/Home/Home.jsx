@@ -1,9 +1,14 @@
 import React from "react";
 import {Box, Button} from '@material-ui/core';
 import '../Home/Home.css'
+import { useHistory } from "react-router-dom";
+
 //import Backdrop from "../Assets/Backdrop.png"
 
 export default function Home(){
+
+    const history = useHistory();
+
     return(
         <div>
 
@@ -53,7 +58,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div style={{display:'flex', justifyContent:'center'}}>
-                    <button  className="BoxContainer_3_Text_Button" >
+                    <button  className="BoxContainer_3_Text_Button" onClick={()=> history.push("/projects")}>
                             View all Projects
                     </button>
                 </div>
@@ -83,7 +88,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div style={{display:'flex', justifyContent:'center'}}>
-                    <button className="BoxContainer_4_Text_Button">
+                    <button className="BoxContainer_4_Text_Button"  onClick={()=> history.push("/contact")}>
                     Schedule a free consultation
                     </button>
                 </div>

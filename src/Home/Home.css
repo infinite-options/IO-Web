@@ -58,8 +58,10 @@
   .BoxContainer_1_Text_Button{
     margin-top: 2rem;
     font-size:18px;
+    height: 3.5rem;
     color:#52330D;
     border: 3px solid #52330D;
+    background-color: #f1f1f1;
     border-radius:24px;
     font-family:Avenir LT Std 45 Book;
     font-weight:bold;
@@ -207,6 +209,8 @@
   color:#52330D;
   text-align:center;
   padding:4rem;
+  font-family:Avennter;
+  padding:4rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
  }
@@ -274,7 +278,7 @@
   font-weight:600;
  }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 500px) {
 
     .BoxContainer_1{
       width:90%;
@@ -394,6 +398,7 @@
     border:3px solid #FFFFFF;
     color: #ffffff;
     background-color: #F6A833;
+    cursor: pointer;
     border-radius:36px;
    }
 
@@ -424,6 +429,7 @@
     height: 2rem;
     border:3px solid #FFFFFF;
     color: #ffffff;
+    cursor: pointer;
     background-color: #52330D;
     border-radius:36px;
    }
@@ -532,3 +538,272 @@
   font-weight:600;
  }
   }
+
+
+  @media screen and (max-width: 1850px) and (min-width: 1600px) {
+
+    .BoxContainer_1{
+      width:620px;
+      height:400px;
+      margin-top:5rem;
+      background-color:white;
+      display:flex;
+      box-shadow:0 0 18px #757575; 
+    }
+
+    .BoxContainer_1_Text{
+      display:flex;
+      justify-content:flex-start;
+      flex-direction:column;
+      flex:1;
+      padding:2rem;
+      }
+    
+      .BoxContainer_1_Text_Header{
+        color:#F6A833;
+        font-size:24px;
+        font-family:Libre Baskerville;
+        font-weight:bold;
+      }
+    
+      .BoxContainer_1_Text_Body{
+        font-size:18px;
+        margin-top:2rem;
+        font-family:Avenir LT Std 65 Medium;
+        font-weight:600;
+      }
+
+      .BoxContainer_1_Text_Button{
+        margin-top: 2rem;
+        font-size:8px;
+        height: 2rem;
+        color:#52330D;
+        border: 3px solid #52330D;
+        border-radius:24px;
+        font-family:Avenir LT Std 45 Book;
+        font-weight:bold;
+        text-transform: none;
+      }
+
+      .BoxContainer_1_Image{
+        flex:1;
+        display:flex;
+        align-items:center;
+        padding:2rem;
+      
+       }
+
+       .BoxContainer_2{
+        width:auto;
+        height:5rem;
+        margin-top:3rem;
+        font-size:18px; 
+        font-family:Libre Baskerville;
+        font-weight:bold;
+        text-align:center; 
+      }
+  
+      .BoxContainer_3{
+        width:auto;
+        height:auto;
+        margin-top:1rem;
+        background-color:#F6A833;
+        display:flex;
+        flex-direction:column;
+        box-shadow:0 0 18px #757575; 
+     }
+ 
+   .BoxContainer_3_Text{
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     padding-left:1rem;
+     padding-right:1rem;
+     padding-top:1rem;
+     padding-bottom:1rem;
+   }
+    .BoxContainer_3_Text_Header{
+     font-size:22px;
+     color:white;
+     font-family:Libre Baskerville;
+     font-weight:bold;
+    }
+ 
+    .BoxContainer_3_Text_Body{
+     font-size:12px;
+     color:white;
+     text-align:center;
+     font-family:Avenir LT Std 65 Medium;
+    }
+ 
+    .BoxContainer_3_Text_Image{
+     display:flex;
+     justify-content:center;
+     padding-left: 1rem;
+     padding-right: 1rem;
+
+    }
+    .BoxContainer_3_Text_ImageSize_1{
+     width:100%;
+     height:7.5rem;
+    }
+    .BoxContainer_3_Text_ImageSize_2{
+     width:100%;
+     height:15rem;
+    }
+
+   .BoxContainer_3_Text_Button{
+    font-family:Avenir LT Std 45 Book;
+    text-transform:none;
+    font-size:12px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    border:3px solid #FFFFFF;
+    color: #ffffff;
+    background-color: #F6A833;
+    cursor: pointer;
+    border-radius:36px;
+   }
+
+   .BoxContainer_4{
+    width:615px;
+    height:auto;
+    margin-top:1rem;
+    background-color:#52330D;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 0 18px #757575; 
+ }
+   .BoxContainer_4_Text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-left:1rem;
+    padding-right:1rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+  }
+
+  .BoxContainer_4_Text_Button{
+    font-family:Avenir LT Std 45 Book;
+    text-transform:none;
+    font-size:12px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    height: 2rem;
+    border:3px solid #FFFFFF;
+    color: #ffffff;
+    background-color: #52330D;
+    cursor: pointer;
+    border-radius:36px;
+   }
+
+   
+ .BoxContainer_5{
+  width:615px;
+  height:auto;
+  margin: 0;
+  margin-top:3rem;
+  background-color:#FFF9F0;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 0 18px #757575 
+ }
+
+ .BoxContainer_5_Text{
+  display:flex;
+  flex-direction:column;
+  padding-left:0rem;
+  padding-right:0rem;
+  padding-top:0rem;
+  padding-bottom:0rem;
+ }
+
+ .BoxContainer_5_Text_Header{
+  font-size:24px;
+  color:#52330D;
+  margin-top: 2rem;
+  font-family:Libre Baskerville;
+  font-weight:bold
+ }
+
+ .BoxContainer_5_Text_Body{
+  font-size:12px;
+  color:#52330D;
+  margin-top: -1rem;
+  text-align:center;
+  font-family:Avenir LT Std 65 Medium;
+  font-weight:600;
+ }
+
+ .BoxContainer_5_Text_Tail{
+  font-size:12px;
+  color:#52330D;
+  margin-top: -1rem;
+  text-align:center;
+  font-family:Avenir LT Std 65 Medium;
+  font-weight:600;
+  margin-bottom: 2rem;
+ }
+
+ 
+ .BoxContainer_6{
+  width:615px;
+  height:18rem;
+  margin-top:3rem;
+  background-color:#F6A833;
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 0 18px #757575
+ }
+
+.BoxContainer_6_Text_Header{
+ font-size:24px;
+ color:white;
+ margin-top:2rem;
+ font-family:Libre Baskerville;
+ font-weight:600;
+}
+
+.BoxContainer_6_Text_Body{
+  display:flex;
+  justify-content:space-between;
+  color:white;
+  margin-top:2rem;
+  font-size:12px;
+  font-family:Avenir LT Std 65 Medium;
+  font-weight:600;
+} 
+
+
+.BoxContainer_6_Text_Button{
+  font-size:18px;
+  font-family:Avenir LT Std 45 Book;
+  text-transform:none;
+  font-weight:600;
+  margin-top:2rem;
+  border:3px solid #FFFFFF;
+  background-color: #F6A833;
+  color:#FFFFFF;
+  border-radius:24px
+}
+
+.BoxContainer_6_Text_Body_Margin{
+  margin-left:3rem
+}
+
+
+.BoxContainer_7_Text_Body{
+  font-size:12px;
+  color:#52330D;
+  text-align:center;
+  padding:2rem;
+  font-family:Avenir LT Std 65 Medium;
+  font-weight:600;
+ }
+}
+
+
+  

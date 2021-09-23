@@ -16,3 +16,25 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  .Container{
+    background-color:#52330D;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-Items:center;
+    width:100%;
+    flex-direction:column;
+  }
+
+  .Title{
+    font-family:Libre Baskerville;
+    font-size:54px;
+  }
+
+  @media screen and (max-width: 500px){
+  
+  
+  
+  
+  }

@@ -1,0 +1,64 @@
+.Contianer{
+    display:flex;
+    justify-content:space-evenly;
+    font-family:Avenir LT Std 45 Book;
+    font-size:12px;
+    color:#E0E0E0;
+    align-items:center;
+    width:100%;
+    background-color:#52330D;
+    position:relative;
+    bottom:0;
+}
+
+.SubContainer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:2rem;
+}
+
+
+.MobileContainer{
+    display:flex;
+    height: 8rem;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.Mobile1{
+    margin-top:3rem;
+    margin-left:10rem;
+}
+
+
+@media screen and (max-width: 500px){
+    .Contianer{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        font-family:Avenir LT Std 45 Book;
+        font-size:12px;
+        color:#E0E0E0;
+        align-items:center;
+        width:100%;
+        background-color:#52330D;
+        position:relative;
+        bottom:0;
+    }
+
+    .SubContainer{
+        display:flex;
+    }
+
+    .MobileContainer{
+        display:flex;
+        justify-content: flex-start;
+    }
+
+    .Mobile1{
+        margin-top:4rem;
+        margin-left: 4rem;
+    }
+}
