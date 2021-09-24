@@ -160,6 +160,7 @@ import { useHistory, useLocation } from "react-router-dom";
 // import SignUp from "../Components/Home/SignUp";
 // import LogIn from "../Components/Home/LogIn";
 import "./Navbar.css";
+import Home from "../Home/Home";
 
 const useStyles = makeStyles((theme) => ({
   authModal: {
@@ -198,10 +199,15 @@ function useOutsideAlerter(ref) {
 
 const Navbar = () => {
   const classes = useStyles();
-  const location = useLocation();
+  const location  = useLocation();
 
   const [open, setOpen] = useState(false);
   const [projects, setProjects] = useState(false)
+  const [onClickAbout, setOnClickAbout] = useState(false)
+  const [onClickproject, setOnClickProject] = useState(false)
+  const [onClickteams, setOnClickTeams] = useState(false)
+
+
 
   const handleClick = () => {
     setOpen(!open);
@@ -213,9 +219,24 @@ const Navbar = () => {
 
   };
 
+  const closeMenuHome = () => {
+    setOpen(false);
+    setProjects(false)
+    setOnClickAbout(!onClickAbout)
+    console.log("about", onClickAbout)
+
+  };
+
   const closeMenuProjects = () => {
     setOpen(false);
     setProjects(true)
+    setOnClickProject(!onClickproject)
+  };
+
+  const closeMenuTeams = () => {
+    setOpen(false);
+    setProjects(true)
+    setOnClickTeams(!onClickteams)
   };
 
   const scrollToTop = () => {
@@ -233,30 +254,25 @@ const Navbar = () => {
         {open ? <FiX /> : <FiMenu />}
       </div>
       <ul className={open ? "nav-links active" : "nav-links"}>
-        <li className="nav-item">
-          <Link to="/projects" className="nav-link" onClick={closeMenuProjects}  >
+        <li className="nav-item" >
+          <Link to={{pathname: '/', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : 'black'}} >
            Projects
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/teams" className="nav-link" onClick={closeMenu} >
+          <Link to={{pathname: '/', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
             Teams
           </Link>
         </li>
-        {/* <li className="nav-item">
-          <Link to="/services" className="nav-link" onClick={closeMenu}>
-            Services
-          </Link>
-        </li> */}
     
         <li className="nav-item">
-          <Link to="/contact" className="nav-link" onClick={closeMenu}>
+          <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
             Contact
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/about" className="nav-link" onClick={closeMenu}>
+          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
             About
           </Link>
         </li>

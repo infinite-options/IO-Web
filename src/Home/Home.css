@@ -66,6 +66,7 @@
     font-family:Avenir LT Std 45 Book;
     font-weight:bold;
     text-transform: none;
+    cursor: pointer;
   }
 
   .BoxContainer_1_Image{
@@ -142,6 +143,7 @@
     color: #ffffff;
     background-color: #F6A833;
     border-radius:36px;
+    cursor: pointer;
    }
 
    .BoxContainer_4{
@@ -175,6 +177,7 @@
   color: #ffffff;
   background-color: #52330D;
   border-radius:36px;
+  cursor: pointer;
  }
 
  .BoxContainer_5{
@@ -184,6 +187,7 @@
   background-color:#FFF9F0;
   display:flex;
   flex-direction:column;
+  margin-bottom: 3rem;
   box-shadow:0 0 18px #757575 
  }
 
@@ -258,11 +262,14 @@
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
   font-weight:600;
+  height: 3rem;
   margin-top:2rem;
+  cursor: pointer;
   border:3px solid #FFFFFF;
   color:#FFFFFF;
   background-color: #F6A833;
-  border-radius:24px
+  border-radius:24px;
+  cursor: pointer;
 }
 
 .BoxContainer_6_Text_Body_Margin{
@@ -319,6 +326,7 @@
         border-radius:24px;
         font-family:Avenir LT Std 45 Book;
         font-weight:bold;
+        cursor: pointer;
         text-transform: none;
       }
 
@@ -517,11 +525,14 @@
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
   font-weight:600;
+  height: 3rem;
   margin-top:2rem;
   border:3px solid #FFFFFF;
   background-color: #F6A833;
   color:#FFFFFF;
-  border-radius:24px
+  border-radius:24px;
+  cursor: pointer;
+
 }
 
 .BoxContainer_6_Text_Body_Margin{
@@ -583,6 +594,8 @@
         font-family:Avenir LT Std 45 Book;
         font-weight:bold;
         text-transform: none;
+        cursor: pointer;
+
       }
 
       .BoxContainer_1_Image{
@@ -783,11 +796,13 @@
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
   font-weight:600;
+  height: 3rem;
   margin-top:2rem;
   border:3px solid #FFFFFF;
   background-color: #F6A833;
   color:#FFFFFF;
-  border-radius:24px
+  border-radius:24px;
+  cursor: pointer;
 }
 
 .BoxContainer_6_Text_Body_Margin{

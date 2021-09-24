@@ -1,0 +1,181 @@
+
+
+.Container_Teams_Header{
+    width:40%;
+    margin-top:2rem;
+    text-align:center;
+    font-size:22px;
+    color:#52330D;
+    font-family:Avenir LT Std 65 Medium;
+    font-weight:bold;
+}
+
+.Container_Teams_Box{
+    width:60%;
+    height:75rem;
+    margin-top:5rem;
+    background-color:white;
+    display:flex;
+    box-shadow:0 0 18px #757575;
+    flex-direction:column;
+    align-items:center;
+}
+
+.Container_Teams_Box_Body{
+    width:70%;
+    margin-top:2rem;
+    text-align:center;
+    font-size:22px;
+    color:#52330D;
+    font-family:Avenir LT Std 65 Medium;
+    font-weight:bold;
+}
+
+.Container_Teams_Box_Image{
+    width: 100%;
+    height: auto;
+}
+
+.QueryContainer_Header{
+    display:flex;
+    justify-content:flex-start;
+    margin-left:30%;
+    margin-top:1rem;
+    font-family:Libre Baskerville;
+    font-size:48px;
+    color:white;
+}
+
+.QueryContainer_Body_Input{
+    display:flex;
+    justify-content:center;
+    margin-top:1rem;
+}
+
+.QueryContainer_Body_Input_1{
+    padding-left:1rem;
+    height:2rem;
+    width:20%;
+    border:2px solid #52330D;
+    border-radius:16px;
+}
+
+.QueryContainer_Body_Input_2{
+    padding-left:1rem;
+    height:2rem;
+    width:20%;
+    margin-left:1rem;
+    border:2px solid #52330D;
+    border-radius:16px;
+}
+
+.QueryContainer_Body_TextArea{
+    height:4rem;
+    width:44%;
+    border:2px solid #52330D;
+    border-radius:16px;
+}
+
+.QueryContainer_Body_Button{
+    background-color:#52330D;
+    color:#ffffff;
+    text-transform:none;
+    width:10rem;
+    height: 3rem;
+    border-radius:16px;
+    margin-left:45%;
+    margin-top:1rem;
+}
+
+@media screen and (max-width: 500px){
+
+    .Container_Teams_Header{
+        width:80%;
+        margin-top:2rem;
+        text-align:center;
+        font-size:14px;
+        color:#52330D;
+        font-family:Avenir LT Std 65 Medium;
+        font-weight:bold;
+    }
+
+    .Container_Teams_Box{
+        width:90%;
+        height: auto;
+        margin-top:5rem;
+        background-color:white;
+        display:flex;
+        box-shadow:0 0 18px #757575;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    
+.Container_Teams_Box_Body{
+    width:90%;
+    margin-top:2rem;
+    text-align:center;
+    font-size:14px;
+    color:#52330D;
+    font-family:Avenir LT Std 65 Medium;
+    font-weight:bold;
+}
+
+.Container_Teams_Box_Image{
+    width: 100%;
+    height: auto;
+}
+
+.QueryContainer_Header{
+    display:flex;
+    justify-content:center;
+    margin-left:0px;
+    margin-top:1rem;
+    font-family:Libre Baskerville;
+    font-size:32px;
+    color:white;
+}
+
+.QueryContainer_Body_Input{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-top:1rem;
+}
+
+.QueryContainer_Body_Input_1{
+    height:2rem;
+    margin-left: 1rem;
+    width:75%;
+    border:2px solid #52330D;
+    border-radius:16px;
+}
+
+.QueryContainer_Body_Input_2{
+    height:2rem;
+    margin-top: 1rem;
+    width:75%;
+    border:2px solid #52330D;
+    border-radius:16px;
+}
+
+.QueryContainer_Body_TextArea{
+    height:10rem;
+    width:80%;
+    border:2px solid #52330D;
+    border-radius:16px;
+    margin-left: 1rem;
+}
+
+.QueryContainer_Body_Button{
+    background-color:#52330D;
+    color:#ffffff;
+    text-transform:none;
+    width:10rem;
+    height: 3rem;
+    border-radius:16px;
+    margin-left:30%;
+    margin-top:1rem;
+}
+}

@@ -92,13 +92,14 @@
     font-size:  52px ;
     font-family:  AvenirHeavy ;
   }
-  .calendarTimeTable {
-    width:  70% ;
-    /* // margin:  0 auto ; */
-   
+  .calendarTimeTable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
+
   .calendarBox {
-    width:  50% ; 
+    width:  35% ; 
     /* // this makes the calander and timeslot take up half the box each */
     /* // padding:  50px ; */
     /* // padding:  10px ; */
@@ -106,8 +107,9 @@
   }
 
   .timeslotBox {
-    width:  100% ;
-    height: 350px ;
+    width: 35% ;
+    top:0px;
+    height: auto ;
     border:  2px solid #F6A833  ;
     /* // padding:  20px ; */
   }
@@ -171,7 +173,39 @@
     background-color:  #52330D ;
   }
 
+  .ContainerContact{
+    box-shadow: 0 0 18px #757575;
+    background-color: white;
+    width: 70%;
+    height: auto;
+    margin-bottom: 5rem;
+    margin-Top: 5rem; 
+  }
 
+  .container_text{
+    font-size: 52px;
+    font-family: Avenir LT Std 45 Book;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .Container_Name{
+    width: 61%;
+    padding: 20px;
+    margin: 5px 5px;
+  }
+
+  .Container_Phone{
+    width: 30%;
+    padding: 20px;
+    margin: 5px 5px;
+  }
+
+  .Container_Message{
+    width: 61%;
+    padding: 20px;
+    margin: 5px 5px;
+  }
 
 
 @media (max-width:980px){
@@ -273,11 +307,10 @@
       height: 350px ;
     }
 
-    .timeslotBox {
+    /* .timeslotBox {
       width:  50% ;
       height: 350px ;
-      /* // padding:  20px ; */
-    }
+    } */
     .center {
       margin:  0 auto ;
     }
@@ -427,11 +460,10 @@
       height: 300px ;
     }
 
-    .timeslotBox {
+    /* .timeslotBox {
       width:  50% ;
       height: 300px ;
-      /* // padding:  20px ; */
-    }
+    } */
     .center {
       margin:  0 auto ;
     }
@@ -580,11 +612,10 @@
       height: 300px ;
     }
 
-    .timeslotBox {
+    /* .timeslotBox {
       width:  50% ;
       height: 300px ;
-      /* // padding:  20px ; */
-    }
+    } */
     .center {
       margin:  0 auto ;
     }
@@ -648,6 +679,69 @@
   
 @media (max-width:550px){
 
+  .ContainerContact{
+    box-shadow: 0 0 18px #757575;
+    background-color: white;
+    width: 90%;
+    height: auto;
+    margin-Top: 5rem; 
+  }
+
+  .calendarTimeTable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .calendarBox {
+    width:  100% ; 
+    padding-bottom: 5rem;
+    /* // this makes the calander and timeslot take up half the box each */
+    /* // padding:  50px ; */
+    /* // padding:  10px ; */
+    background-color:  #F6A833 ;
+  }
+
+  .timeslotBox {
+    width: 100% ;
+    height: auto ;
+    border:  2px solid #F6A833  ;
+    /* // padding:  20px ; */
+  }
+
+  .container_text{
+    font-size: 42px;
+    font-family: Avenir LT Std 45 Book;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .date {
+    font-size:  42px ;
+    font-family:  AvenirHeavy ;
+    text-align: center;
+  }
+
+  
+  .Container_Name{
+    width: 80%;
+  }
+
+  
+  .Container_Phone{
+    width: 80%;
+    padding: 20px;
+    margin: 5px 5px;
+  }
+  
+  .Container_Message{
+    width: 80%;
+    padding: 20px;
+    margin: 5px 5px;
+  }
+ 
 }
   
 @media (max-width:450px){

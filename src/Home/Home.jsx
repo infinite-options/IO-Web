@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {Box, Button} from '@material-ui/core';
 import '../Home/Home.css'
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 //import Backdrop from "../Assets/Backdrop.png"
 
 export default function Home(){
 
+    const myRef = useRef(null)
+    const myRef_project = useRef(null)
+    const myRef_teams = useRef(null)
+
+
     const history = useHistory();
+    const location = useLocation();
+
+    useEffect(()=>{
+         myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+    },[location.state])
+
+    useEffect(()=>{
+        myRef_project.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+   },[location.state_project])
+
+   useEffect(()=>{
+    myRef_teams.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+    },[location.state_teams])
+
 
     return(
         <div>
@@ -22,20 +41,20 @@ export default function Home(){
                     <div  className="BoxContainer_1_Text_Body" >
                         We love taking ideas from zero  to one whether they are  our own creations or yours as an entrepreneur
                      </div>   
-                     <button className="BoxContainer_1_Text_Button" >
+                     <button className="BoxContainer_1_Text_Button"  onClick={()=> history.push("/contact")}>
                          Schedule a free consultation
                      </button>
                 </div>
-                <div className="BoxContainer_1_Image">
+                <div className="BoxContainer_1_Image" >
                     <img src={"./Navigation/Logo.png"}  style={{width:'100%'}}/>
                 </div>      
             </div>
 
-            <div className="BoxContainer_2" >
+            <div  className="BoxContainer_2" >
            There are infinite ways to take an idea and turn into a business.
             </div>
 
-            <div className="BoxContainer_3" >
+            <div  ref={myRef_project} className="BoxContainer_3" >
                 <div className="BoxContainer_3_Text">
                     <div className="BoxContainer_3_Text_Header">
                     Projects we’ve built
@@ -57,7 +76,7 @@ export default function Home(){
                         <img src={"./Home/Fun_Fact.png"}  className="BoxContainer_3_Text_ImageSize_2"/>
                     </div>
                 </div>
-                <div style={{display:'flex', justifyContent:'center'}}>
+                <div  style={{display:'flex', justifyContent:'center'}}>
                     <button  className="BoxContainer_3_Text_Button" onClick={()=> history.push("/projects")}>
                             View all Projects
                     </button>
@@ -108,7 +127,7 @@ export default function Home(){
                    <p  className="BoxContainer_5_Text_Tail">
                    -Mercedes Fernandez,
                     </p>
-                    <div  className="BoxContainer_5_Text_Tail">
+                    <div ref={myRef_teams} className="BoxContainer_5_Text_Tail">
                     Founder, Walk with Pop
                     </div>
                 </div>
@@ -130,16 +149,15 @@ export default function Home(){
                         <p>Human Resources</p>
                     </div>
                 </div>
-                <div style={{display:'flex', justifyContent:'center'}}>
-                    <button className="BoxContainer_6_Text_Button" >
+                <div  style={{display:'flex', justifyContent:'center'}}>
+                    <button  ref={myRef} className="BoxContainer_6_Text_Button" onClick={()=> history.push("/teams")}>
                     Join the team
                     </button>
                 </div>
             </div>
-
         
            
-            <div className="BoxContainer_5">
+            <div  className="BoxContainer_5">
                 <div className="BoxContainer_5_Text">
                     <div  className="BoxContainer_5_Text_Header" >
                     About Us

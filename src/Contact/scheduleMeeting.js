@@ -85,19 +85,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "64px",
     fontFamily: "AvenirHeavy",
   },
-  calendarTimeTable: {
-    width: "100%",
-    // the margin used here is to
-    // margin: "0 auto",
-    border: "2px solid #F6A833 ",
-  },
-  calendarBox: {
-    width: "100%", // this makes the calander and timeslot take up half the box each
-    // padding: "50px",
-    // padding: "10px",
-    backgroundColor: "#F6A833",
-    height: "350px",
-  },
+  // calendarTimeTable: {
+  //   width: "100%",
+  //   // the margin used here is to
+  //   // margin: "0 auto",
+  //   border: "2px solid #F6A833 ",
+  // },
+  // calendarBox: {
+  //   width: "100%", // this makes the calander and timeslot take up half the box each
+  //   // padding: "50px",
+  //   // padding: "10px",
+  //   backgroundColor: "#F6A833",
+  //   height: "350px",
+  // },
   timeslotBox: {
     width: "50%",
     height: "350px",
@@ -110,8 +110,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F6A833",
     border: "none",
     color: "white",
-    padding: " 15px 90px 15px 90px ",
-    textAlign: "center",
+    padding: " 15px 70px 15px 70px ",
+    textAlign: "right",
+    marginLeft: '4rem',
     textDecoration: "none",
     fontSize: "20px",
     borderRadius: "50px",
@@ -331,36 +332,6 @@ const Appointment = () => {
   const classes = useStyles();
   const postURL =
     " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
-  /* function bookAppt() {
-    console.log(fName, url, email, phoneNum);
-
-    const postURL =
-      " https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/createAppointment";
-    
-
-    axios
-      .post(postURL, {
-        name: fName,
-        // last_name: "", //lName,
-        email: email,
-        phone: phoneNum,
-        // appt_treatment_uid: url, //treatment_uid, //TREATMENT INFO #1
-        company: CompanyName,
-        message: notes,
-        url: url,
-        appt_date: dateFormat1(date),
-        appt_time: selectedTime,
-        // purchase_price: "$100", //TREATMENT INFO #2
-        // purchase_date: dateFormat1(purchaseDate),
-      })
-      .then((res) => {
-        console.log(res);
-        }
-      );
-
-
-    setSubmitted(true);
-  } */
   const [data, setData] = useState({
     name: "",
     phone: "",
@@ -417,84 +388,58 @@ const Appointment = () => {
 
   return (
     <Box style={{ width: '100%', backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Box style={{ boxShadow: '0 0 18px #757575', backgroundColor: 'white', width: '70%', height: '100rem', marginTop: '5rem' }}>
+      <Box className="ContainerContact">
         {/* <ScrollToTop /> */}
         {/* <scrollToTop /> */}
         <div className="container"
         >
-          {/* <img
-          src={logo}
-          alt="logo"
-          style={{ width: "25%", marginBottom: "50px" }}
-        /> */}
           <p className="calanderHeader" style={{ fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }} > Schedule a 30 min meeting</p>
-          <table className="calendarTimeTable" >
-            <tr>
-              <th className="calendarBox" >
-                <div
-                  className="h1"
-                  style={{
-                    // marginTop:"-20px",
-                    // textAlign: "left",
-                    fontFamily: 'Avenir LT Std 45 Book',
-                    fontWeight: '600',
-                    color: "white",
-
-                    // font: "normal normal medium 60px/82px Avenir",
-                  }}
-                >
-                  Pick a date
-                </div>
-                <Calendar
-                  onClickDay={dateChange}
-                  value={date}
-                  backgroundColor="#F6A833"
-                  calendarType="US"
-                  className="center"
-
-                />
-              </th>
-              <th className="timeslotBox">
-                <div className="leftTitle">
-                  <div className="h1" style={{ marginTop: '3rem', fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }}>
-                    Pick a time
-                    <span className="pst">
-                      {/* UTC - 07:00 Pacific Time */}
-                      All times are in PST
-                    </span>
-                  </div>
-                </div>
-                {/* <div className={classes.inputRow}>
-                <label className={classes.h1}>Meeting Duriation</label>
-                <input
-                  className={classes.duritionInput}
-                  placeholder="30 mins"
-                ></input>
-              </div> */}
-
-                {/* <p
+          <div className="calendarTimeTable" >
+            <div className="calendarBox" >
+              <div
+                className="h1"
                 style={{
+                  // marginTop:"-20px",
                   // textAlign: "left",
-                  color: "#4E70FF",
-                  fontFamily: "AvenirHeavy",
-                  width:"20px",
+                  fontFamily: 'Avenir LT Std 45 Book',
+                  fontWeight: '600',
+                  color: "white",
+
+                  // font: "normal normal medium 60px/82px Avenir",
                 }}
               >
-                
-                All times are in PST
-              </p> */}
-                <div className="timeslotButtonBox"  >
-                  {renderAvailableApptsVertical()}
+                Pick a date
+              </div>
+              <Calendar
+                onClickDay={dateChange}
+                value={date}
+                backgroundColor="#F6A833"
+                calendarType="US"
+                className="center"
+
+              />
+            </div>
+            <div className="timeslotBox">
+              <div className="leftTitle">
+                <div className="h1" style={{ marginTop: '5rem', fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }}>
+                  Pick a time
+                  <span className="pst">
+                    {/* UTC - 07:00 Pacific Time */}
+                    All times are in PST
+                  </span>
                 </div>
-              </th>
-            </tr>
-          </table>
+              </div>
+              <div className="timeslotButtonBox"  >
+                {renderAvailableApptsVertical()}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="container">
           <div className="selectTime" >Confirm Meeting</div>
           <div
-            style={{ fontSize: "52px", fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600', marginTop: '1rem' }}
+            className="container_text"
             hidden={timeSelected ? "hidden" : ""}
           >
             Please pick a day and time to meet
@@ -511,20 +456,22 @@ const Appointment = () => {
                   name="name"
                   id="name"
                   placeholder="Full Name*"
+                  className="Container_Name"
                   onChange={(e) => handle(e)}
                   value={data.name}
                   style={{
-                    padding: "20px",
+                    // padding: "20px",
+                    // margin: "5px 5px",
+
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
 
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
-                    width: "59.5%",
+                    //width: "59.5%",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                     // height:"100px"
@@ -538,20 +485,21 @@ const Appointment = () => {
                   name="phone"
                   id="phone"
                   placeholder="Phone Number"
+                  className="Container_Phone"
                   onChange={(e) => handle(e)}
                   value={data.phone}
                   style={{
-                    padding: "20px",
+                    // padding: "20px",
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
+                    //  margin: "5px 5px",
                     marginLeft: '5px',
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
-                    width: "30%",
+                    //  width: "30%",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
@@ -561,19 +509,20 @@ const Appointment = () => {
                   name="email"
                   id="email"
                   placeholder="Email address*"
+                  className="Container_Phone"
                   onChange={(e) => handle(e)}
                   value={data.email}
                   style={{
-                    padding: "20px",
+                    // padding: "20px",
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
+                    // margin: "5px 5px",
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
-                    width: "29%",
+                    // width: "29%",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
@@ -585,19 +534,20 @@ const Appointment = () => {
                   name="company"
                   id="company"
                   placeholder="Company Name"
+                  className="Container_Phone"
                   onChange={(e) => handle(e)}
                   value={data.company}
                   style={{
-                    padding: "20px",
+                    //  padding: "20px",
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
+                    //  margin: "5px 5px",
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
-                    width: "30%",
+                    // width: "30%",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
@@ -608,19 +558,20 @@ const Appointment = () => {
                   name="url"
                   id="url"
                   placeholder="Website URL"
+                  className="Container_Phone"
                   onChange={(e) => handle(e)}
                   value={data.url}
                   style={{
-                    padding: "20px",
+                    //  padding: "20px",
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
+                    //  margin: "5px 5px",
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
-                    width: "29%",
+                    //  width: "29%",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
@@ -633,30 +584,31 @@ const Appointment = () => {
                   name="text"
                   id="message"
                   placeholder="Message"
+                  className="Container_Message"
                   onChange={(e) => handle(e)}
                   value={data.message}
                   style={{
-                    padding: "20px",
+                    //  padding: "20px",
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
                     fontSize: "20px",
-                    margin: "5px 5px",
+                    //  margin: "5px 5px",
                     //borderColor: "#52330D",
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     // width: "80.5%",
-                    width: "60%",
+                    //  width: "60%",
                     height: "150px",
                     fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />
               </FormGroup>
-              <div hidden={timeSelected ? "hidden" : ""}>
+              <div hidden={timeSelected ? "hidden" : ""} style={{ paddingBottom: '5rem' }}>
                 <button className="buttonDisable">Submit</button>
               </div>
-              <div hidden={!timeSelected ? "hidden" : ""}>
+              <div hidden={!timeSelected ? "hidden" : ""} style={{ paddingBottom: '5rem' }}>
                 <button className="button">Submit</button>
               </div>
             </Form>
