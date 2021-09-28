@@ -231,12 +231,15 @@ const Navbar = () => {
     setOpen(false);
     setProjects(true)
     setOnClickProject(!onClickproject)
+    console.log("clickPro", onClickproject)
+
   };
 
   const closeMenuTeams = () => {
     setOpen(false);
     setProjects(true)
     setOnClickTeams(!onClickteams)
+    console.log("click", onClickteams)
   };
 
   const scrollToTop = () => {
@@ -255,87 +258,31 @@ const Navbar = () => {
       </div>
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item" >
-          <Link to={{pathname: '/', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : 'black'}} >
+          <Link to={{pathname: '/', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : ''}} >
            Projects
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={{pathname: '/', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
+          <Link to={{pathname: '/', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
             Teams
           </Link>
         </li>
     
         <li className="nav-item">
-          <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
+          <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
             Contact
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : 'black'}}>
+          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
             About
           </Link>
         </li>
       </ul>
 
-      <ul className="right">
-        {/* <InstagramIcon
-          fontSize="large"
-          className="instagram-icon"
-          onClick={(event) =>
-            (window.location.href = "https://www.instagram.com/nityaayurveda/")
-          }
-        /> */}
-      </ul>
-
-      {/* <ul className={"nav-log"}>
-        <li className="nav-item" className="nav-link" className="log-in">
-          <LoginNavBar
-            isLoginShown={isLoginShown}
-            setIsLoginShown={setIsLoginShown}
-            isSignUpShown={isSignUpShown}
-            setIsSignUpShown={setIsSignUpShown}
-          /> */}
-      {/* START: Login/SignUp Modal */}
-      {/* <Box display="flex" justifyContent="flex-end"> */}
-      {/* Login Modal */}
-      {/* <Box
-              position="absolute"
-              width="50%"
-              display="flex"
-              justifyContent="center"
-              zIndex={40}
-            >
-              <Box
-                ref={loginWrapperRef}
-                className={classes.authModal}
-                hidden={!isLoginShown}
-              >
-                <LogIn />
-              </Box>
-            </Box> */}
-
-      {/* Sign Up Modal */}
-      {/* <Box display="flex" justifyContent="flex-end">
-              <Box
-                position="absolute"
-                width="50%"
-                display="flex"
-                justifyContent="center"
-                zIndex={40}
-              >
-                <Box
-                  ref={signupWrapperRef}
-                  className={classes.authModal}
-                  hidden={!isSignUpShown}
-                >
-                  <SignUp />
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </li>
-      </ul> */}
+      <div className="emptyDiv1">
+      </div>
     </nav>
   );
 };

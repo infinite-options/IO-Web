@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import {Box, Button} from '@material-ui/core';
 import '../Home/Home.css'
 import { useHistory, useLocation } from "react-router-dom";
+import ScrollToTop from "../Contact/ScrollToTop";
 
 //import Backdrop from "../Assets/Backdrop.png"
 
@@ -10,28 +11,33 @@ export default function Home(){
     const myRef = useRef(null)
     const myRef_project = useRef(null)
     const myRef_teams = useRef(null)
+    const myRef_home = useRef(null)
 
 
     const history = useHistory();
     const location = useLocation();
 
-    useEffect(()=>{
-         myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
-    },[location.state])
 
     useEffect(()=>{
         myRef_project.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
-   },[location.state_project])
+    },[location.state_project])
 
-   useEffect(()=>{
+    useEffect(()=>{
     myRef_teams.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
     },[location.state_teams])
 
+    useEffect(()=>{
+        myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+    },[location.state])
+
+    useEffect(()=>{
+        window.scrollTo(0, 0); 
+    },[])
+
 
     return(
-        <div>
-
-            <Box  style={{width:'100%', backgroundImage:`url(${"./Navigation/Backdropv2.png"})`,backgroundRepeat:'no-repeat', backgroundSize:'100%, 200vh'}}>
+        <div  >
+            <Box ref={myRef_home} style={{width:'100%', backgroundImage:`url(${"./Navigation/Backdropv2.png"})`,backgroundRepeat:'no-repeat', backgroundSize:'100%, 200vh'}}>
             <Box className="HomeContainer">
             <div  className="BoxContainer_1">
                 <div className="BoxContainer_1_Text" >
@@ -50,11 +56,11 @@ export default function Home(){
                 </div>      
             </div>
 
-            <div  className="BoxContainer_2" >
+            <div  ref={myRef_project}  className="BoxContainer_2" >
            There are infinite ways to take an idea and turn into a business.
             </div>
 
-            <div  ref={myRef_project} className="BoxContainer_3" >
+            <div  className="BoxContainer_3" >
                 <div className="BoxContainer_3_Text">
                     <div className="BoxContainer_3_Text_Header">
                     Projects we’ve built
@@ -133,7 +139,7 @@ export default function Home(){
                 </div>
             </div>
 
-            <div  className="BoxContainer_6" >
+            <div  className="BoxContainer_6" style={{marginTop:'-1rem'}} >
                 <div  className="BoxContainer_6_Text_Header" >
                     Teams
                 </div>
@@ -174,7 +180,7 @@ export default function Home(){
                     we also work with clients to design and develop their business ideas.
                     </div>
                     <div style={{display:'flex', justifyContent:'center'}}>
-                    <button style={{fontSize:'18px' , marginTop:'2rem', border:'3px solid #52330D',color:'#52330D', borderRadius:'24px',fontFamily:'Avenir LT Std 45 Book',fontWeight:'bold',textTransform:'none'}}>
+                    <button style={{fontSize:'20px' , marginTop:'2rem', border:'3px solid #52330D',color:'#52330D', borderRadius:'42px',fontFamily:'Avenir LT Std 45 Book',fontWeight:'600',padding:'1rem',paddingLeft:'2rem',paddingRight:'2rem',textTransform:'none', backgroundColor:"white"}}>
                     Learn More
                     </button>
                 </div>

@@ -3,11 +3,13 @@ import React from "react";
 import '../Projects/Projects.css'
 import Nitya from '../Assets/Projects/Nitya.png'
 import SF from '../Assets/Projects/SF.png'
+import ScrollToTop from "../Contact/ScrollToTop";
 
 
 export default function Projects(){
     return(
         <Box  className="Container">
+            <ScrollToTop/>
             <div >
                 <p className="Title"> Projects</p>
             </div>

@@ -2,6 +2,7 @@ import { Button, Box} from "@material-ui/core";
 import axios from "axios";
 import React, { useState } from "react";
 import '../Teams/Teams.css'
+import ScrollToTop from "../Contact/ScrollToTop";
 
 export default function Teams(){
 
@@ -22,6 +23,7 @@ export default function Teams(){
     }
     return(
         <Box style={{ width: '100%',backgroundPosition:'center' ,backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <ScrollToTop/>
             <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:'2rem'}}>
                 <div>
                 <img src="/Navigation/Logo.png"/>

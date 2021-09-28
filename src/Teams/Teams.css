@@ -2,7 +2,7 @@
 
 .Container_Teams_Header{
     width:40%;
-    margin-top:2rem;
+    margin-top:3rem;
     text-align:center;
     font-size:22px;
     color:#52330D;
@@ -71,7 +71,7 @@
 
 .QueryContainer_Body_TextArea{
     height:4rem;
-    width:44%;
+    width:43%;
     border:2px solid #52330D;
     border-radius:16px;
 }

@@ -173,6 +173,7 @@ const Appointment = () => {
   const [dateHasBeenChanged, setDateHasBeenChanged] = useState(false);
   const [apiDateString, setApiDateString] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
+  const [resultLength, setResultLength] = useState(0)
 
   //For Axios.Post
   const [purchaseDate, setPurchaseDate] = useState(new Date());
@@ -303,6 +304,7 @@ const Appointment = () => {
         )
         .then((res) => {
           console.log(res);
+          setResultLength(res.data.result.length)
           console.log(res.data.result);
           setTimeSlots(res.data.result);
           console.log("Timeslots Array " + timeSlots);
@@ -389,7 +391,7 @@ const Appointment = () => {
   return (
     <Box style={{ width: '100%', backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Box className="ContainerContact">
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         {/* <scrollToTop /> */}
         <div className="container"
         >
@@ -429,7 +431,7 @@ const Appointment = () => {
                   </span>
                 </div>
               </div>
-              <div className="timeslotButtonBox"  >
+              <div className="timeslotButtonBox" style={{ paddingTop: resultLength > 6 ? '1rem' : '3rem' }} >
                 {renderAvailableApptsVertical()}
               </div>
             </div>
@@ -462,7 +464,6 @@ const Appointment = () => {
                   style={{
                     // padding: "20px",
                     // margin: "5px 5px",
-
                     boxSizing: "border-box",
                     borderRadius: "20px",
                     fontColor: "#52330D",
@@ -472,7 +473,6 @@ const Appointment = () => {
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     //width: "59.5%",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                     // height:"100px"
                   }}
@@ -500,7 +500,6 @@ const Appointment = () => {
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     //  width: "30%",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />
@@ -523,7 +522,6 @@ const Appointment = () => {
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     // width: "29%",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />
@@ -548,7 +546,6 @@ const Appointment = () => {
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     // width: "30%",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />
@@ -572,7 +569,6 @@ const Appointment = () => {
                     //borderWidth: "2px",
                     border: "4px solid #52330D",
                     //  width: "29%",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />
@@ -600,7 +596,6 @@ const Appointment = () => {
                     // width: "80.5%",
                     //  width: "60%",
                     height: "150px",
-                    fontFamily: "AvenirHeavy",
                     outline: "none",
                   }}
                 />

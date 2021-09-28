@@ -1,21 +1,4 @@
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #52330D; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+
 
 
   .HomeContainer{
@@ -26,7 +9,8 @@
 
   .BoxContainer_1{
     width:60%;
-    height:36rem;
+    height:auto;
+    padding-bottom: 5rem;
     margin-top:5rem;
     background-color:white;
     display:flex;
@@ -52,16 +36,16 @@
     font-size:32px;
     margin-top:2rem;
     font-family:Avenir LT Std 65 Medium;
-    font-weight:600;
+    font-weight:400;
   }
 
   .BoxContainer_1_Text_Button{
     margin-top: 2rem;
-    font-size:18px;
+    font-size:22px;
     height: 3.5rem;
     color:#52330D;
     border: 3px solid #52330D;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius:24px;
     font-family:Avenir LT Std 45 Book;
     font-weight:bold;
@@ -78,7 +62,7 @@
 
   .BoxContainer_2{
     width:60%;
-    height:10rem;
+    height:6rem;
     margin-top:5rem;
     font-size:42px; 
     font-family:Libre Baskerville;
@@ -136,13 +120,13 @@
    .BoxContainer_3_Text_Button{
     font-family:Avenir LT Std 45 Book;
     text-transform:none;
-    font-size:18px;
+    font-size:20px;
+    padding: 1rem;
     margin-top:2rem;
-    height: 3rem;
     border:3px solid #FFFFFF;
     color: #ffffff;
     background-color: #F6A833;
-    border-radius:36px;
+    border-radius:42px;
     cursor: pointer;
    }
 
@@ -170,9 +154,9 @@
  .BoxContainer_4_Text_Button{
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
-  font-size:18px;
   margin-top:2rem;
-  height: 3rem;
+  font-size:20px;
+  padding: 1rem;
   border:3px solid #FFFFFF;
   color: #ffffff;
   background-color: #52330D;
@@ -187,7 +171,7 @@
   background-color:#FFF9F0;
   display:flex;
   flex-direction:column;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   box-shadow:0 0 18px #757575 
  }
 
@@ -212,9 +196,10 @@
   font-size:18px;
   color:#52330D;
   text-align:center;
-  padding:4rem;
-  font-family:Avennter;
-  padding:4rem;
+  padding-left:4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
  }
@@ -223,6 +208,7 @@
   font-size:18px;
   color:#52330D;
   text-align:center;
+  margin-top: -1rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
  }
@@ -258,17 +244,19 @@
 
 
 .BoxContainer_6_Text_Button{
-  font-size:18px;
+  font-size:20px;
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
-  font-weight:600;
-  height: 3rem;
+  font-weight:500;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top:2rem;
   cursor: pointer;
   border:3px solid #FFFFFF;
   color:#FFFFFF;
   background-color: #F6A833;
-  border-radius:24px;
+  border-radius:42px;
   cursor: pointer;
 }
 
@@ -315,7 +303,7 @@
         font-size:12px;
         margin-top:2rem;
         font-family:Avenir LT Std 65 Medium;
-        font-weight:600;
+        font-weight:400;
       }
 
       .BoxContainer_1_Text_Button{
@@ -434,7 +422,6 @@
     text-transform:none;
     font-size:12px;
     margin-top: 0.5rem;
-    height: 2rem;
     border:3px solid #FFFFFF;
     color: #ffffff;
     cursor: pointer;
@@ -450,6 +437,7 @@
   margin-top:3rem;
   background-color:#FFF9F0;
   display:flex;
+  margin-bottom: 5rem;
   flex-direction:column;
   box-shadow:0 0 18px #757575 
  }
@@ -581,7 +569,7 @@
         font-size:18px;
         margin-top:2rem;
         font-family:Avenir LT Std 65 Medium;
-        font-weight:600;
+        font-weight:400;
       }
 
       .BoxContainer_1_Text_Button{
@@ -704,7 +692,6 @@
     font-size:12px;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    height: 2rem;
     border:3px solid #FFFFFF;
     color: #ffffff;
     background-color: #52330D;

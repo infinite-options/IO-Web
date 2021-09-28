@@ -1,9 +1,8 @@
 .navbar {
   height: 15vh;
   background: white;
-  color: #000000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 18px;
   font-weight: 700;
@@ -17,23 +16,25 @@
 flex: 2;
 }
 
+.emptyDiv1{
+  flex: 1;
+  }
+
 .nav-logo {
-  flex:1;
+  flex:3;
 }
 
 .nav-links {
-  flex:1;
+  flex:3;
+  text-align: left;
   display: grid;
   grid-template-columns: repeat(7, auto);
-  grid-gap: 3rem;
+  grid-gap: 1rem;
   list-style: none;
-  margin-left: 8rem ;
 }
-
 
 .right {
   flex: 1;
-  width: 250px;
   /* margin-left: auto; */
   padding-top: 30px;
 }
@@ -102,7 +103,7 @@ flex: 2;
 
   .nav-links.active {
     background: white;
-    left: -40%;
+    left: -10%;
   }
 
   .nav-item {
