@@ -28,7 +28,7 @@ export default function Projects(){
                         </div>
                         <div className = "Container_1_Text_Button" >
                             <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
+                            <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export default function Projects(){
                         </div>
                         <div className = "Container_1_Text_Button">
                         <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
+                            <Button href ="https://servingfresh.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
                     <div>
@@ -67,7 +67,7 @@ export default function Projects(){
                         </div>
                         <div  className = "Container_1_Text_Button">
                         <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
+                            <Button href ="https://nityaayurveda.com/" target="_blank"  style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
                 </div>

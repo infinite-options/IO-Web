@@ -282,3 +282,16 @@
   }
   
 }
+
+@media screen and (max-width: 1850px) and (min-width: 1600px) {
+
+
+    .QueryContainer_Body_TextArea{
+        height:4rem;
+        width:41%;
+        border:2px solid #52330D;
+        border-radius:16px;
+    }
+
+
+}

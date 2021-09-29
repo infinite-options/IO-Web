@@ -3,6 +3,8 @@ import {Box, Button} from '@material-ui/core';
 import '../Home/Home.css'
 import { useHistory, useLocation } from "react-router-dom";
 import ScrollToTop from "../Contact/ScrollToTop";
+import { Link } from "react-router-dom";
+
 
 //import Backdrop from "../Assets/Backdrop.png"
 
@@ -52,7 +54,7 @@ export default function Home(){
                      </button>
                 </div>
                 <div className="BoxContainer_1_Image" >
-                    <img src={"./Navigation/Logo.png"}  style={{width:'100%'}}/>
+                    <img src={"./Navigation/Logo.svg"}  style={{width:'100%'}}/>
                 </div>      
             </div>
 
