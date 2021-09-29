@@ -247,35 +247,41 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar" style={{ background: location.pathname === "/projects" ? '#52330D' : 'white' }}>
+    // <nav className="navbar" style={{ background: location.pathname === "/projects" ? '#52330D' : 'white' }}>
+      <nav className="navbar">
       <div className="emptyDiv">
       </div>
       <Link to="/" className="nav-logo"  onClick={closeMenu}>
-         <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/>
+         {/* <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/> */}
+         <img src={"/Navigation/Logo.png"}/>
       </Link>
       <div onClick={handleClick} className="nav-icon">
         {open ? <FiX /> : <FiMenu />}
       </div>
       <ul className={open ? "nav-links active" : "nav-links"}>
         <li className="nav-item" >
-          <Link to={{pathname: '/', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : ''}} >
+          {/* <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : ''}} > */}
+          <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} >
            Projects
           </Link>
         </li>
         <li className="nav-item">
-          <Link to={{pathname: '/', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
+          {/* <Link to={{pathname: '/teams', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
+          <Link to={{pathname: '/teams', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams} >
             Teams
           </Link>
         </li>
     
         <li className="nav-item">
-          <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
+          {/* <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
+          <Link to="/contact" className="nav-link" onClick={closeMenu} > 
             Contact
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : ''}}>
+          {/* <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
+          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome} >
             About
           </Link>
         </li>

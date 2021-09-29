@@ -9,8 +9,8 @@ import ScrollToTop from "../Contact/ScrollToTop";
 export default function Home(){
 
     const myRef = useRef(null)
-    const myRef_project = useRef(null)
-    const myRef_teams = useRef(null)
+    // const myRef_project = useRef(null)
+    // const myRef_teams = useRef(null)
     const myRef_home = useRef(null)
 
 
@@ -18,13 +18,13 @@ export default function Home(){
     const location = useLocation();
 
 
-    useEffect(()=>{
-        myRef_project.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
-    },[location.state_project])
+    // useEffect(()=>{
+    //     myRef_project.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+    // },[location.state_project])
 
-    useEffect(()=>{
-    myRef_teams.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
-    },[location.state_teams])
+    // useEffect(()=>{
+    // myRef_teams.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+    // },[location.state_teams])
 
     useEffect(()=>{
         myRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
@@ -56,7 +56,7 @@ export default function Home(){
                 </div>      
             </div>
 
-            <div  ref={myRef_project}  className="BoxContainer_2" >
+            <div  className="BoxContainer_2" >
            There are infinite ways to take an idea and turn into a business.
             </div>
 
@@ -133,7 +133,7 @@ export default function Home(){
                    <p  className="BoxContainer_5_Text_Tail">
                    -Mercedes Fernandez,
                     </p>
-                    <div ref={myRef_teams} className="BoxContainer_5_Text_Tail">
+                    <div className="BoxContainer_5_Text_Tail">
                     Founder, Walk with Pop
                     </div>
                 </div>

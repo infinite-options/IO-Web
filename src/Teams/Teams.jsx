@@ -24,9 +24,25 @@ export default function Teams(){
     return(
         <Box style={{ width: '100%',backgroundPosition:'center' ,backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <ScrollToTop/>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:'2rem'}}>
+             <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:'2rem'}}>
                 <div>
-                <img src="/Navigation/Logo.png"/>
+                <div  className="BoxContainer_6_Teams" style={{marginTop:'-1rem'}} >
+                <div  className="BoxContainer_6_Text_Header_Teams" >
+                    Teams
+                </div>
+                <div className="BoxContainer_6_Text_Body_Teams" >
+                    <div>
+                        <p>Front-End Development</p>
+                        <p>Back-End Development</p>
+                        <p>Mobile App Development</p>
+                    </div>
+                    <div className="BoxContainer_6_Text_Body_Margin_Teams">
+                        <p>UI / UX Design</p>
+                        <p>Marketing</p>
+                        <p>Human Resources</p>
+                    </div>
+                </div>
+               </div>
                 </div>
                 <div className="Container_Teams_Header" >
                 We work with people who would benefit from real world experience. 
