@@ -54,7 +54,7 @@ export default function Home(){
                      </button>
                 </div>
                 <div className="BoxContainer_1_Image" >
-                    <img src={"./Navigation/Logo.svg"}  style={{width:'100%'}}/>
+                    <img src={"./Navigation/Logo1.png"}  style={{width:'100%'}}/>
                 </div>      
             </div>
 

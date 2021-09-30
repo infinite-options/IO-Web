@@ -13,6 +13,9 @@ import Teams from './Teams/Teams';
 import Contact from './Contact/scheduleMeeting'
 //import { Navigation } from './Navigation/navigation';
 import Navigation from '../src/Navigation/navigation';
+import MealsForMe from '../src/MealsForMe/mealsforme';
+import Nitya from '../src/Nitya/nitya';
+import ServingFresh from '../src/ServingFresh/servingFresh';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -29,6 +32,25 @@ function App() {
           <Navigation />
 
           <Switch>
+            <Route path="/servingFresh">
+
+              <ServingFresh />
+
+            </Route>
+
+            <Route path="/nitya">
+
+              <Nitya />
+
+            </Route>
+
+            <Route path="/mealsForMe">
+
+              <MealsForMe />
+
+            </Route>
+
+
             <Route path="/about">
 
             </Route>
@@ -56,6 +78,8 @@ function App() {
               <Home />
 
             </Route>
+
+
 
           </Switch>
 

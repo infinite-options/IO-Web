@@ -4,9 +4,13 @@ import '../Projects/Projects.css'
 import Nitya from '../Assets/Projects/Nitya.png'
 import SF from '../Assets/Projects/SF.png'
 import ScrollToTop from "../Contact/ScrollToTop";
+import { useHistory } from "react-router";
 
 
 export default function Projects(){
+
+    const history = useHistory()
+
     return(
         <Box  className="Container">
             <ScrollToTop/>
@@ -27,7 +31,7 @@ export default function Projects(){
                         identity and a simple user flow for the meal subscription platform was key to the project.
                         </div>
                         <div className = "Container_1_Text_Button" >
-                            <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
+                            <Button  onClick={()=>{history.push("./mealsForMe")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
                             <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
@@ -44,7 +48,7 @@ export default function Projects(){
                         It continues to be one of our favorite in-house products where we are now focusing on creating marketing and advertising.
                         </div>
                         <div className = "Container_1_Text_Button">
-                        <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
+                        <Button  onClick={()=>{history.push("./servingFresh")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
                             <Button href ="https://servingfresh.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
@@ -66,7 +70,7 @@ export default function Projects(){
                         We also simplified the user flow to make it easier for people to understand the services and book appointments.
                         </div>
                         <div  className = "Container_1_Text_Button">
-                        <Button style={{color:'white',textTransform:'none'}}> View Project</Button>
+                        <Button  onClick={()=>{history.push("./Nitya")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
                             <Button href ="https://nityaayurveda.com/" target="_blank"  style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
                     </div>
