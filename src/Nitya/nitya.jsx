@@ -11,7 +11,7 @@ import ScrollToTop from "../Contact/ScrollToTop";
 class App extends Component {
   render() {
     return (
-      <div style={{ fontFamily: "AvenirHeavy" }}>
+      <div style={{ fontFamily: "AvenirHeavy", paddingLeft:'20rem', paddingRight:'20rem'}}>
           <ScrollToTop/>
         <div style={{ marginLeft: "10%", marginRight: "10%", height: "auto" }}>
           <img
@@ -34,7 +34,7 @@ class App extends Component {
           <div style={{ width: "23%", textAlign: "left" }}>
             <p style={{ float: "left" }}>Client</p>
           </div>
-          <div style={{ width: "33%", textAlign: "left" }}>
+          <div style={{ width: "33%", textAlign: "left", marginLeft:'1rem' }}>
             <p style={{ float: "left" }}>Challenge / brief</p>
           </div>
           <div style={{ width: "33%", textAlign: "left", marginLeft: "10%" }}>
@@ -63,7 +63,7 @@ class App extends Component {
             </a>
           </div>
           <div style={{ width: "33%" }}>
-            <p style={{ fontSize: "90%", textAlign: "left" }}>
+            <p style={{ fontSize: "90%", textAlign: "left", marginLeft:'1rem' }}>
               We redesigned the website for an Ayurvedic practitioner to make it
               pop and convey their messaging around Ayurveda. We also simplified
               the user flow to make it easier for people to understand the
@@ -154,7 +154,7 @@ class App extends Component {
                     for a mobile phone
                   </p>
                 </div>
-                <div style={{ float: "left" }}>
+                <div style={{ float: "left", marginLeft:'0px' }}>
                   <img
                     src={After1}
                     alt="Nitya Ayurveda after Infinite Options"
@@ -162,11 +162,11 @@ class App extends Component {
                 </div>
               </Col>
               <Col style={{ width: "66%" }}>
-                <div style={{ float: "left" }}>
+                <div style={{ float: "left", marginLeft:'10rem' }}>
                   <img
                     src={After2}
                     alt="Nitya Ayurveda after Infinite Options"
-                    style={{width:'100%'}}
+                    style={{width:'100%', height:'auto'}}
                   ></img>
                 </div>
               </Col>

@@ -10,7 +10,7 @@ import React, { Component } from "react";
 class App extends Component {
   render() {
     return (
-      <div style={{ fontFamily: "AvenirHeavy" }}>
+      <div style={{ fontFamily: "AvenirHeavy" , paddingLeft:'20rem', paddingRight:'20rem'}}>
           <ScrollToTop/>
         <div>
           <div>
