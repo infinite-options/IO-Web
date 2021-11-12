@@ -14,22 +14,34 @@
     margin-top:5rem;
     background-color:white;
     display:flex;
+    flex-direction: column;
     box-shadow:0 0 18px #757575; 
   }
 
   .BoxContainer_1_Text{
   display:flex;
-  justify-content:flex-start;
+  justify-content:center;
   flex-direction:column;
+  align-items: center;
   flex:1;
-  padding:2rem;
   }
 
   .BoxContainer_1_Text_Header{
     color:#F6A833;
+    /* font-size:54px;
+    font-family:Libre Baskerville;
+    font-weight:bold; */
+
     font-size:54px;
+    /* color:white; */
     font-family:Libre Baskerville;
     font-weight:bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .BoxContainer_1_Text_and_Image{
+    display: flex;
   }
 
   .BoxContainer_1_Text_Body{
@@ -37,6 +49,7 @@
     margin-top:2rem;
     font-family:Avenir LT Std 65 Medium;
     font-weight:400;
+    padding-left: 10%;
   }
 
   .BoxContainer_1_Text_Button{
@@ -91,7 +104,7 @@
   }
    .BoxContainer_3_Text_Header{
     font-size:38px;
-    color:white;
+    color:#52330D;
     font-family:Libre Baskerville;
     font-weight:bold;
    }
@@ -105,12 +118,13 @@
    }
 
    .BoxContainer_3_Text_Image{
+    /* background-color: white; */
     display:flex;
     justify-content:center;
    }
    .BoxContainer_3_Text_ImageSize_1{
     width:100%;
-    height:15rem;
+    height:15rem;    
    }
    .BoxContainer_3_Text_ImageSize_2{
     width:100%;
@@ -196,10 +210,10 @@
   font-size:18px;
   color:#52330D;
   text-align:center;
-  padding-left:4rem;
+  /* padding-left:4rem;
   padding-right: 4rem;
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 4rem; */
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
  }
@@ -218,7 +232,6 @@
   height:28rem;
   margin-top:5rem;
   background-color:#F6A833;
-  align-items:center;
   display:flex;
   flex-direction:column;
   box-shadow:0 0 18px #757575
@@ -230,11 +243,12 @@
  margin-top:2rem;
  font-family:Libre Baskerville;
  font-weight:600;
+ text-align: center;
 }
 
 .BoxContainer_6_Text_Body{
   display:flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
   color:white;
   margin-top:2rem;
   font-size:24px;
@@ -261,26 +275,28 @@
 }
 
 .BoxContainer_6_Text_Body_Margin{
-  margin-left:10rem
+  /* margin-left:10rem */
 }
 
 .BoxContainer_7_Text_Body{
   font-size:18px;
   color:#52330D;
   text-align:center;
-  padding:2rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
+
+
  }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1280px) {
 
     .BoxContainer_1{
       width:90%;
-      height:15rem;
+      height:auto;
       margin-top:5rem;
       background-color:white;
       display:flex;
+      flex-direction: column;
       box-shadow:0 0 18px #757575; 
     }
 
@@ -291,24 +307,37 @@
       flex:2;
       padding:2rem;
       }
+
+      .BoxContainer_1_Text_and_Image{
+        display: flex;
+        flex-direction: column;
+      }
     
       .BoxContainer_1_Text_Header{
         color:#F6A833;
-        font-size:16px;
+        /* font-size:16px;
+        font-family:Libre Baskerville;
+        font-weight:bold; */
+
+        font-size:32px;
+        /* color:white; */
         font-family:Libre Baskerville;
         font-weight:bold;
+        text-align: center;
       }
     
       .BoxContainer_1_Text_Body{
-        font-size:12px;
+        font-size:18px;
         margin-top:2rem;
         font-family:Avenir LT Std 65 Medium;
         font-weight:400;
+        text-align: center;
+        padding-left: 0%;
       }
 
       .BoxContainer_1_Text_Button{
         margin-top: 2rem;
-        font-size:8px;
+        font-size:16px;
         color:#52330D;
         border: 3px solid #52330D;
         border-radius:24px;
@@ -328,17 +357,17 @@
 
        .BoxContainer_2{
         width:90%;
-        height:5rem;
+        height:auto;
         margin-top:3rem;
-        font-size:18px; 
+        font-size:24px; 
         font-family:Libre Baskerville;
         font-weight:bold;
         text-align:center; 
       }
   
       .BoxContainer_3{
-        width:90%;
-        height:28rem;
+        width:90%;  
+        height:auto;
         margin-top:1rem;
         background-color:#F6A833;
         display:flex;
@@ -360,6 +389,7 @@
      color:white;
      font-family:Libre Baskerville;
      font-weight:bold;
+     text-align: center;
     }
  
     .BoxContainer_3_Text_Body{
@@ -371,36 +401,38 @@
  
     .BoxContainer_3_Text_Image{
      display:flex;
-     justify-content:center;
-     padding-left: 1rem;
-     padding-right: 1rem;
+     flex-direction: column;
+     justify-content:flex-start;
+     padding-left: 5%;
+     padding-right: 5%;
 
     }
     .BoxContainer_3_Text_ImageSize_1{
      width:100%;
-     height:7.5rem;
+    object-fit: cover;
     }
     .BoxContainer_3_Text_ImageSize_2{
      width:100%;
-     height:15rem;
+     object-fit: contain;
+     height: auto;
     }
 
    .BoxContainer_3_Text_Button{
     font-family:Avenir LT Std 45 Book;
     text-transform:none;
     font-size:12px;
-    margin-top: 0.5rem;
-    height: 2rem;
+    height: auto;
     border:3px solid #FFFFFF;
     color: #ffffff;
     background-color: #F6A833;
     cursor: pointer;
+    margin-bottom: 2rem;
     border-radius:36px;
    }
 
    .BoxContainer_4{
     width:90%;
-    height:28rem;
+    height:auto;
     margin-top:1rem;
     background-color:#52330D;
     display:flex;
@@ -421,18 +453,18 @@
     font-family:Avenir LT Std 45 Book;
     text-transform:none;
     font-size:12px;
-    margin-top: 0.5rem;
     border:3px solid #FFFFFF;
     color: #ffffff;
     cursor: pointer;
     background-color: #52330D;
     border-radius:36px;
+    margin-bottom: 2rem;
    }
 
    
  .BoxContainer_5{
   width:90%;
-  height:28rem;
+  height:auto;
   margin: 0;
   margin-top:3rem;
   background-color:#FFF9F0;
@@ -445,33 +477,32 @@
  .BoxContainer_5_Text{
   display:flex;
   flex-direction:column;
-  padding-left:0rem;
-  padding-right:0rem;
-  padding-top:0rem;
-  padding-bottom:0rem;
+ padding: 5%;
  }
 
  .BoxContainer_5_Text_Header{
-  font-size:24px;
   color:#52330D;
   margin-top: 2rem;
+  font-weight:bold;
+  font-size:22px;
   font-family:Libre Baskerville;
-  font-weight:bold
+  font-weight:bold;
+  text-align: center;
  }
 
  .BoxContainer_5_Text_Body{
   font-size:12px;
   color:#52330D;
-  margin-top: -1rem;
   text-align:center;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
+  margin-top: 1rem;
  }
 
  .BoxContainer_5_Text_Tail{
   font-size:12px;
+  margin-top: 1rem;
   color:#52330D;
-  margin-top: -1rem;
   text-align:center;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
@@ -480,13 +511,12 @@
  
  .BoxContainer_6{
   width:90%;
-  height:18rem;
+  height:auto;
   margin-top:3rem;
   background-color:#F6A833;
-  align-items:center;
   display:flex;
   flex-direction:column;
-  box-shadow:0 0 18px #757575
+  box-shadow:0 0 18px #757575;
  }
 
 .BoxContainer_6_Text_Header{
@@ -499,7 +529,7 @@
 
 .BoxContainer_6_Text_Body{
   display:flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
   color:white;
   margin-top:2rem;
   font-size:12px;
@@ -509,22 +539,19 @@
 
 
 .BoxContainer_6_Text_Button{
-  font-size:18px;
+  font-size:12px;
   font-family:Avenir LT Std 45 Book;
   text-transform:none;
   font-weight:600;
-  height: 3rem;
+  height:auto;
   margin-top:2rem;
   border:3px solid #FFFFFF;
   background-color: #F6A833;
   color:#FFFFFF;
   border-radius:24px;
   cursor: pointer;
+  margin-bottom: 2rem;
 
-}
-
-.BoxContainer_6_Text_Body_Margin{
-  margin-left:3rem
 }
 
 
@@ -532,9 +559,9 @@
   font-size:12px;
   color:#52330D;
   text-align:center;
-  padding:2rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
+  margin-top: 1rem;
  }
   }
 
@@ -560,7 +587,12 @@
     
       .BoxContainer_1_Text_Header{
         color:#F6A833;
-        font-size:24px;
+        /* font-size:24px;
+        font-family:Libre Baskerville;
+        font-weight:bold; */
+
+        font-size:54px;
+        /* color:white; */
         font-family:Libre Baskerville;
         font-weight:bold;
       }

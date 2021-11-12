@@ -1,14 +1,20 @@
 .Contianer{
-    display:flex;
+    /* display:flex;
     justify-content:space-evenly;
     font-family:Avenir LT Std 45 Book;
     font-size:12px;
     color:#E0E0E0;
     align-items:center;
-    width:100%;
     background-color:#52330D;
     position:relative;
-    bottom:0;
+    bottom:0; */
+    display: grid;
+    background-color:#52330D;
+    color:#E0E0E0;
+    font-size:18px;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: flex-end;
+    margin-top: 2rem;
 }
 
 .SubContainer{
@@ -33,9 +39,44 @@
 }
 
 
-@media screen and (max-width: 500px){
+
+
+
+
+  
+  .FooterTextWrapper{
+    background-color:#52330D;
+    color:#E0E0E0;
+   font-size:14px;
+   /* display:flex;
+   justify-content:space-evenly; */
+   display: grid;
+   grid-template-columns: repeat(4, auto);
+   align-items: flex-end;
+   padding-bottom: 4rem;
+   padding-top: 2rem;
+  }
+  
+  .FooterText{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    /* margin-top:1rem; */
+  }
+  
+  .FooterTitle{
+    color:#C3A336;
+    font-size:28px;
+    text-align: left;
+    border:2px solid blue;
+    padding-left: 20%;
+    padding-bottom: 5%;
+  }
+
+
+@media screen and (max-width: 1280px){
     .Contianer{
-        display:flex;
+        /* display:flex;
         flex-direction: column;
         justify-content:space-evenly;
         font-family:Avenir LT Std 45 Book;
@@ -45,7 +86,15 @@
         width:100%;
         background-color:#52330D;
         position:relative;
-        bottom:0;
+        bottom:0; */
+
+        display: grid;
+        background-color:#52330D;
+        color:#E0E0E0;
+        font-size:18px;
+        grid-template-columns: repeat(1, auto);
+        align-items: flex-end;
+        margin-top: 2rem;
     }
 
     .SubContainer{
@@ -61,4 +110,36 @@
         margin-top:4rem;
         margin-left: 4rem;
     }
+
+
+
+
+    .FooterTextWrapper{
+        background-color:#52330D;
+        color:#E0E0E0;
+       font-size:14px;
+       /* display:flex;
+       justify-content:space-evenly; */
+       display: grid;
+       grid-template-columns: repeat(1, auto);
+       align-items: flex-end;
+       padding-bottom: 4rem;
+       padding-top: 2rem;
+       }
+    
+      
+      .MobileImage{
+        width: 70%;
+        height: 2rem;
+        object-fit: contain;
+      }
+      
+      .FooterText{
+        text-align:center;
+        border-right:0px solid #424242;
+        /* border: 2px solid green; */
+        margin-top:2rem;
+        padding-right:0rem;
+        padding:0rem;
+      }
 }

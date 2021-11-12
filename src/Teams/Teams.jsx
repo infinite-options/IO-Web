@@ -1,6 +1,6 @@
 import { Button, Box} from "@material-ui/core";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../Teams/Teams.css'
 import ScrollToTop from "../Contact/ScrollToTop";
 import Dialog from '@material-ui/core/Dialog';
@@ -17,6 +17,13 @@ export default function Teams(){
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
+    const [teamsButton,  setTeamsButton] = useState(false)
+
+    const myRef_teams = useRef(null)
+
+    useEffect(()=>{
+      myRef_teams.current.scrollIntoView({ behavior: 'smooth', block: 'start' })    
+  },[teamsButton])
 
     function onHandleSubmit(){
         axios.post('https://3o9ul2w8a1.execute-api.us-west-1.amazonaws.com/dev/api/v2/addContact', {
@@ -46,6 +53,10 @@ export default function Teams(){
       setOpen(false);
     };
 
+    useEffect(()=>{
+      window.scrollTo(0, 0); 
+  },[])
+  
     return(
         <Box style={{ width: '100%',backgroundPosition:'center' ,backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <ScrollToTop/>
@@ -66,6 +77,13 @@ export default function Teams(){
                         <p>Marketing</p>
                         <p>Human Resources</p>
                     </div>
+                   
+                </div>
+                <div  style={{display:'flex', justifyContent:'center'}}>
+                    {/* <button className="BoxContainer_6_Text_Button" onClick={()=> history.push("/teams")}> */}
+                    <button className="BoxContainer_6_Text_Button" onClick={()=> setTeamsButton(!teamsButton)}> 
+                    Join the team
+                    </button>
                 </div>
                </div>
                 </div>
@@ -78,12 +96,12 @@ export default function Teams(){
                     <div className="Container_Teams_Box_Body" >We learn by doing. The best way to get good at something is to do it - preferably in a safe, supportive environment.</div>
                     <img src={'./Teams/flow.png'} className="Container_Teams_Box_Image" style={{ padding:'5rem'}} />
                 </div>
-                <div className="Container_Teams_Header" style={{marginTop:'5rem'}}>
+                <div ref={myRef_teams} className="Container_Teams_Header" style={{marginTop:'5rem'}}>
                 It’s an iterative process. Both success and failure teach us something and are key to Project Based learning.
                 </div>
            
             </div>
-            <div style={{backgroundColor:'#F6A833', width:'100%', height:'auto',paddingBottom:'2rem', display:'flex', flexDirection:'column', marginTop:'5rem'}}>
+            <div  style={{backgroundColor:'#F6A833', width:'100%', height:'auto',paddingBottom:'2rem', display:'flex', flexDirection:'column', marginTop:'5rem'}}>
                     <div className="QueryContainer_Header">
                     Lets have a chat!
                     </div>

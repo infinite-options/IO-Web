@@ -41,55 +41,57 @@ export default function Home(){
         <div  >
             <Box ref={myRef_home} style={{width:'100%', backgroundImage:`url(${"./Navigation/Backdropv2.png"})`,backgroundRepeat:'no-repeat', backgroundSize:'100%, 200vh'}}>
             <Box className="HomeContainer">
-            <div  className="BoxContainer_1">
-                <div className="BoxContainer_1_Text" >
+                <div  className="BoxContainer_1">
                     <div className="BoxContainer_1_Text_Header">
-                        Turning ideas into reality 
+                            Turning ideas into reality 
                     </div>
-                    <div  className="BoxContainer_1_Text_Body" >
-                        We love taking ideas from zero  to one whether they are  our own creations or yours as an entrepreneur
-                     </div>   
-                     <button className="BoxContainer_1_Text_Button"  onClick={()=> history.push("/contact")}>
-                         Schedule a free consultation
-                     </button>
+                    <div className="BoxContainer_1_Text_and_Image" >     
+                        <div className="BoxContainer_1_Text">
+                            <div  className="BoxContainer_1_Text_Body" >
+                                We love taking ideas from zero  to one whether they are  our own creations or yours as an entrepreneur
+                            </div> 
+                            <button className="BoxContainer_1_Text_Button"  onClick={()=> history.push("/contact")}>
+                                Schedule a free consultation
+                            </button>
+                        </div>
+                        <div className="BoxContainer_1_Image" >
+                            <img src={"./Navigation/Logo1.png"}  style={{width:'100%', objectFit:'contain'}}/>
+                        </div>     
+                    </div> 
                 </div>
-                <div className="BoxContainer_1_Image" >
-                    <img src={"./Navigation/Logo1.png"}  style={{width:'100%'}}/>
-                </div>      
-            </div>
 
-            <div  className="BoxContainer_2" >
-           There are infinite ways to take an idea and turn into a business.
-            </div>
+                <div  className="BoxContainer_2" >
+                    There are infinite ways to take an idea and turn into a business.
+                </div>
 
-            <div  className="BoxContainer_3" >
-                <div className="BoxContainer_3_Text">
-                    <div className="BoxContainer_3_Text_Header">
-                    Projects we’ve built
+                <div  className="BoxContainer_3" >
+                    <div className="BoxContainer_3_Text">
+                        <div className="BoxContainer_3_Text_Header">
+                        Projects we’ve built
+                        </div>
+                        <div className="BoxContainer_3_Text_Body">
+                        We are entrepreneurs solving problems that we encounter in new and creative ways. Here are some examples.
+                        </div>
                     </div>
-                    <div className="BoxContainer_3_Text_Body">
-                    We are entrepreneurs solving problems that we encounter in new and creative ways. Here are some examples.
-                     </div>
-                </div>
-                <div className="BoxContainer_3_Text_Image" >
-                    <div>
+                    <div className="BoxContainer_3_Text_Image" >
+                        <div >
+                            <div >
+                            <img src={"./Home/M4Me.png"} className="BoxContainer_3_Text_ImageSize_1" />
+                            </div>
+                            <div style={{marginTop:'-0.3rem'}} >
+                            <img src={"./Home/project_map.png"} className="BoxContainer_3_Text_ImageSize_1"/>
+                            </div>
+                        </div>
                         <div>
-                        <img src={"./Home/M4Me.png"} className="BoxContainer_3_Text_ImageSize_1" />
-                        </div>
-                        <div style={{marginTop:'-0.3rem'}}>
-                        <img src={"./Home/project_map.png"} className="BoxContainer_3_Text_ImageSize_1"/>
+                            <img src={"./Home/Fun_Fact.png"}  className="BoxContainer_3_Text_ImageSize_2"/>
                         </div>
                     </div>
-                    <div>
-                        <img src={"./Home/Fun_Fact.png"}  className="BoxContainer_3_Text_ImageSize_2"/>
+                    <div  style={{display:'flex', justifyContent:'center'}}>
+                        <button  className="BoxContainer_3_Text_Button" onClick={()=> history.push("/projects")}>
+                                View all Projects
+                        </button>
                     </div>
                 </div>
-                <div  style={{display:'flex', justifyContent:'center'}}>
-                    <button  className="BoxContainer_3_Text_Button" onClick={()=> history.push("/projects")}>
-                            View all Projects
-                    </button>
-                </div>
-            </div>
 
 
                 
@@ -103,8 +105,8 @@ export default function Home(){
                 </div>
                 <div className="BoxContainer_3_Text_Image" >
                     <div>
-                        <div>
-                        <img src={"./Home/M4Me.png"} className="BoxContainer_3_Text_ImageSize_1"/>
+                        <div style={{backgroundColor:'white'}}>
+                        <img src={"./Home/NityaAyurvedaLogo.png"} className="BoxContainer_3_Text_ImageSize_1"/>
                         </div>
                         <div style={{marginTop:'-0.3rem'}}>
                         <img src={"./Home/Walk_with_pop.png"} className="BoxContainer_3_Text_ImageSize_1"/>
@@ -170,13 +172,13 @@ export default function Home(){
                     <div  className="BoxContainer_5_Text_Header" >
                     About Us
                     </div>
-                    <div  className="BoxContainer_7_Text_Body" >
+                    <div  className="BoxContainer_5_Text_Body" >
                     Infinite Options was primarily started in 2019 to help college students gain real work experience along with their coursework.
                     Prashant Marathay, the Founder and CEO, has 25+ years of experience as a project manager in Silicon Valley at companies 
                     like Apple, Intel, Alphabet.
                
                    </div>
-                   <div  className="BoxContainer_7_Text_Body" >
+                   <div  className="BoxContainer_5_Text_Body" >
                         
                     We’ve since built multiple businesses in-house, we offer business-in-a-box to people who want to be self-employed and
                     we also work with clients to design and develop their business ideas.
