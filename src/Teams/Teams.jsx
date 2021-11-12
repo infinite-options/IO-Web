@@ -92,7 +92,7 @@ export default function Teams(){
                 We offer a safe, supportive environment where you’ll get a chance to learn and hone your skills.
                 </div>
                 <div className="Container_Teams_Box">
-                    <div style={{marginTop:'5rem',fontSize:'32px', color:'#52330D',fontFamily:'Avenir LT Std 65 Medium', fontWeight:'bold'}}>Our Process </div>
+                    <div style={{marginTop:'2rem',fontSize:'32px', color:'#52330D',fontFamily:'Avenir LT Std 65 Medium', fontWeight:'bold'}}>Our Process </div>
                     <div className="Container_Teams_Box_Body" >We learn by doing. The best way to get good at something is to do it - preferably in a safe, supportive environment.</div>
                     <img src={'./Teams/flow.png'} className="Container_Teams_Box_Image" style={{ padding:'5rem'}} />
                 </div>

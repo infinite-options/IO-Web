@@ -59,7 +59,7 @@ export default function Projects(){
 
                 <div className="Container_1" >
                     <div>
-                    <img src={Nitya} className="Container_1_Image"/>
+                    <img src={Nitya} style={{backgroundColor:'white'}} className="Container_1_Image"/>
                     </div>
                     <div className = "Container_1_Text">
                         <div  className = "Container_1_Text_Header">
@@ -69,7 +69,7 @@ export default function Projects(){
                         We redesigned the website for an Ayurvedic practitioner to make it pop and convey their messaging around Ayurveda. 
                         We also simplified the user flow to make it easier for people to understand the services and book appointments.
                         </div>
-                        <div  className = "Container_1_Text_Button">
+                        <div  className = "Container_1_Text_Button" >
                         <Button  onClick={()=>{history.push("./Nitya")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
                             <Button href ="https://nityaayurveda.com/" target="_blank"  style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
                         </div>
@@ -86,7 +86,7 @@ export default function Projects(){
                        We designed and developed a productivity to help people with short-term memory loss gain control 
                        of their lives without the app dominating it - in collaboration with Tulane University.
                        </div>
-                       <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'4rem',fontFamily:'Avenir LT Std 65 Medium', fontWeight:'600'}}>
+                       <div style={{display:'flex', justifyContent:'space-evenly', marginTop:'2rem',fontFamily:'Avenir LT Std 65 Medium', fontWeight:'600'}}>
                            Coming Soon
                        </div>
                    </div>

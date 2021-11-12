@@ -173,7 +173,7 @@ export default function Home(){
                     About Us
                     </div>
                     <div  className="BoxContainer_5_Text_Body" >
-                    Infinite Options was primarily started in 2019 to help college students gain real work experience along with their coursework.
+                    Infinite Options was started in 2019 primarily to help college students gain real work experience along with their coursework.
                     Prashant Marathay, the Founder and CEO, has 25+ years of experience as a project manager in Silicon Valley at companies 
                     like Apple, Intel, Alphabet.
                
