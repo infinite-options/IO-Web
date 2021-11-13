@@ -18,12 +18,13 @@
   font-family: Avenir LT Std 45 Book;
   font-weight: 600;
   font-size: 14px;
-  margin-left: 5rem;
+  margin-top: 1rem;
+  /* margin-left: 5rem; */
 }
 
 .calanderHeader{
     text-align:  center ;
-    font-size: 54px;
+    font-size: 42px;
     font-family: Avenir LT Std 65 Medium ;
     font-weight: bolder;
     /* // fontSize: 60px/82px ; */
@@ -42,6 +43,7 @@
     color:  #52330D ;
     font-family: Avenir LT Std 45 Book ;
     font-weight: 600;
+    text-align: center;
 }
 .container {
     /* margin:  auto ; */
@@ -182,7 +184,7 @@
   }
 
   .container_text{
-    font-size: 52px;
+    font-size: 38px;
     font-family:Avenir LT Std 65 Medium;
     font-weight: 600;
     margin-top: 1rem;
@@ -542,30 +544,31 @@
 @media (max-width:650px){
   .h1 {
     font:  normal normal 900 18px/40px Avenir ;
-    padding-left: 20px ;
+    padding-left: 0px ;
   }
     
   .pst{
-    padding-left: 120px;
+    padding-left: 0px;
     color: #4E70FF;
     font: normal normal 900 12px/18px Avenir;
-    margin-top: -20px;
+    margin-top: 1rem;
   }
 
   .calanderHeader{
-      font:  normal normal 40px/72px AvenirMedium ;
-      padding:  20px 0 ;
+      /* font:  normal normal 40px/72px AvenirMedium ;
+      padding:  20px 0 ; */
   }
   .leftTitle{
       margin-top: -50px ;
   }
   .selectTime {
-      padding-top: 118px ;
+      padding-top: 0px ;
       font-size:  42px ;
       color:  #52330D ;
       font-family:  AvenirHeavy ;
   }
   .container {
+
       margin:  auto ;
       width:  100% ;
       
@@ -726,7 +729,7 @@
   }
 
   .container_text{
-    font-size: 42px;
+    font-size: 32px;
     font-family: Avenir LT Std 45 Book;
     font-weight: 600;
     margin-top: 1rem;

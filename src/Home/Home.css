@@ -104,9 +104,9 @@
   }
    .BoxContainer_3_Text_Header{
     font-size:38px;
-    color:#52330D;
     font-family:Libre Baskerville;
     font-weight:bold;
+    color: white;
    }
 
    .BoxContainer_3_Text_Body{
@@ -180,7 +180,7 @@
 
  .BoxContainer_5{
   width:60%;
-  height:32rem;
+  height:auto;
   margin-top:5rem;
   background-color:#FFF9F0;
   display:flex;
@@ -203,7 +203,7 @@
   font-size:38px;
   color:#52330D;
   font-family:Libre Baskerville;
-  font-weight:bold
+  font-weight:bold;
  }
 
  .BoxContainer_5_Text_Body{
@@ -216,13 +216,14 @@
   padding-bottom: 4rem; */
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
+  margin-top: 2rem;
  }
 
  .BoxContainer_5_Text_Tail{
   font-size:18px;
   color:#52330D;
   text-align:center;
-  margin-top: -1rem;
+  margin-top: 2rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
  }

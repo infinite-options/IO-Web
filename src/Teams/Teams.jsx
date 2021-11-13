@@ -58,7 +58,7 @@ export default function Teams(){
   },[])
   
     return(
-        <Box style={{ width: '100%',backgroundPosition:'center' ,backgroundImage: `url(${"./Navigation/Backdropv2.png"})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%, 100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Box style={{border:'2px solid blue'}}>
             <ScrollToTop/>
              <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginTop:'2rem'}}>
                 <div>
@@ -94,7 +94,7 @@ export default function Teams(){
                 <div className="Container_Teams_Box">
                     <div style={{marginTop:'2rem',fontSize:'32px', color:'#52330D',fontFamily:'Avenir LT Std 65 Medium', fontWeight:'bold'}}>Our Process </div>
                     <div className="Container_Teams_Box_Body" >We learn by doing. The best way to get good at something is to do it - preferably in a safe, supportive environment.</div>
-                    <img src={'./Teams/flow.png'} className="Container_Teams_Box_Image" style={{ padding:'5rem'}} />
+                    <img src={'./Teams/flow.png'} className="Container_Teams_Box_Image"  />
                 </div>
                 <div ref={myRef_teams} className="Container_Teams_Header" style={{marginTop:'5rem'}}>
                 It’s an iterative process. Both success and failure teach us something and are key to Project Based learning.
@@ -115,11 +115,11 @@ export default function Teams(){
                         <div className="QueryContainer_Body_Input" >
                         <input onChange={(e)=> setEmail(e.target.value) } placeholder='Email address*'  className="QueryContainer_Body_Input_1">
                             </input >
-                            <input onChange={(e)=> setPhone(e.target.value) } placeholder='phone Number' className="QueryContainer_Body_Input_2">
+                            <input onChange={(e)=> setPhone(e.target.value) } placeholder='Phone Number' className="QueryContainer_Body_Input_2">
                             </input>
 
                         </div>
-                    <div  style={{display:'flex',justifyContent:'flex-start', marginLeft:'30%', marginTop:'1rem',fontFamily:'Libre Baskerville', color:'white'}}>
+                    <div  style={{textAlign:'center', marginTop:'1rem',fontFamily:'Libre Baskerville', color:'white'}}>
                     What are you good at?
                     </div>
                     <div style={{display:'flex', justifyContent:'center',marginTop:'1rem'}}>

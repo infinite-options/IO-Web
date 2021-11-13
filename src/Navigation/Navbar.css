@@ -13,7 +13,7 @@
 }
 
 .emptyDiv{
-flex: 2;
+flex: 1;
 }
 
 .emptyDiv1{
@@ -25,10 +25,10 @@ flex: 2;
 }
 
 .nav-links {
-  flex:3;
-  text-align: left;
+  flex:2;
+  text-align: right;
   display: grid;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(6, auto);
   grid-gap: 1rem;
   list-style: none;
 }
@@ -53,11 +53,17 @@ flex: 2;
 .nav-log {
   list-style: none;
   padding-top: 30px;
+
 }
 .nav-icon {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.nav-Image{
+  object-fit:contain;
+  width:100%;
 }
 
 .instagram-icon {
@@ -68,6 +74,7 @@ flex: 2;
 .instagram-icon:hover {
   color: #d3a625;
 }
+
 
 @media screen and (max-width: 1250px) and (min-width: 1050px) {
   .right {
@@ -88,6 +95,11 @@ flex: 2;
   .emptyDiv{
     flex: 0;
     }
+
+    .emptyDiv1{
+      flex: 0;
+      }
+
 
   .nav-links {
     font-size: 18px;
@@ -114,6 +126,12 @@ flex: 2;
 
   .nav-icon {
     display: flex;
+    margin-top: 1rem;
+  }
+
+  .nav-Image{
+    object-fit:contain;
+    width:80%;
   }
 
   .right {

@@ -103,16 +103,17 @@ const Navbar = () => {
   return (
     // <nav className="navbar" style={{ background: location.pathname === "/projects" ? '#52330D' : 'white' }}>
       <nav className="navbar">
-      <div className="emptyDiv">
+      <div className="emptyDiv" ></div >
+      <div style={{display:'flex', justifyContent:'flex-start'}}>
+        <Link to="/" className="nav-logo"  onClick={closeMenu}>
+          {/* <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/> */}
+          <img src={"/Navigation/Logo.png"} className="nav-Image"/>
+        </Link>
+        <div onClick={handleClick} className="nav-icon">
+          {open ? <FiX /> : <FiMenu />}
+        </div>
       </div>
-      <Link to="/" className="nav-logo"  onClick={closeMenu}>
-         {/* <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/> */}
-         <img src={"/Navigation/Logo.png"}/>
-      </Link>
-      <div onClick={handleClick} className="nav-icon">
-        {open ? <FiX /> : <FiMenu />}
-      </div>
-      <ul className={open ? "nav-links active" : "nav-links"}>
+      <ul className={open ? "nav-links active" : "nav-links"} >
         <li className="nav-item" >
           {/* <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : ''}} > */}
           <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} >

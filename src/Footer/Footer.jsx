@@ -3,6 +3,10 @@ import React from "react";
 import '../Footer/Footer.css'
 
 export default function Footer(){
+
+    function handleInstagram(){
+
+    }
     return(
         <div>
         <div className="FooterTextWrapper">
@@ -21,10 +25,16 @@ export default function Footer(){
                          <div>Careers</div>
                          <div>info@infiniteoptions.com</div>
                     </div>
-                    <div style={{ display:'flex', justifyContent:'center'}}>
-                        <img src={'./Navigation/Instagram.png'} style={{ height:'1rem', marginRight:'1rem'}}/>
-                        <img src={'./Navigation/LinkedIn.png'} style={{ height:'1rem', marginRight:'1rem'}}/>
-                        <img src={'./Navigation/Facebook.png'} style={{ height:'1rem'}}/>
+                    <div style={{ display:'flex', justifyContent:'center',alignItems:'flex-end', height:'2rem'}}>
+                        <img src={'./Navigation/Instagram.png'} onClick={(handleInstagram) =>
+                                 window.open("https://www.instagram.com/nityaayurveda/", '_blank', 'noopener,noreferrer')} 
+                                 style={{ height:'1rem', marginRight:'1rem', cursor:'pointer'}}/>
+                        <img src={'./Navigation/LinkedIn.png'} onClick={() =>
+                                 window.open("https://www.linkedin.com/company/7264772/admin/", '_blank', 'noopener,noreferrer')} 
+                                 style={{ height:'1rem', marginRight:'1rem', cursor:'pointer'}}/>
+                        <img src={'./Navigation/Facebook.png'} onClick={() =>
+                                window.open("https://www.facebook.com/Infinite-Options-LLC-112016320222622", '_blank', 'noopener,noreferrer')}
+                                 style={{ height:'1rem', cursor:'pointer'}}/>
 
                     </div>
 

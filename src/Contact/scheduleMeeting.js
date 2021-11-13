@@ -395,7 +395,8 @@ const Appointment = () => {
         {/* <scrollToTop /> */}
         <div className="container"
         >
-          <p className="calanderHeader" style={{ fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }} > Schedule a 30 min meeting</p>
+          {/* <p className="calanderHeader" style={{ fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }} > Schedule a 30 min meeting</p> */}
+          <p className="selectTime" > Schedule a 30 min meeting</p>
           <div className="calendarTimeTable" >
             <div className="calendarBox" >
               <div
@@ -423,8 +424,10 @@ const Appointment = () => {
             </div>
             <div className="timeslotBox">
               <div className="leftTitle">
-                <div className="h1" style={{ marginTop: '5rem', fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600' }}>
-                  Pick a time
+                <div style={{ marginTop: '5rem', padding: '1rem', fontFamily: 'Avenir LT Std 45 Book', fontWeight: '600', display: 'flex', justifyContent: 'space-between' }}>
+                  <div className="h1">
+                    Pick a time
+                  </div>
                   <span className="pst">
                     {/* UTC - 07:00 Pacific Time */}
                     All times are in PST
@@ -450,7 +453,7 @@ const Appointment = () => {
             <span style={{ color: "#F6A833" }}>{dateString1}</span> at{" "}
             <span style={{ color: "#F6A833" }}>{selectedTime}</span>
           </h1>
-          <div id="contact-form" style={{ width: '100%', textAlign: 'center', marginTop: '3rem' }} hidden={submitted ? "hidden" : ""}>
+          <div id="contact-form" style={{ width: '100%', textAlign: 'center', marginTop: '2rem' }} hidden={submitted ? "hidden" : ""}>
             <Form onSubmit={(e) => submit(e)}>
               <FormGroup>
                 <Input
