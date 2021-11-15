@@ -1,6 +1,6 @@
 
 
-
+ /* Default Screen Size */
   .HomeContainer{
     display:flex;
     align-items:center; 
@@ -289,289 +289,15 @@
 
  }
 
-@media screen and (max-width: 1280px) {
+
+ /* Big Screen Size */
+  @media screen and (max-width: 1175px) {
 
     .BoxContainer_1{
-      width:90%;
+      /* width:620px;
+      height:400px; */
+      width:60%;
       height:auto;
-      margin-top:5rem;
-      background-color:white;
-      display:flex;
-      flex-direction: column;
-      box-shadow:0 0 18px #757575; 
-    }
-
-    .BoxContainer_1_Text{
-      display:flex;
-      justify-content:flex-start;
-      flex-direction:column;
-      flex:2;
-      padding:2rem;
-      }
-
-      .BoxContainer_1_Text_and_Image{
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .BoxContainer_1_Text_Header{
-        color:#F6A833;
-        /* font-size:16px;
-        font-family:Libre Baskerville;
-        font-weight:bold; */
-
-        font-size:32px;
-        /* color:white; */
-        font-family:Libre Baskerville;
-        font-weight:bold;
-        text-align: center;
-      }
-    
-      .BoxContainer_1_Text_Body{
-        font-size:18px;
-        margin-top:2rem;
-        font-family:Avenir LT Std 65 Medium;
-        font-weight:400;
-        text-align: center;
-        padding-left: 0%;
-      }
-
-      .BoxContainer_1_Text_Button{
-        margin-top: 2rem;
-        font-size:16px;
-        color:#52330D;
-        border: 3px solid #52330D;
-        border-radius:24px;
-        font-family:Avenir LT Std 45 Book;
-        font-weight:bold;
-        cursor: pointer;
-        text-transform: none;
-      }
-
-      .BoxContainer_1_Image{
-        flex:1;
-        display:flex;
-        align-items:center;
-        padding:2rem;
-      
-       }
-
-       .BoxContainer_2{
-        width:90%;
-        height:auto;
-        margin-top:3rem;
-        font-size:24px; 
-        font-family:Libre Baskerville;
-        font-weight:bold;
-        text-align:center; 
-      }
-  
-      .BoxContainer_3{
-        width:90%;  
-        height:auto;
-        margin-top:1rem;
-        background-color:#F6A833;
-        display:flex;
-        flex-direction:column;
-        box-shadow:0 0 18px #757575; 
-     }
- 
-   .BoxContainer_3_Text{
-     display:flex;
-     flex-direction:column;
-     align-items:center;
-     padding-left:1rem;
-     padding-right:1rem;
-     padding-top:1rem;
-     padding-bottom:1rem;
-   }
-    .BoxContainer_3_Text_Header{
-     font-size:22px;
-     color:white;
-     font-family:Libre Baskerville;
-     font-weight:bold;
-     text-align: center;
-    }
- 
-    .BoxContainer_3_Text_Body{
-     font-size:12px;
-     color:white;
-     text-align:center;
-     font-family:Avenir LT Std 65 Medium;
-    }
- 
-    .BoxContainer_3_Text_Image{
-     display:flex;
-     flex-direction: column;
-     justify-content:flex-start;
-     padding-left: 5%;
-     padding-right: 5%;
-
-    }
-    .BoxContainer_3_Text_ImageSize_1{
-     width:100%;
-    object-fit: cover;
-    }
-    .BoxContainer_3_Text_ImageSize_2{
-     width:100%;
-     object-fit: contain;
-     height: auto;
-    }
-
-   .BoxContainer_3_Text_Button{
-    font-family:Avenir LT Std 45 Book;
-    text-transform:none;
-    font-size:12px;
-    height: auto;
-    border:3px solid #FFFFFF;
-    color: #ffffff;
-    background-color: #F6A833;
-    cursor: pointer;
-    margin-bottom: 2rem;
-    border-radius:36px;
-   }
-
-   .BoxContainer_4{
-    width:90%;
-    height:auto;
-    margin-top:1rem;
-    background-color:#52330D;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 0 18px #757575; 
- }
-   .BoxContainer_4_Text{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding-left:1rem;
-    padding-right:1rem;
-    padding-top:1rem;
-    padding-bottom:1rem;
-  }
-
-  .BoxContainer_4_Text_Button{
-    font-family:Avenir LT Std 45 Book;
-    text-transform:none;
-    font-size:12px;
-    border:3px solid #FFFFFF;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #52330D;
-    border-radius:36px;
-    margin-bottom: 2rem;
-   }
-
-   
- .BoxContainer_5{
-  width:90%;
-  height:auto;
-  margin: 0;
-  margin-top:3rem;
-  background-color:#FFF9F0;
-  display:flex;
-  margin-bottom: 5rem;
-  flex-direction:column;
-  box-shadow:0 0 18px #757575 
- }
-
- .BoxContainer_5_Text{
-  display:flex;
-  flex-direction:column;
- padding: 5%;
- }
-
- .BoxContainer_5_Text_Header{
-  color:#52330D;
-  margin-top: 2rem;
-  font-weight:bold;
-  font-size:22px;
-  font-family:Libre Baskerville;
-  font-weight:bold;
-  text-align: center;
- }
-
- .BoxContainer_5_Text_Body{
-  font-size:12px;
-  color:#52330D;
-  text-align:center;
-  font-family:Avenir LT Std 65 Medium;
-  font-weight:600;
-  margin-top: 1rem;
- }
-
- .BoxContainer_5_Text_Tail{
-  font-size:12px;
-  margin-top: 1rem;
-  color:#52330D;
-  text-align:center;
-  font-family:Avenir LT Std 65 Medium;
-  font-weight:600;
- }
-
- 
- .BoxContainer_6{
-  width:90%;
-  height:auto;
-  margin-top:3rem;
-  background-color:#F6A833;
-  display:flex;
-  flex-direction:column;
-  box-shadow:0 0 18px #757575;
- }
-
-.BoxContainer_6_Text_Header{
- font-size:24px;
- color:white;
- margin-top:2rem;
- font-family:Libre Baskerville;
- font-weight:600;
-}
-
-.BoxContainer_6_Text_Body{
-  display:flex;
-  justify-content:space-evenly;
-  color:white;
-  margin-top:2rem;
-  font-size:12px;
-  font-family:Avenir LT Std 65 Medium;
-  font-weight:600;
-} 
-
-
-.BoxContainer_6_Text_Button{
-  font-size:12px;
-  font-family:Avenir LT Std 45 Book;
-  text-transform:none;
-  font-weight:600;
-  height:auto;
-  margin-top:2rem;
-  border:3px solid #FFFFFF;
-  background-color: #F6A833;
-  color:#FFFFFF;
-  border-radius:24px;
-  cursor: pointer;
-  margin-bottom: 2rem;
-
-}
-
-
-.BoxContainer_7_Text_Body{
-  font-size:12px;
-  color:#52330D;
-  text-align:center;
-  font-family:Avenir LT Std 65 Medium;
-  font-weight:600;
-  margin-top: 1rem;
- }
-  }
-
-
-  @media screen and (max-width: 1850px) and (min-width: 1600px) {
-
-    .BoxContainer_1{
-      width:620px;
-      height:400px;
       margin-top:5rem;
       background-color:white;
       display:flex;
@@ -588,12 +314,9 @@
     
       .BoxContainer_1_Text_Header{
         color:#F6A833;
-        /* font-size:24px;
-        font-family:Libre Baskerville;
-        font-weight:bold; */
+      
 
         font-size:54px;
-        /* color:white; */
         font-family:Libre Baskerville;
         font-weight:bold;
       }
@@ -628,8 +351,10 @@
        }
 
        .BoxContainer_2{
-        width:620px;
-        height:5rem;
+        /* width:620px;
+        height:5rem; */
+        width:60%;
+        height:auto;
         margin-top:3rem;
         font-size:18px; 
         font-family:Libre Baskerville;
@@ -638,7 +363,9 @@
       }
   
       .BoxContainer_3{
-        width:620px;
+        /* width:620px;
+        height:auto; */
+        width:60%;
         height:auto;
         margin-top:1rem;
         background-color:#F6A833;
@@ -701,7 +428,9 @@
    }
 
    .BoxContainer_4{
-    width:620px;
+    /* width:620px;
+    height:auto; */
+    width:60%;
     height:auto;
     margin-top:1rem;
     background-color:#52330D;
@@ -734,7 +463,9 @@
 
    
  .BoxContainer_5{
-  width:620px;
+  /* width:620px;
+  height:auto; */
+  width:60%;
   height:auto;
   margin: 0;
   margin-top:3rem;
@@ -782,8 +513,10 @@
 
  
  .BoxContainer_6{
-  width:620px;
-  height:18rem;
+  /* width:620px;
+  height:18rem; */
+  width:60%;
+  height:auto;
   margin-top:3rem;
   background-color:#F6A833;
   align-items:center;
@@ -837,8 +570,562 @@
   padding:2rem;
   font-family:Avenir LT Std 65 Medium;
   font-weight:600;
+ } 
+}
+
+ /* Medium Screen Size */
+ @media screen and (max-width: 1175px) and (min-width: 630px) {
+
+  .BoxContainer_1{
+    width:75%;
+    height:auto;
+    margin-top:5rem;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    box-shadow:0 0 18px #757575; 
+  }
+
+  .BoxContainer_1_Text{
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:column;
+    flex:2;
+    padding:2rem;
+    }
+
+    .BoxContainer_1_Text_and_Image{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .BoxContainer_1_Text_Header{
+      color:#F6A833;
+      /* font-size:16px;
+      font-family:Libre Baskerville;
+      font-weight:bold; */
+
+      font-size:32px;
+      /* color:white; */
+      font-family:Libre Baskerville;
+      font-weight:bold;
+      text-align: center;
+    }
+  
+    .BoxContainer_1_Text_Body{
+      font-size:18px;
+      margin-top:2rem;
+      font-family:Avenir LT Std 65 Medium;
+      font-weight:400;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    .BoxContainer_1_Text_Button{
+      margin-top: 2rem;
+      font-size:16px;
+      color:#52330D;
+      border: 3px solid #52330D;
+      border-radius:24px;
+      font-family:Avenir LT Std 45 Book;
+      font-weight:bold;
+      cursor: pointer;
+      text-transform: none;
+    }
+
+    .BoxContainer_1_Image{
+      flex:1;
+      display:flex;
+      align-items:center;
+      padding:2rem;
+    
+     }
+
+     .BoxContainer_2{
+      width:75%;
+      height:auto;
+      margin-top:3rem;
+      font-size:24px; 
+      font-family:Libre Baskerville;
+      font-weight:bold;
+      text-align:center; 
+    }
+
+    .BoxContainer_3{
+      width:75%;
+      height:auto;
+      margin-top:1rem;
+      background-color:#F6A833;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 0 18px #757575; 
+   }
+
+ .BoxContainer_3_Text{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   padding-left:1rem;
+   padding-right:1rem;
+   padding-top:1rem;
+   padding-bottom:1rem;
  }
+  .BoxContainer_3_Text_Header{
+   font-size:22px;
+   color:white;
+   font-family:Libre Baskerville;
+   font-weight:bold;
+   text-align: center;
+  }
+
+  .BoxContainer_3_Text_Body{
+   font-size:12px;
+   color:white;
+   text-align:center;
+   font-family:Avenir LT Std 65 Medium;
+  }
+
+  .BoxContainer_3_Text_Image{
+   display:flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   padding-left: 5%;
+   padding-right: 5%;
+
+  }
+  .BoxContainer_3_Text_ImageSize_1{
+   width:100%;
+  object-fit: cover;
+  }
+  .BoxContainer_3_Text_ImageSize_2{
+   width:100%;
+   object-fit: contain;
+   height: auto;
+  }
+
+ .BoxContainer_3_Text_Button{
+  font-family:Avenir LT Std 45 Book;
+  text-transform:none;
+  font-size:12px;
+  height: auto;
+  border:3px solid #FFFFFF;
+  color: #ffffff;
+  background-color: #F6A833;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-radius:36px;
+ }
+
+ .BoxContainer_4{
+  width:75%;
+  height:auto;
+  margin-top:1rem;
+  background-color:#52330D;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 0 18px #757575; 
+}
+ .BoxContainer_4_Text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.BoxContainer_4_Text_Button{
+  font-family:Avenir LT Std 45 Book;
+  text-transform:none;
+  font-size:12px;
+  border:3px solid #FFFFFF;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #52330D;
+  border-radius:36px;
+  margin-bottom: 2rem;
+ }
+
+ 
+.BoxContainer_5{
+  width:75%;
+  height:auto;
+margin: 0;
+margin-top:3rem;
+background-color:#FFF9F0;
+display:flex;
+margin-bottom: 5rem;
+flex-direction:column;
+box-shadow:0 0 18px #757575 
+}
+
+.BoxContainer_5_Text{
+display:flex;
+flex-direction:column;
+padding: 5%;
+}
+
+.BoxContainer_5_Text_Header{
+color:#52330D;
+margin-top: 2rem;
+font-weight:bold;
+font-size:22px;
+font-family:Libre Baskerville;
+font-weight:bold;
+text-align: center;
+}
+
+.BoxContainer_5_Text_Body{
+font-size:12px;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+margin-top: 1rem;
+}
+
+.BoxContainer_5_Text_Tail{
+font-size:12px;
+margin-top: 1rem;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
 }
 
 
+.BoxContainer_6{
+  width:75%;
+  height:auto;
+margin-top:3rem;
+background-color:#F6A833;
+display:flex;
+flex-direction:column;
+box-shadow:0 0 18px #757575;
+}
+
+.BoxContainer_6_Text_Header{
+font-size:24px;
+color:white;
+margin-top:2rem;
+font-family:Libre Baskerville;
+font-weight:600;
+}
+
+.BoxContainer_6_Text_Body{
+display:flex;
+justify-content:space-evenly;
+color:white;
+margin-top:2rem;
+font-size:12px;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+} 
+
+
+.BoxContainer_6_Text_Button{
+font-size:12px;
+font-family:Avenir LT Std 45 Book;
+text-transform:none;
+font-weight:600;
+height:auto;
+margin-top:2rem;
+border:3px solid #FFFFFF;
+background-color: #F6A833;
+color:#FFFFFF;
+border-radius:24px;
+cursor: pointer;
+margin-bottom: 2rem;
+
+}
+
+
+.BoxContainer_7_Text_Body{
+font-size:12px;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+margin-top: 1rem;
+}
+}
+
+ /* Small Screen Size */
+@media screen and (max-width: 630px) {
+
+  .BoxContainer_1{
+    width:90%;
+    height:auto;
+    margin-top:5rem;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    box-shadow:0 0 18px #757575; 
+  }
+
+  .BoxContainer_1_Text{
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:column;
+    flex:2;
+    padding:2rem;
+    }
+
+    .BoxContainer_1_Text_and_Image{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .BoxContainer_1_Text_Header{
+      color:#F6A833;
+      /* font-size:16px;
+      font-family:Libre Baskerville;
+      font-weight:bold; */
+
+      font-size:32px;
+      /* color:white; */
+      font-family:Libre Baskerville;
+      font-weight:bold;
+      text-align: center;
+    }
+  
+    .BoxContainer_1_Text_Body{
+      font-size:18px;
+      margin-top:2rem;
+      font-family:Avenir LT Std 65 Medium;
+      font-weight:400;
+      text-align: center;
+      padding-left: 0%;
+    }
+
+    .BoxContainer_1_Text_Button{
+      margin-top: 2rem;
+      font-size:16px;
+      color:#52330D;
+      border: 3px solid #52330D;
+      border-radius:24px;
+      font-family:Avenir LT Std 45 Book;
+      font-weight:bold;
+      cursor: pointer;
+      text-transform: none;
+    }
+
+    .BoxContainer_1_Image{
+      flex:1;
+      display:flex;
+      align-items:center;
+      padding:2rem;
+    
+     }
+
+     .BoxContainer_2{
+      width:90%;
+      height:auto;
+      margin-top:3rem;
+      font-size:24px; 
+      font-family:Libre Baskerville;
+      font-weight:bold;
+      text-align:center; 
+    }
+
+    .BoxContainer_3{
+      width:90%;  
+      height:auto;
+      margin-top:1rem;
+      background-color:#F6A833;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 0 18px #757575; 
+   }
+
+ .BoxContainer_3_Text{
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   padding-left:1rem;
+   padding-right:1rem;
+   padding-top:1rem;
+   padding-bottom:1rem;
+ }
+  .BoxContainer_3_Text_Header{
+   font-size:22px;
+   color:white;
+   font-family:Libre Baskerville;
+   font-weight:bold;
+   text-align: center;
+  }
+
+  .BoxContainer_3_Text_Body{
+   font-size:12px;
+   color:white;
+   text-align:center;
+   font-family:Avenir LT Std 65 Medium;
+  }
+
+  .BoxContainer_3_Text_Image{
+   display:flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   padding-left: 5%;
+   padding-right: 5%;
+
+  }
+  .BoxContainer_3_Text_ImageSize_1{
+   width:100%;
+  object-fit: cover;
+  }
+  .BoxContainer_3_Text_ImageSize_2{
+   width:100%;
+   object-fit: contain;
+   height: auto;
+  }
+
+ .BoxContainer_3_Text_Button{
+  font-family:Avenir LT Std 45 Book;
+  text-transform:none;
+  font-size:12px;
+  height: auto;
+  border:3px solid #FFFFFF;
+  color: #ffffff;
+  background-color: #F6A833;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border-radius:36px;
+ }
+
+ .BoxContainer_4{
+  width:90%;
+  height:auto;
+  margin-top:1rem;
+  background-color:#52330D;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 0 18px #757575; 
+}
+ .BoxContainer_4_Text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.BoxContainer_4_Text_Button{
+  font-family:Avenir LT Std 45 Book;
+  text-transform:none;
+  font-size:12px;
+  border:3px solid #FFFFFF;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #52330D;
+  border-radius:36px;
+  margin-bottom: 2rem;
+ }
+
+ 
+.BoxContainer_5{
+width:90%;
+height:auto;
+margin: 0;
+margin-top:3rem;
+background-color:#FFF9F0;
+display:flex;
+margin-bottom: 5rem;
+flex-direction:column;
+box-shadow:0 0 18px #757575 
+}
+
+.BoxContainer_5_Text{
+display:flex;
+flex-direction:column;
+padding: 5%;
+}
+
+.BoxContainer_5_Text_Header{
+color:#52330D;
+margin-top: 2rem;
+font-weight:bold;
+font-size:22px;
+font-family:Libre Baskerville;
+font-weight:bold;
+text-align: center;
+}
+
+.BoxContainer_5_Text_Body{
+font-size:12px;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+margin-top: 1rem;
+}
+
+.BoxContainer_5_Text_Tail{
+font-size:12px;
+margin-top: 1rem;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+}
+
+
+.BoxContainer_6{
+width:90%;
+height:auto;
+margin-top:3rem;
+background-color:#F6A833;
+display:flex;
+flex-direction:column;
+box-shadow:0 0 18px #757575;
+}
+
+.BoxContainer_6_Text_Header{
+font-size:24px;
+color:white;
+margin-top:2rem;
+font-family:Libre Baskerville;
+font-weight:600;
+}
+
+.BoxContainer_6_Text_Body{
+display:flex;
+justify-content:space-evenly;
+color:white;
+margin-top:2rem;
+font-size:12px;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+} 
+
+
+.BoxContainer_6_Text_Button{
+font-size:12px;
+font-family:Avenir LT Std 45 Book;
+text-transform:none;
+font-weight:600;
+height:auto;
+margin-top:2rem;
+border:3px solid #FFFFFF;
+background-color: #F6A833;
+color:#FFFFFF;
+border-radius:24px;
+cursor: pointer;
+margin-bottom: 2rem;
+
+}
+
+
+.BoxContainer_7_Text_Body{
+font-size:12px;
+color:#52330D;
+text-align:center;
+font-family:Avenir LT Std 65 Medium;
+font-weight:600;
+margin-top: 1rem;
+}
+}
   

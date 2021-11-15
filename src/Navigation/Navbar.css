@@ -76,13 +76,13 @@ flex: 1;
 }
 
 
-@media screen and (max-width: 1250px) and (min-width: 1050px) {
+@media screen and (max-width: 1250px) and (min-width: 630px) {
   .right {
     width: auto;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 630px) {
   .navbar {
     position: sticky;
     top: 0;
