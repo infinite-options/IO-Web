@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { Box, TextField, Button } from "@material-ui/core";
 import PrivacyPic from "../Assets/images/Privacy.png";
+import ScrollToTop from "../Contact/ScrollToTop";
 
 const BASE_URL = process.env.REACT_APP_SERVER_BASE_URI;
 
@@ -37,6 +38,7 @@ export default function PrivacyPolicy() {
         justifyContent: "left",
       }}
     >
+      <ScrollToTop />
       <div
         style={{
           display: "flex",
