@@ -14,6 +14,7 @@ import ServingFresh from "../src/ServingFresh/servingFresh";
 import DocuSignLogin from "./DocuSign/DocuSignLogin";
 import ReturnPage from "./DocuSign/ReturnPage";
 import Footer from "./Footer/Footer";
+import PrivacyPolicy from "./Privacy/PrivacyPolicy";
 
 function App() {
   const history = useHistory();
@@ -44,6 +45,9 @@ function App() {
             <Route path="/about"></Route>
             <Route path="/projects">
               <Projects />
+            </Route>
+            <Route path="/privacy">
+              <PrivacyPolicy />
             </Route>
             <Route path="/contact">
               <Contact />

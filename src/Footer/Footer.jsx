@@ -36,6 +36,9 @@ export default function Footer() {
           <div>Careers</div>
           <div>info@infiniteoptions.com</div>
         </div>
+        <div className="FooterText">
+          <div onClick={() => history.push("/privacy")}>Privacy Policy</div>
+        </div>
         <div
           style={{
             display: "flex",
