@@ -1,0 +1,102 @@
+.image-dimesion{
+    width:60%;
+}
+.image-dimesion-L-Casita{
+  width:100%;
+}
+.bold-font{
+
+}
+
+.heading-center{
+
+}
+
+.vote-button{
+
+}
+
+.center-heading{
+ 
+}
+.center-div-content{
+  justify-content: center !important;
+  /* display: flex; */
+
+}
+.content-center{
+  /* display: flex !important; */
+  justify-content: center;
+  align-items: center;
+    /* height: 100vh; */
+};
+
+.full-width{
+  width:100% !important;
+}
+
+.flex-display{
+  display: flex
+}
+
+.none-display{
+  display: inline-block;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.body-font {
+  font-family: Helvetica, Arial, sans-serif;
+  
+
+  /* font-size: 16px; Adjust the font size as needed */
+  /* Add any other global styles here */
+}
+.tucson-img{
+  width:7%;
+}
+
+.margin-top{
+  margin-top: 2em;
+}
+
+.bg-color{
+  background-color: #F6A833 !important;
+ 
+}
+
+.bg-color-white{
+  /* background-color: whitesmoke; */
+}
+
+.margin-bottom{
+  /* margin-bottom: 123px; */
+  bottom:10px;
+}
+
+.padding-20{
+  padding :20px !important;
+}
+
+.font-28{
+  font-size: 28px !important;
+  color:#F6A833 !important;
+}
+.font-36{
+  font-size: 36px !important;
+  color:#F6A833 !important;
+}
+
+.font-24{
+  font-size:24px !important;
+}
+.color-black{
+  color: black !important;
+}
+
+.vote-btn{
+
+  border-radius: 25px !important;
+}
