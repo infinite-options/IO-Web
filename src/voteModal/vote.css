@@ -97,6 +97,15 @@
 }
 
 .vote-btn{
-
+  font-size:22px !important;
   border-radius: 25px !important;
+}
+
+.casita{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.margin-18{
+  margin-bottom: 6px !important;
 }

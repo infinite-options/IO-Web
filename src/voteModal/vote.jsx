@@ -54,12 +54,14 @@ export default function BasicModal() {
 
 
       {/* <Typography variant="h4" className="center-div-content flex-display color-black">Please vote for our designs in the Tucson Casita Model Plan Competition</Typography> */}
-      <h2 className="center-div-content flex-display color-black">Please vote for our designs in the Tucson Casita Model Plan Competition</h2>
+      <h2 className="center-div-content color-black">Please vote for <u> our designs</u> in the Tucson Casita Model Plan Competition</h2>
 
       
-      <Button variant="contained bg-color font-24 vote-btn" onClick={handleClick} >Vote for L-Casita and I-Casita Now!</Button>      
-    
-      <h3 className="bold-font"> Our Designs</h3>
+      <Button variant="contained bg-color vote-btn" onClick={handleClick} >Vote for L-Casita and I-Casita Now!</Button>      
+
+      <h3 className="bold-font"> (Select our designs from the drop down menus) </h3>
+
+      <h3 className="bold-font font-28 margin-18"> Our Designs</h3>
 
       <table className="full-width"  style={{width : "100%"}}>
 
@@ -72,10 +74,10 @@ export default function BasicModal() {
         </td>
       </tr>
       <tr className="full-width">
-      <td className="center-div-content text-center">
+      <td className="center-div-content text-center casita">
           <a target="_blank" href="https://www.tucsonaz.gov/files/sharedassets/public/v/1/pdsd/images/adu/survey/submittals/60-the-_l_-casita.pdf">"L" Casita</a>
         </td>
-        <td className="center-div-content text-center">
+        <td className="center-div-content text-center casita">
           <a target='_blank' href="https://www.tucsonaz.gov/files/sharedassets/public/v/1/pdsd/images/adu/survey/submittals/64-the-_i_-casita.pdf">"I" Casita</a>
         </td>
       </tr>
@@ -83,12 +85,14 @@ export default function BasicModal() {
       </table>
 
     <div className="text-center margin-top">
-      <img alt="tucson" src="/artifacts/tucson.jpg" className="tucson-img"/>
+      <a href="https://casitas-in-tucson-cotgis.hub.arcgis.com/pages/casita-competition-public-voting" target="_blank">
+      <img alt="tucson" src="/artifacts/tucson.jpg" className="tucson-img" />
+      </a>
     </div>
-    <div className="text-center">
+    {/* <div className="text-center">
       Casita Model Plan Design Competition <br />
       Public Vote Open NOW OPEN
-    </div>
+    </div> */}
           {/* // feedback form */}
     {/* <h2 className="bold-font center-heading text-center"> Help us make these Designs better</h2>
     <form onSubmit={handleSubmit}>
