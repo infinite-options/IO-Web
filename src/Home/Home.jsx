@@ -5,10 +5,18 @@ import { useHistory, useLocation } from "react-router-dom";
 import ScrollToTop from "../Contact/ScrollToTop";
 import { Link } from "react-router-dom";
 
+// vote-page
+import Vote from "../voteModal/vote"
+import Modal from '@mui/joy/Modal';
+import ModalClose from '@mui/joy/ModalClose';
+import Sheet from '@mui/joy/Sheet';
 
 //import Backdrop from "../Assets/Backdrop.png"
 
 export default function Home(){
+
+   // for modal
+   const [open, setOpen] = React.useState(false);
 
     const myRef = useRef(null)
     // const myRef_project = useRef(null)
@@ -36,9 +44,43 @@ export default function Home(){
         window.scrollTo(0, 0); 
     },[])
 
+    // vote-page code
+    React.useEffect(()=>{
+        setTimeout(()=> setOpen(true), 1000)
+  },[])
 
     return(
         <div  >
+            {/* Vote-page code start*/}
+
+            <React.Fragment>
+      {/* <Button variant="outlined" color="neutral" onClick={() => setOpen(true)}>
+        Open modal
+      </Button> */}
+      <Modal
+        aria-labelledby="modal-title"
+        aria-describedby="modal-desc"
+        open={open}
+        onClose={() => setOpen(false)}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <Sheet
+          variant="outlined"
+          sx={{
+            maxWidth: 500,
+            borderRadius: 'md',
+            p: 3,
+            boxShadow: 'lg',
+          }}
+        >
+          <ModalClose variant="plain" sx={{ m: 1 }} />
+          <Vote />
+        </Sheet>
+      </Modal>
+    </React.Fragment>
+
+
+            {/* Vote-page Code end */}
             <Box ref={myRef_home} style={{width:'100%', backgroundImage:`url(${"./Navigation/Backdropv2.png"})`,backgroundRepeat:'no-repeat', backgroundSize:'100%, 200vh'}}>
             <Box className="HomeContainer">
                 <div  className="BoxContainer_1">
