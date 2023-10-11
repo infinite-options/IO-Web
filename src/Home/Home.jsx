@@ -10,6 +10,9 @@ import Vote from "../voteModal/vote"
 import Modal from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
 import Sheet from '@mui/joy/Sheet';
+import ModalOverflow from '@mui/joy/ModalOverflow';
+import ModalDialog from '@mui/joy/ModalDialog';
+
 
 //import Backdrop from "../Assets/Backdrop.png"
 
@@ -61,21 +64,40 @@ export default function Home(){
         aria-labelledby="modal-title"
         aria-describedby="modal-desc"
         open={open}
+        size="lg"
         onClose={() => setOpen(false)}
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width:"100%" }}
       >
+                <ModalOverflow sx={(theme)=>({
+                    padding:0
+                })}>
+                <ModalDialog  layout="center" size=""
+                 sx={(theme) => ({
+                    [theme.breakpoints.only('xs')]: {
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      // transform: 'none',
+                      maxWidth: 'unset',
+                    },
+                  })} 
+                >
         <Sheet
           variant="outlined"
           sx={{
-            maxWidth: 500,
+            maxWidth: 700,
             borderRadius: 'md',
-            p: 3,
+            p: 1,
             boxShadow: 'lg',
           }}
         >
           <ModalClose variant="plain" sx={{ m: 1 }} />
           <Vote />
         </Sheet>
+        </ModalDialog>
+        </ModalOverflow>
+
       </Modal>
     </React.Fragment>
 

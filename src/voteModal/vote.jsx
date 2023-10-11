@@ -14,16 +14,16 @@ import { FormControl } from '@mui/material';
 
 
 export default function BasicModal() {
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
-  const [firstName, setFirstName]  = React.useState("");
-  const [lastName, setLastName]  = React.useState("");
-  const [email, setEmail]  = React.useState("");
-  const [companyName, setCompanyName]  = React.useState("");
-  const [companyURL, setCompanyURL]  = React.useState("");
-  const [phone, setPhone]  = React.useState("");
+  // const [firstName, setFirstName]  = React.useState("");
+  // const [lastName, setLastName]  = React.useState("");
+  // const [email, setEmail]  = React.useState("");
+  // const [companyName, setCompanyName]  = React.useState("");
+  // const [companyURL, setCompanyURL]  = React.useState("");
+  // const [phone, setPhone]  = React.useState("");
 
-  // const handleSubmit = (e) => {
+  // // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   const formData = {
   //     firstName,
@@ -49,21 +49,17 @@ export default function BasicModal() {
 
  <div className="content-center text-center body-font margin-bottom ">
 
-      {/* <Typography variant="h1" className="center-div-content flex-display font-28"> We could use your help !! </Typography> */}
-      <h1 className="center-div-content flex-display font-36"> We could use your help !! </h1>
+      <h2 className="center-div-content flex-display font-36 margin-18"> We could use your help !! </h2>
 
+      <h3 className="center-div-content color-black">Please vote for <u> our designs</u> in the Tucson Casita Model Plan Competition</h3>
 
-      {/* <Typography variant="h4" className="center-div-content flex-display color-black">Please vote for our designs in the Tucson Casita Model Plan Competition</Typography> */}
-      <h2 className="center-div-content color-black">Please vote for <u> our designs</u> in the Tucson Casita Model Plan Competition</h2>
-
-      
       <Button variant="contained bg-color vote-btn" onClick={handleClick} >Vote for L-Casita and I-Casita Now!</Button>      
 
-      <h3 className="bold-font"> (Select our designs from the drop down menus) </h3>
+      <h3 className="bold-font margin-0"> (Select our designs from the drop down menus) </h3>
 
-      <h3 className="bold-font font-28 margin-18"> Our Designs</h3>
+      {/* <h3 className="bold-font font-24 color-text margin-18"> Our Designs</h3> */}
 
-      <table className="full-width"  style={{width : "100%"}}>
+      {/* <table className="full-width"  style={{width : "100%"}}>
 
       <tr className="full-width">
       <td className="center-div-content text-center">
@@ -82,7 +78,56 @@ export default function BasicModal() {
         </td>
       </tr>
 
-      </table>
+      </table> */}
+
+    {/* alternate cascaded table */}
+
+    <table className="full-width"  style={{width : "100%"}}>
+      <tr className="full-width">
+        <td className="center-div-content text-center">
+          <table className="full-width"  style={{width : "100%"}}>
+          <tr className="full-width">
+              <td className="center-div-content text-center">
+              <h3 className="bold-font font-24 color-text margin-0"> Our Designs</h3>
+              </td>
+            </tr>  
+            <tr className="full-width">
+              <td className="center-div-content text-center">
+
+              <img className="image-dimesion-L-Casita" src='artifacts/lcasita.jpg' alt="L-Casita" />
+              </td>
+            </tr>  
+            <tr className="full-width">
+              <td className="center-div-content text-center casita">
+              <a target="_blank" href="https://www.tucsonaz.gov/files/sharedassets/public/v/1/pdsd/images/adu/survey/submittals/60-the-_l_-casita.pdf">"L" Casita</a>
+                
+              </td>
+            </tr>  
+          </table>   
+        </td>
+
+        <td className="center-div-content text-center">
+        <table className="full-width"  style={{width : "100%"}}>
+        <tr className="full-width"  style={{width : "100%"}}>
+                <td className="center-div-content text-center color-white">sss</td>  
+              </tr>
+            <tr className="full-width">
+              <td className="center-div-content text-center">
+              <img className="image-dimesion" src="artifacts/icasita.jpg" alt="I-Casita" />
+
+              </td>
+            </tr>  
+            <tr className="full-width">
+              <td className="center-div-content text casita">
+              <a target='_blank' href="https://www.tucsonaz.gov/files/sharedassets/public/v/1/pdsd/images/adu/survey/submittals/64-the-_i_-casita.pdf">"I" Casita</a>
+         
+              </td>
+            </tr>  
+          </table>   
+
+        </td>
+      </tr>
+    </table>
 
     <div className="text-center margin-top">
       <a href="https://casitas-in-tucson-cotgis.hub.arcgis.com/pages/casita-competition-public-voting" target="_blank">

@@ -1,8 +1,8 @@
 .image-dimesion{
-    width:60%;
+    width:50%;
 }
 .image-dimesion-L-Casita{
-  width:100%;
+  width:87%;
 }
 .bold-font{
 
@@ -81,31 +81,45 @@
 }
 
 .font-28{
-  font-size: 28px !important;
+  font-size: 22px !important;
   color:#F6A833 !important;
 }
 .font-36{
-  font-size: 36px !important;
+  font-size: 26px !important;
   color:#F6A833 !important;
 }
 
 .font-24{
-  font-size:24px !important;
+  font-size:22px !important;
 }
 .color-black{
   color: black !important;
 }
 
 .vote-btn{
-  font-size:22px !important;
+  color: white;
+  font-size:16px !important;
   border-radius: 25px !important;
+  box-shadow: 0px 2px 2px 2px grey;
 }
 
 .casita{
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .margin-18{
   margin-bottom: 6px !important;
+}
+
+.margin-0{
+  margin: 0px;
+}
+
+.color-text{
+  color:#F6A833 !important; 
+}
+
+.color-white{
+  color: white;
 }
