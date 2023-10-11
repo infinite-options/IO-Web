@@ -108,9 +108,9 @@ export default function BasicModal() {
 
         <td className="center-div-content text-center">
         <table className="full-width"  style={{width : "100%"}}>
-        <tr className="full-width"  style={{width : "100%"}}>
-                <td className="center-div-content text-center color-white">sss</td>  
-              </tr>
+        {/* <tr className="full-width"  style={{width : "100%"}}>
+                <td className="center-div-content text-center color-white">I-Casita</td>  
+              </tr> */}
             <tr className="full-width">
               <td className="center-div-content text-center">
               <img className="image-dimesion" src="artifacts/icasita.jpg" alt="I-Casita" />
