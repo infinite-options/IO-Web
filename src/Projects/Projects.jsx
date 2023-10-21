@@ -17,66 +17,93 @@ export default function Projects(){
             <div >
                 <p className="Title"> Projects</p>
             </div>
+
+            <div className="BoxContainer_5">
+                <div className="BoxContainer_5_Text">
+                    <div  className="BoxContainer_5_Text_Header" >
+                    What our clients say
+                    </div>
+                    <div  className="BoxContainer_5_Text_Body" >
+                    “Choosing Infinite Options to create a wireframe for the early phase of my startup was the best decision I have made! 
+                    From the introduction, to development, to completion, the IO team was warm, consistent, and competent in their expertise.
+                     As someone without a technical background, the IO team made the process understandable and seamless. 
+                     I am obsessed with the final product and am looking forward to working with them again in the future!”
+                   </div>
+                   <p  className="BoxContainer_5_Text_Tail">
+                   -Mercedes Fernandez,
+                    </p>
+                    <div className="BoxContainer_5_Text_Tail">
+                    Founder, Walk with Pop
+                    </div>
+                </div>
+            </div>
+
                 <div className="Container_1" >
-                    <div>
+                    <div className="in_box">
+                    <div className="image-wrapper">
                     <img src={'./Home/M4Me.png'} className="Container_1_Image"/>
                     </div>
-                    <div className = "Container_1_Text">
-                        <div className = "Container_1_Text_Header">
-                        Meals for Me
-                        </div>
-                        <div className = "Container_1_Text_Body" >
-                        An in-house product, Meals For Me was born out of the need to help people eat healthy even when they don’t
-                        have time to cook. We designed and developed the website and app for this ourselves. Creating a strong brand 
-                        identity and a simple user flow for the meal subscription platform was key to the project.
-                        </div>
-                        <div className = "Container_1_Text_Button" >
-                            <Button  onClick={()=>{history.push("./mealsForMe")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
+                    {/* <div className = "Container_1_Text"> */}
+                    <div className = "container_1_text">
+                            <div className = "Container_1_Text_Body" >
+                            An in-house product, Meals For Me was born out of the need to help people eat healthy even when they don’t
+                            have time to cook. We designed and developed the website and app for this ourselves. Creating a strong brand 
+                            identity and a simple user flow for the meal subscription platform was key to the project.
+                            </div>
+                            <div className = "Container_1_Text_Button" >
+                            <Button  onClick={()=>{history.push("./mealsForMe")}} style={{backgroundColor: "white",
+                            border: "2px solid black",
+                            borderRadius:'8px',textTransform:'none',color:'black', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Project</Button>
+
+                                <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'8px',textTransform:'none',color:'white', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Website </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="Container_2">
-                   
+                   <div class="in_box">
+                   <div className="container-2-image-wrapper">
+                    <img src={SF}className="Container_2_Image"/>
+                    </div>
                     <div  className = "Container_2_Text">
-                        <div  className = "Container_2_Text_Header">
-                        Serving Fresh
-                        </div>
-                        <div  className = "Container_2_Text_Body" style={{ }}>
+                        <div  className = "Container_2_Text_Body">
                         We designed and developed the brand identity, logo, mobile app as well as the website for Serving Fresh. 
                         It continues to be one of our favorite in-house products where we are now focusing on creating marketing and advertising.
                         </div>
-                        <div className = "Container_1_Text_Button">
-                        <Button  onClick={()=>{history.push("./servingFresh")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button href ="https://servingfresh.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
-                        </div>
+                        <div className = "Container_1_Text_Button" >
+                            <Button  onClick={()=>{history.push("./mealsForMe")}} style={{backgroundColor: "white",
+                            border: "2px solid black",
+                            borderRadius:'8px',textTransform:'none',color:'black', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Project</Button>
+
+                                <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'8px',textTransform:'none',color:'white', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Website </Button>
+                            </div>
                     </div>
-                    <div>
-                    <img src={SF}className="Container_2_Image"/>
                     </div>
                 </div>
 
-                <div className="Container_1" >
-                    <div>
+                <div className="Container_3" >
+                <div className="in_box">
+                    <div className="image-wrapper">
                     <img src={Nitya} style={{backgroundColor:'white'}} className="Container_1_Image"/>
                     </div>
-                    <div className = "Container_1_Text">
-                        <div  className = "Container_1_Text_Header">
-                        Nitya Ayurveda
-                        </div>
+                    <div className = "container_1_text">
                         <div className = "Container_1_Text_Body" >
                         We redesigned the website for an Ayurvedic practitioner to make it pop and convey their messaging around Ayurveda. 
                         We also simplified the user flow to make it easier for people to understand the services and book appointments.
                         </div>
                         <div  className = "Container_1_Text_Button" >
-                        <Button  onClick={()=>{history.push("./Nitya")}} style={{color:'white',textTransform:'none'}}> View Project</Button>
-                            <Button href ="https://nityaayurveda.com/" target="_blank"  style={{backgroundColor:'#F6A833', borderRadius:'16px',textTransform:'none',color:'white', marginLeft:'1rem',height:'3rem',width:'10rem'}}> View Website </Button>
+                        <Button  onClick={()=>{history.push("./mealsForMe")}} style={{backgroundColor: "white",
+                            border: "2px solid black",
+                            borderRadius:'8px',textTransform:'none',color:'black', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Project</Button>
+
+                                <Button href =" https://mealsfor.me/" target="_blank" style={{backgroundColor:'#F6A833', borderRadius:'8px',textTransform:'none',color:'white', marginLeft:'1rem',height:'2.5rem',width:'10rem'}}> View Website </Button>
                         </div>
+                    </div>
                     </div>
                 </div>
 
-                <div className="Container_2">
+                {/* <div className="Container_2">
                    
                 <div  className = "Container_2_Text">
                         <div  className = "Container_2_Text_Header">
@@ -111,7 +138,7 @@ export default function Projects(){
                         Coming Soon
                         </div>
                     </div>
-                </div>
+                </div> */}
         </Box>
     )
 }

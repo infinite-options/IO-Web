@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router";
 // import Home from "../src/Home/Home";
 import Home from "../src/Home/Home";
-import Projects from "./Projects/Projects-new.jsx";
+import Projects from "./Projects/Projects.jsx";
 import Teams from "./Teams/Teams";
 import Contact from "./Contact/scheduleMeeting";
 import About from "./About/About";
