@@ -1,0 +1,64 @@
+.about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100vh;  */
+}
+.about-us-intro{
+    /* width:70%; */
+    max-width: 600px; /* Adjust the maximum width as needed */
+    padding: 20px;
+}
+
+.case-study-intro{
+
+}
+
+.about-us-image{
+width:100%;
+
+}
+
+.center-align{
+    text-align: center;
+}
+
+@media screen and (max-width: 820px){
+    .about-us-image{
+
+        /* width: 50%; */
+    }
+    .case-study-image{
+        width:80%;
+    }
+    .about-us-intro{
+        /* width:70%; */
+        max-width: 500px; /* Adjust the maximum width as needed */
+        padding: 20px;
+    }
+    .case-study-intro{
+        width: 500px;
+    }
+       
+}
+
+@media screen and (max-width: 555px){
+    .about-us-image{
+
+        /* width: 50%; */
+    }
+    .case-study-image{
+        width:60%;
+    }
+    .about-us-intro{
+        /* width:70%; */
+        width: 300px; /* Adjust the maximum width as needed */
+        padding: 20px;
+    }
+    .case-study-intro{
+        width: 300px;
+    }
+       
+}
