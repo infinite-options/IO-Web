@@ -2,12 +2,15 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router";
+// import Home from "../src/Home/Home";
 import Home from "../src/Home/Home";
-import Projects from "./Projects/Projects.jsx";
+import Projects from "./Projects/Projects-new.jsx";
 import Teams from "./Teams/Teams";
 import Contact from "./Contact/scheduleMeeting";
+import About from "./About/About";
 //import { Navigation } from './Navigation/navigation';
-import Navigation from "../src/Navigation/navigation";
+// import Navigation from "../src/Navigation/navigation";
+import NavTabs from "./Navigation/navigation";
 import MealsForMe from "../src/MealsForMe/mealsforme";
 import Nitya from "../src/Nitya/nitya";
 import ServingFresh from "../src/ServingFresh/servingFresh";
@@ -23,8 +26,8 @@ function App() {
     <div>
       <Router>
         <div>
-          <Navigation />
-
+          {/* <Navigation /> */}
+          <NavTabs />
           <Switch>
             {" "}
             <Route path="/send-offer">
@@ -42,7 +45,9 @@ function App() {
             <Route path="/mealsForMe">
               <MealsForMe />
             </Route>
-            <Route path="/about"></Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/projects">
               <Projects />
             </Route>
