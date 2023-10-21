@@ -1,151 +1,85 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import {Link, useLocation} from "react-router-dom";
 
-
-import React, { useState, useEffect, useRef } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-router-dom";
-// import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import { animateScroll as scroll } from "react-scroll";
-import { useHistory, useLocation } from "react-router-dom";
-
-//import logo from "../Assets/Projects/Nitya.png";
-//import InstagramIcon from "../Assets/Projects/Nitya.png";
-// import LoginNavBar from "./LoginNavBar";
-// import SignUp from "../Components/Home/SignUp";
-// import LogIn from "../Components/Home/LogIn";
-import "./Navbar.css";
-import Home from "../Home/Home";
-
-const useStyles = makeStyles((theme) => ({
-  authModal: {
-    position: "absolute",
-    width: "500px",
-  },
-
-  buttonColor: {
-    color: "#000000"
+function samePageLinkNavigation(event) {
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 || // ignore everything but left-click
+    event.metaKey ||
+    event.ctrlKey ||
+    event.altKey ||
+    event.shiftKey
+  ) {
+    return false;
   }
-}));
-
-function useOutsideAlerter(ref) {
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event) {
-      if (
-        ref.current &&
-        !ref.current.contains(event.target) &&
-        !ref.current.hidden
-      ) {
-        ref.current.hidden = true;
-      }
-    }
-
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
+  return true;
 }
 
-const Navbar = () => {
-  const classes = useStyles();
-  const location  = useLocation();
+function LinkTab(props) {
+  const { selected } = props;
+  return (
+    <Tab
+      component={Link}
+      style={{ color: 'black', border: selected ? '4px solid #F6A833' : 'none'  }} 
+      onClick={(event) => {
+        // Routing libraries handle this, you can remove the onClick handle when using them.
+        // if (samePageLinkNavigation(event)) {
+        //   event.preventDefault();
+        // }
+      }}
+      {...props}
+    />
+  );
+}
 
-  const [open, setOpen] = useState(false);
-  const [projects, setProjects] = useState(false)
-  const [onClickAbout, setOnClickAbout] = useState(false)
-  const [onClickproject, setOnClickProject] = useState(false)
-  const [onClickteams, setOnClickTeams] = useState(false)
+// export default function NavTabs() {
+const NavTabs=()=> {
+  const [value, setValue] = React.useState(0);
+  
+  const location = useLocation();
+  const currentPath = location.pathname;
 
-
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
-  const closeMenu = () => {
-    setOpen(false);
-    setProjects(false)
-
-  };
-
-  const closeMenuHome = () => {
-    setOpen(false);
-    setProjects(false)
-    setOnClickAbout(!onClickAbout)
-    console.log("about", onClickAbout)
-
-  };
-
-  const closeMenuProjects = () => {
-    setOpen(false);
-    setProjects(true)
-    setOnClickProject(!onClickproject)
-    console.log("clickPro", onClickproject)
-
-  };
-
-  const closeMenuTeams = () => {
-    setOpen(false);
-    setProjects(true)
-    setOnClickTeams(!onClickteams)
-    console.log("click", onClickteams)
-  };
-
-  const scrollToTop = () => {
-    scroll.scrollToTop();
+  const handleChange = (event, newValue) => {
+    // event.type can be equal to focus with selectionFollowsFocus.
+    if (
+      event.type !== 'click' ||
+      (event.type === 'click' && samePageLinkNavigation(event))
+    ) {
+      setValue(newValue);
+    }
   };
 
   return (
-    // <nav className="navbar" style={{ background: location.pathname === "/projects" ? '#52330D' : 'white' }}>
-      <nav className="navbar">
-      <div className="emptyDiv" ></div >
-      <div style={{display:'flex', justifyContent:'flex-start'}}>
-        <Link to="/" className="nav-logo"  onClick={closeMenu}>
-          {/* <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/> */}
-          <img src={"/Navigation/Logo.png"} className="nav-Image"/>
-        </Link>
-        <div onClick={handleClick} className="nav-icon">
-          {open ? <FiX /> : <FiMenu />}
-        </div>
-      </div>
-      <ul className={open ? "nav-links active" : "nav-links"} >
-        <li className="nav-item" >
-          {/* <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} style={{color: location.pathname === "/projects" ? 'white' : ''}} > */}
-          <Link to={{pathname: '/projects', state_project : { project: onClickproject } }} className="nav-link" onClick={closeMenuProjects} >
-           Projects
-          </Link>
-        </li>
-        <li className="nav-item">
-          {/* <Link to={{pathname: '/teams', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
-          <Link to={{pathname: '/teams', state_teams : { teams: onClickteams } }} className="nav-link" onClick={closeMenuTeams} >
-            Teams
-          </Link>
-        </li>
-    
-        <li className="nav-item">
-          {/* <Link to="/contact" className="nav-link" onClick={closeMenu}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
-          <Link to="/contact" className="nav-link" onClick={closeMenu} > 
-            Contact
-          </Link>
-        </li>
-
-        <li className="nav-item">
-          {/* <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome}  style={{color: location.pathname === "/projects" ? 'white' : ''}}> */}
-          <Link to={{pathname: '/', state : { click: onClickAbout } }}  className="nav-link" onClick={closeMenuHome} >
-            About
-          </Link>
-        </li>
-      </ul>
-
-      <div className="emptyDiv1">
-      </div>
+    <nav className="navbar">
+    <div className="emptyDiv" ></div >
+    <div style={{display:'flex', justifyContent:'flex-start'}}>
+      <Link to="/" className="nav-logo">
+        {/* <img src={location.pathname === "/projects" ? "/Navigation/Logo-White.png"  : "/Navigation/Logo.png"}/> */}
+        <img src={"/Navigation/Logo.png"} className="nav-Image"/>
+      </Link>
+      {/* <div  className="nav-icon">
+        {open ? <FiX /> : <FiMenu />}
+      </div> */}
+    </div>
+    {/* <Box sx={{ width: '60%'}}> */}
+    <Box sx={{ flex:1}}>
+      <Tabs 
+      value={value} 
+      onChange={handleChange} 
+      aria-label="nav tabs example"    
+      variant="fullWidth" 
+      indicatorColor="none"
+      >
+        <LinkTab label="About" to="/about" selected={currentPath === "/about"} />
+        <LinkTab  label="Internships" to="/teams" selected={currentPath === "/teams"} />
+        <LinkTab  label="Projects" to="/projects" selected={currentPath === "/projects"} />
+        <LinkTab label="Contact Us" to="/contact" selected={currentPath === "/contact"} />
+      </Tabs>
+    </Box>
     </nav>
   );
-};
-
-export default Navbar;
+}
+export default NavTabs;
