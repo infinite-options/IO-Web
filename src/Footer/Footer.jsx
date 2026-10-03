@@ -37,12 +37,12 @@ export default function Footer() {
           <div>info@infiniteoptions.com</div>
         </div>
         <div className="FooterText">
-          <div
-            onClick={() => history.push("/privacy")}
-            style={{ textDecoration: "underline", cursor: "pointer" }}
+          <a
+            href="/privacypolicy.html"
+            style={{ textDecoration: "underline", cursor: "pointer", color: "inherit" }}
           >
             Privacy Policy
-          </div>
+          </a>
         </div>
         <div
           style={{
